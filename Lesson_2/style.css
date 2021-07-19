@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+.home-menu{
+    background-image: url(./img/hero.jpg);
+    height: 700px;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+.max-width{
+    padding: 50px;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+nav{
+    margin-left: 10%;
+}
+nav .max-width {
+    display: flex;
+    justify-content: space-around;
+}
+nav .menu a{
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+nav .menu a:hover{
+    color:orange;
+}
+.max-width .logo img{
+    width: 80px;
+    height: 80px;
+    filter: invert(100%);
+    z-index: 9;
+}
+.max-width .menu{
+    width: 800px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.max-width .menu a{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    z-index: 3;
+}
+.opacity-menu{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.5;
+}
+/* content menu */
+.content-menu{
+    width: 700px;
+    height: 200px;
+    padding-top: 100px;
+    margin-left: 10%;
+    margin-right: 8%;
+    color: white;
+    position: relative;
+    z-index: 69;
+}
+.content-menu .text p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 150;
+    z-index: 9;
+    line-height: 60px;
+}
+.content-menu .multi-button{
+    width: 320px;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.content-menu .multi-button button{
+    width: 150px;
+    height: 40px;
+    outline: none;
+    border: solid 2px orange;
+    border-radius: 30px;
+}
+#btn1{
+    color: white;
+    background-color: orange;
+}
+#btn2{
+    color: orange;
+    background-color: transparent;
+}
+/* body 1 */
+.body_1{
+    padding-top: 800px;
+}
+.body_1 .head{
+    font-family: 'Commissioner';
+    text-align: center;
+}
+.body_1 .head .header{
+    font-size: 38px;
+    word-spacing: 3px;
+}
+.body_1 .head .cross{
+    margin: 20px 45%;
+    border-top: 3px solid orange;
+}
+.body_1 .head .text{
+    text-align: left;
+    padding: 0 23%;
+    font-size: 19px;
+    word-spacing: 1px;
+}
+/* column stuff */
+.row{
+    padding-top: 30px;
+    padding-left: 130px;
+    font-family: 'Montserrat', sans-serif;
+}
+.row .column {
+    float: left;
+    width: 24%;
+
+}
+.row .column i{
+    color: orange;
+    padding: 20px 0;
+}
+.row .column .caption{
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.row .column .content{
+    margin-right: 50px;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: justify;
+}
