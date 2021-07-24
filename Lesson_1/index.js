@@ -7,4 +7,5 @@ function yeah(){
 function yes(){
     x+= 1000000;
     document.getElementById('money').innerHTML = x + 'BTC';
+    document.getElementById('congrats').innerHTML = 'Congratulations! You have defeated this boss!'
 }
