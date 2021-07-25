@@ -102,23 +102,39 @@ nav .menu a:hover{
     color: orange;
     background-color: transparent;
 }
-/* body 1 */
-.body_1{
+#btn1:hover{
+    background-color: transparent;
+    color: orange;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#btn2:hover{
+    background-color: orange;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+/* part 2 */
+.part_2{
     padding-top: 800px;
 }
-.body_1 .head{
+.head{
     font-family: 'Commissioner';
     text-align: center;
 }
-.body_1 .head .header{
-    font-size: 38px;
+.head .header{
+    font-size: 34px;
     word-spacing: 3px;
 }
-.body_1 .head .cross{
-    margin: 20px 45%;
-    border-top: 3px solid orange;
+.head .header::after{
+    content:"";
+    width: 120px;
+    height: 3px;
+    background-color: orange;
+    display: block;
+    margin: 15px auto;
 }
-.body_1 .head .text{
+.part_2 .head .text{
     text-align: left;
     padding: 0 23%;
     font-size: 19px;
@@ -126,26 +142,56 @@ nav .menu a:hover{
 }
 /* column stuff */
 .row{
-    padding-top: 30px;
-    padding-left: 130px;
+    display: flex;
+    justify-content: space-around;
     font-family: 'Montserrat', sans-serif;
+    margin: auto;
+    width: 85%;
+    margin: auto 10%;
+    margin-bottom: 100px;
 }
 .row .column {
-    float: left;
-    width: 24%;
-
+    width: 20% auto;
 }
 .row .column i{
     color: orange;
-    padding: 20px 0;
+    padding: 15px 35px;
 }
 .row .column .caption{
     font-size: 22px;
-    padding-bottom: 10px;
 }
 .row .column .content{
-    margin-right: 50px;
+    padding-right: 50px;
     font-size: 15px;
     line-height: 30px;
     text-align: justify;
+}
+/* part 3 */
+ul{
+    list-style: none; /* remove dots */
+    font-size: 0; /* remove spacing */
+}
+.p3 li{
+    width: 25%;
+    float: left;
+    overflow: hidden;
+}
+.p3 li img{
+    width: 100%;
+    background-color: black;
+    height: auto;
+    opacity: 0.9;
+    transition: scale(1.15);
+}
+.p3 li img:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    transition: transform 0.5s opacity 1s;
+}
+/* part 4 */
+.part_4{
+    padding-top: 650px;
+}
+.p4{
+    list-style:element(img);
 }
