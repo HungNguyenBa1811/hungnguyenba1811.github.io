@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@200;400&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -136,12 +137,12 @@ nav .menu a:hover{
 }
 .part_2 .head .text{
     text-align: left;
-    padding: 0 23%;
+    padding: 2% 23%;
     font-size: 19px;
     word-spacing: 1px;
 }
 /* column stuff */
-.row{
+.part_2 .row{
     display: flex;
     justify-content: space-around;
     font-family: 'Montserrat', sans-serif;
@@ -150,17 +151,17 @@ nav .menu a:hover{
     margin: auto 10%;
     margin-bottom: 100px;
 }
-.row .column {
+.part_2 .row .column {
     width: 20% auto;
 }
-.row .column i{
+.part_2 .row .column i{
     color: orange;
     padding: 15px 35px;
 }
-.row .column .caption{
+.part_2 .row .column .caption{
     font-size: 22px;
 }
-.row .column .content{
+.part_2 .row .column .content{
     padding-right: 50px;
     font-size: 15px;
     line-height: 30px;
@@ -190,8 +191,24 @@ ul{
 }
 /* part 4 */
 .part_4{
-    padding-top: 650px;
+    margin-top: 200px;
 }
-.p4{
-    list-style:element(img);
+.part_4 img{
+    width: 30%;
+    float: right;
+}
+.part_4 i{
+    display: inline;
+    color: orange;
+}
+.part_4 p{
+    display: inline;
+    font-family: 'Commissioner';
+    font-weight: 400;
+    font-size: 18px;
+}
+.part_4 .rate{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
