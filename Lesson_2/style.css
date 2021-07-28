@@ -122,6 +122,7 @@ nav .menu a:hover{
 .head{
     font-family: 'Commissioner';
     text-align: center;
+    font-weight: 100;
 }
 .head .header{
     font-size: 34px;
@@ -172,6 +173,9 @@ ul{
     list-style: none; /* remove dots */
     font-size: 0; /* remove spacing */
 }
+.p3{
+    padding: 0;
+}
 .p3 li{
     width: 25%;
     float: left;
@@ -191,24 +195,41 @@ ul{
 }
 /* part 4 */
 .part_4{
-    margin-top: 200px;
+    position: relative;
+    top: 50px;
+}
+.part_4 .head{
+    padding-bottom: 2%;
 }
 .part_4 img{
-    width: 30%;
+    width: 35%;
     float: right;
 }
 .part_4 i{
-    display: inline;
+    display: block;
     color: orange;
+    float: left;
+    padding-right: 10px;
 }
-.part_4 p{
+.part_4 .rate{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 330px;
+}
+.part_4 .rate p{
     display: inline;
     font-family: 'Commissioner';
     font-weight: 400;
     font-size: 18px;
 }
-.part_4 .rate{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+.part_4 .android{
+    width: 150px;
+    height: 85%;
+    float: left;
+}
+.part_4 .ios{
+    width: 170px;
+    height: 85%;
+    float: left;
 }
