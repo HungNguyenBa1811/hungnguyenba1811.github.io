@@ -258,3 +258,8 @@ ul{
     font-weight: 200;
     font-family: 'Commissioner';
 }
+.part_5 .row a{
+    color: orange;
+    font-weight: 200;
+    font-size: 18px;
+}
