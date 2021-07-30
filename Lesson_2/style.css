@@ -191,7 +191,7 @@ ul{
 .p3 li img:hover{
     opacity: 1;
     transform: scale(1.05);
-    transition: transform 0.5s opacity 1s;
+    transition: transform 0.5s, opacity 1s;
 }
 /* part 4 */
 .part_4{
