@@ -37,23 +37,23 @@ function numberOneTriangle(){
     document.getElementById("answer").innerHTML = blank;
 }
 // bài 4
+function updateTimer(n) {
+    if (n < 10) {
+      return "0" + n;
+    }
+    else {
+      return n;
+    }
+}
 function getTime(){
     var date = new Date(); /* creating object of Date class */
     var hour = date.getHours();
     var minute = date.getMinutes();
     var second = date.getSeconds();
-    hour = updateTime(hour);
-    minute = updateTime(minute);
-    second = updateTime(second);
+    hour = updateTimer(hour);
+    minute = updateTimer(minute);
+    second = updateTimer(second);
     document.getElementById("timer").innerText = hour + " : " + minute + " : " + second;
-    var t = setTimeout(function(){ getTime() }, 1000);
+    setTimeout(function(){ getTime() }, 1000);
 }
-function updateTime(l) {
-    if (l < 10) {
-      return "0" + l;
-    }
-    else {
-      return l;
-    }
-  }
 getTime();
