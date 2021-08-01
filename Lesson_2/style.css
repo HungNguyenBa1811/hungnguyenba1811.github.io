@@ -4,6 +4,9 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    box-sizing:border-box;
 }
 .home-menu{
     background-image: url(./img/hero.jpg);
@@ -33,8 +36,24 @@ nav .menu a{
     text-decoration: none;
     font-size: 14px;
 }
+nav .menu a:after{
+    content: "";
+    display: block;
+    position:absolute; 
+    left:0; 
+    bottom:0; 
+    width:0%; 
+    height:3px; 
+    background-color:#ffe800; 
+    -webkit-transition:all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+    -o-transition:all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+    transition:all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 nav .menu a:hover{
-    color:orange;
+    color: orange;
+}
+nav .menu a:hover:after{
+    width: 100%;
 }
 .max-width .logo img{
     width: 80px;
