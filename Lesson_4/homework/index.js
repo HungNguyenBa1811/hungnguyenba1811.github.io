@@ -26,10 +26,8 @@ function changeColorBack(){
 function numberOneTriangle(){
     var lvl3 = document.getElementById("lvl3").value;
     var blank = "";
-    var j;
-    var k;
-    for(j = 1; j <= lvl3 ; j++){
-        for(k = 1; k <= j; k++) {
+    for(var j = 1; j <= lvl3 ; j++){
+        for(var k = 1; k <= j; k++){
             blank += 1;
         }
         blank += '<br>';
@@ -50,10 +48,11 @@ function getTime(){
     var hour = date.getHours();
     var minute = date.getMinutes();
     var second = date.getSeconds();
-    hour = updateTimer(hour);
-    minute = updateTimer(minute);
-    second = updateTimer(second);
+    // hour = updateTimer(hour);
+    // minute = updateTimer(minute);
+    // second = updateTimer(second);
     document.getElementById("timer").innerText = hour + " : " + minute + " : " + second;
-    setTimeout(function(){ getTime() }, 1000);
+    // setTimeout(function(){ getTime() }, 1000);
 }
-getTime();
+var update = setInterval(getTime, 1000);
+// getTime();
