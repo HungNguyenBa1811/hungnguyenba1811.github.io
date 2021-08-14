@@ -5,5 +5,5 @@ Lmao
 Testing code at:
 # hungnguyenba1811.github.io
 
-"CHECKMATE"
-    - Davie504 -
+# "CHECKMATE"
+#    - Davie504 -
