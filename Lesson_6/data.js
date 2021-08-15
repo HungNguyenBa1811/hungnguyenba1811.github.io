@@ -36,6 +36,24 @@ let products = [
         img: './img/food.jpg'
     },
 
+    {
+        name: 'Banh-da-cua',
+        title: 'Mon ngon Ha Noi',
+        img: './img/food.jpg'
+    },
+
+    {
+        name: 'Xoi-khuc',
+        title: 'Mon ngon Ha Noi',
+        img: './img/food.jpg'
+    },
+
+    {
+        name: 'Bun-cha',
+        title: 'Mon ngon Ha Noi',
+        img: './img/food.jpg'
+    },
+
 ];
 
 // localStorage

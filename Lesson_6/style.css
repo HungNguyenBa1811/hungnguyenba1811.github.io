@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'georama';
 }
 .img-icon {
     width: 100px;
@@ -12,7 +13,7 @@
     height: auto;
     padding: 100px;
     background-color: #D5EEBB;
-    
+    background-repeat: repeat-y;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,11 +23,12 @@
     height: 500px;
     padding: 20px;
     background-color: #444941;
-    overflow-wrap: wrap;
+    overflow: scroll;
 }
 .container-right {
     width: 30%;
     height: 500px;
+    padding: 10px;
     background-color: #7FC8A9;
 }
 .items {
@@ -35,7 +37,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
+
+    overflow: hidden;
 }
 .items .item {
     background-color: #B61919;

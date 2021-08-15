@@ -6,9 +6,9 @@ let cartParse = JSON.parse(localStorage.getItem('productsCart'))
 console.log('cartParse', cartParse);
 item.addEventListener('click', function(event) {
     alert(event.target.value);
-    let item = event.target.value;
-    console.log('Item: ', item);
-    cartParse.push(`${item.id}`);
+    let item1 = event.target.value;
+    console.log('Item: ', item1);
+    cartParse.push(`${item1.id}`);
     localStorage.setItem('productsCart', JSON.stringify(cartParse));
-    cart.innerHTML += `<p>${item}</p>`
+    cart.innerHTML += `<p> > ${item1}</p>`
 })
