@@ -46,7 +46,7 @@ localStorage.setItem('productsCart', productsCartString);
 
 let productsString = JSON.stringify(products)
 console.log(productsString);
-localStorage.setItem('products', productsCartString);
+localStorage.setItem('products', productsString);
 
 let productsData = localStorage.getItem('products')
 console.log(JSON.parse(productsData))
@@ -57,8 +57,8 @@ for (product of products){
     items.innerHTML += `
         <div class="item">
             <div class="product-view">
-                <img src= ${product.img} alt="" class="img-icon">
-                <button class="btn" type="input" value= ${product.name} >Add to list</button>
+                <img src= ${product.img} alt="No image" class="img-icon">
+                <button class="btn" type="input" value= ${product.name}>Add to list</button>
             </div>
             <div class="content">
                 <h3> ${product.name} </h3>
