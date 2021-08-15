@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: linear-gradient(45deg, rgba(9,229,226,1) 0%, rgba(213,140,255,1) 100%);
+    background-size: cover;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.login-popup{
+    background-image: url('./background.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 280px;
+    height: 500px;
+    overflow: auto;
+}
+.btn-Login{
+    background: linear-gradient(45deg, rgba(94,39,232,1) 0%, rgba(191,100,221,1) 100%);
+}
+.close{
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+img{
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}

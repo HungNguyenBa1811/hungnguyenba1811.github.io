@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <button class="btn" onclick=" document.querySelector('#popup').style.display = 'block' ">Login</button>
+    <div id="popup" class="login-popup">
+
+        <div class="img-container">
+
+            <span class="close" onclick="close()">&times;</span>
+            <img 
+                src="./avatar.png"
+                alt="Nothing here">
+
+        </div>
+
+        <div class="container">
+
+            <p>Username:</p>
+            <input type="text" placeholder="Enter Username" id="username" required>
+            <p>Password:</p>
+            <input type="password" placeholder="Enter Password" id="password" required>
+            <button class="btn-Login" onclick="addItem()">Login</button>
+
+        </div>
+
+        <div class="container">
+
+            <button type="button" class="cancelBtn" onclick="close()">Cancel</button>
+            <a href="#">Forgot password?</a>
+
+        </div>
+
+    </div>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
