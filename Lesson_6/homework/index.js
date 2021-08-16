@@ -1,9 +1,9 @@
-let popup = document.querySelector('.login-popup');
-window.onclick = function(event){
-    if(event.target == popup){
-        popup.style.display = 'none'
-    }
+function redirect_1(){
+    window.location = './signupPage.html'
 }
-function close(){
-    document.querySelector('#popup').style.display = 'none';
+function redirect_2(){
+    window.location = './loginPage.html'
+}
+function cancel(){
+    window.location = './index.html'
 }

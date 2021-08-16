@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Landing Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="login-popup">
+
+        <h1 class="head">LOGIN</h1>
+
+        <div class="img-container">
+
+            <img 
+                src="./avatar.png"
+                alt="Nothing here">
+
+        </div>
+
+        <div class="container">
+
+            <p>Username:</p>
+            <input type="text" placeholder="Enter Username" id="userName" required>
+            <p>Password:</p>
+            <input type="password" placeholder="Enter Password" id="userPsw" required>
+            <br>
+            <button type="submit" class="btn-login" onclick="check()">Login</button>
+
+        </div>
+
+        <div class="container">
+
+            <button type="button" class="cancelBtn" onclick="cancel()">Go back to Main Page</button>
+            <a href="#">Forgot password?</a>
+
+        </div>
+
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
