@@ -1,71 +1,63 @@
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-* {
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300&display=swap');
+body{
     margin: 0;
     padding: 0;
+    font-family: 'Martel Sans';
+    color: white;
+    background-color: #BBE1FA;
 }
-
-.head{
-    padding: 30px 0;
-}
-ul{
-    padding-left: 5%;
-}
-li{
-    padding: 5px 0;
-}
-body{
-    background-color: #CCFFBD;
+.login-popup{
+    margin: 10% 33%;
+    background-color: #3282B8;
+    padding: 40px;
 }
 img{
-    border-radius: 100%;
     width: 40%;
+    border-radius: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
 }
-.login-popup {
-    display: block;
-    margin: 10% 30%;
-    padding: 22px 22px 22px 22px;
-    width: 40%;
+h1{
+    font-weight: 200;
+    font-size: 35px;
+    text-align: center;
+}
+li{
+    font-size: 13px;
+}
+.name-tag{
+    margin: 0;
+}
+#userName, #userPsw, #name, #psw{
+    width: 85%;
+    border-radius: 3px;
+    background-color: #1B262C;
     color: white;
-    font: 87.5% 'Open Sans', sans-serif;
-    border-radius: 5px;
-    background: #1C1427;
-}
-
-.login-popup input[type="text"] {
-    background-color: #40394A;
-    border-radius: 7px;
-    color: #bbbbbb;
     margin-bottom: 1em;
     padding: 0 16px;
-    width: 90%;
-    height: 40px;
+    height: 50px;
 }
-
-.login-popup input[type="password"] {
-    background-color: #40394A;
-    border-radius: 7px;
-    color: #a9a9a9;
-    margin-bottom: 1em;
-    padding: 0 16px;
-    width: 90%;
-    height: 40px;
-}
-
-.login-popup .btn-login {
-    background: #7ECA9C;
+.btn-login{
+    background: #0F4C75;
     border: 0;
-    margin-top: 10%;
-    width: 100%;
+    width: 95%;
     height: 40px;
+    margin-bottom: 30px;
     border-radius: 3px;
     color: white;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
-.login-popup .btn-login:hover {
-    background: #16aa56;
+.btn-login:hover{
+    background-color: #BBE1FA;
+}
+a{
+    float: right;
+    text-decoration: none;
+    color: #BBE1FA;
+}
+a:hover{
+    color: #1B262C;
+    transition: 0.3s;
 }

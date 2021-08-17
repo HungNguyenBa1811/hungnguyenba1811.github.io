@@ -22,16 +22,20 @@ function store(){
         psw.value = ""
     }
 }
+function rick(){
+    window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+}
 function check(){
-    let storedName = localStorage.getItem('name')
-    let storedPsw = localStorage.getItem('psw')
+    let storedName = localStorage.getItem('username')
+    let storedPsw = localStorage.getItem('password')
 
     let userName = document.querySelector('#userName')
     let userPsw = document.querySelector('#userPsw')
 
     if(userName.value == storedName && userPsw.value == storedPsw){
         alert('You are logged in!')
+        setTimeout(rick, 1400)
     }else{
-        alert('Please check your account')
+        alert('Login failed!')
     }
 }
