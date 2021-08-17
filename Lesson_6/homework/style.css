@@ -4,12 +4,13 @@ body{
     padding: 0;
     font-family: 'Martel Sans';
     color: white;
-    background-color: #BBE1FA;
+    background: linear-gradient(to bottom left, #77ACF1 0%, #ffffff 100%) no-repeat;
 }
 .login-popup{
     margin: 10% 33%;
     background-color: #3282B8;
     padding: 40px;
+    border-radius: 5px;
 }
 img{
     width: 40%;
@@ -50,14 +51,56 @@ li{
     transition: background 0.3s ease-in-out;
 }
 .btn-login:hover{
-    background-color: #BBE1FA;
+    background-color: #daebf7;
+    color: #1B262C;
 }
 a{
     float: right;
     text-decoration: none;
-    color: #BBE1FA;
+    color: #1B262C;
+    font-weight: 300;
+    font-style: italic
 }
 a:hover{
-    color: #1B262C;
+    color: whitesmoke;
     transition: 0.3s;
+}
+.cancelBtn{
+    background-color: #77ACF1;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.cancelBtn:hover{
+    background-color: #C0FEFC;
+    color: #04009A;
+    transition: 0.2s;
+}
+  
+.cancelBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+  
+.cancelBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+}
+  
+.cancelBtn:hover span {
+    padding-right: 15px;
+}
+  
+.cancelBtn:hover span:after {
+    opacity: 1;
+    right: 0;
 }

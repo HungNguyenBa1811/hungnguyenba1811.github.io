@@ -4,6 +4,9 @@ function redirect_1(){
 function redirect_2(){
     window.location = './loginPage.html'
 }
+function redirect_3(){
+    window.location = 'https://www.google.com.vn/'
+}
 function cancel(){
     window.location = './index.html'
 }
