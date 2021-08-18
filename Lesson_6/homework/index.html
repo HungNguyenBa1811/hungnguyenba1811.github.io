@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <style>
         body{
@@ -61,7 +62,7 @@
         }
     </style>
 </head>
-<body>
+<body id="body">
     <img 
         src="./warning.png" 
         alt=""
@@ -76,5 +77,13 @@
         <button class="btn-page google" onclick="redirect_3()">Back to safety</button>
     </div>
     <script src="./index.js"></script>
+    <script>
+        if(window.innerHeight > window.innerWidth){
+            document.getElementById('body').style.display = 'none';
+            setTimeout( function(){
+                alert("Please rotate your device");
+            }, 1500); 
+        }
+    </script>
 </body>
 </html>
