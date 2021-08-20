@@ -11,6 +11,7 @@ body{
     background-color: #3282B8;
     padding: 40px;
     border-radius: 5px;
+    min-width: 300px;
 }
 img{
     width: 40%;
@@ -21,7 +22,6 @@ img{
 }
 h1{
     font-weight: 200;
-    font-size: 35px;
     text-align: center;
 }
 li{

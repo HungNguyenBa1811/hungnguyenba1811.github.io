@@ -10,12 +10,28 @@ function redirect_3(){
 function cancel(){
     window.location = './index.html'
 }
-if(window.innerHeight > window.innerWidth || screen.availHeight > screen.availWidth){
-    document.getElementById('body').style.display = 'none';
-    setTimeout( function(){
-        alert("Please rotate your device or being rickrolled in 5 seconds");
-    }, 1234);
-    setTimeout( function(){
-        window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-    }, 5000)
-}
+
+//prank
+setInterval(function(){
+    if(window.outerHeight > window.outerWidth || screen.availHeight > screen.availWidth){
+        document.getElementById('body').style.display = 'none';
+        setTimeout( function(){
+            alert("Please rotate your device and reload the page, or being rickrolled");
+        }, 234);
+        setTimeout( function(){
+            window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        }, 3000)
+    }else{
+        document.getElementById('body').style.display = 'inherit'
+    }
+}, 3000)
+
+setInterval(function(){
+    if(window.innerWidth < 1145){
+        document.querySelector('.landing').style.padding = "110px";
+        document.querySelector('.head').style.fontSize = '32px'
+    }else{
+        document.querySelector('.landing').style.padding = "150px";
+        document.querySelector('.head').style.fontSize = '35px'
+    }
+}, 500)
