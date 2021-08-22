@@ -140,7 +140,6 @@ Line.prototype.step = function() {
         if( lines.length < maxLines && Math.random() < .5 ) {
             lines.push( new Line( this ) );
         }
-        
     // kill the poor thing
         if( Math.random() < .2 ) {
             dead = true

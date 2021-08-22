@@ -22,12 +22,12 @@ function addItem(){
 
 function render(){
     let content = list.map(function (item) {
-        return '<li id="hello">' + item + '</li>';
+        return '<li class="hello">' + item + '</li>';
     });
     document.getElementById('list').innerHTML = content.join(' ');
 }
 render();
 
-document.getElementById('hello').addEventListener('click', function(){
-    window.location = 'https://dinoswords.gg/';
+document.getElementById('list').addEventListener('click', function(){
+    window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
 });
