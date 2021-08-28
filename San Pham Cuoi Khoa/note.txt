@@ -1,0 +1,26 @@
+BODY:
+
+$ PC BUILD:
+***$ GRAPHICS CARDS (VGA):
+***$ CPU:
+***$ CASE:
+***$ RAM:
+***$ HDD:
+***$ MOTHERBOARDS:
+***$ MONITORS:
+
+# GEARS
+***# KEYBOARDS:
+***# GAMING MOUSE:
+***# MOUSE PADS:
+***# CONTROLLER:
+***# GAMING HEADSET:
+***# GAMING FURNITURE:
+***# SPEAKERS & MICROPHONE:
+***# WEBCAM:
+***# OTHER ACCESSORIES:
+
+
+LOGIC:
+
+# tạo file chứa
