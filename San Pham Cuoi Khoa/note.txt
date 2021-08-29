@@ -21,6 +21,19 @@ $ PC BUILD:
 ***# OTHER ACCESSORIES:
 
 
-LOGIC:
+LOGIC & STEPS:
 
-# tạo file chứa
+# create a js file to store products
+## export import products to another js file
+### create sign up & login landing page
+#### create main body theme
+##### create js cart & js maths (money)
+###### decoration
+####### create product details page & paying landing page
+######## bugs fix
+######### re-decorate page & check if the page works properly
+
+
+LINKS:
+https://www.gaminggearskh.com/
+https://us-store.msi.com/Gaming-Gears
