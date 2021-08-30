@@ -17,15 +17,18 @@
     </style>
 </head>
 <body>
-    <form method="GET">
-        <p>Bài 1:</p>
-        <label>Nhập số a:</label>
-        <input type="text" id="a" required>
+
+    <p>Bài 1:</p>
+    <form action="" method="GET">
+        Nhập số a: <input type="text" id="a" value="5">
         <br>
-        <label>Nhập số b:</label>
-        <input type="text" id="b" required>
+        Nhập số b: <input type="text" id="b" value="8">
         <br>
-        <input type="submit">
+        <input type="button" onclick="equation()" value="Submit!">
     </form>
+    <div id="result"></div>
+
+
+    <script src="./index.js"></script>
 </body>
 </html>
