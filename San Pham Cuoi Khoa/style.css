@@ -21,6 +21,7 @@
 }
 .top-bar .button-drop .dropdown{
     display: inline;
+    float: right;
 }
 .top-bar .button-drop .dropdown .dropdown-content{
     border: none;
