@@ -7,4 +7,23 @@
     border-bottom: 1px solid #2e427d;
     padding: 10px 0;
     font-size: .8571em;
+    font-family: 'Rubik';
+    color: #fff;
+}
+.top-bar #nav{
+    display: block;
+}
+.top-bar .list-unstyled{
+    list-style-type: none;
+}
+.top-bar .button-drop{
+    position: relative;
+}
+.top-bar .button-drop .dropdown{
+    display: inline;
+}
+.top-bar .button-drop .dropdown .dropdown-content{
+    border: none;
+    background-color: transparent;
+    padding: 0 0 0 20px;
 }

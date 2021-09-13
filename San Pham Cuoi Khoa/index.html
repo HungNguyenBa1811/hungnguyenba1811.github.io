@@ -9,43 +9,58 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet"> 
     <title>Shopping</title>
 
 </head>
 <body>
-    <div class="top-bar">
-        
-        <div class="contact">
-            <p>Telephone Enquiry: 123456789</p>
-        </div>
+    <div class="top-bar row">
+        <nav id="top">
 
-        <div class="button-drop">
+            <ul class="list-unstyled">
 
-            <div class="dropdown">
-                <button class="dropdown-content">
-                    Currency
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">USD</a></li>
-                    <li><a href="#">EUR</a></li>
-                    <li><a href="#">VND</a></li>
-                </ul>
-            </div>
+                <li>
+                    <div class="contact col-sm-4">
+                        <p>Telephone Enquiry: 123456789</p>
+                    </div>
+                </li>
 
-            <div class="dropdown">
-                <button class="dropdown-content">
-                    My Account
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Sign in</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">View Cart</a></li>
-                </ul>
-            </div> 
+                <li>
 
-        </div>
+                    <div class="button-drop col-sm-8">
+
+                        <div class="dropdown">
+                            <button class="dropdown-content">
+                                <span>Currency:</span>
+                                <span class="selected-currency">USD</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">USD</a></li>
+                                <li><a href="#">EUR</a></li>
+                                <li><a href="#">VND</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="dropdown">
+                            <button class="dropdown-content">
+                                <span>My account</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Sign in</a></li>
+                                <li><a href="#">Register</a></li>
+                                <li><a href="#">View Cart</a></li>
+                            </ul>
+                        </div> 
+            
+                    </div>
+
+                </li>
+
+            </ul>
+            
+        </nav>
 
     </div>
     <div class="middle-bar">
