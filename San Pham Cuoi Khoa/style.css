@@ -2,3 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.top-bar{
+    background-color: #293a6c;
+    border-bottom: 1px solid #2e427d;
+    padding: 10px 0;
+    font-size: .8571em;
+}
