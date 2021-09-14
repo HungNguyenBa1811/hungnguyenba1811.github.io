@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
     <title>Shopping</title>
 
 </head>
@@ -20,40 +20,42 @@
             <ul class="list-unstyled container">
 
                 <li>
-                    <div class="contact col-sm-4">
+                    <div class="contact col-sm-4 col-lg-3">
                         <p>Telephone Enquiry: 123456789</p>
                     </div>
                 </li>
 
                 <li>
 
-                    <div class="button-drop col-sm-8">
+                    <div class="button-drop col-sm-8 col-lg-9">
+                        <ul class="dropdown list-unstyled">
 
-                        <div class="dropdown">
-                            <button class="dropdown-content">
-                                <span>Currency:</span>
-                                <span class="selected-currency">USD</span>
-                                <i class="fa fa-chevron-down"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">USD</a></li>
-                                <li><a href="#">EUR</a></li>
-                                <li><a href="#">VND</a></li>
-                            </ul>
-                        </div>
-            
-                        <div class="dropdown">
-                            <button class="dropdown-content">
-                                <span>My account</span>
-                                <i class="fa fa-chevron-down"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Sign in</a></li>
-                                <li><a href="#">Register</a></li>
-                                <li><a href="#">View Cart</a></li>
-                            </ul>
-                        </div> 
-            
+                            <li>
+                                <button class="dropdown-content">
+                                    <span>Currency:</span>
+                                    <span class="selected-currency">USD</span>
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">USD $</a></li>
+                                    <li><a href="#">EUR €</a></li>
+                                    <li><a href="#">VND</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <button class="dropdown-content">
+                                    <span>My account</span>
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Sign in</a></li>
+                                    <li><a href="#">Register</a></li>
+                                    <li><a href="#">View Cart</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
                     </div>
 
                 </li>
@@ -65,36 +67,46 @@
     </div>
     <div class="middle-bar">
 
-        <div class="icon-bar">
-            <img 
-                src="" 
-                alt="">
-        </div>
-        <div class="search-bar">
+        <div class="container row">
 
-            <input type="text" placeholder="Search entire store here...">
-            <button type="submit">
-                <i></i>
-            </button>
+            <div class="icon-bar col-lg-3">
+                <img 
+                    src="" 
+                    alt="">
+            </div>
+            <div class="col-lg-9 pl-lg-0">
 
-        </div>
-        <div class="account">
+                <form class="search-bar">
 
-            <button>
-                <i></i>
-            </button>
+                    <input type="text" placeholder="Search entire store here...">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
 
-        </div>
-        <div class="cart">
+                </form>
 
-            <button>
+                <div class="cart-trigger">
+                    <ul class="list-unstyled minicart">
+                        <li>
+                            <div>
+                                <i class="fa fa-shopping-basket fa-2x basket"></i>
+                                <span class="item-text">
+                                    $0
+                                    <i class="fa fa-chevron-down"></i>
+                                    <span class="cart-item-count">0</span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
 
-            </button>
-            
-            
+            </div>
+
         </div>
 
     </div>
+
     <div class="submenu">
         <ul>
             <li><a href="#">HOME</a></li>

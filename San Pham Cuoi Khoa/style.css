@@ -5,7 +5,7 @@
 .top-bar{
     background-color: #293a6c;
     border-bottom: 1px solid #2e427d;
-    padding: 10px 0;
+    padding: 12px 0 0 0;
     font-size: .8571em;
     font-family: 'Rubik';
     color: #fff;
@@ -20,11 +20,106 @@
     position: relative;
 }
 .top-bar .button-drop .dropdown{
-    display: inline;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+.top-bar .button-drop .dropdown i{
+    padding-left: 4px;
 }
 .top-bar .button-drop .dropdown .dropdown-content{
     border: none;
     background-color: transparent;
     padding: 0 0 0 20px;
+}
+
+.middle-bar{
+    background-color: #293a6c;
+    padding: 30px 0;
+}
+.middle-bar .container .col-lg-9 .search-bar{
+    display: flex;
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #e1e1e1;
+    min-width: 638px;
+    height: 45px;
+    float: left;
+}
+.middle-bar .container .col-lg-9 .search-bar input{
+    font-size: 13px;
+    color: #a5a5a5;
+    height: 45px;
+    background: transparent;
+    border: 0;
+    width: 100%;
+    padding: 0 60px 0 33px;
+    box-shadow: none;
+}
+.middle-bar .container .col-lg-9 .search-bar button{
+    border: 0;
+    background: #fed700;
+    color: #242424;
+    font-size: 20px;
+    width: 45px;
+    border-radius: 0 2px 2px 0;
+    height: 45px;
+    line-height: 45px;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.middle-bar .container .col-lg-9 .search-bar button:hover {
+    background: #333;
+    color: #fff;
+}
+.middle-bar .container .col-lg-9 .cart-trigger{
+    display: flex;
+    justify-content: flex-end;
+}
+.minicart{
+    display: inline-block;
+    position: relative;
+}
+.middle-bar .container .col-lg-9 .cart-trigger div{
+    border: 0;
+    border-radius: 2px;
+    background: #e80f0f;
+    color: #fff;
+    height: 45px;
+    cursor: pointer;
+    display: block;
+    padding: 0 15px 0 30px;
+}
+.middle-bar .container .col-lg-9 .cart-trigger div .item-text {
+    position: relative;
+    line-height: 35px;
+    font-weight: 500;
+}
+.middle-bar .container .col-lg-9 .cart-trigger div .basket{
+    position: relative;
+    top: 3px;
+    left: -10px;
+}
+.middle-bar .container .col-lg-9 .cart-trigger div .item-text i::after {
+    color: #a4a4a4;
+    margin-left: 5px;
+}
+.middle-bar .container .col-lg-9 .cart-trigger div .item-text .cart-item-count {
+    position: absolute;
+    top: -25px;
+    left: -60px;
+    display: block;
+    overflow: hidden;
+    min-width: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #242424;
+    background: #fed700;
+    text-align: center;
+    border-radius: 100%;
 }
