@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .top-bar{
     background-color: #293a6c;
@@ -100,9 +101,14 @@
     font-weight: 500;
 }
 .middle-bar .container .col-lg-9 .cart-trigger div .basket{
-    position: relative;
-    top: 3px;
-    left: -10px;
+    line-height: 20px;
+    vertical-align: middle;
+    padding: 5px 20px 0 0;
+    margin-right: 10px;
+    border-right: 1px solid rgba(255,255,255,.3);
+}
+.middle-bar .container .col-lg-9 .cart-trigger div .item-text{
+    vertical-align: middle;
 }
 .middle-bar .container .col-lg-9 .cart-trigger div .item-text i::after {
     color: #a4a4a4;
@@ -111,7 +117,7 @@
 .middle-bar .container .col-lg-9 .cart-trigger div .item-text .cart-item-count {
     position: absolute;
     top: -25px;
-    left: -60px;
+    left: -90px;
     display: block;
     overflow: hidden;
     min-width: 26px;
