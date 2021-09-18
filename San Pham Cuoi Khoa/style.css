@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 .top-bar{
     background-color: #293a6c;
@@ -128,4 +128,20 @@
     background: #fed700;
     text-align: center;
     border-radius: 100%;
+}
+.submenu{
+    background-color: #2e427d;
+}
+.submenu .menu-list{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.submenu .menu-list a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px;
+    font-size: 13px;
+    line-height: 35px;
 }
