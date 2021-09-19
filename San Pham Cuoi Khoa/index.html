@@ -30,7 +30,7 @@
                     <div class="button-drop col-sm-8 col-lg-9">
                         <ul class="dropdown list-unstyled">
 
-                            <li>
+                            <li class="create_border">
                                 <button class="dropdown-content">
                                     <span>Currency:</span>
                                     <span class="selected-currency">USD</span>
@@ -73,11 +73,11 @@
 
                 <div class="icon-bar col-lg-3">
                     <img 
-                        src="./img/logogg.png" 
+                        src="./img/logogo.png" 
                         alt="logo"
-                        width="200px">
+                        width="230px">
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-9 search-system">
 
                     <form class="search-bar">
 
@@ -87,18 +87,23 @@
                         </button>
 
                     </form>
-
+                    <a href="#" class="account-link">
+                        <i class="fal fa-user-alt"></i>
+                    </a>
                     <div class="cart-trigger">
                         <ul class="list-unstyled minicart">
                             <li>
-                                <div>
+                                <button class="btn-cart">
                                     <i class="fa fa-shopping-cart basket"></i>
                                     <span class="item-text">
-                                        $0
-                                        <i class="fa fa-chevron-down"></i>
                                         <span class="cart-item-count">0</span>
+                                        <span class="money-heist">
+                                            <span class="currency">$</span>
+                                            <span class="bigmoney">0.00</span>    
+                                        </span>
+                                        <i class="fa fa-chevron-down"></i>
                                     </span>
-                                </div>
+                                </button>
                             </li>
                         </ul>
                         
@@ -124,22 +129,60 @@
     </div>
     <div class="main">
         <div class="container">
-            <div class="slideshow">
-                <img class="mySilde" src="" alt="">
-                <img class="mySlide" src="" alt="">
-                <img class="mySlide" src="" alt="">
-            </div>
-            <div class="feature-new">
-                <img 
-                    src=""
-                    alt="">
-                <img
-                    src=""
-                    alt="">
-            </div>        
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-8 slideshow">
+                    <div class="mySlide">
+                        <img 
+                            src="./img/banner_top_1.jpg"
+                            alt="">
+                    </div>
+                    <div class="mySlide">
+                        <img
+                            src="./img/banner_top_2.jpg"
+                            alt="">
+                    </div>
+                    <div class="mySlide">
+                        <img
+                            src="./img/banner_top_3.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 feature-new"> 
+                    <div>
+                        <div class="text-content">
+                            
+                            <h5>Full HD Display</h5>                              
+                            <h4>smartphone meizu m5</h4>            
+                            <h4>new color green</h4>                              
+                            <p class="diff-color"> sale 20% off</p>
+                            
+                          </div>
+                        <img
+                            src="./img/feature-1.jpg"  
+                            alt="">
+                    </div>
+                    <div>
+                        <div class="text-content">
+
+                            <h5>sale 20% off all store</h5>
+                            <h4>Playstaytion VR Plus</h4>   
+                            <h4>network 2018</h4>     
+                            <p class="diff-color"> sale 20% off</p>
+                            
+                          </div>
+                        <img
+                            src="./img/feature-2.jpg" 
+                            alt="">
+                    </div>
+                </div>
+            </div>       
         </div>
-        <div class="sale-off">
-            <p class="coupon">Gift Special: Gift every single day on Weekends - New Coupon code "<span id="coupon_code">AMOGUSSALEOFF</span>"</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 sale-off">
+                    <p class="coupon">Gift Special: Gift every single day on Weekends - New Coupon code "<span id="coupon_code">AMOGUSSALEOFF</span>"</p>
+                </div>
+            </div>
         </div>
         <div class=container>
             <ul>
@@ -198,6 +241,7 @@
     <div class="footer-bar">
 
     </div>
+    <script src="https://kit.fontawesome.com/68cd9a1066.js" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
     <script type="module" src="./js/index.js"></script>
 </body>
