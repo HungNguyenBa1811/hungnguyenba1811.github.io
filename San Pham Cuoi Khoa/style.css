@@ -49,7 +49,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.middle-bar .container .col-lg-9 .search-bar{
+.middle-bar .search-bar{
     display: flex;
     position: relative;
     background: #fff;
@@ -59,7 +59,7 @@
     height: 45px;
     float: left;
 }
-.middle-bar .container .col-lg-9 .search-bar input{
+.middle-bar .search-bar input{
     font-size: 13px;
     color: #a5a5a5;
     height: 45px;
@@ -69,7 +69,7 @@
     padding: 0 60px 0 33px;
     box-shadow: none;
 }
-.middle-bar .container .col-lg-9 .search-bar button{
+.middle-bar .search-bar button{
     border: 0;
     background: #fed700;
     color: #242424;
@@ -121,15 +121,15 @@
     white-space: nowrap;
     vertical-align: middle;
 }
-.middle-bar .container .col-lg-9 .cart-trigger .item-text {
+.middle-bar .cart-trigger .item-text {
     position: relative;
     line-height: 35px;
     font-weight: 500;
 }
-.middle-bar .container .col-lg-9 .cart-trigger .item-text i{
+.middle-bar .cart-trigger .item-text i{
     padding: 0 10px 0 5px;
 }
-.middle-bar .container .col-lg-9 .cart-trigger .basket{
+.middle-bar .cart-trigger .basket{
     padding: 0 10px;
     margin-right: 10px;
     font-size: 1.4285em;
@@ -138,11 +138,11 @@
     vertical-align: middle;
     border-right: 1px solid rgba(255,255,255,.3);
 }
-.middle-bar .container .col-lg-9 .cart-trigger .item-text{
+.middle-bar .cart-trigger .item-text{
     vertical-align: middle;
 }
 
-.middle-bar .container .col-lg-9 .cart-trigger .item-text .cart-item-count {
+.middle-bar .cart-trigger .item-text .cart-item-count {
     font-weight: 400;
     color: #242424;
     background: #fed700;
@@ -165,7 +165,7 @@
     flex-direction: row;
     margin: 10px 0;
 }
-.submenu .menu-list a{
+.submenu .menu-list .title{
     text-decoration: none;
     color: #fff;
     font-weight: 500;
@@ -174,13 +174,38 @@
     font-size: 13px;
     line-height: 35px;
 }
-.submenu .menu-list a::after{
+.drop-down-ul{
+    display: none;
+}
+.submenu .drop-down-ul a{
+	color: #fff;
+	display: block;
+	padding: 20px 22px;
+	text-decoration: none;
+	background-color: #365670;
+	border-bottom: 1px dotted #547787;
+	-webkit-transition: color 0.2s linear, background 0.2s linear;
+	-moz-transition: color 0.2s linear, background 0.2s linear;
+	-o-transition: color 0.2s linear, background 0.2s linear;
+	transition: color 0.2s linear, background 0.2s linear;
+}
+.title:hover .drop-down-ul{
+    display: block;
+}
+.submenu .menu-list .title::after{
     content: '\f107';
     font-family: FontAwesome;
     vertical-align: middle;
     padding: 0 5px;
 }
+/* slideshow */
+.slideshow .mySlide img{
+    width: 99.5%
+}
 /* banner */
+.banner-text {
+    position: relative;
+}
 .text-content {
     position: absolute;
     left: 0;
