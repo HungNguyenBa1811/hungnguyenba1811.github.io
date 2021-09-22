@@ -4,6 +4,15 @@
     box-sizing: inherit;
     font-family: 'Rubik';
 }
+body{
+    font-family: "Rubik", "HelveticaNeue", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    color: #7b7b7b;
+    font-size: 14px;
+    line-height: 24px;
+    width: 100%;
+    background: #ffffff;
+}
 /* top bar */
 .top-bar{
     background-color: #293a6c;
@@ -198,10 +207,20 @@
     vertical-align: middle;
     padding: 0 5px;
 }
+
 /* slideshow */
-.slideshow .mySlide img{
-    width: 99.5%
+.slideshow{
+    width: 99.5%;
+    position: relative;
 }
+.slideshow .mySlide{
+    position: absolute;
+}
+.mySlide .slide-text h5{
+    font-size: 18px;
+    color: #242424;
+}
+
 /* banner */
 .banner-text {
     position: relative;
@@ -214,18 +233,27 @@
     text-transform: capitalize;
     text-align: left;
     z-index: 1;
-    font-size: 1.2857em;
-    margin: 20px 0 0;
     letter-spacing: -.05em;
 }
 .diff-color {
     color: #e80f0f;
 }
-h5 {
+.text-content h5 {
     font-size: 1em;
     color: #293a6c;
     font-weight: 400;
     margin: 0 0 10px 0;
+}
+.text-content h4 {
+    font-size: 1.71429em;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -.05em;
+}
+.text-content p {
+    font-size: 1.2857em;
+    margin: 20px 0 0;
+    letter-spacing: -.05em;
 }
 /* sub row */
 .sale-off{
