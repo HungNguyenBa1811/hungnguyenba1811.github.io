@@ -210,17 +210,115 @@ body{
 
 /* slideshow */
 .slideshow{
-    width: 99.5%;
+    margin-right: -10px;
+    margin-bottom: 50px;
+}
+.slideshow .mySlide {
     position: relative;
 }
-.slideshow .mySlide{
+.slideshow .mySlide img{
+    width: 97%;
+}
+.slideshow .mySlide .slide-text {
     position: absolute;
+    padding: 50px;
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+    animation-duration: 4s;
 }
 .mySlide .slide-text h5{
     font-size: 18px;
     color: #242424;
+    font-size: 1.2857em;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    margin: 0 0 20px 0;
 }
-
+.mySlide .slide-text h4{
+    font-size: 2.5714em;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin: 0;
+    font-weight: 400;
+}
+.mySlide .slide-text p{
+    font-size: 1.2857em;
+    margin: 25px 0 50px;
+    padding: 0;
+}
+.mySlide .slide-text p span{
+    font-size: 1.6667em;
+    font-weight: 500;
+}
+.banner-btn{
+    border: none;
+    background: #fed700;
+    text-transform: uppercase;
+    color: #242424;
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.9286em;
+    line-height: 50px;
+    height: 50px;
+    padding: 0 35px;
+    transition: 0.3s;
+}
+.banner-btn:hover {
+    background: #293a6c;
+    color: #fff;
+}
+@-webkit-keyframes bounceInRight {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(2000px);
+      transform: translateX(2000px);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: translateX(-30px);
+      transform: translateX(-30px);
+    }
+  
+    80% {
+      -webkit-transform: translateX(10px);
+      transform: translateX(10px);
+    }
+  
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+}
+  
+@keyframes bounceInRight {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(2000px);
+      -ms-transform: translateX(2000px);
+      transform: translateX(2000px);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+      transform: translateX(-30px);
+    }
+  
+    80% {
+      -webkit-transform: translateX(10px);
+      -ms-transform: translateX(10px);
+      transform: translateX(10px);
+    }
+  
+    100% {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+    }
+}
 /* banner */
 .banner-text {
     position: relative;
@@ -234,6 +332,9 @@ body{
     text-align: left;
     z-index: 1;
     letter-spacing: -.05em;
+}
+.banner-text:hover .text-content{
+    opacity: 0.7;
 }
 .diff-color {
     color: #e80f0f;
