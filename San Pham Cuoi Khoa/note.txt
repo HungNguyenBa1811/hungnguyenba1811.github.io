@@ -21,13 +21,13 @@ $ PC BUILD:
 ***# OTHER ACCESSORIES:
 
 
-LOGIC & STEPS:
+STEPS:
 
 # create a js file to store products
 ## export import products to another js file
 ### create sign up & login landing page
-#### create main body theme
-##### create js cart & js maths (money)
+#### create main body theme {done}
+##### create js cart & js mafths (money)
 ###### decoration
 ####### create product details page & paying landing page
 ######## bugs fix
