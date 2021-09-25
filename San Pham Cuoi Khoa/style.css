@@ -320,6 +320,26 @@ body{
       transform: translateX(0);
     }
 }
+/* slide controller */
+.dot{
+    border: none;
+    display: inline-block;
+    height: 8px;
+    margin: 0 5px;
+    font-size: 0;
+    width: 8px;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+    background: rgba(36,36,36,.15);
+    box-shadow: none;
+    border-radius: 100%;
+    font-size: 0;
+    opacity: 1;
+}
+.whiteballs{
+    background: #fed700;
+}
 /* banner */
 .banner-text {
     position: relative;
@@ -331,11 +351,8 @@ body{
     padding: 30px;
     text-transform: capitalize;
     text-align: left;
-    z-index: 1;
+    z-index: 69;
     letter-spacing: -.05em;
-}
-.banner-text:hover .text-content{
-    opacity: 0.7;
 }
 .diff-color {
     color: #e80f0f;
@@ -360,12 +377,60 @@ body{
 /* giga chad banner */
 .big-banner{
     position: relative;
+    margin-bottom: 50px;
 }
-.big-banner .text-content {
+.big-banner .text-content h4{
+    letter-spacing: -0.025em;
+    font-size: 2.5714em;
+    line-height: 0.8333;
+    font-weight: 400;
+    margin: 0;
+}
+.big-banner .text-content a:hover{
+    color: #fff;
+    background: #293a6c;
+}
+.big-banner .text-content a{
+    font-size: 0.9286em;
+    font-weight: 500;
+    background: #fed700;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 0 30px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+.big-banner .text-content p{
+    margin: 25px 0 45px;
+}
+.big-banner .text-content p span{
+    font-weight: 500;
+    font-size: 1.7143em;
+}
+.big-banner .text-content h6{
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    margin: 0 0 15px 0;
+}
+.big-banner .text-content{
     position: absolute;
     left: 75px;
-    top: -50%;
+    top: 50%;
+    z-index: 69;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+.banner-text img,
+.big-banner img{
+    margin-bottom: 20px;
+    z-index: 1;
+}
+.banner-text img:hover,
+.big-banner img:hover{
+    opacity: .7;
 }
 /* sub row */
 .sale-off{

@@ -1,31 +1,21 @@
 import {products} from './data.js';
 
-var slideIndex;
+var slideIndex = 0;
+carousel();
 
-function showSlides() {
+function carousel() {
     let i;
-    let slides = document.getElementsByClassName("mySlide");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+    let x = document.getElementsByClassName("mySlide");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
     }
+    var dots = document.getElementsByClassName("dot");
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
+      dots[i].className = dots[i].className.replace(" whiteballs", "");
     }
- 
-    slides[slideIndex].style.display = "block";  
-    dots[slideIndex].className += "active";
-    
     slideIndex++;
-
-    if (slideIndex > slides.length - 1) {
-        slideIndex = 0
-    }    
-    
-    setTimeout(showSlides, 5000);
-}
-showSlides(slideIndex = 0);
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += "w3-white";
+    setTimeout(carousel, 5000); // Change image every 5 seconds
 }
