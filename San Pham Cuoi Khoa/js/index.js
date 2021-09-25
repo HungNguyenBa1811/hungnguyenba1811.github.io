@@ -1,19 +1,31 @@
 import {products} from './data.js';
 
-var myIndex = 0;
-carousel();
+var slideIndex;
 
-function carousel() {
+function showSlides() {
     let i;
-    let x = document.getElementsByClassName("mySlide");
-    let y = document.getElementsByClassName("slide-text");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+    let slides = document.getElementsByClassName("mySlide");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
     }
-    myIndex++;
-    if (myIndex > x.length) {
-        myIndex = 1
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+ 
+    slides[slideIndex].style.display = "block";  
+    dots[slideIndex].className += "active";
+    
+    slideIndex++;
+
+    if (slideIndex > slides.length - 1) {
+        slideIndex = 0
     }    
-    x[myIndex-1].style.display = "block"
-    setTimeout(carousel, 8000); // Change image every 5 seconds
+    
+    setTimeout(showSlides, 5000);
+}
+showSlides(slideIndex = 0);
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
 }

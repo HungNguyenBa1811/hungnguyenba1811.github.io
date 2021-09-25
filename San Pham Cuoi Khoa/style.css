@@ -268,6 +268,7 @@ body{
     background: #293a6c;
     color: #fff;
 }
+
 @-webkit-keyframes bounceInRight {
     0% {
       opacity: 0;
@@ -323,7 +324,7 @@ body{
 .banner-text {
     position: relative;
 }
-.text-content {
+.banner-text .text-content {
     position: absolute;
     left: 0;
     top: 0;
@@ -355,6 +356,16 @@ body{
     font-size: 1.2857em;
     margin: 20px 0 0;
     letter-spacing: -.05em;
+}
+/* giga chad banner */
+.big-banner{
+    position: relative;
+}
+.big-banner .text-content {
+    position: absolute;
+    left: 75px;
+    top: -50%;
+    transform: translateY(-50%);
 }
 /* sub row */
 .sale-off{
