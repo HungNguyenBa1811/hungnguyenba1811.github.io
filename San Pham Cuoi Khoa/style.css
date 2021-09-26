@@ -68,9 +68,9 @@ body{
     height: 45px;
     float: left;
 }
-.middle-bar .search-bar input{
+.middle-bar .search-bar input[type="text"]{
     font-size: 13px;
-    color: #a5a5a5;
+    color: #333;
     height: 45px;
     background: transparent;
     border: 0;
