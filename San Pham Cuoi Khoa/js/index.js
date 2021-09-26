@@ -11,11 +11,11 @@ function carousel() {
     }
     var dots = document.getElementsByClassName("dot");
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" whiteballs", "");
+      dots[i].className = dots[i].className.replace(" active-ball", "");
     }
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1}
     x[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += "w3-white";
-    setTimeout(carousel, 5000); // Change image every 5 seconds
+    dots[slideIndex-1].className += " active-ball";
+    setTimeout(carousel, 7654); // Change image every 7.654 seconds
 }

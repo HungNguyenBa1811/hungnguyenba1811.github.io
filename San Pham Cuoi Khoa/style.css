@@ -215,6 +215,7 @@ body{
 }
 .slideshow .mySlide {
     position: relative;
+    overflow: hidden;
 }
 .slideshow .mySlide img{
     width: 97%;
@@ -337,8 +338,9 @@ body{
     font-size: 0;
     opacity: 1;
 }
-.whiteballs{
+.active-ball{
     background: #fed700;
+    zoom: 1.2;
 }
 /* banner */
 .banner-text {
