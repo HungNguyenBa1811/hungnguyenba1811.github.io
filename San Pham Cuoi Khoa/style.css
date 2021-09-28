@@ -193,9 +193,9 @@ body{
 	text-decoration: none;
 	background-color: #365670;
 	border-bottom: 1px dotted #547787;
-	-webkit-transition: color 0.2s linear, background 0.2s linear;
+	/* -webkit-transition: color 0.2s linear, background 0.2s linear;
 	-moz-transition: color 0.2s linear, background 0.2s linear;
-	-o-transition: color 0.2s linear, background 0.2s linear;
+	-o-transition: color 0.2s linear, background 0.2s linear; */
 	transition: color 0.2s linear, background 0.2s linear;
 }
 .title:hover .drop-down-ul{
@@ -216,9 +216,6 @@ body{
 .slideshow .mySlide {
     position: relative;
     overflow: hidden;
-}
-.slideshow .mySlide img{
-    width: 97%;
 }
 .slideshow .mySlide .slide-text {
     position: absolute;
@@ -322,6 +319,15 @@ body{
     }
 }
 /* slide controller */
+.dot-container{
+    position: relative;
+    margin-right: -10px;
+    margin-bottom: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+    text-align: center !important;
+}
 .dot{
     border: none;
     display: inline-block;
@@ -438,6 +444,7 @@ body{
 .sale-off{
     background-image: url('./img/bg_banner.jpg');
     padding: 15px;
+    margin-bottom: 50px;
     text-align: center;
 }
 .sale-off .coupon{
@@ -448,4 +455,83 @@ body{
 }
 .sale-off .coupon #coupon_code{
     color: #fed700;
+}
+/* product */
+.title-container .heading{
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0 0 10px 0;
+    margin-bottom: 15px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+}
+.heading li {
+    list-style: none;
+    cursor: pointer;
+    margin: 0 !important;
+    padding: 0 30px;
+    border-right: 1px solid #e1e1e1;
+}
+.heading li:first-child{
+    padding-left: 0;
+}
+.heading li:last-child {
+    padding-right: 0;
+    border: none;
+}
+.heading li a{
+    background: none !important;
+    border-radius: 0;
+    padding: 0 !important;
+    margin: 0;
+    color: #c8c8c8;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+.heading .active-list a{
+    color: #242424;
+}
+.heading li:hover a::before,
+.heading li.active a::before{
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+    background: #fed700;
+    height: 1px;
+  }
+.heading li:hover a,
+.heading li .active-list a{
+  position: relative;
+}
+.heading li .active-list a:hover,
+.heading li .active-list a:focus,
+.heading li:hover a,
+.heading li .active-list a{
+  color: #242424;
+  background: none;
+}
+/* module */
+.module-title{
+    line-height: 18px;
+}
+.module-title h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 24px;
+    position: relative;
+    letter-spacing: -0.025em;
+    display: inline-block;
+}
+.module-title h2::before{
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+    background: #fed700;
+    height: 1px;
 }
