@@ -1,5 +1,4 @@
-import {products} from './data.js';
-
+// slideshow
 var slideIndex = 0;
 carousel();
 

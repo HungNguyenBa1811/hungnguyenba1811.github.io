@@ -535,3 +535,8 @@ body{
     background: #fed700;
     height: 1px;
 }
+/* product box */
+.product-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
