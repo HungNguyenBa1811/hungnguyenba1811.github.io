@@ -1,30 +1,37 @@
 let products_keyboard = [
     {
-        img: '',
+        img: './img/keyboard-1.jpg',
         name: 'Dareu EK868 Bluetooth Mechanical Gaming Keyboard',
         company: 'Dareu',
-        price: 799.00,
+        price: 10.99,
     }
     ,
     {
-        img: '',
+        img: './img/keyboard-2.jpg',
         name: 'IKBC Gundam TKL (C200)',
         company: 'IKBC',
-        price: 2065.00,
+        price: 28.99,
     }
     ,
     {
-        img: '',
+        img: './img/keyboard-3.jpg',
         name: 'Keychron K12 Wireless Mechanical Keyboard',
         company: 'Keychron',
-        price: 1450.00
+        price: 19.99
     }
     ,
     {
-        img: '',
+        img: './img/keyboard-4.jpg',
         name: 'IKBC S200 GODIVA',
         company: 'IKBC',
-        price: 1450.00
+        price: 29.99
+    }
+    ,
+    {
+        img: './img/keyboard-5.jpg',
+        name: 'IKBC Gundam RX-78-2 Version 2.0',
+        company: 'IKBC',
+        price: 30.99
     }
 ]
 export {products_keyboard}

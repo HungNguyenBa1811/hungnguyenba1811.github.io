@@ -8,7 +8,7 @@ item.addEventListener('click', function(event) {
     alert(event.target.value);
     let item = event.target.value;
     console.log('Item: ', item);
-    cartParse.push(`${item.id}`);
+    cartParse.push(`${item}`);
     localStorage.setItem('productsCart', JSON.stringify(cartParse));
     let cartFood = document.querySelector('.food-choose')
     cartFood.innerHTML += `<p class="foody"> > ${item}</p>`
