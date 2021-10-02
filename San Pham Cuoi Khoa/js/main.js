@@ -1,15 +1,15 @@
 import {products_keyboard} from './data.js';
 
-// let productsCart = []
-// let productsCartString = JSON.stringify(productsCart);
-// localStorage.setItem('productsCart', productsCartString);
+let productsCart = []
+let productsCartString = JSON.stringify(productsCart);
+localStorage.setItem('productsCart', productsCartString);
 
-// let productsString = JSON.stringify(products_keyboard)
-// console.log(productsString);
-// localStorage.setItem('products', productsString);
+let productsString = JSON.stringify(products_keyboard)
+console.log(productsString);
+localStorage.setItem('products', productsString);
 
-// let productsData = localStorage.getItem('products')
-// console.log(JSON.parse(productsData))
+let productsData = localStorage.getItem('products')
+console.log(JSON.parse(productsData))
 
 let items = document.querySelectorAll('.product-container')
 let x;

@@ -11,62 +11,83 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
     <title>Shopping</title>
-
 </head>
 <body>
-    <div class="top-bar row">
-        <nav id="top">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <nav id="top">
 
-            <ul class="list-unstyled container">
+                    <ul class="list-unstyled container">
 
-                <li>
-                    <div class="contact col-sm-4 col-lg-3">
-                        <p>Telephone Enquiry: 123456789</p>
-                    </div>
-                </li>
+                        <li>
+                            <div class="contact col-sm-4 col-lg-3">
+                                <p>Telephone Enquiry: 123456789</p>
+                            </div>
+                        </li>
 
-                <li>
+                        <li>
 
-                    <div class="button-drop col-sm-8 col-lg-9">
-                        <ul class="dropdown list-unstyled">
+                            <div class="button-drop col-sm-8 col-lg-9">
+                                <ul class="dropdown list-unstyled">
 
-                            <li class="create_border">
-                                <button class="dropdown-content">
-                                    <span>Currency:</span>
-                                    <span class="selected-currency">USD</span>
-                                    <i class="fa fa-chevron-down"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">USD $</a></li>
-                                    <li><a href="#">EUR €</a></li>
-                                    <li><a href="#">VND</a></li>
+                                    <li class="create_border">
+                                        <button class="dropdown-content" onclick="myFunction()">
+                                            <span>Currency:</span>
+                                            <span class="selected-currency">USD</span>
+                                            <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                        <ul class="sub-menu list-drop">
+                                            <li><a href="#" class="usd">USD $</a></li>
+                                            <li><a href="#" class="eur">EUR €</a></li>
+                                            <li><a href="#" class="vnd">VND</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <button class="dropdown-content-2" onclick="myFunction2()">
+                                            <span>My account</span>
+                                            <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                        <ul class="sub-menu-2 list-drop">
+                                            <li><a href="#">Sign in</a></li>
+                                            <li><a href="#">Register</a></li>
+                                            <li><a href="#">View Cart</a></li>
+                                        </ul>
+                                        <!-- <div class="btn-group shadow-0">
+                                            <button
+                                                type="button"
+                                                class="btn btn-link dropdown-toggle"
+                                                data-mdb-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Action
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider"/>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                            </ul>
+                                        </div> -->
+
+                                    </li>
+
                                 </ul>
-                            </li>
+                            </div>
 
-                            <li>
-                                <button class="dropdown-content">
-                                    <span>My account</span>
-                                    <i class="fa fa-chevron-down"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Sign in</a></li>
-                                    <li><a href="#">Register</a></li>
-                                    <li><a href="#">View Cart</a></li>
-                                </ul>
-                            </li>
+                        </li>
 
-                        </ul>
-                    </div>
-
-                </li>
-
-            </ul>
-            
-        </nav>
-
-        <div class="headerSpace" style="height:70px;"></div>
+                    </ul>
+                    
+                </nav>
+            </div>
+        </div>
         
     </div>
+
     <div class="middle-bar">
 
         <div class="container">
@@ -126,12 +147,10 @@
         <div class="container">
             <ul class="list-unstyled menu-list">
                 <li>
-                    <a href="#" class="title">HOME
-                        <ul class="drop-down-ul animated fadeIn list-unstyled">  
-                            <li><a href="#">ABOUT US</a></li>
-                        </ul>
-                    </a>
-                    
+                    <a href="#" class="title">HOME</a>
+                    <ul class="drop-down-ul list-unstyled">  
+                        <li><a href="#">ABOUT US</a></li>
+                    </ul>
                 </li>
                 <li><a href="#" class="title">CATALOG</a></li>
                 <li><a href="#" class="title">FEATURE PRODUCTS</a></li>
@@ -139,6 +158,9 @@
             </ul>
         </div>
     </div>
+    
+    <div class="headerSpace" style="height:70px"></div>
+
     <div class="main">
         <div class="container">
             <div class="row">
@@ -261,7 +283,7 @@
             </div>
 
             <div class="product-container type-3">
-
+                <button class="add-to-cart"></button>
             </div>
         </div>
         <div class="container">
@@ -320,7 +342,7 @@
     <div class="footer-bar">
 
     </div>
-    <script src="https://kit.fontawesome.com/68cd9a1066.js" crossorigin="anonymous"></script>
+    <script src="./js/slideshow.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/index.js"></script>
     <script type="module" src="./js/main.js"></script>

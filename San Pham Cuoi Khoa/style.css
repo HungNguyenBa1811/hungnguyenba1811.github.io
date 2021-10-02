@@ -32,18 +32,54 @@ body{
     content: '';
     border-right: 1px solid #2e427d;
 }
+.dropdown-menu{
+    border: none !important;
+    border-radius: 0 !important;
+}
+.list-drop{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    padding: 5px 0;
+    margin: 0;
+    left: auto !important;
+    min-width: 160px;
+    font-size: 14px;
+    text-align: center;
+    background-clip: padding-box;
+    border: none;
+    z-index: 1002;
+    top: calc(100% + 12px)
+}
 .top-bar .button-drop{
     position: relative;
 }
 .top-bar .button-drop .dropdown{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
+    text-align: right;
+}
+.top-bar .button-drop .dropdown li{
+    display: inline-block;
+}
+.top-bar .button-drop .dropdown .list-drop li{
+    display: block;
+    line-height: 1.5;
+    padding: 5px 0;
+}
+.top-bar .button-drop .dropdown .list-drop li a{
+    color: #000 !important;
+}
+.top-bar .button-drop .dropdown .list-drop li:hover{
+    background-color: #ccc;
+}
+.top-bar .button-drop .dropdown .list-drop li:hover a{
+    text-decoration: none;
 }
 .top-bar .button-drop .dropdown i{
     padding-left: 4px;
 }
-.top-bar .button-drop .dropdown .dropdown-content{
+.top-bar .button-drop .dropdown .dropdown-content,
+.top-bar .button-drop .dropdown .dropdown-content-2{
     border: none;
     background-color: transparent;
     padding: 0 20px;
@@ -179,24 +215,30 @@ body{
     color: #fff;
     font-weight: 500;
     vertical-align: middle;
-    padding: 8px 10px;
-    font-size: 13px;
+    padding: 13px 25px 13px 25px;
+    font-size: 14px;
     line-height: 35px;
+    position: relative;
 }
 .drop-down-ul{
     display: none;
+    float: left;
+    position: absolute;
 }
-.submenu .drop-down-ul a{
+.drop-down-ul li a{
+    text-decoration: none;
+    color: black;
+}
+.submenu .menu-list li:hover .drop-down-ul{
 	color: #fff;
 	display: block;
 	padding: 20px 22px;
 	text-decoration: none;
-	background-color: #365670;
-	border-bottom: 1px dotted #547787;
-	/* -webkit-transition: color 0.2s linear, background 0.2s linear;
-	-moz-transition: color 0.2s linear, background 0.2s linear;
-	-o-transition: color 0.2s linear, background 0.2s linear; */
-	transition: color 0.2s linear, background 0.2s linear;
+	background-color: #fff;
+    width: 200px;
+}
+.submenu .menu-list li:hover .drop-down-ul li a:hover{
+    color: #0363cd;
 }
 .title:hover .drop-down-ul{
     display: block;
