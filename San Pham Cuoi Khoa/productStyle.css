@@ -195,6 +195,22 @@
     font-size: 0.8571em;
     text-transform: uppercase;
 }
+.manu-rating{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ebebeb;
+    min-height: 35px;
+}
+.manufacture-product {
+    margin: 0;
+    line-height: 1;
+}
+.manufacture-product a {
+    color: #a4a4a4;
+    cursor: pointer;
+    font-size: .9286em;
+}
 /* list */
 .list-style:hover .price-container{
     opacity: 0 !important;

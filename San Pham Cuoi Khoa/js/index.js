@@ -1,4 +1,4 @@
-let addToCartBtn = document.querySelectorAll(".add-to-cart");
+let addToCartBtn = document.querySelectorAll(".btn-cart");
 let showNumProduct = document.querySelector(".cart-item-count");
 let keys  = Object.keys(localStorage)
 let cart = []
@@ -8,7 +8,7 @@ if(keys.length){
   numProduct = localStorage.getItem('numProduct')
 }
 showNumProduct.innerHTML = numProduct;
-// Increse num product
+// Increase num product
 for (let y of addToCartBtn) {
   y.onclick = () => {
     ++numProduct;
@@ -29,23 +29,23 @@ for (let y of addToCartBtn) {
   };
 }
 
-let item = document.querySelector('.product-container')
-let cartParse = JSON.parse(localStorage.getItem('productsCart'))
+// let item = document.querySelector('.product-container')
+// let cartParse = JSON.parse(localStorage.getItem('productsCart'))
 
 
-console.log('cartParse', cartParse);
-item.addEventListener('click', function(event) {
-    let item = event.target.value;
-    console.log('Item: ', item);
-    cartParse.push(`${item.id}`);
-    localStorage.setItem('productsCart', JSON.stringify(cartParse));
-    let cartFood = document.querySelector('.item-choose')
-    cartFood.innerHTML += `<p class="foody">${item}</p>`
-})
+// console.log('cartParse', cartParse);
+// item.addEventListener('click', function(event) {
+//     let item = event.target.value;
+//     console.log('Item: ', item);
+//     cartParse.push(`${item}`);
+//     localStorage.setItem('productsCart', JSON.stringify(cartParse));
+//     let cartFood = document.querySelector('.item-choose')
+//     cartFood.innerHTML += `<p class="product">${item}</p>`
+// })
 
-function resetCart() {
-    document.querySelector('.food-choose').innerHTML = ''
-}
+// function resetCart() {
+//     document.querySelector('.food-choose').innerHTML = ''
+// }
 // Toggle
 function myFunction() {
   document.querySelector(".sub-menu").classList.toggle("show");
