@@ -1,4 +1,7 @@
 /* product grid */
+.spaces{
+    margin-bottom: 60px;
+}
 .owl-item {
     min-height: 1px;
     float: left;
