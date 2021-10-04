@@ -10,7 +10,7 @@ localStorage.setItem('keyboard', keyboardString);
 let items_keyboard = document.querySelector('.product-container-1')
 let items_headphone = document.querySelector('.product-container-2')
 let x;
-for (x of products_keyboard){
+for (x of products){
     if(x.type === 'keyboard'){
         items_keyboard.innerHTML += `
         <div class="owl-item active" style="width: 240px;">
@@ -53,7 +53,7 @@ for (x of products_keyboard){
                             </div>
                             <div class="product-intro">
                                 <div class="action-link2">
-                                    <button class="btn-cart add-to-cart" type="button" title="" onclick="" value='${x.name}'>
+                                    <button class="btn-cart" type="button" title="" onclick="" value=${x.name}>
                                         <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
                                     </button>
                                     <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
@@ -112,7 +112,7 @@ for (x of products_keyboard){
                             </div>
                             <div class="product-intro">
                                 <div class="action-link2">
-                                    <button class="btn-cart add-to-cart" type="button" title="" onclick="" value='${x.name}'>
+                                    <button class="btn-cart" type="button" title="" onclick="" value=${x.name}>
                                         <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
                                     </button>
                                     <button class="btn-wishlist btn btn-default wishlist-btn" type="button">

@@ -153,7 +153,7 @@ body{
     display: inline-block;
     position: relative;
 }
-.middle-bar .cart-trigger .btn-cart{
+.middle-bar .cart-trigger .add-to-cart{
     border: 0;
     border-radius: 5px;
     background: #e80f0f;
@@ -243,7 +243,7 @@ body{
 .title:hover .drop-down-ul{
     display: block;
 }
-.submenu .menu-list .title::after{
+.submenu .menu-list .title-dropdown::after{
     content: '\f107';
     font-family: FontAwesome;
     vertical-align: middle;

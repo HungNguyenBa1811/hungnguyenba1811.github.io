@@ -96,10 +96,10 @@
                     <a href="#" class="account-link">
                         <i class="fal fa-user-alt"></i>
                     </a>
-                    <div class="cart-trigger">
+                    <div class="cart-trigger" id="cart">
                         <ul class="list-unstyled minicart">
                             <li>
-                                <button class="btn-cart">
+                                <button class="add-to-cart" onclick="myFunction3()">
                                     <i class="far fa-shopping-cart basket"></i>
                                     <span class="item-text">
                                         <span class="cart-item-count">0</span>
@@ -111,7 +111,26 @@
                                     </span>
 
                                 </button>
-
+                                <ul class="list-drop list-unstyled cart-list empty">
+                                    <li class="has-scroll">
+                                      <p class="text-center cart-empty">Your shopping cart is empty!</p><table class="table">
+                                        <tbody>
+                                        </tbody>
+                                      </table>
+                                    </li>
+                                    <li class="hide">
+                                      <table class="table">
+                                        <tbody><tr>
+                                          <td class="text-left">Subtotal :</td>
+                                          <td class="text-right" id="cart-subtotal"><span class="money" data-currency-usd="$0.00">$0.00</span></td>
+                                        </tr>
+                                      </tbody></table>
+                                      <p class="text-center cart-button">
+                                        <a href="/cart">View Cart</a> 
+                                        <a href="/checkout">Checkout</a>
+                                      </p>
+                                    </li>
+                                  </ul>
                             </li>
 
                         </ul>
@@ -130,14 +149,14 @@
         <div class="container">
             <ul class="list-unstyled menu-list">
                 <li>
-                    <a href="#" class="title">HOME</a>
-                    <ul class="drop-down-ul list-unstyled">  
+                    <a href="./index.html" class="title">HOME</a>
+                    <!-- <ul class="drop-down-ul list-unstyled">  
                         <li><a href="#">ABOUT US</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
-                <li><a href="#" class="title">CATALOG</a></li>
-                <li><a href="#" class="title">FEATURE PRODUCTS</a></li>
-                <li><a href="#" class="title">FAQ PAGE</a></li>
+                <li><a href="#" class="title title-dropdown">CATALOG</a></li>
+                <li><a href="#" class="title title-dropdown">FEATURE PRODUCTS</a></li>
+                <li><a href="#" class="title">ABOUT US</a></li>
             </ul>
         </div>
     </div>

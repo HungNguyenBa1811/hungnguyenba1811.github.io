@@ -7,10 +7,15 @@ if(keys.length){
   cart = JSON.parse(localStorage.getItem('cart'))
   numProduct = localStorage.getItem('numProduct')
 }
-showNumProduct.innerHTML = numProduct;
+if(numProduct == 0){
+  showNumProduct.innerHTML = '0'
+}else{
+  showNumProduct.innerHTML = numProduct;
+}
+
 // Increase num product
 for (let y of addToCartBtn) {
-  y.onclick = () => {
+  y.addEventListener('click', () => {
     ++numProduct;
     showNumProduct.innerHTML = numProduct;
     let product = {
@@ -26,7 +31,7 @@ for (let y of addToCartBtn) {
     // cart.push(product)
     // localStorage.setItem('cart',JSON.stringify(cart))
     // localStorage.setItem('numProduct',numProduct)
-  };
+  })
 }
 
 // let item = document.querySelector('.product-container')
@@ -53,10 +58,13 @@ function myFunction() {
 function myFunction2() {
   document.querySelector(".sub-menu-2").classList.toggle("show");
 }
+function myFunction3() {
+  document.querySelector(".cart-list").classList.toggle("show");
+}
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.dropdown-content') || !event.target.matches('.dropdown-content-2')) {
+  if (!event.target.matches('.dropdown-content') || !event.target.matches('.dropdown-content-2') || !event.target.matches('.cart-list') ) {
     let dropdowns = document.querySelector(".sub-menu");
     let i;
     for (i = 0; i < dropdowns.length; i++) {
@@ -71,6 +79,14 @@ window.onclick = function(event) {
       let openDropdown_2 = dropdowns_2[k];
       if (openDropdown_2.classList.contains('show')) {
         openDropdown_2.classList.remove('show');
+      }
+    }
+    let dropdowns_3 = document.querySelector(".cart-list");
+    let l;
+    for (l = 0; l < dropdowns_3.length; l++) {
+      let openDropdown_3 = dropdowns_3[l];
+      if (openDropdown_3.classList.contains('show')) {
+        openDropdown_3.classList.remove('show');
       }
     }
   }
