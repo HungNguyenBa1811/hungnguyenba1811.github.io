@@ -3,40 +3,74 @@ let showNumProduct = document.querySelector(".cart-item-count");
 let keys  = Object.keys(localStorage)
 let cart = []
 let numProduct = 0;
-if(keys.length){
-  cart = JSON.parse(localStorage.getItem('cart'))
-  numProduct = localStorage.getItem('numProduct')
-}
-if(numProduct == 0){
-  showNumProduct.innerHTML = '0'
-}else{
-  showNumProduct.innerHTML = numProduct;
-}
+let numPrice = 0;
 
+// Math.round( *100)/100;
 // Increase num product
-for (let y of addToCartBtn) {
-  y.addEventListener('click', () => {
-    ++numProduct;
-    showNumProduct.innerHTML = numProduct;
-    let product = {
-      name: "",
-      image: "",
-      price: "",
-    };
-    let productDom = y.parentElement.children;
-    console.log(productDom[0])
-    // product.name = productDom[2].innerHTML;
-    // product.price = productDom[0].innerHTML;
-    // product.image = ""
-    // cart.push(product)
-    // localStorage.setItem('cart',JSON.stringify(cart))
-    // localStorage.setItem('numProduct',numProduct)
-  })
-}
+// for (let y of addToCartBtn) {
+//   y.addEventListener('click', () => {
+//     ++numProduct;
+//     showNumProduct.innerHTML = numProduct;
+//     let product = {
+//       name: "",
+//       image: "",
+//       price: "",
+//     };
+//     let productDom = y.parentElement.children;
+//     console.log(productDom[0])
+//     // product.name = productDom[2].innerHTML;
+//     // product.price = productDom[0].innerHTML;
+//     // product.image = ""
+//     // cart.push(product)
+//     // localStorage.setItem('cart',JSON.stringify(cart))
+//     // localStorage.setItem('numProduct',numProduct)
+//   })
+// }
+
+let addNumProduct = () => {
+  ++numProduct;
+  showNumProduct.innerHTML = numProduct;
+};
 
 // let item = document.querySelector('.product-container')
 // let cartParse = JSON.parse(localStorage.getItem('productsCart'))
 
+//showPro
+let mainProd = document.getElementById('main-content');
+//fnc list
+function showList(productsData){
+
+    for(let prod of productsData){
+        let imageUrl = prod.imageUrl;
+        let name = prod.name;
+        let brand = prod.brand;
+        let price = prod.price;
+        let size = prod.size;
+        let sex = prod.sex;
+        let scent = prod.scent;
+        product(imageUrl,name, brand,price,size,sex,scent);
+    }
+}
+// console.log(showList);
+showList(productsData);
+// fnc prod
+function product(imageUrl,name, brand,price,size,sex,scent){
+
+    // console.log(mainProd)
+    mainProd.insertAdjacentHTML('beforeend',`
+    <div class="main-item">
+        <div class="main-pic">
+            <img wirdth="170" height="170" src="${imageUrl}" alt="${name}"/>
+        </div>
+        <div class="title">
+            <b>${brand}</b><br/>
+            <span>${price}</span>
+          <button>buy</button>
+        </div>
+    </div>
+    `
+    );
+}
 
 // console.log('cartParse', cartParse);
 // item.addEventListener('click', function(event) {
