@@ -33,334 +33,103 @@ var hardware_product = products.filter(function(hardware){
     return hardware.type == `hardware`;
 });
 
-console.log(keyboard_product)
-console.log(headphone_product)
-console.log(chair_product)
-console.log(mouse_product)
-console.log(hardware_product)
+let content = (x) => `
+    <div class="owl-item active" style="width: 240px;">
+        <div class="row_items">
+            <div class="product-layout product-grid">
+                <div class="product-thumb transition">
+                    <div class="image swatches-image-container">
+                        <a href="#" class="">
+                            <img 
+                                class="img-responsive img-default-image img-cate-1951471894587-1543060429425"
+                                src="${x.img}"
+                                class="img-1">
+                            <div class="img-2"></div>
+                        </a>  
+                        <div class="action-link"> 
+                            <button class="btn-quickview quickview" type="button" title="Quick View">
+                                <i class="icon-eye"></i><span>Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- image -->
+                    <div class="product-inner">
+                        <div class="product-caption swtch">
+                            <div class="manu-rating">
+                                <p class="manufacture-product">
+                                    <a>${x.company}</a>
+                                </p>
+                            </div>
+                            <h4 class="product-name">
+                                ${x.name}
+                            </h4>
+                            <div class="price-container">
+                                <p class="price">
+                                    <span class="price-new">${'$' + Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100}</span>
+                                    <span class="price-old">${'$' + x.oldPrice}</span>
+                                </p>
+                                <div class="label-product l_sale">
+                                    <span>${x.saleOff + ' OFF'}</span>
+                                </div>
+                            </div>
+                            <!-- price-container -->
+                        </div>
+                        <div class="product-intro">
+                            <div class="action-link2">
+                                <button class="btn-cart" type="button" value=${'$' + Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100} onclick="addNumProduct()">
+                                    <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
+                                </button>
+                                <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
+                                    <i class="far fa-heart"></i><span>Add to Wish List</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                <!-- caption -->
+                </div>
+            <!-- product-thumb -->
+            </div>
+            <!-- product-layout -->
+        </div>
+    </div>`
 
 function update_keyboardproduct(){
     items_keyboard.innerHTML = '';
 
-    for(let keyboardYES of keyboard_product){
-        items_keyboard.insertAdjacentHTML('beforeend', `
-        <div class="owl-item active" style="width: 240px;">
-            <div class="row_items">
-                <div class="product-layout product-grid">
-                    <div class="product-thumb transition">
-                        <div class="image swatches-image-container">
-                            <a href="#" class="">
-                                <img 
-                                    class="img-responsive img-default-image img-cate-1951471894587-1543060429425"
-                                    src="${keyboardYES.img}">
-                            </a>  
-                            <div class="action-link"> 
-                                <button class="btn-quickview quickview" type="button" title="Quick View">
-                                    <i class="icon-eye"></i><span>Quick View</span>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- image -->
-                        <div class="product-inner">
-                            <div class="product-caption swtch">
-                                <div class="manu-rating">
-                                    <p class="manufacture-product">
-                                        <a>${keyboardYES.company}</a>
-                                    </p>
-                                </div>
-                                <h4 class="product-name">
-                                    ${keyboardYES.name}
-                                </h4>
-                                <div class="price-container">
-                                    <p class="price">
-                                        <span class="price-new" value=${'$' + Math.round((keyboardYES.oldPrice * (1 - keyboardYES.saleOffValue)) * 100) / 100}>${'$' + Math.round((keyboardYES.oldPrice * (1 - keyboardYES.saleOffValue)) * 100) / 100}</span>
-                                        <span class="price-old">${'$' + keyboardYES.oldPrice}</span>
-                                    </p>
-                                    <div class="label-product l_sale">
-                                        <span>${keyboardYES.saleOff + ' OFF'}</span>
-                                    </div>
-                                </div>
-                                <!-- price-container -->
-                            </div>
-                            <div class="product-intro">
-                                <div class="action-link2">
-                                    <button class="btn-cart" type="button" title="" onclick="addNumProduct()" value=${keyboardYES.name}>
-                                        <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
-                                    </button>
-                                    <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
-                                        <i class="far fa-heart"></i><span>Add to Wish List</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- caption -->
-                    </div>
-                <!-- product-thumb -->
-                </div>
-                <!-- product-layout -->
-            </div>
-        </div>`
-        )
+    for(let x of keyboard_product){
+        items_keyboard.insertAdjacentHTML('beforeend', content(x))
     }
 }
 
 function update_headphoneproduct(){
     items_headphone.innerHTML = '';
 
-    for(let headphoneYES of headphone_product){
-        items_headphone.insertAdjacentHTML('beforeend', `
-        <div class="owl-item active" style="width: 240px;">
-            <div class="row_items">
-                <div class="product-layout product-grid">
-                    <div class="product-thumb transition">
-                        <div class="image swatches-image-container">
-                            <a href="#" class="">
-                                <img 
-                                    class="img-responsive img-default-image img-cate-1951471894587-1543060429425"
-                                    src="${headphoneYES.img}">
-                            </a>  
-                            <div class="action-link"> 
-                                <button class="btn-quickview quickview" type="button" title="Quick View">
-                                    <i class="icon-eye"></i><span>Quick View</span>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- image -->
-                        <div class="product-inner">
-                            <div class="product-caption swtch">
-                                <div class="manu-rating">
-                                    <p class="manufacture-product">
-                                        <a>${headphoneYES.company}</a>
-                                    </p>
-                                </div>
-                                <h4 class="product-name">
-                                    ${headphoneYES.name}
-                                </h4>
-                                <div class="price-container">
-                                    <p class="price">
-                                        <span class="price-new" value=${'$' + Math.round((headphoneYES.oldPrice * (1 - headphoneYES.saleOffValue)) * 100) / 100}>${'$' + Math.round((headphoneYES.oldPrice * (1 - headphoneYES.saleOffValue)) * 100) / 100}</span>
-                                        <span class="price-old">${'$' + headphoneYES.oldPrice}</span>
-                                    </p>
-                                    <div class="label-product l_sale">
-                                        <span>${headphoneYES.saleOff + ' OFF'}</span>
-                                    </div>
-                                </div>
-                                <!-- price-container -->
-                            </div>
-                            <div class="product-intro">
-                                <div class="action-link2">
-                                    <button class="btn-cart" type="button" title="" onclick="addNumProduct()" value=${headphoneYES.name}>
-                                        <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
-                                    </button>
-                                    <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
-                                        <i class="far fa-heart"></i><span>Add to Wish List</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- caption -->
-                    </div>
-                <!-- product-thumb -->
-                </div>
-                <!-- product-layout -->
-            </div>
-        </div>`
-        )
+    for(let x of headphone_product){
+        items_headphone.insertAdjacentHTML('beforeend', content(x))
     }
 }
 
 function update_chairproduct(){
     items_chair.innerHTML = '';
 
-    for(let chairYES of chair_product){
-        items_chair.insertAdjacentHTML('beforeend', `
-        <div class="owl-item active" style="width: 240px;">
-            <div class="row_items">
-                <div class="product-layout product-grid">
-                    <div class="product-thumb transition">
-                        <div class="image swatches-image-container">
-                            <a href="#" class="">
-                                <img 
-                                    class="img-responsive img-default-image img-cate-1951471894587-1543060429425"
-                                    src="${chairYES.img}">
-                            </a>  
-                            <div class="action-link"> 
-                                <button class="btn-quickview quickview" type="button" title="Quick View">
-                                    <i class="icon-eye"></i><span>Quick View</span>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- image -->
-                        <div class="product-inner">
-                            <div class="product-caption swtch">
-                                <div class="manu-rating">
-                                    <p class="manufacture-product">
-                                        <a>${chairYES.company}</a>
-                                    </p>
-                                </div>
-                                <h4 class="product-name">
-                                    ${chairYES.name}
-                                </h4>
-                                <div class="price-container">
-                                    <p class="price">
-                                        <span class="price-new" value=${'$' + Math.round((chairYES.oldPrice * (1 - chairYES.saleOffValue)) * 100) / 100}>${'$' + Math.round((chairYES.oldPrice * (1 - chairYES.saleOffValue)) * 100) / 100}</span>
-                                        <span class="price-old">${'$' + chairYES.oldPrice}</span>
-                                    </p>
-                                    <div class="label-product l_sale">
-                                        <span>${chairYES.saleOff + ' OFF'}</span>
-                                    </div>
-                                </div>
-                                <!-- price-container -->
-                            </div>
-                            <div class="product-intro">
-                                <div class="action-link2">
-                                    <button class="btn-cart" type="button" title="" onclick="addNumProduct()" value=${chairYES.name}>
-                                        <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
-                                    </button>
-                                    <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
-                                        <i class="far fa-heart"></i><span>Add to Wish List</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- caption -->
-                    </div>
-                <!-- product-thumb -->
-                </div>
-                <!-- product-layout -->
-            </div>
-        </div>`
-        )
+    for(let x of chair_product){
+        items_chair.insertAdjacentHTML('beforeend', content(x))
     }
 }
 
 function update_mouseproduct(){
     items_mouse.innerHTML = '';
 
-    for(let mouseYES of mouse_product){
-        items_mouse.insertAdjacentHTML('beforeend', `
-        <div class="owl-item active" style="width: 240px;">
-            <div class="row_items">
-                <div class="product-layout product-grid">
-                    <div class="product-thumb transition">
-                        <div class="image swatches-image-container">
-                            <a href="#" class="">
-                                <img 
-                                    class="img-responsive img-default-image img-cate-1951471894587-1543060429425"
-                                    src="${mouseYES.img}">
-                            </a>  
-                            <div class="action-link"> 
-                                <button class="btn-quickview quickview" type="button" title="Quick View">
-                                    <i class="icon-eye"></i><span>Quick View</span>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- image -->
-                        <div class="product-inner">
-                            <div class="product-caption swtch">
-                                <div class="manu-rating">
-                                    <p class="manufacture-product">
-                                        <a>${mouseYES.company}</a>
-                                    </p>
-                                </div>
-                                <h4 class="product-name">
-                                    ${mouseYES.name}
-                                </h4>
-                                <div class="price-container">
-                                    <p class="price">
-                                        <span class="price-new" value=${'$' + Math.round((mouseYES.oldPrice * (1 - mouseYES.saleOffValue)) * 100) / 100}>${'$' + Math.round((mouseYES.oldPrice * (1 - mouseYES.saleOffValue)) * 100) / 100}</span>
-                                        <span class="price-old">${'$' + mouseYES.oldPrice}</span>
-                                    </p>
-                                    <div class="label-product l_sale">
-                                        <span>${mouseYES.saleOff + ' OFF'}</span>
-                                    </div>
-                                </div>
-                                <!-- price-container -->
-                            </div>
-                            <div class="product-intro">
-                                <div class="action-link2">
-                                    <button class="btn-cart" type="button" title="" onclick="addNumProduct()" value=${mouseYES.name}>
-                                        <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
-                                    </button>
-                                    <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
-                                        <i class="far fa-heart"></i><span>Add to Wish List</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- caption -->
-                    </div>
-                <!-- product-thumb -->
-                </div>
-                <!-- product-layout -->
-            </div>
-        </div>`
-        )
+    for(let x of mouse_product){
+        items_mouse.insertAdjacentHTML('beforeend', content(x))
     }
 }
 
 function update_hardwareproduct(){
     items_hardware.innerHTML = '';
 
-    for(let hardwareYES of hardware_product){
-        items_hardware.insertAdjacentHTML('beforeend', `
-        <div class="owl-item active" style="width: 240px;">
-            <div class="row_items">
-                <div class="product-layout product-grid">
-                    <div class="product-thumb transition">
-                        <div class="image swatches-image-container">
-                            <a href="#" class="">
-                                <img 
-                                    class="img-responsive img-default-image img-cate-1951471894587-1543060429425"
-                                    src="${hardwareYES.img}">
-                            </a>  
-                            <div class="action-link"> 
-                                <button class="btn-quickview quickview" type="button" title="Quick View">
-                                    <i class="icon-eye"></i><span>Quick View</span>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- image -->
-                        <div class="product-inner">
-                            <div class="product-caption swtch">
-                                <div class="manu-rating">
-                                    <p class="manufacture-product">
-                                        <a>${hardwareYES.company}</a>
-                                    </p>
-                                </div>
-                                <h4 class="product-name">
-                                    ${hardwareYES.name}
-                                </h4>
-                                <div class="price-container">
-                                    <p class="price">
-                                        <span class="price-new" value=${'$' + Math.round((hardwareYES.oldPrice * (1 - hardwareYES.saleOffValue)) * 100) / 100}>${'$' + Math.round((hardwareYES.oldPrice * (1 - hardwareYES.saleOffValue)) * 100) / 100}</span>
-                                        <span class="price-old">${'$' + hardwareYES.oldPrice}</span>
-                                    </p>
-                                    <div class="label-product l_sale">
-                                        <span>${hardwareYES.saleOff + ' OFF'}</span>
-                                    </div>
-                                </div>
-                                <!-- price-container -->
-                            </div>
-                            <div class="product-intro">
-                                <div class="action-link2">
-                                    <button class="btn-cart" type="button" title="" onclick="addNumProduct()" value=${hardwareYES.name}>
-                                        <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
-                                    </button>
-                                    <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
-                                        <i class="far fa-heart"></i><span>Add to Wish List</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- caption -->
-                    </div>
-                <!-- product-thumb -->
-                </div>
-                <!-- product-layout -->
-            </div>
-        </div>`
-        )
+    for(let x of hardware_product){
+        items_hardware.insertAdjacentHTML('beforeend', content(x))
     }
 }
 

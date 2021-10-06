@@ -35,42 +35,42 @@ let addNumProduct = () => {
 // let item = document.querySelector('.product-container')
 // let cartParse = JSON.parse(localStorage.getItem('productsCart'))
 
-//showPro
-let mainProd = document.getElementById('main-content');
-//fnc list
-function showList(productsData){
+// //showPro
+// let mainProd = document.getElementById('main-content');
+// //fnc list
+// function showList(productsData){
 
-    for(let prod of productsData){
-        let imageUrl = prod.imageUrl;
-        let name = prod.name;
-        let brand = prod.brand;
-        let price = prod.price;
-        let size = prod.size;
-        let sex = prod.sex;
-        let scent = prod.scent;
-        product(imageUrl,name, brand,price,size,sex,scent);
-    }
-}
-// console.log(showList);
-showList(productsData);
-// fnc prod
-function product(imageUrl,name, brand,price,size,sex,scent){
+//     for(let prod of productsData){
+//         let imageUrl = prod.imageUrl;
+//         let name = prod.name;
+//         let brand = prod.brand;
+//         let price = prod.price;
+//         let size = prod.size;
+//         let sex = prod.sex;
+//         let scent = prod.scent;
+//         product(imageUrl,name, brand,price,size,sex,scent);
+//     }
+// }
+// // console.log(showList);
+// showList(productsData);
+// // fnc prod
+// function product(imageUrl,name, brand,price,size,sex,scent){
 
-    // console.log(mainProd)
-    mainProd.insertAdjacentHTML('beforeend',`
-    <div class="main-item">
-        <div class="main-pic">
-            <img wirdth="170" height="170" src="${imageUrl}" alt="${name}"/>
-        </div>
-        <div class="title">
-            <b>${brand}</b><br/>
-            <span>${price}</span>
-          <button>buy</button>
-        </div>
-    </div>
-    `
-    );
-}
+//     // console.log(mainProd)
+//     mainProd.insertAdjacentHTML('beforeend',`
+//     <div class="main-item">
+//         <div class="main-pic">
+//             <img wirdth="170" height="170" src="${imageUrl}" alt="${name}"/>
+//         </div>
+//         <div class="title">
+//             <b>${brand}</b><br/>
+//             <span>${price}</span>
+//           <button>buy</button>
+//         </div>
+//     </div>
+//     `
+//     );
+// }
 
 // console.log('cartParse', cartParse);
 // item.addEventListener('click', function(event) {
@@ -95,6 +95,8 @@ function myFunction2() {
 function myFunction3() {
   document.querySelector(".cart-list").classList.toggle("show");
 }
+
+// Zoom Image
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
@@ -131,5 +133,20 @@ let eur = document.querySelector('.eur')
 let vnd = document.querySelector('.vnd')
 
 usd.addEventListener('click', function(){
-  document.querySelector('.selected-country')
+  document.querySelector('.currency').innerHTML = '$'
+  document.querySelector('.show').classList.remove('show')
+  let xyz = document.querySelector('.bigmoney').innerHTML
 })
+
+eur.addEventListener('click', function(){
+    document.querySelector('.currency').innerHTML = '€'
+    document.querySelector('.show').classList.remove('show')
+})
+
+vnd.addEventListener('click', function(){
+    document.querySelector('.currency').innerHTML = '₫'
+    document.querySelector('.show').classList.remove('show')
+})
+
+// Search bar
+let input_search = document.getElementById('input');

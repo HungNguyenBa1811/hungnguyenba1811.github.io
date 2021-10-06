@@ -2,7 +2,7 @@ import {products} from "./data.js";
 
 let items = document.querySelector('.item-container')
 let items_1 = document.querySelector('.item-container-1')
-let content = `
+let content = () => `
         <div class="layout">
 
             <div class="company-name">
@@ -21,9 +21,9 @@ let content = `
 let x;
 for (x of products){
     if(x.type === 'keyboard'){
-        items.innerHTML += content;
+        items.innerHTML += content();
     }else if(x.type === 'headphone'){
-        items_1.innerHTML += content;
+        items_1.innerHTML += content();
     }
     
 }
