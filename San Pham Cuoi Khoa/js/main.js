@@ -10,6 +10,8 @@ import {products} from './data.js';
 let items_keyboard = document.querySelector('.product-container-1')
 let items_headphone = document.querySelector('.product-container-2')
 let items_chair = document.querySelector('.product-container-3')
+let items_mouse = document.querySelector('.product-container-4')
+let items_hardware = document.querySelector('.product-container-5')
 
 var keyboard_product = products.filter(function(keyboard){
     return keyboard.type == `keyboard`;
@@ -23,9 +25,19 @@ var chair_product = products.filter(function(chair){
     return chair.type == `chair`;
 });
 
+var mouse_product = products.filter(function(mouse){
+    return mouse.type == `mouse`;
+});
+
+var hardware_product = products.filter(function(hardware){
+    return hardware.type == `hardware`;
+});
+
 console.log(keyboard_product)
 console.log(headphone_product)
 console.log(chair_product)
+console.log(mouse_product)
+console.log(hardware_product)
 
 function update_keyboardproduct(){
     items_keyboard.innerHTML = '';
@@ -91,6 +103,7 @@ function update_keyboardproduct(){
         )
     }
 }
+
 function update_headphoneproduct(){
     items_headphone.innerHTML = '';
 
@@ -155,6 +168,7 @@ function update_headphoneproduct(){
         )
     }
 }
+
 function update_chairproduct(){
     items_chair.innerHTML = '';
 
@@ -220,6 +234,138 @@ function update_chairproduct(){
     }
 }
 
+function update_mouseproduct(){
+    items_mouse.innerHTML = '';
+
+    for(let mouseYES of mouse_product){
+        items_mouse.insertAdjacentHTML('beforeend', `
+        <div class="owl-item active" style="width: 240px;">
+            <div class="row_items">
+                <div class="product-layout product-grid">
+                    <div class="product-thumb transition">
+                        <div class="image swatches-image-container">
+                            <a href="#" class="">
+                                <img 
+                                    class="img-responsive img-default-image img-cate-1951471894587-1543060429425"
+                                    src="${mouseYES.img}">
+                            </a>  
+                            <div class="action-link"> 
+                                <button class="btn-quickview quickview" type="button" title="Quick View">
+                                    <i class="icon-eye"></i><span>Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- image -->
+                        <div class="product-inner">
+                            <div class="product-caption swtch">
+                                <div class="manu-rating">
+                                    <p class="manufacture-product">
+                                        <a>${mouseYES.company}</a>
+                                    </p>
+                                </div>
+                                <h4 class="product-name">
+                                    ${mouseYES.name}
+                                </h4>
+                                <div class="price-container">
+                                    <p class="price">
+                                        <span class="price-new" value=${'$' + Math.round((mouseYES.oldPrice * (1 - mouseYES.saleOffValue)) * 100) / 100}>${'$' + Math.round((mouseYES.oldPrice * (1 - mouseYES.saleOffValue)) * 100) / 100}</span>
+                                        <span class="price-old">${'$' + mouseYES.oldPrice}</span>
+                                    </p>
+                                    <div class="label-product l_sale">
+                                        <span>${mouseYES.saleOff + ' OFF'}</span>
+                                    </div>
+                                </div>
+                                <!-- price-container -->
+                            </div>
+                            <div class="product-intro">
+                                <div class="action-link2">
+                                    <button class="btn-cart" type="button" title="" onclick="addNumProduct()" value=${mouseYES.name}>
+                                        <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
+                                    </button>
+                                    <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
+                                        <i class="far fa-heart"></i><span>Add to Wish List</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- caption -->
+                    </div>
+                <!-- product-thumb -->
+                </div>
+                <!-- product-layout -->
+            </div>
+        </div>`
+        )
+    }
+}
+
+function update_hardwareproduct(){
+    items_hardware.innerHTML = '';
+
+    for(let hardwareYES of hardware_product){
+        items_hardware.insertAdjacentHTML('beforeend', `
+        <div class="owl-item active" style="width: 240px;">
+            <div class="row_items">
+                <div class="product-layout product-grid">
+                    <div class="product-thumb transition">
+                        <div class="image swatches-image-container">
+                            <a href="#" class="">
+                                <img 
+                                    class="img-responsive img-default-image img-cate-1951471894587-1543060429425"
+                                    src="${hardwareYES.img}">
+                            </a>  
+                            <div class="action-link"> 
+                                <button class="btn-quickview quickview" type="button" title="Quick View">
+                                    <i class="icon-eye"></i><span>Quick View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- image -->
+                        <div class="product-inner">
+                            <div class="product-caption swtch">
+                                <div class="manu-rating">
+                                    <p class="manufacture-product">
+                                        <a>${hardwareYES.company}</a>
+                                    </p>
+                                </div>
+                                <h4 class="product-name">
+                                    ${hardwareYES.name}
+                                </h4>
+                                <div class="price-container">
+                                    <p class="price">
+                                        <span class="price-new" value=${'$' + Math.round((hardwareYES.oldPrice * (1 - hardwareYES.saleOffValue)) * 100) / 100}>${'$' + Math.round((hardwareYES.oldPrice * (1 - hardwareYES.saleOffValue)) * 100) / 100}</span>
+                                        <span class="price-old">${'$' + hardwareYES.oldPrice}</span>
+                                    </p>
+                                    <div class="label-product l_sale">
+                                        <span>${hardwareYES.saleOff + ' OFF'}</span>
+                                    </div>
+                                </div>
+                                <!-- price-container -->
+                            </div>
+                            <div class="product-intro">
+                                <div class="action-link2">
+                                    <button class="btn-cart" type="button" title="" onclick="addNumProduct()" value=${hardwareYES.name}>
+                                        <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
+                                    </button>
+                                    <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
+                                        <i class="far fa-heart"></i><span>Add to Wish List</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- caption -->
+                    </div>
+                <!-- product-thumb -->
+                </div>
+                <!-- product-layout -->
+            </div>
+        </div>`
+        )
+    }
+}
+
 update_keyboardproduct()
 update_headphoneproduct()
 update_chairproduct()
+update_mouseproduct()
+update_hardwareproduct()

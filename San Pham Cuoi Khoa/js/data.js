@@ -149,16 +149,16 @@ let products = [
         name: 'Fantech Office Chair A258',
         company: 'MSI',
         oldPrice: 69.99,
-        saleOff: '-15%',
-        saleOffValue: 0.15
+        saleOff: '-20%',
+        saleOffValue: 0.2
     }
     ,
     {
         type: 'mouse',
         img: './img/mouse-1.jpg',
-        name: '',
-        company: '',
-        oldPrice: 13.75,
+        name: 'HyperX Pulsefire Raid',
+        company: 'HyperX',
+        oldPrice: 53.99,
         saleOff: '-15%',
         saleOffValue: 0.15
     }
@@ -166,19 +166,19 @@ let products = [
     {
         type: 'mouse',
         img: './img/mouse-2.jpg',
-        name: '',
-        company: '',
-        oldPrice: 13.75,
-        saleOff: '-15%',
-        saleOffValue: 0.15
+        name: 'Sades Hunter',
+        company: 'Sades',
+        oldPrice: 7.99,
+        saleOff: '-5%',
+        saleOffValue: 0.05
     }
     ,
     {
         type: 'mouse',
         img: './img/mouse-3.jpg',
-        name: '',
-        company: '',
-        oldPrice: 13.75,
+        name: 'Tecware Exo Lite',
+        company: 'Tecware',
+        oldPrice: 14.99,
         saleOff: '-15%',
         saleOffValue: 0.15
     }
@@ -186,19 +186,69 @@ let products = [
     {
         type: 'mouse',
         img: './img/mouse-4.jpg',
-        name: '',
-        company: '',
-        oldPrice: 13.75,
-        saleOff: '-15%',
-        saleOffValue: 0.15
+        name: 'Logitech G502 Hero K/DA',
+        company: 'Logitech',
+        oldPrice: 59.99,
+        saleOff: '-10%',
+        saleOffValue: 0.1
     }
     ,
     {
         type: 'mouse',
         img: './img/mouse-5.jpg',
-        name: '',
-        company: '',
-        oldPrice: 13.75,
+        name: 'Razer Basilisk V3',
+        company: 'Razer',
+        oldPrice: 79.99,
+        saleOff: '-25%',
+        saleOffValue: 0.25
+    }
+    ,
+    {
+        type: 'hardware',
+        img: './img/hardware-1.jpg',
+        name: 'EVGA Geforce GTX 1050 SC – 2GB',
+        company: 'EVGA',
+        oldPrice: 121.99,
+        saleOff: '-15%',
+        saleOffValue: 0.15
+    }
+    ,
+    {
+        type: 'hardware',
+        img: './img/hardware-2.jpg',
+        name: 'Colorful GeForce GTX1050 LP 2G',
+        company: 'Colorful',
+        oldPrice: 214.99,
+        saleOff: '-20%',
+        saleOffValue: 0.2
+    }
+    ,
+    {
+        type: 'hardware',
+        img: './img/hardware-3.jpg',
+        name: 'Colorful iGame GeForce GTX1060 U-TOP 6G',
+        company: 'Colorful',
+        oldPrice: 379.99,
+        saleOff: '-20%',
+        saleOffValue: 0.2
+    }
+    ,
+    {
+        type: 'hardware',
+        img: './img/hardware-4.jpg',
+        name: 'Colorful GeForce GTX1050Ti NB 4G',
+        company: 'Colorful',
+        oldPrice: 219.99,
+        saleOff: '-25%',
+        saleOffValue: 0.25
+    }
+    ,
+    {
+        type: 'hardware',
+        img: './img/hardware-5.jpg',
+        name: 'Colorful GeForce GT1030 2G V2',
+        company: 'Colorful',
+        oldPrice: 89.99,
         saleOff: '-15%',
         saleOffValue: 0.15
     }
