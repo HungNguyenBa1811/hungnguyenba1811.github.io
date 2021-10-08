@@ -12,6 +12,8 @@ let items_headphone = document.querySelector('.product-container-2')
 let items_chair = document.querySelector('.product-container-3')
 let items_mouse = document.querySelector('.product-container-4')
 let items_hardware = document.querySelector('.product-container-5')
+let items_feature_1 = document.querySelector('.product-container-feature-1')
+let items_feature_2 = document.querySelector('.product-container-feature-2')
 
 var keyboard_product = products.filter(function(keyboard){
     return keyboard.type == `keyboard`;
@@ -31,6 +33,14 @@ var mouse_product = products.filter(function(mouse){
 
 var hardware_product = products.filter(function(hardware){
     return hardware.type == `hardware`;
+});
+
+var feature_product = products.filter(function(feature){
+    return feature.special == `Best Selling`;
+});
+
+var cheap_product = products.filter(function(cheap){
+    return cheap.special == `Cheapest`;
 });
 
 let content = (x) => `
@@ -133,8 +143,26 @@ function update_hardwareproduct(){
     }
 }
 
+function update_featureproduct1(){
+    items_feature_1.innerHTML = '';
+
+    for(let x of feature_product){
+        items_feature_1.insertAdjacentHTML('beforeend', content(x))
+    }
+}
+
+function update_featureproduct2(){
+    items_feature_2.innerHTML = '';
+
+    for(let x of cheap_product){
+        items_feature_2.insertAdjacentHTML('beforeend', content(x))
+    }
+}
+
 update_keyboardproduct()
 update_headphoneproduct()
 update_chairproduct()
 update_mouseproduct()
 update_hardwareproduct()
+update_featureproduct1()
+update_featureproduct2()

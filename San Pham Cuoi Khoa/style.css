@@ -509,6 +509,9 @@ body{
     justify-content: space-between;
     flex-direction: column;
 }
+.no-border{
+    border: none !important;
+}
 .module-image {
     margin-top: 20px;
 }
@@ -594,4 +597,8 @@ body{
 .product-container{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+/* toggle */
+.nolongerexist{
+    display: none !important;
 }

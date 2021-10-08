@@ -6,7 +6,8 @@ let products = [
         company: 'Dareu',
         oldPrice: 55.99,
         saleOff: '-25%',
-        saleOffValue: 0.25
+        saleOffValue: 0.25,
+        special: 'Cheapest'
     }
     ,
     {
@@ -17,7 +18,6 @@ let products = [
         oldPrice: 144.99,
         saleOff: '-20%',
         saleOffValue: 0.2,
-        special: 'Best Selling'
     }
     ,
     {
@@ -89,7 +89,8 @@ let products = [
         company: 'Digital Alliancer',
         oldPrice: 24.99,
         saleOff: '-10%',
-        saleOffValue: 0.1
+        saleOffValue: 0.1,
+        special: 'Cheapest'
     }
     ,
     {
@@ -150,7 +151,8 @@ let products = [
         company: 'MSI',
         oldPrice: 69.99,
         saleOff: '-20%',
-        saleOffValue: 0.2
+        saleOffValue: 0.2,
+        special: 'Cheapest'
     }
     ,
     {
@@ -170,7 +172,8 @@ let products = [
         company: 'Sades',
         oldPrice: 7.99,
         saleOff: '-5%',
-        saleOffValue: 0.05
+        saleOffValue: 0.05,
+        special: 'Cheapest'
     }
     ,
     {
@@ -190,7 +193,8 @@ let products = [
         company: 'Logitech',
         oldPrice: 59.99,
         saleOff: '-10%',
-        saleOffValue: 0.1
+        saleOffValue: 0.1,
+        special: 'Best Selling'
     }
     ,
     {
@@ -220,7 +224,8 @@ let products = [
         company: 'Colorful',
         oldPrice: 214.99,
         saleOff: '-20%',
-        saleOffValue: 0.2
+        saleOffValue: 0.2,
+        special: 'Best Selling'
     }
     ,
     {
@@ -250,7 +255,8 @@ let products = [
         company: 'Colorful',
         oldPrice: 89.99,
         saleOff: '-15%',
-        saleOffValue: 0.15
+        saleOffValue: 0.15,
+        special: 'Cheapest'
     }
 ]
 export {products}

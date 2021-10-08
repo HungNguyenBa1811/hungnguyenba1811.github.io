@@ -45,6 +45,12 @@
     margin-top: 0;
     opacity: 1;
 }
+.product-layout:not(:last-child){
+    margin-bottom: 30px !important;
+}
+.row_items  .list-small.product-layout:not(:last-child){
+    margin-bottom: 20px !important;
+}
 /* image */
 .image, .image>a {
     position: relative;
@@ -224,7 +230,7 @@
 .list-style:hover .action-link2{
     opacity: 1;
 }
-.list_small.list-style:hover .action-link2{
+.list_small .list-style:hover .action-link2{
     opacity: 1;
 }
 .list-style:hover{

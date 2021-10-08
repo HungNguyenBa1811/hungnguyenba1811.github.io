@@ -127,6 +127,40 @@ window.onclick = function(event) {
     }
   }
 }
+// Toggle
+
+let tog_1 = document.getElementsByClassName("product-container-feature-1")
+let tog_2 = document.getElementsByClassName("product-container-feature-2")
+let item_tog_1 = document.getElementsByClassName('elem-1')
+let item_tog_2 = document.getElementsByClassName('elem-2')
+
+let toggle_01 = () => {
+  tog_2[0].className = tog_2[0].className.replace("nolongerexist", " visible-haha")
+  tog_1[0].className = tog_1[0].className.replace("visible-haha", " nolongerexist")
+  item_tog_1[0].className = item_tog_1[0].className.replace(" active-list", "")
+  item_tog_2[0].className += " active-list"
+
+}
+
+let tg_1 = document.getElementsByClassName('toggle-1')
+for(let i = 0; i < tg_1.length; i++){
+  tg_1[i].addEventListener('click', toggle_01)
+}
+
+let toggle_02 = () => {
+
+  tog_1[0].className = tog_1[0].className.replace("nolongerexist", " visible-haha")
+  tog_2[0].className = tog_2[0].className.replace("visible-haha", " nolongerexist")
+  item_tog_2[0].className = item_tog_2[0].className.replace(" active-list", "")
+  item_tog_1[0].className += " active-list"
+
+}
+
+let tg_2 = document.getElementsByClassName('toggle-2')
+for(let i = 0; i < tg_2.length; i++){
+  tg_2[i].addEventListener('click', toggle_02)
+}
+
 // Click event
 let usd = document.querySelector('.usd')
 let eur = document.querySelector('.eur')
