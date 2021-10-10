@@ -31,17 +31,22 @@ let addNumProduct = (price, name, img) => {
   // Increase number of products
   ++numProduct;
   showNumProduct.innerHTML = numProduct;
+  // Get quantity
+  let quantity_prd = prompt('Xin vui lòng nhập số sản phẩm cần mua: ')
+  if(quantity_prd >= 50){
+    alert('Kho hàng hiện còn 49 sản phẩm')
+    quantity_prd = 49;
+  }
   // Get money
   let pay = document.getElementsByClassName('bigmoney')[0]
   let pay_2 = document.getElementsByClassName('money')[0]
   let pricing = document.getElementsByClassName('pricing')[0]
   let money = Number(document.getElementsByClassName('bigmoney')[0].innerHTML)
-  money += price
-  pay.innerHTML = money
-  pay_2.innerHTML = '$' + money
+  money += Math.round(price * quantity_prd * 100)/100
+  let formatted = new Intl.NumberFormat().format(money)
+  pay.innerHTML = formatted
+  pay_2.innerHTML = '$' + formatted
   pricing = price
-  // Get quantity
-  
 
 
 
@@ -60,7 +65,7 @@ let addNumProduct = (price, name, img) => {
           <a href="#" class="cart-name">
             ${name}
           </a>
-          <p class="cart-quantity"> × 1</p>
+          <p class="cart-quantity"> × ${quantity_prd}</p>
           <p class="cart-price">
               <span class="pricing">${'$' + price}</span>
           </p>
@@ -77,7 +82,7 @@ let addNumProduct = (price, name, img) => {
 
 
   // Alert
-  alert('Added to your cart!')
+  alert('Đã thêm vào giỏ hàng của bạn!')
   // Cart changes 
   $('.table').removeClass('table-align');
   let hide = document.getElementsByClassName('checkout-lists')
@@ -221,19 +226,39 @@ let eur = document.querySelector('.eur')
 let vnd = document.querySelector('.vnd')
 
 usd.addEventListener('click', function(){
+  // Change text
   document.querySelector('.currency').innerHTML = '$'
+  document.querySelector('.selected-currency').innerHTML = 'USD'
   document.querySelector('.show').classList.remove('show')
-  let xyz = document.querySelector('.bigmoney').innerHTML
+  // Change amount
+
+
+
 })
 
 eur.addEventListener('click', function(){
-    document.querySelector('.currency').innerHTML = '€'
-    document.querySelector('.show').classList.remove('show')
+  // Change amount
+
+
+
+
+  // Change text
+  document.querySelector('.currency').innerHTML = '€'
+  document.querySelector('.selected-currency').innerHTML = 'EUR'
+  document.querySelector('.show').classList.remove('show')
+
+
 })
 
 vnd.addEventListener('click', function(){
-    document.querySelector('.currency').innerHTML = '₫'
-    document.querySelector('.show').classList.remove('show')
+  // Change text  
+  document.querySelector('.currency').innerHTML = '₫'
+  document.querySelector('.selected-currency').innerHTML = 'VND'
+  document.querySelector('.show').classList.remove('show')
+  // Change amount
+
+
+
 })
 
 // Search bar
