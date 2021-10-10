@@ -8,7 +8,7 @@ let numPrice = 0;
 // Math.round( *100)/100;
 // Increase num product
 // for (let y of addToCartBtn) {
-//   y.addEventListener('click', () => {
+//   y.onclick = {
 //     ++numProduct;
 //     showNumProduct.innerHTML = numProduct;
 //     let product = {
@@ -24,12 +24,31 @@ let numPrice = 0;
 //     // cart.push(product)
 //     // localStorage.setItem('cart',JSON.stringify(cart))
 //     // localStorage.setItem('numProduct',numProduct)
-//   })
+//   }
 // }
 
-let addNumProduct = () => {
+let addNumProduct = (price, name, img) => {
+  // Increase number of products
   ++numProduct;
   showNumProduct.innerHTML = numProduct;
+  // Get money
+  let pay = document.getElementsByClassName('bigmoney')[0]
+  let pay_2 = document.getElementsByClassName('money')[0]
+  let money = Number(document.getElementsByClassName('bigmoney')[0].innerHTML)
+  money += price
+  pay.innerHTML = money
+  pay_2.innerHTML = '$' + money
+
+
+
+
+
+  // cart changes 
+  $('.table').removeClass('table-align');
+  let hide = document.getElementsByClassName('checkout-lists')
+  let show = document.getElementsByClassName('has-scroll')
+  hide[0].className = hide[0].className.replace(" hide", " show")
+  show[0].className = show[0].className.replace(" show", " hide")
 };
 
 // let item = document.querySelector('.product-container')

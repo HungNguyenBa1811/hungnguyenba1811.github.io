@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./productStyle.css">
+    <link rel="stylesheet" href="./cartDesign.css">
+    <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -111,24 +113,29 @@
                                     </span>
 
                                 </button>
-                                <ul class="list-drop list-unstyled cart-list empty">
-                                    <li class="has-scroll">
-                                      <p class="text-center cart-empty">Your shopping cart is empty!</p><table class="table">
-                                        <tbody>
-                                        </tbody>
-                                      </table>
+                                <ul class="list-drop cart-list empty">
+                                    <li class="has-scroll show">
+                                        <p class="text-center cart-empty">Your shopping cart is empty!</p>
+                                        <table class="table">
+                                            <tbody>
+                                            </tbody>
+                                        </table>
                                     </li>
-                                    <li class="hide">
-                                      <table class="table">
-                                        <tbody><tr>
-                                          <td class="text-left">Subtotal :</td>
-                                          <td class="text-right" id="cart-subtotal"><span class="money" data-currency-usd="$0.00">$0.00</span></td>
-                                        </tr>
-                                      </tbody></table>
-                                      <p class="text-center cart-button">
-                                        <a href="/cart">View Cart</a> 
-                                        <a href="/checkout">Checkout</a>
-                                      </p>
+                                    <li class="checkout-lists hide">
+                                        <table class="table table-align">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-left">Subtotal :</td>
+                                                    <td class="text-right" id="cart-subtotal">
+                                                        <span class="money">$0.00</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="text-center cart-button">
+                                            <a href="#">View Cart</a> 
+                                            <a href="#">Checkout</a>
+                                        </p>
                                     </li>
                                   </ul>
                             </li>
@@ -154,8 +161,16 @@
                         <li><a href="#">ABOUT US</a></li>
                     </ul> -->
                 </li>
-                <li><a href="#" class="title title-dropdown">CATALOG</a></li>
-                <li><a href="#" class="title title-dropdown">FEATURE PRODUCTS</a></li>
+                <li><a href="#" class="title title-dropdown">CATALOG</a>
+                    <ul class="drop-down-ul list-unstyled">  
+                        <li><a href="#">Gaming Keyboards</a></li>
+                        <li><a href="#">Gaming Headphones</a></li>
+                        <li><a href="#">Gaming Chairs</a></li>
+                        <li><a href="#">Gaming Mouses</a></li>
+                        <li><a href="#">Gaming Hardware</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="title">FEATURED PRODUCTS</a></li>
                 <li><a href="#" class="title">ABOUT US</a></li>
             </ul>
         </div>
@@ -211,9 +226,9 @@
                             
                         </div>
                         <div class="dot-container">
-                            <span class="dot active-ball"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
+                            <span class="dot active-ball" onclick="currentSlide(0)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
                         </div>
 
                     </div>
@@ -349,37 +364,161 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="title-cointainer">
-                        <div class="module-title">
-                            <h2>Best Selling</h2>
-                        </div>
-                    </div>
+        <div class="mid-end">
+            <div class="container">
+                <div class="row">
+                    <div class="static-policy">
 
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="title-cointainer">
-                        <div class="module-title">
-                            <h2>Cheapest</h2>                        
+                        <div class="col col-md-3 col-xs-6">
+                            <div class="col-img icon-wrapper">
+                                <i class="fa fa-motorcycle"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>Free Delivery</h3>
+                                <p>And free returns. See checkout for delivery dates.</p>
+                            </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="title-cointainer">
-                        <div class="module-title">
-                            <h2>Newest</h2>
+                        <div class="col col-md-3 col-xs-6">
+                            <div class="col-img icon-wrapper">
+                                <i class="fa fa-credit-card"></i>                        </div>
+                            <div class="text-content">
+                                <h3>Safe Payment</h3>
+                                <p>Pay with the world's most popular and secure payment method.</p>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-3 col-xs-6">
+                            <div class="col-img icon-wrapper">
+                                <i class="fa fa-shield-alt"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>Shop with Confidence</h3>
+                                <p>Our Buyer Protection covers your purchase from click to delivery.</p>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-3 col-xs-6">
+                            <div class="col-img icon-wrapper">
+                                <i class="fa fa-comments"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>24/7 Help Center</h3>
+                                <p>Have a question? Call a Specialist or chat online.</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="context">
+    <footer>
+        <div class="middle-footer">
+            <div class="container">
+                <div class="row">
 
-    </div>
+                    <div class="col-sm-4 col-f">
+                        <div class="static-contact">
+                            <div class="logo-f">
+                                <a href="#">
+                                    <img
+                                        src=""
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="about-us-f">
+                                <p>We are a team of designers and developers who creates high quality premium Gaming Gears themes.</p>
+                            </div>
+                            <table class="contact-info">
+                                <tbody>
+                    
+                                    <tr>
+                                      <td>Address: Redmond, Washington, USA</td>
+                                      <td></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td>Call Us:</td>
+                                      <td>(084) 363 974 881</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td>Email:</td>
+                                      <td>support@amogusballshd.com</td>
+                                    </tr>
+                                    
+                                  </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2 col col-f">
+                        <h5 class="title-footer">Main Menu</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Catalog</a>
+                            </li>
+                            <li>
+                                <a href="#">Featured Products</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 col col-f">
+                        <h5 class="title-footer">Main Menu</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Catalog</a>
+                            </li>
+                            <li>
+                                <a href="#">Featured Products</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-f">
+                        <div class="social-footer">
+                            <h5 class="title-footer">Follow Us</h5>
+                            <ul class="list-unstyled">
+                                
+                                <li class="first">
+                                    <a class="fa fa-facebook-f facebook" href="" title="Facebook Contact">
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a class="fa fa-twitter twitter" href="" title="Twitter Contact">
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a class="fa fa-pinterest-square pinterest" href="" title="Pinterest Contact">
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a class="fa fa-instagram instagram" href="" title="Instagram Contact">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="./js/slideshow.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/index.js"></script>

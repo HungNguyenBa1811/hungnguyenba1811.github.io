@@ -39,6 +39,7 @@ body{
 .list-drop{
     display: none;
     position: absolute;
+    list-style-type: none;
     background-color: #fff;
     color: #000;
     padding: 5px 0;
@@ -224,6 +225,14 @@ body{
     display: none;
     float: left;
     position: absolute;
+    z-index: 1001;
+}
+.drop-down-ul li{
+    margin: 0 0 20px 0;
+    padding: 10px 22px;
+}
+.drop-down-ul li:last-child{
+    margin-bottom: 2px;
 }
 .drop-down-ul li a{
     text-decoration: none;
@@ -232,20 +241,23 @@ body{
 .submenu .menu-list li:hover .drop-down-ul{
 	color: #fff;
 	display: block;
-	padding: 20px 22px;
+	padding: 5px 0;
 	text-decoration: none;
 	background-color: #fff;
     width: 200px;
 }
-.submenu .menu-list li:hover .drop-down-ul li a:hover{
-    color: #0363cd;
+.submenu .menu-list li:hover .drop-down-ul li:hover{
+    background-color: #d6d6d6;
 }
 .title:hover .drop-down-ul{
     display: block;
 }
+.title:hover{
+    background-color: #22305c;
+}
 .submenu .menu-list .title-dropdown::after{
     content: '\f107';
-    font-family: FontAwesome;
+    font-family: 'Font Awesome\ 5 Pro';
     vertical-align: middle;
     padding: 0 5px;
 }
