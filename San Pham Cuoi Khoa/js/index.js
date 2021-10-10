@@ -34,16 +34,51 @@ let addNumProduct = (price, name, img) => {
   // Get money
   let pay = document.getElementsByClassName('bigmoney')[0]
   let pay_2 = document.getElementsByClassName('money')[0]
+  let pricing = document.getElementsByClassName('pricing')[0]
   let money = Number(document.getElementsByClassName('bigmoney')[0].innerHTML)
   money += price
   pay.innerHTML = money
   pay_2.innerHTML = '$' + money
+  pricing = price
+  // Get quantity
+  
 
 
 
+  // Insert table
+  let count_table = document.getElementsByClassName('count')[0]
+  count_table.insertAdjacentHTML('beforebegin', `
+    <tr>
+      <td class="text-center">
+          <a href="#">
+              <img 
+                src="${img}"
+                class="cart-image">
+          </a>
+      </td>
+      <td class="text-left info-item">
+          <a href="#" class="cart-name">
+            ${name}
+          </a>
+          <p class="cart-quantity"> × 1</p>
+          <p class="cart-price">
+              <span class="pricing">${'$' + price}</span>
+          </p>
+      </td>
+      <td class="text-center cart-close">
+          <button type="button" onclick="removeItem()" title="Remove" class="btn btn-danger btn-xs">
+            <i class="fas fa-times-circle"></i>
+          </button>
+      </td>
+    </tr>
+    `
+  )
 
 
-  // cart changes 
+
+  // Alert
+  alert('Added to your cart!')
+  // Cart changes 
   $('.table').removeClass('table-align');
   let hide = document.getElementsByClassName('checkout-lists')
   let show = document.getElementsByClassName('has-scroll')

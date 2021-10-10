@@ -60,9 +60,9 @@
 #cart .cart-list > li:first-child .table > tbody > tr > td{
   padding: 20px 0;
 }
-#cart .table > li:not(.has-scroll) > tbody > tr > td{
+/* #cart .table > li:not(.has-scroll) > tbody > tr > td{
   padding: 5px 0;
-}
+} */
 #cart .table > tbody > tr > td{
   border: none;
   padding: 20px 0;

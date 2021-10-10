@@ -17,7 +17,7 @@ function carousel() {
   }
   x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active-ball";
-  setTimeout(carousel, 7654); // Change image every 7.654 seconds
+  setTimeout(carousel, 20000); // Change image every 20 seconds
 }
 
 let currentSlide = (n) => {
