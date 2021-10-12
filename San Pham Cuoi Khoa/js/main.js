@@ -1,11 +1,11 @@
 import {products} from './data.js';
 
 // let productsCart = []
-// let productsCartString = JSON.stringify(productsCart);
-// localStorage.setItem('productsCart', productsCartString);
+let productsCartString = JSON.stringify(products);
+localStorage.setItem('productsCart', productsCartString);
 
-// let keyboardString = JSON.stringify(products)
-// localStorage.setItem('keyboard', keyboardString);
+let productsString = JSON.stringify(products)
+localStorage.setItem('products', productsString);
 
 let items_keyboard = document.querySelector('.product-container-1')
 let items_headphone = document.querySelector('.product-container-2')

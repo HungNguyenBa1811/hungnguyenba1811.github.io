@@ -1,10 +1,12 @@
+import { products } from "./data";
+
 let addToCartBtn = document.querySelectorAll(".btn-cart");
 let showNumProduct = document.querySelector(".cart-item-count");
-let keys  = Object.keys(localStorage)
-let cart = []
+// let keys  = Object.keys(localStorage)
+// let cart = []
 let numProduct = 0;
-let numPrice = 0;
-
+let productsData = JSON.parse(products)
+console.log(productsData)
 // Math.round( *100)/100;
 // Increase num product
 // for (let y of addToCartBtn) {
@@ -33,17 +35,22 @@ let addNumProduct = (price, name, img) => {
   showNumProduct.innerHTML = numProduct;
   // Get quantity
   let quantity_prd = prompt('Xin vui lòng nhập số sản phẩm cần mua: ')
+  let notNumberFormat = /[^0-9]/g;
   if(quantity_prd >= 50){
     alert('Kho hàng hiện còn 49 sản phẩm')
     quantity_prd = 49;
+    alert('Đã thêm vào giỏ hàng của bạn!')
+  }else if(quantity_prd.match(notNumberFormat)){
+    alert("You typed the wrong input!")
+    window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   }
   // Get money
   let pay = document.getElementsByClassName('bigmoney')[0]
   let pay_2 = document.getElementsByClassName('money')[0]
   let pricing = document.getElementsByClassName('pricing')[0]
   let money = Number(document.getElementsByClassName('bigmoney')[0].innerHTML)
-  money += Math.round(price * quantity_prd * 100)/100
-  let formatted = new Intl.NumberFormat().format(money)
+  money += Math.round(price * quantity_prd * 100) / 100
+  let formatted = new Intl.NumberFormat().format(money)     // Format the price
   pay.innerHTML = formatted
   pay_2.innerHTML = '$' + formatted
   pricing = price
@@ -55,25 +62,25 @@ let addNumProduct = (price, name, img) => {
   count_table.insertAdjacentHTML('beforebegin', `
     <tr>
       <td class="text-center">
-          <a href="#">
-              <img 
-                src="${img}"
-                class="cart-image">
-          </a>
+        <a href="#">
+          <img 
+            src="${img}"
+            class="cart-image">
+        </a>
       </td>
       <td class="text-left info-item">
-          <a href="#" class="cart-name">
-            ${name}
-          </a>
-          <p class="cart-quantity"> × ${quantity_prd}</p>
-          <p class="cart-price">
-              <span class="pricing">${'$' + price}</span>
-          </p>
+        <a href="#" class="cart-name">
+          ${name}
+        </a>
+        <p class="cart-quantity"> × ${quantity_prd}</p>
+        <p class="cart-price">
+          <span class="pricing">${'$' + price}</span>
+        </p>
       </td>
       <td class="text-center cart-close">
-          <button type="button" onclick="removeItem()" title="Remove" class="btn btn-danger btn-xs">
-            <i class="fas fa-times-circle"></i>
-          </button>
+        <button type="button" onclick="removeItem()" title="Remove" class="btn btn-danger btn-xs">
+          <i class="fas fa-times-circle"></i>
+        </button>
       </td>
     </tr>
     `
@@ -81,8 +88,6 @@ let addNumProduct = (price, name, img) => {
 
 
 
-  // Alert
-  alert('Đã thêm vào giỏ hàng của bạn!')
   // Cart changes 
   $('.table').removeClass('table-align');
   let hide = document.getElementsByClassName('checkout-lists')
@@ -144,7 +149,9 @@ let addNumProduct = (price, name, img) => {
 // function resetCart() {
 //     document.querySelector('.food-choose').innerHTML = ''
 // }
+
 // Toggle
+
 function myFunction() {
   document.querySelector(".sub-menu").classList.toggle("show");
 }
@@ -224,11 +231,13 @@ for(let i = 0; i < tg_2.length; i++){
 let usd = document.querySelector('.usd')
 let eur = document.querySelector('.eur')
 let vnd = document.querySelector('.vnd')
+let currency_icon = document.getElementsByClassName('currency')[0]
+let selected_currency =   document.querySelector('.selected-currency')
 
 usd.addEventListener('click', function(){
   // Change text
-  document.querySelector('.currency').innerHTML = '$'
-  document.querySelector('.selected-currency').innerHTML = 'USD'
+  currency_icon.innerHTML = '$'
+  selected_currency.innerHTML = 'USD'
   document.querySelector('.show').classList.remove('show')
   // Change amount
 
@@ -238,13 +247,19 @@ usd.addEventListener('click', function(){
 
 eur.addEventListener('click', function(){
   // Change amount
-
-
+  console.log(currency_icon.innerHTML)
+  if(currency_icon.innerHTML == '$'){
+    console.log("pass")
+  }else if(currency_icon.innerHTML == '₫'){
+    console.log("pass 2")
+  }else{
+    console.log("failed")
+  }
 
 
   // Change text
-  document.querySelector('.currency').innerHTML = '€'
-  document.querySelector('.selected-currency').innerHTML = 'EUR'
+  currency_icon.innerHTML = '€'
+  selected_currency.innerHTML = 'EUR'
   document.querySelector('.show').classList.remove('show')
 
 
@@ -252,7 +267,7 @@ eur.addEventListener('click', function(){
 
 vnd.addEventListener('click', function(){
   // Change text  
-  document.querySelector('.currency').innerHTML = '₫'
+  currency_icon.innerHTML = '₫'
   document.querySelector('.selected-currency').innerHTML = 'VND'
   document.querySelector('.show').classList.remove('show')
   // Change amount
@@ -263,3 +278,29 @@ vnd.addEventListener('click', function(){
 
 // Search bar
 let input_search = document.getElementById('input');
+function getInputValue(){
+  mainProd.innerHTML = '';
+  let inputVal = input_search.ariaValueMax.toLowerCase()
+  for(let i = 0; i < productsData.length; i++ ){
+    let y = productsData[i].name.toLowerCase()
+    if(y == inputVal){
+      // update table
+      
+    }
+  }
+}
+let productsList = document.getElementById('productsList')
+function searchResult(name){
+  console.log(name)
+  // insert HTML
+}
+let arrayName = [];
+function fillArr(){
+  for(let i = 0; i < productsData.length; i++){
+    // arrayName.push()
+  }
+  for(let i = 0; i < productsData.length; i++){
+    // search result
+  }
+}
+console.log(fillArr())
