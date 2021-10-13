@@ -496,7 +496,7 @@ body{
 }
 /* sub row */
 .sale-off{
-    background-image: url('./img/bg_banner.jpg');
+    background-image: url('../img/bg_banner.jpg');
     padding: 15px;
     margin-bottom: 50px;
     text-align: center;
@@ -613,4 +613,25 @@ body{
 /* toggle */
 .nolongerexist{
     display: none !important;
+}
+/* custom button */
+.btn-proceed{
+    border: none;
+    background: #fed700!important;
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #242424!important;
+    line-height: 45px;
+    height: 45px;
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 500;
+}
+.btn-proceed:hover{
+    color: #fff !important;
+    background-color: #293a6c !important;
+    -webkit-transition: ease-in-out all .3s;
+    -moz-transition: ease-in-out all .3s;
+    transition: ease-in-out all .3s;
 }

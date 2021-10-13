@@ -1,38 +1,13 @@
-import { products } from "./data";
-
 let addToCartBtn = document.querySelectorAll(".btn-cart");
 let showNumProduct = document.querySelector(".cart-item-count");
 // let keys  = Object.keys(localStorage)
 // let cart = []
 let numProduct = 0;
-let productsData = JSON.parse(products)
-console.log(productsData)
+// let productsData = JSON.parse(localStorage.getItem(products))
+// console.log(productsData)
 // Math.round( *100)/100;
-// Increase num product
-// for (let y of addToCartBtn) {
-//   y.onclick = {
-//     ++numProduct;
-//     showNumProduct.innerHTML = numProduct;
-//     let product = {
-//       name: "",
-//       image: "",
-//       price: "",
-//     };
-//     let productDom = y.parentElement.children;
-//     console.log(productDom[0])
-//     // product.name = productDom[2].innerHTML;
-//     // product.price = productDom[0].innerHTML;
-//     // product.image = ""
-//     // cart.push(product)
-//     // localStorage.setItem('cart',JSON.stringify(cart))
-//     // localStorage.setItem('numProduct',numProduct)
-//   }
-// }
 
-let addNumProduct = (price, name, img) => {
-  // Increase number of products
-  ++numProduct;
-  showNumProduct.innerHTML = numProduct;
+let addNumProduct = (price, name, img, company) => {
   // Get quantity
   let quantity_prd = prompt('Xin vui lòng nhập số sản phẩm cần mua: ')
   let notNumberFormat = /[^0-9]/g;
@@ -43,6 +18,10 @@ let addNumProduct = (price, name, img) => {
   }else if(quantity_prd.match(notNumberFormat)){
     alert("You typed the wrong input!")
     window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }else{
+    alert('Đã thêm vào giỏ hàng của bạn!')
+    ++numProduct;
+    showNumProduct.innerHTML = numProduct;
   }
   // Get money
   let pay = document.getElementsByClassName('bigmoney')[0]
@@ -54,8 +33,6 @@ let addNumProduct = (price, name, img) => {
   pay.innerHTML = formatted
   pay_2.innerHTML = '$' + formatted
   pricing = price
-
-
 
   // Insert table
   let count_table = document.getElementsByClassName('count')[0]
@@ -87,6 +64,53 @@ let addNumProduct = (price, name, img) => {
   )
 
 
+  // Cart table
+  // let table_cart = document.getElementsByClassName('table-cart')[0]
+  // table_cart.insertAdjacentHTML('beforeend', `
+  //   <tbody>
+  //     <tr>
+  //         <td class="text-center">
+  //             <img 
+  //                 src="${img}"
+  //                 class="cart-image">
+  //         </td>
+  //         <td class="text-center">
+  //             <a href="" class="cart-name">
+  //               ${name}
+  //             </a>
+  //             <br>
+  //             <small>${company}</small>
+  //         </td>
+  //         <td class="text-left">
+  //             <div class="input-group btn-block" style="max-width: 200px;">
+  //                 <input type="text" value="${quantity_prd}" class="form-control">
+  //                 <span class="input-group-btn">
+  //                     <button type="button" class="btn btn-danger" title="Remove">
+  //                         <i class="fa fa-times-circle"></i>
+  //                     </button>
+  //                 </span>
+  //             </div>
+  //         </td>
+  //         <td class="text-right">
+  //             <span class="money">${price}</span>
+  //         </td>
+  //         <td class="text-right">
+  //             <span class="money">${money}</span>
+  //         </td>
+  //     </tr>
+  // </tbody>
+  // `)
+  let product_info = {
+    imageURL: `${img}`,
+    name: `${name}`,
+    company: `${company}`,
+    priceOriginal: `${price}`,
+    quantity_prd: `${quantity_prd}`,
+    total: `${quantity_prd * price}`,
+  }
+  let product_info_str = JSON.stringify(product_info)
+  console.log(product_info)
+  console.log(product_info_str)
 
   // Cart changes 
   $('.table').removeClass('table-align');
@@ -118,23 +142,6 @@ let addNumProduct = (price, name, img) => {
 // // console.log(showList);
 // showList(productsData);
 // // fnc prod
-// function product(imageUrl,name, brand,price,size,sex,scent){
-
-//     // console.log(mainProd)
-//     mainProd.insertAdjacentHTML('beforeend',`
-//     <div class="main-item">
-//         <div class="main-pic">
-//             <img wirdth="170" height="170" src="${imageUrl}" alt="${name}"/>
-//         </div>
-//         <div class="title">
-//             <b>${brand}</b><br/>
-//             <span>${price}</span>
-//           <button>buy</button>
-//         </div>
-//     </div>
-//     `
-//     );
-// }
 
 // console.log('cartParse', cartParse);
 // item.addEventListener('click', function(event) {
@@ -145,10 +152,6 @@ let addNumProduct = (price, name, img) => {
 //     let cartFood = document.querySelector('.item-choose')
 //     cartFood.innerHTML += `<p class="product">${item}</p>`
 // })
-
-// function resetCart() {
-//     document.querySelector('.food-choose').innerHTML = ''
-// }
 
 // Toggle
 
@@ -193,7 +196,7 @@ window.onclick = function(event) {
     }
   }
 }
-// Toggle
+// Toggle 2
 
 let tog_1 = document.getElementsByClassName("product-container-feature-1")
 let tog_2 = document.getElementsByClassName("product-container-feature-2")
@@ -201,6 +204,7 @@ let item_tog_1 = document.getElementsByClassName('elem-1')
 let item_tog_2 = document.getElementsByClassName('elem-2')
 
 let toggle_01 = () => {
+
   tog_2[0].className = tog_2[0].className.replace("nolongerexist", " visible-haha")
   tog_1[0].className = tog_1[0].className.replace("visible-haha", " nolongerexist")
   item_tog_1[0].className = item_tog_1[0].className.replace(" active-list", "")
@@ -227,80 +231,36 @@ for(let i = 0; i < tg_2.length; i++){
   tg_2[i].addEventListener('click', toggle_02)
 }
 
-// Click event
-let usd = document.querySelector('.usd')
-let eur = document.querySelector('.eur')
-let vnd = document.querySelector('.vnd')
-let currency_icon = document.getElementsByClassName('currency')[0]
-let selected_currency =   document.querySelector('.selected-currency')
-
-usd.addEventListener('click', function(){
-  // Change text
-  currency_icon.innerHTML = '$'
-  selected_currency.innerHTML = 'USD'
+// Toggle Currency
+document.querySelector('.usd').addEventListener('click', function(){
   document.querySelector('.show').classList.remove('show')
-  // Change amount
-
-
-
 })
 
-eur.addEventListener('click', function(){
-  // Change amount
-  console.log(currency_icon.innerHTML)
-  if(currency_icon.innerHTML == '$'){
-    console.log("pass")
-  }else if(currency_icon.innerHTML == '₫'){
-    console.log("pass 2")
-  }else{
-    console.log("failed")
-  }
-
-
-  // Change text
-  currency_icon.innerHTML = '€'
-  selected_currency.innerHTML = 'EUR'
-  document.querySelector('.show').classList.remove('show')
-
-
-})
-
-vnd.addEventListener('click', function(){
-  // Change text  
-  currency_icon.innerHTML = '₫'
-  document.querySelector('.selected-currency').innerHTML = 'VND'
-  document.querySelector('.show').classList.remove('show')
-  // Change amount
-
-
-
-})
-
-// Search bar
-let input_search = document.getElementById('input');
-function getInputValue(){
-  mainProd.innerHTML = '';
-  let inputVal = input_search.ariaValueMax.toLowerCase()
-  for(let i = 0; i < productsData.length; i++ ){
-    let y = productsData[i].name.toLowerCase()
-    if(y == inputVal){
-      // update table
+// // Search bar
+// let input_search = document.getElementById('input');
+// function getInputValue(){
+//   mainProd.innerHTML = '';
+//   let inputVal = input_search.ariaValueMax.toLowerCase()
+//   for(let i = 0; i < productsData.length; i++ ){
+//     let y = productsData[i].name.toLowerCase()
+//     if(y == inputVal){
+//       // update table
       
-    }
-  }
-}
-let productsList = document.getElementById('productsList')
-function searchResult(name){
-  console.log(name)
-  // insert HTML
-}
-let arrayName = [];
-function fillArr(){
-  for(let i = 0; i < productsData.length; i++){
-    // arrayName.push()
-  }
-  for(let i = 0; i < productsData.length; i++){
-    // search result
-  }
-}
-console.log(fillArr())
+//     }
+//   }
+// }
+// let productsList = document.getElementById('productsList')
+// function searchResult(name){
+//   console.log(name)
+//   // insert HTML
+// }
+// let arrayName = [];
+// function fillArr(){
+//   for(let i = 0; i < productsData.length; i++){
+//     // arrayName.push()
+//   }
+//   for(let i = 0; i < productsData.length; i++){
+//     // search result
+//   }
+// }
+// console.log(fillArr())

@@ -75,8 +75,8 @@ let content = (x) => `
                             </h4>
                             <div class="price-container">
                                 <p class="price">
-                                    <span class="price-new">${'$' + Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100}</span>
-                                    <span class="price-old">${'$' + x.oldPrice}</span>
+                                    <span class="price-new">$${Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100}</span>
+                                    <span class="price-old">$${x.oldPrice}</span>
                                 </p>
                                 <div class="label-product l_sale">
                                     <span>${x.saleOff + ' OFF'}</span>
@@ -86,7 +86,7 @@ let content = (x) => `
                         </div>
                         <div class="product-intro">
                             <div class="action-link2">
-                                <button class="btn-cart" type="button" value="0" onclick="addNumProduct( ${Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100} , '${x.name}', '${x.img}')">
+                                <button class="btn-cart" type="button" value="0" onclick="addNumProduct( ${Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100} , '${x.name}', '${x.img}', '${x.company}')">
                                     <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
                                 </button>
                                 <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
@@ -103,7 +103,7 @@ let content = (x) => `
         </div>
     </div>`
 
-function update_keyboardproduct(){
+let update_keyboardproduct = () => {
     items_keyboard.innerHTML = '';
 
     for(let x of keyboard_product){
@@ -111,7 +111,7 @@ function update_keyboardproduct(){
     }
 }
 
-function update_headphoneproduct(){
+let update_headphoneproduct = () => {
     items_headphone.innerHTML = '';
 
     for(let x of headphone_product){
@@ -119,7 +119,7 @@ function update_headphoneproduct(){
     }
 }
 
-function update_chairproduct(){
+let update_chairproduct = () => {
     items_chair.innerHTML = '';
 
     for(let x of chair_product){
@@ -127,7 +127,7 @@ function update_chairproduct(){
     }
 }
 
-function update_mouseproduct(){
+let update_mouseproduct = () => {
     items_mouse.innerHTML = '';
 
     for(let x of mouse_product){
@@ -135,7 +135,7 @@ function update_mouseproduct(){
     }
 }
 
-function update_hardwareproduct(){
+let update_hardwareproduct = () => {
     items_hardware.innerHTML = '';
 
     for(let x of hardware_product){
@@ -143,7 +143,7 @@ function update_hardwareproduct(){
     }
 }
 
-function update_featureproduct1(){
+let update_featureproduct1 = () => {
     items_feature_1.innerHTML = '';
 
     for(let x of feature_product){
@@ -151,7 +151,7 @@ function update_featureproduct1(){
     }
 }
 
-function update_featureproduct2(){
+let update_featureproduct2 = () => {
     items_feature_2.innerHTML = '';
 
     for(let x of cheap_product){
