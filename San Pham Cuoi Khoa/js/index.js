@@ -1,8 +1,33 @@
 let addToCartBtn = document.querySelectorAll(".btn-cart");
 let showNumProduct = document.querySelector(".cart-item-count");
 // let keys  = Object.keys(localStorage)
-// let cart = []
+console.log(addToCartBtn)
+let cart = []
+let cartString = JSON.stringify(cart);
+localStorage.setItem('cart', cartString);
+
+let productsData = localStorage.getItem('products')
+console.log(JSON.parse(productsData))
+
+// let item = document.querySelector('.items')
+// let cart = document.querySelector('.container-right')
+let cartParse = JSON.parse(localStorage.getItem('cart'))
+for(let y of addToCartBtn){
+  y.addEventListener('click', function(event){
+    alert(event.target.value);
+    let item = event.target.value;
+    console.log('Item: ', item);
+    cartParse.push(`${item}`);
+    localStorage.setItem('cart', JSON.stringify(cartParse));
+    // let cartFood = document.querySelector('.food-choose')
+  })
+}
+
 let numProduct = 0;
+localStorage.setItem('numProduct', 0)
+
+let money = Number(document.getElementsByClassName('bigmoney')[0].innerHTML)
+localStorage.setItem('cartPrice', money)
 // let productsData = JSON.parse(localStorage.getItem(products))
 // console.log(productsData)
 // Math.round( *100)/100;
@@ -11,25 +36,33 @@ let addNumProduct = (price, name, img, company) => {
   // Get quantity
   let quantity_prd = prompt('Xin vui lòng nhập số sản phẩm cần mua: ')
   let notNumberFormat = /[^0-9]/g;
+
   if(quantity_prd >= 50){
     alert('Kho hàng hiện còn 49 sản phẩm')
     quantity_prd = 49;
     alert('Đã thêm vào giỏ hàng của bạn!')
-  }else if(quantity_prd.match(notNumberFormat)){
+  }
+  else if(quantity_prd.match(notNumberFormat)){
     alert("You typed the wrong input!")
     window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  }else{
+  }
+  else{
     alert('Đã thêm vào giỏ hàng của bạn!')
     ++numProduct;
-    showNumProduct.innerHTML = numProduct;
+    localStorage.setItem('numProduct', numProduct)
+    showNumProduct.innerHTML = localStorage.getItem('numProduct');
   }
+
+
   // Get money
   let pay = document.getElementsByClassName('bigmoney')[0]
   let pay_2 = document.getElementsByClassName('money')[0]
   let pricing = document.getElementsByClassName('pricing')[0]
   let money = Number(document.getElementsByClassName('bigmoney')[0].innerHTML)
-  money += Math.round(price * quantity_prd * 100) / 100
+  localStorage.setItem('numProduct', numProduct)
   let formatted = new Intl.NumberFormat().format(money)     // Format the price
+  
+  money += Math.round(price * quantity_prd * 100) / 100
   pay.innerHTML = formatted
   pay_2.innerHTML = '$' + formatted
   pricing = price
@@ -62,7 +95,6 @@ let addNumProduct = (price, name, img, company) => {
     </tr>
     `
   )
-
 
   // Cart table
   // let table_cart = document.getElementsByClassName('table-cart')[0]
@@ -100,6 +132,7 @@ let addNumProduct = (price, name, img, company) => {
   //     </tr>
   // </tbody>
   // `)
+
   let product_info = {
     imageURL: `${img}`,
     name: `${name}`,
@@ -119,6 +152,11 @@ let addNumProduct = (price, name, img, company) => {
   hide[0].className = hide[0].className.replace(" hide", " show")
   show[0].className = show[0].className.replace(" show", " hide")
 };
+
+showNumProduct.innerHTML = localStorage.getItem('numProduct');
+
+
+
 
 // let item = document.querySelector('.product-container')
 // let cartParse = JSON.parse(localStorage.getItem('productsCart'))

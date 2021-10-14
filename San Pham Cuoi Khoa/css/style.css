@@ -67,6 +67,10 @@ body{
     line-height: 1.5;
     padding: 5px 0;
 }
+.top-bar .button-drop .dropdown .list-drop li:last-child{
+    display: none;
+    padding: 0;
+}
 .top-bar .button-drop .dropdown .list-drop li a{
     color: #000 !important;
 }

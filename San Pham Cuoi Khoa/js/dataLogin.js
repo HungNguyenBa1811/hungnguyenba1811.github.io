@@ -1,5 +1,6 @@
 let accountList = []
 var signIn = false
+localStorage.setItem('Logged_in', signIn)
 
 let store = () => {
     let name = document.getElementById('name');
@@ -26,6 +27,7 @@ let store = () => {
 }
 
 let check = () => {
+    
     let storedName = localStorage.getItem('username')
     let storedPsw = localStorage.getItem('password')
 
@@ -35,10 +37,14 @@ let check = () => {
     if(userName.value == storedName && userPsw.value == storedPsw){
         alert('You are logged in!')
         signIn = true
-        console.log(signIn)
+        localStorage.setItem('Logged_in', signIn)
+        setTimeout(function(){
+            window.location = './index.html'
+        }, 5000)
     }else{
-        alert('Login failed!')
+        alert('Login failed! Try again')
     }
+
 }
 
 let backToHomePage = () => {
@@ -49,14 +55,19 @@ console.log(signIn)
 let sign_ball = document.getElementById('sign')
 let reg_ball = document.getElementById('reg')
 let out_ball = document.getElementById('ball')
-if(signInNew == true){
-    sign_ball.addEventListener('click', function(){
-        sign_ball.setAttribute('href', '#')
-    })
-    reg_ball.addEventListener('click', function(){
-        reg_ball.setAttribute('href', '#')
-    })
+let signInStatus = localStorage.getItem('Logged_in')
+if(signInStatus == true){
+    sign_ball.style.display = "none"
+    reg_ball.style.display = "none"
+    out_ball.style.display = "block !important"
+    out_ball.style.padding = "5px 0"
     out_ball.addEventListener('click', function(){
         signIn = false
+        localStorage.removeItem('Logged_in')
+        localStorage.getItem('Logged_in', signIn)
+        localStorage.removeItem('username')
+        localStorage.removeItem('password')
     })
+}else if(signInStatus == false){
+    localStorage.removeItem('Logged_in')
 }

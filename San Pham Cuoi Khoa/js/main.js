@@ -1,9 +1,6 @@
 import {products} from './data.js';
 
 // let productsCart = []
-let productsCartString = JSON.stringify(products);
-localStorage.setItem('productsCart', productsCartString);
-
 let productsString = JSON.stringify(products)
 localStorage.setItem('products', productsString);
 
@@ -57,8 +54,8 @@ let content = (x) => `
                             <div class="img-2"></div>
                         </a>  
                         <div class="action-link"> 
-                            <button class="btn-quickview quickview" type="button" title="Quick View">
-                                <i class="icon-eye"></i><span>Quick View</span>
+                            <button class="btn-quickview quickview" type="button" title="Quick View" onclick="window.open('${x.img}', '_blank')">
+                                <i class="fas fa-eye"></i><span>Quick View</span>
                             </button>
                         </div>
                     </div>
@@ -86,7 +83,7 @@ let content = (x) => `
                         </div>
                         <div class="product-intro">
                             <div class="action-link2">
-                                <button class="btn-cart" type="button" value="0" onclick="addNumProduct( ${Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100} , '${x.name}', '${x.img}', '${x.company}')">
+                                <button class="btn-cart" type="button" value=${x.name} onclick="addNumProduct( ${Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100} , '${x.name}', '${x.img}', '${x.company}')">
                                     <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
                                 </button>
                                 <button class="btn-wishlist btn btn-default wishlist-btn" type="button">
