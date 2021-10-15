@@ -1,12 +1,12 @@
 let addToCartBtn = document.querySelectorAll(".btn-cart");
 let showNumProduct = document.querySelector(".cart-item-count");
 // let keys  = Object.keys(localStorage)
-console.log(addToCartBtn)
-let cartString = JSON.stringify(cart);
-localStorage.setItem('cart', cartString);
 
-if(dataString){
-  cart = JSON.parse(dataString);
+var storageKey = 'Cart';
+let dataCart = localStorage.getItem(storageKey);
+let cart;
+if(dataCart){
+  cart = JSON.parse(dataCart);
 }else{
   cart = [];
 }
@@ -28,10 +28,11 @@ for(let y of addToCartBtn){
   })
 }
 
-if(localStorage.getItem('numProduct') > 0){
+let numLocal = localStorage.getItem('numProduct')
+if(numLocal){
   // if product has already been counted
-  var numProduct = localStorage.getItem('numProduct') // get products count from local
-  showNumProduct.innerHTML = numProduct
+  var numProduct = numLocal // get products count from local
+  showNumProduct.innerHTML = numLocal
 }else{
   // set product count default = 0
   var numProduct = 0
@@ -39,7 +40,14 @@ if(localStorage.getItem('numProduct') > 0){
 }
 
 let money = Number(document.getElementsByClassName('bigmoney')[0].innerHTML)
-localStorage.setItem('cartPrice', money)
+let moneyLocal = localStorage.getItem('cartPrice')
+if(moneyLocal) {
+  money = moneyLocal
+}else{
+  money = 0;
+  localStorage.setItem('cartPrice', money)
+}
+
 // let productsData = JSON.parse(localStorage.getItem(products))
 // console.log(productsData)
 // Math.round( *100)/100;
@@ -84,71 +92,7 @@ let addNumProduct = (price, name, img, company) => {
   pay_2.innerHTML = '$' + formatted
   pricing = price
 
-  // Insert table
-  let count_table = document.getElementsByClassName('count')[0]
-  count_table.insertAdjacentHTML('beforebegin', `
-    <tr>
-      <td class="text-center">
-        <a href="#">
-          <img 
-            src="${img}"
-            class="cart-image">
-        </a>
-      </td>
-      <td class="text-left info-item">
-        <a href="#" class="cart-name">
-          ${name}
-        </a>
-        <p class="cart-quantity"> × ${quantity_prd}</p>
-        <p class="cart-price">
-          <span class="pricing">${'$' + price}</span>
-        </p>
-      </td>
-      <td class="text-center cart-close">
-        <button type="button" onclick="removeItem()" title="Remove" class="btn btn-danger btn-xs">
-          <i class="fas fa-times-circle"></i>
-        </button>
-      </td>
-    </tr>
-    `
-  )
 
-  // Cart table
-  // let table_cart = document.getElementsByClassName('table-cart')[0]
-  // table_cart.insertAdjacentHTML('beforeend', `
-  //   <tbody>
-  //     <tr>
-  //         <td class="text-center">
-  //             <img 
-  //                 src="${img}"
-  //                 class="cart-image">
-  //         </td>
-  //         <td class="text-center">
-  //             <a href="" class="cart-name">
-  //               ${name}
-  //             </a>
-  //             <br>
-  //             <small>${company}</small>
-  //         </td>
-  //         <td class="text-left">
-  //             <div class="input-group btn-block" style="max-width: 200px;">
-  //                 <input type="text" value="${quantity_prd}" class="form-control">
-  //                 <span class="input-group-btn">
-  //                     <button type="button" class="btn btn-danger" title="Remove">
-  //                         <i class="fa fa-times-circle"></i>
-  //                     </button>
-  //                 </span>
-  //             </div>
-  //         </td>
-  //         <td class="text-right">
-  //             <span class="money">${price}</span>
-  //         </td>
-  //         <td class="text-right">
-  //             <span class="money">${money}</span>
-  //         </td>
-  //     </tr>
-  // </tbody>
-  // `)
 
   let product_info = {
     imageURL: `${img}`,
@@ -158,9 +102,82 @@ let addNumProduct = (price, name, img, company) => {
     quantity_prd: `${quantity_prd}`,
     total: `${quantity_prd * price}`,
   }
-  let product_info_str = JSON.stringify(product_info)
-  console.log(product_info)
-  console.log(product_info_str)
+  cart.push(`${JSON.stringify(product_info)}`)
+  render();
+  product_info = ''
+  localStorage.setItem(storageKey, JSON.stringify(cart));
+
+
+  // Insert table
+  // let count_table = document.getElementsByClassName('count')[0]
+  // count_table.insertAdjacentHTML('beforebegin', `
+  //   <tr>
+  //     <td class="text-center">
+  //       <a href="#">
+  //         <img 
+  //           src="${img}"
+  //           class="cart-image">
+  //       </a>
+  //     </td>
+  //     <td class="text-left info-item">
+  //       <a href="#" class="cart-name">
+  //         ${name}
+  //       </a>
+  //       <p class="cart-quantity"> × ${quantity_prd}</p>
+  //       <p class="cart-price">
+  //         <span class="pricing">${'$' + price}</span>
+  //       </p>
+  //     </td>
+  //     <td class="text-center cart-close">
+  //       <button type="button" onclick="removeItem()" title="Remove" class="btn btn-danger btn-xs">
+  //         <i class="fas fa-times-circle"></i>
+  //       </button>
+  //     </td>
+  //   </tr>
+  //   `
+  // )
+
+  // Cart table
+  // let table_cart = document.getElementsByClassName('table-cart')[0]
+  // table_cart.insertAdjacentHTML('beforeend', `
+//   <tbody>
+//   <tr>
+//       <td class="text-center">
+//           <img 
+//               src="${img}"
+//               class="cart-image">
+//       </td>
+//       <td class="text-center">
+//           <a href="" class="cart-name">
+//             ${name}
+//           </a>
+//           <br>
+//           <small>${company}</small>
+//       </td>
+//       <td class="text-left">
+//           <div class="input-group btn-block" style="max-width: 200px;">
+//               <input type="text" value="${quantity_prd}" class="form-control">
+//               <span class="input-group-btn">
+//                   <button type="button" class="btn btn-danger" title="Remove">
+//                       <i class="fa fa-times-circle"></i>
+//                   </button>
+//               </span>
+//           </div>
+//       </td>
+//       <td class="text-right">
+//           <span class="money">${price}</span>
+//       </td>
+//       <td class="text-right">
+//           <span class="money">${money}</span>
+//       </td>
+//   </tr>
+// </tbody>
+  // `)
+
+
+  // let product_info_str = JSON.stringify(product_info)
+  // console.log(product_info)
+  // console.log(product_info_str)
 
   // Cart changes 
   $('.table').removeClass('table-align');
@@ -172,7 +189,36 @@ let addNumProduct = (price, name, img, company) => {
 
 showNumProduct.innerHTML = localStorage.getItem('numProduct');
 
-
+function render(){
+  let content = cart.map(function (img, name, quantity_prd, price) {
+      return `
+      <tr>
+        <td class="text-center">
+          <a href="#">
+            <img 
+              src="${img}"
+              class="cart-image">
+          </a>
+        </td>
+        <td class="text-left info-item">
+          <a href="#" class="cart-name">
+            ${name}
+          </a>
+          <p class="cart-quantity"> × ${quantity_prd}</p>
+          <p class="cart-price">
+            <span class="pricing">${'$' + price}</span>
+          </p>
+        </td>
+        <td class="text-center cart-close">
+          <button type="button" onclick="removeItem()" title="Remove" class="btn btn-danger btn-xs">
+            <i class="fas fa-times-circle"></i>
+          </button>
+        </td>
+      </tr>
+      `;
+  });
+  document.getElementsByClassName('count')[0].innerHTML = content.join(' ');
+}
 
 
 // let item = document.querySelector('.product-container')
@@ -207,6 +253,7 @@ showNumProduct.innerHTML = localStorage.getItem('numProduct');
 //     let cartFood = document.querySelector('.item-choose')
 //     cartFood.innerHTML += `<p class="product">${item}</p>`
 // })
+
 
 // Toggle
 

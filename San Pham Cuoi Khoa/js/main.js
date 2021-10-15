@@ -1,6 +1,5 @@
 import {products} from './data.js';
 
-// let productsCart = []
 let productsString = JSON.stringify(products)
 localStorage.setItem('products', productsString);
 

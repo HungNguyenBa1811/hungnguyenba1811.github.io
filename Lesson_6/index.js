@@ -15,5 +15,6 @@ item.addEventListener('click', function(event) {
 })
 
 function resetCart() {
+    localStorage.removeItem('productsCart')
     document.querySelector('.food-choose').innerHTML = ''
 }
