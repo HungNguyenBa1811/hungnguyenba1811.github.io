@@ -2,9 +2,14 @@ let addToCartBtn = document.querySelectorAll(".btn-cart");
 let showNumProduct = document.querySelector(".cart-item-count");
 // let keys  = Object.keys(localStorage)
 console.log(addToCartBtn)
-let cart = []
 let cartString = JSON.stringify(cart);
 localStorage.setItem('cart', cartString);
+
+if(dataString){
+  cart = JSON.parse(dataString);
+}else{
+  cart = [];
+}
 
 let productsData = localStorage.getItem('products')
 console.log(JSON.parse(productsData))
@@ -23,8 +28,15 @@ for(let y of addToCartBtn){
   })
 }
 
-let numProduct = 0;
-localStorage.setItem('numProduct', 0)
+if(localStorage.getItem('numProduct') > 0){
+  // if product has already been counted
+  var numProduct = localStorage.getItem('numProduct') // get products count from local
+  showNumProduct.innerHTML = numProduct
+}else{
+  // set product count default = 0
+  var numProduct = 0
+  localStorage.setItem('numProduct', numProduct)
+}
 
 let money = Number(document.getElementsByClassName('bigmoney')[0].innerHTML)
 localStorage.setItem('cartPrice', money)
@@ -33,6 +45,11 @@ localStorage.setItem('cartPrice', money)
 // Math.round( *100)/100;
 
 let addNumProduct = (price, name, img, company) => {
+  // Increase products
+  ++numProduct
+  showNumProduct.innerHTML = numProduct
+  localStorage.setItem('numProduct', numProduct)
+
   // Get quantity
   let quantity_prd = prompt('Xin vui lòng nhập số sản phẩm cần mua: ')
   let notNumberFormat = /[^0-9]/g;
