@@ -137,3 +137,23 @@ footer a{
     display: inline-block;
     margin: 0 8px 5px 0;
 }  
+#back-top:hover{
+    background: #293a6c;
+}
+#back-top{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    background: rgba(41, 58, 108, 0.7);
+    text-align: center;
+    cursor: pointer;
+    z-index: 999;
+}
+#back-top i{
+    font-size: 1.4286em;
+    line-height: 50px;
+    color: #fff;
+}

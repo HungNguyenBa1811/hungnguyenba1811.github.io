@@ -255,8 +255,7 @@ function render(){
 // })
 
 
-// Toggle
-
+// Toggle through function
 function myFunction() {
   document.querySelector(".sub-menu").classList.toggle("show");
 }
@@ -266,8 +265,6 @@ function myFunction2() {
 function myFunction3() {
   document.querySelector(".cart-list").classList.toggle("show");
 }
-
-// Zoom Image
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
@@ -298,13 +295,13 @@ window.onclick = function(event) {
     }
   }
 }
-// Toggle 2
 
+// Toggle 2
 let tog_1 = document.getElementsByClassName("product-container-feature-1")
 let tog_2 = document.getElementsByClassName("product-container-feature-2")
 let item_tog_1 = document.getElementsByClassName('elem-1')
 let item_tog_2 = document.getElementsByClassName('elem-2')
-
+// create function
 let toggle_01 = () => {
 
   tog_2[0].className = tog_2[0].className.replace("nolongerexist", " visible-haha")
@@ -313,12 +310,6 @@ let toggle_01 = () => {
   item_tog_2[0].className += " active-list"
 
 }
-
-let tg_1 = document.getElementsByClassName('toggle-1')
-for(let i = 0; i < tg_1.length; i++){
-  tg_1[i].addEventListener('click', toggle_01)
-}
-
 let toggle_02 = () => {
 
   tog_1[0].className = tog_1[0].className.replace("nolongerexist", " visible-haha")
@@ -327,7 +318,11 @@ let toggle_02 = () => {
   item_tog_1[0].className += " active-list"
 
 }
-
+// add event
+let tg_1 = document.getElementsByClassName('toggle-1')
+for(let i = 0; i < tg_1.length; i++){
+  tg_1[i].addEventListener('click', toggle_01)
+}
 let tg_2 = document.getElementsByClassName('toggle-2')
 for(let i = 0; i < tg_2.length; i++){
   tg_2[i].addEventListener('click', toggle_02)
@@ -336,6 +331,13 @@ for(let i = 0; i < tg_2.length; i++){
 // Toggle Currency
 document.querySelector('.usd').addEventListener('click', function(){
   document.querySelector('.show').classList.remove('show')
+})
+
+// Scroll to top
+let scrollTop = document.getElementById("back-top")
+let scroll_1 = document.querySelector('.top-bar')
+scrollTop.addEventListener('click', function(){
+  scroll_1.scrollIntoView()
 })
 
 // // Search bar
