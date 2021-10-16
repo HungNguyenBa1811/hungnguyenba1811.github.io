@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: inherit;
     font-family: 'Rubik';
+    scroll-behavior: smooth;
 }
 body{
     font-family: "Rubik", "HelveticaNeue", "Helvetica Neue", sans-serif;
@@ -214,6 +215,9 @@ body{
     justify-content: flex-start;
     flex-direction: row;
     margin: 10px 0;
+}
+.submenu .menu-list li{
+    cursor: pointer;
 }
 .submenu .menu-list .title{
     text-decoration: none;

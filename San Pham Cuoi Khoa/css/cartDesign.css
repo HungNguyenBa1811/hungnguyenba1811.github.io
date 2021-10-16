@@ -141,7 +141,7 @@
   padding-left: 10px !important;
 }
 #cart .cart-list li:not(.has-scroll) tr td{
-  padding: 5px 0;
+  padding: 5px 10px;
 }
 #cart .cart-list .has-scroll tr{
   border-bottom: 1px solid #e1e1e1;
@@ -167,3 +167,5 @@
 .table-bordered>thead>tr>th {
   vertical-align: middle !important;
 }
+
+/* custom  */
