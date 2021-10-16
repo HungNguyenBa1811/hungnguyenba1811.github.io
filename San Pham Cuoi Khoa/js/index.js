@@ -1,6 +1,4 @@
-
-
-  // Toggle through function
+// Toggle through function
   function myFunction() {
     document.querySelector(".sub-menu").classList.toggle("show");
   }

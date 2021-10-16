@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +13,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <title>Shopping</title>
 </head>
+
 <body>
     <div class="top-bar">
 
@@ -45,6 +47,8 @@
                                         </button>
                                         <ul class="sub-menu list-drop">
                                             <li><a href="#" class="usd">USD $</a></li>
+                                            <li></li>
+                                            <!-- fixed bug -->
                                         </ul>
                                     </li>
 
@@ -57,7 +61,7 @@
                                             <li><a id="sign" href="./loginPage.html">Sign in</a></li>
                                             <li><a id="reg" href="./signupPage.html">Register</a></li>
                                             <li><a href="./viewCart.html">View Cart</a></li>
-                                            <li><a id="out" class="hide" href="#">Sign Out</a></li>
+                                            <li><a id="out" class="nolongerexist" href="#">Sign Out</a></li>
                                         </ul>
 
                                     </li>
@@ -69,26 +73,23 @@
                         </li>
 
                     </ul>
-                    
+
                 </nav>
 
             </div>
 
         </div>
-        
+
     </div>
 
     <div class="middle-bar">
 
         <div class="container">
-            
+
             <div class="row">
 
                 <div class="icon-bar col-lg-3">
-                    <img 
-                        src="./img/logogo.png" 
-                        alt="logo"
-                        width="230px">
+                    <img src="./img/logogo.png" alt="logo" width="230px">
                 </div>
                 <div class="col-lg-9 search-system">
 
@@ -116,7 +117,7 @@
                                         <span class="cart-item-count">0</span>
                                         <span class="money-heist">
                                             <span class="currency">$</span>
-                                            <span class="bigmoney">0.00</span>    
+                                            <span class="bigmoney">0.00</span>
                                         </span>
                                         <i class="fa fa-chevron-down"></i>
                                     </span>
@@ -134,10 +135,12 @@
 
                                     </li>
 
-                                    <li class="checkout-lists hide">
+                                    <li class="checkout-lists show">
 
                                         <table class="table table-align">
+                                            <tbody class="show-cart-item">
 
+                                            </tbody>
                                             <tbody>
                                                 <tr class="count">
                                                     <td class="text-left">Subtotal :</td>
@@ -150,7 +153,7 @@
                                         </table>
 
                                         <p class="text-center cart-button">
-                                            <a href="#">View Cart</a> 
+                                            <a href="./viewCart.html">View Cart</a>
                                             <a href="#">Checkout</a>
                                         </p>
 
@@ -161,7 +164,7 @@
                             </li>
 
                         </ul>
-                        
+
                     </div>
 
                 </div>
@@ -177,26 +180,25 @@
             <ul class="list-unstyled menu-list">
                 <li>
                     <a href="./index.html" class="title">HOME</a>
-                    <!-- <ul class="drop-down-ul list-unstyled">
-                        <li><a href="#">ABOUT US</a></li>
-                    </ul> -->
                 </li>
                 <li>
                     <a href="#" class="title title-dropdown">CATALOG</a>
                     <ul class="drop-down-ul list-unstyled">
-                        <li><a href="#">Gaming Keyboards</a></li>
-                        <li><a href="#">Gaming Headphones</a></li>
-                        <li><a href="#">Gaming Chairs</a></li>
-                        <li><a href="#">Gaming Mouses</a></li>
-                        <li><a href="#">Gaming Hardware</a></li>
+                        <li><a class="g-kb">Gaming Keyboards</a></li>
+                        <li><a class="g-hp">Gaming Headphones</a></li>
+                        <li><a class="g-cs">Gaming Chairs</a></li>
+                        <li><a class="g-ms">Gaming Mouses</a></li>
+                        <li><a class="g-hw">Gaming Hardware</a></li>
                     </ul>
                 </li>
-                <li><a href="#" class="title">FEATURED PRODUCTS</a></li>
-                <li><a href="#" class="title">ABOUT US</a></li>
+                <li><a class="title g-ft">FEATURED PRODUCTS</a></li>
+                <li><a href="https://www.facebook.com/H%E1%BA%A3o-h%C3%A1n-A1-k47-353076152409757" class="title">ABOUT US</a></li>
             </ul>
+
         </div>
+
     </div>
-    
+
     <div class="headerSpace" style="height:70px"></div>
 
     <div id="checkout-cart" class="container">
@@ -225,41 +227,30 @@
                                   </tr>
 
                             </thead>
-                            <tbody class="table-cart">
-                                <tr>
-                                    <td class="text-center">
-                                        <img src="" alt="">
-                                    </td>
-                                    <td class="text-center">
-                                        <h5></h5>
-                                        <br>
-                                        <small></small>
-                                    </td>
-                                    <td class="text-left">
-                                        <div class="input-group btn-block" style="max-width: 200px;">
-                                            <input type="text" value="1" class="form-control">
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-danger" title="Remove">
-                                                    <i class="fa fa-times-circle"></i>
-                                                </button>
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td class="text-right">
-                                        <span class="money"></span>
-                                    </td>
-                                    <td class="text-right">
-                                        <span class="money"></span>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody class="table-cart"></tbody>
 
                         </table>
 
                     </div>
-                    <div>
 
+                    <div>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="text-right">
+                                        <strong>Subtotal:</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span class="total-price">
+                                            <span class="currency">$</span>
+                                            <span class="money">0.00</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+
                     <div class="buttons clearfix">
                         <div class="pull-left">
                             <button class="btn-proceed">Continue shopping</button>
@@ -287,34 +278,33 @@
                             <div class="logo-f">
 
                                 <a href="#">
-                                    <img
-                                        src="./img/logogo2.png"
-                                        alt="">
+                                    <img src="./img/logogo2.png" alt="">
                                 </a>
 
                             </div>
                             <div class="about-us-f">
-                                <p>We are a team of designers and developers who creates low quality premium Gaming Gears themes.</p>
+                                <p>We are a team of designers and developers who creates low quality premium Gaming
+                                    Gears themes.</p>
                             </div>
                             <table class="contact-info">
                                 <tbody>
-                    
+
                                     <tr>
-                                      <td>Address:</td>
-                                      <td>G-Room, Hanoi, Vietnam</td>
+                                        <td>Address:</td>
+                                        <td>G-Room, Hanoi, Vietnam</td>
                                     </tr>
-                                    
+
                                     <tr>
-                                      <td>Call Us:</td>
-                                      <td>(084) 363 974 881</td>
+                                        <td>Call Us:</td>
+                                        <td>(084) 363 974 881</td>
                                     </tr>
-                                    
+
                                     <tr>
-                                      <td>Email:</td>
-                                      <td>support@amogusballshd.com</td>
+                                        <td>Email:</td>
+                                        <td>support@amogusballshd.com</td>
                                     </tr>
-                                    
-                                  </tbody>
+
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -367,27 +357,28 @@
                         <div class="social-footer">
                             <h5 class="title-footer">Follow Us</h5>
                             <ul class="list-unstyled">
-                                
+
                                 <li class="first">
-                                    <a href="" title="Facebook Contact">
+                                    <a href="https://www.facebook.com/hung.nguyen.ba.18.11.05" title="Facebook Contact">
                                         <i class="fab fa-facebook-f facebook"></i>
                                     </a>
                                 </li>
-                                
+
                                 <li>
-                                    <a href="" title="Twitter Contact">
+                                    <a href="https://twitter.com/NguynBH36708888" title="Twitter Contact">
                                         <i class="fab fa-twitter twitter"></i>
                                     </a>
                                 </li>
-                                
+
                                 <li>
-                                    <a href="" title="Pinterest Contact">
+                                    <a href="https://www.pinterest.com/hungba1811" title="Pinterest Contact">
                                         <i class="fab fa-pinterest-square pinterest"></i>
                                     </a>
                                 </li>
-                                
+
                                 <li>
-                                    <a href="" title="Instagram Contact">
+                                    <a href="https://www.instagram.com/joey_carpenter_amogus/"
+                                        title="Instagram Contact">
                                         <i class="fab fa-instagram instagram"></i>
                                     </a>
                                 </li>
@@ -398,8 +389,14 @@
                 </div>
             </div>
         </div>
+        <div id="back-top">
+            <i class="fa fa-angle-up"></i>
+        </div>
+        <!-- <audio autoplay loop id="myaudio">
+            <source src="./Lofi Ching Cheng Hanji.mp3">
+        </audio> -->
     </footer>
+    <script src="./js/cart.js"></script>
     <script src="./js/dataLogin.js"></script>
     <script src="./js/index.js"></script>
-    <script type="module" src="./js/main.js"></script>
 </body>
