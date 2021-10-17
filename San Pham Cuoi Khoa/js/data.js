@@ -7,7 +7,8 @@ let products = [
         oldPrice: 55.99,
         saleOff: '-25%',
         saleOffValue: 0.25,
-        special: 'Cheapest'
+        special: 'Cheapest',
+        id: 'GMP001'
     }
     ,
     {
@@ -18,6 +19,7 @@ let products = [
         oldPrice: 144.99,
         saleOff: '-20%',
         saleOffValue: 0.2,
+        id: 'GMP002'
     }
     ,
     {
@@ -27,7 +29,8 @@ let products = [
         company: 'Keychron',
         oldPrice: 99.99,
         saleOff: '-10%',
-        saleOffValue: 0.1
+        saleOffValue: 0.1,
+        id: 'GMP003'
     }
     ,
     {
@@ -38,7 +41,8 @@ let products = [
         oldPrice: 154.99,
         saleOff: '-25%',
         saleOffValue: 0.25,
-        special: 'Best Selling'
+        special: 'Best Selling',
+        id: 'GMP004'
     }
     ,
     {
@@ -48,7 +52,8 @@ let products = [
         company: 'IKBC',
         oldPrice: 156.99,
         saleOff: '-20%',
-        saleOffValue: 0.2
+        saleOffValue: 0.2,
+        id: 'GMP005'
     }
     ,
     {
@@ -58,7 +63,8 @@ let products = [
         company: 'Razer',
         oldPrice: 224.99,
         saleOff: '-40%',
-        saleOffValue: 0.4
+        saleOffValue: 0.4,
+        id: 'GMP006'
     }
     ,
     {
@@ -69,7 +75,8 @@ let products = [
         oldPrice: 136.99,
         saleOff: '-15%',
         saleOffValue: 0.15,
-        special: 'Best Selling'
+        special: 'Best Selling',
+        id: 'GMP007'
     }
     ,
     {
@@ -79,7 +86,8 @@ let products = [
         company: 'Sades',
         oldPrice: 34.99,
         saleOff: '-10%',
-        saleOffValue: 0.1
+        saleOffValue: 0.1,
+        id: 'GMP008'
     }
     ,
     {
@@ -90,7 +98,8 @@ let products = [
         oldPrice: 24.99,
         saleOff: '-10%',
         saleOffValue: 0.1,
-        special: 'Cheapest'
+        special: 'Cheapest',
+        id: 'GMP009'
     }
     ,
     {
@@ -100,7 +109,8 @@ let products = [
         company: 'Razer',
         oldPrice: 154.99,
         saleOff: '-20%',
-        saleOffValue: 0.2
+        saleOffValue: 0.2,
+        id: 'GMP010'
     }
     ,
     {
@@ -110,7 +120,8 @@ let products = [
         company: 'MSI',
         oldPrice: 299.99,
         saleOff: '-25%',
-        saleOffValue: 0.25
+        saleOffValue: 0.25,
+        id: 'GMP011'
     }
     ,
     {
@@ -121,7 +132,8 @@ let products = [
         oldPrice: 244.99,
         saleOff: '-15%',
         saleOffValue: 0.15,
-        special: 'Best Selling'
+        special: 'Best Selling',
+        id: 'GMP012'
     }
     ,
     {
@@ -131,7 +143,8 @@ let products = [
         company: 'MSI',
         oldPrice: 244.99,
         saleOff: '-20%',
-        saleOffValue: 0.2
+        saleOffValue: 0.2,
+        id: 'GMP013'
     }
     ,
     {
@@ -141,7 +154,8 @@ let products = [
         company: 'MSI',
         oldPrice: 369.99,
         saleOff: '-30%',
-        saleOffValue: 0.3
+        saleOffValue: 0.3,
+        id: 'GMP014'
     }
     ,
     {
@@ -152,7 +166,8 @@ let products = [
         oldPrice: 69.99,
         saleOff: '-20%',
         saleOffValue: 0.2,
-        special: 'Cheapest'
+        special: 'Cheapest',
+        id: 'GMP015'
     }
     ,
     {
@@ -162,7 +177,8 @@ let products = [
         company: 'HyperX',
         oldPrice: 53.99,
         saleOff: '-15%',
-        saleOffValue: 0.15
+        saleOffValue: 0.15,
+        id: 'GMP016'
     }
     ,
     {
@@ -173,7 +189,8 @@ let products = [
         oldPrice: 7.99,
         saleOff: '-5%',
         saleOffValue: 0.05,
-        special: 'Cheapest'
+        special: 'Cheapest',
+        id: 'GMP017'
     }
     ,
     {
@@ -183,7 +200,8 @@ let products = [
         company: 'Tecware',
         oldPrice: 14.99,
         saleOff: '-15%',
-        saleOffValue: 0.15
+        saleOffValue: 0.15,
+        id: 'GMP018'
     }
     ,
     {
@@ -194,7 +212,8 @@ let products = [
         oldPrice: 59.99,
         saleOff: '-10%',
         saleOffValue: 0.1,
-        special: 'Best Selling'
+        special: 'Best Selling',
+        id: 'GMP019'
     }
     ,
     {
@@ -204,7 +223,8 @@ let products = [
         company: 'Razer',
         oldPrice: 79.99,
         saleOff: '-25%',
-        saleOffValue: 0.25
+        saleOffValue: 0.25,
+        id: 'GMP020'
     }
     ,
     {
@@ -214,7 +234,8 @@ let products = [
         company: 'EVGA',
         oldPrice: 121.99,
         saleOff: '-15%',
-        saleOffValue: 0.15
+        saleOffValue: 0.15,
+        id: 'GMP021'
     }
     ,
     {
@@ -225,7 +246,8 @@ let products = [
         oldPrice: 214.99,
         saleOff: '-20%',
         saleOffValue: 0.2,
-        special: 'Best Selling'
+        special: 'Best Selling',
+        id: 'GMP022'
     }
     ,
     {
@@ -235,7 +257,8 @@ let products = [
         company: 'Colorful',
         oldPrice: 379.99,
         saleOff: '-20%',
-        saleOffValue: 0.2
+        saleOffValue: 0.2,
+        id: 'GMP023'
     }
     ,
     {
@@ -245,7 +268,8 @@ let products = [
         company: 'Colorful',
         oldPrice: 219.99,
         saleOff: '-25%',
-        saleOffValue: 0.25
+        saleOffValue: 0.25,
+        id: 'GMP024'
     }
     ,
     {
@@ -256,7 +280,8 @@ let products = [
         oldPrice: 89.99,
         saleOff: '-15%',
         saleOffValue: 0.15,
-        special: 'Cheapest'
+        special: 'Cheapest',
+        id: 'GMP025'
     }
 ]
 export {products}

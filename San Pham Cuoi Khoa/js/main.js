@@ -82,7 +82,7 @@ let content = (x) => `
                         </div>
                         <div class="product-intro">
                             <div class="action-link2">
-                                <button class="btn-cart" type="button"  onclick='setData( "${x.name}", "${x.img}"," ${x.company}", ${Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100} ) ' >
+                                <button class="btn-cart" type="button"  onclick='setData( "${x.name}", "${x.img}"," ${x.company}", ${Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100}, "${x.id}") ' >
                                     <i class="far fa-shopping-cart"></i><span>Add to Cart</span>
                                 </button>
                                 <button class="btn-wishlist btn btn-default wishlist-btn" type="button">

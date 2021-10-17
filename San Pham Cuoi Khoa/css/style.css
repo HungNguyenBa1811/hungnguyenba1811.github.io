@@ -67,11 +67,12 @@ body{
     display: block;
     line-height: 1.5;
     padding: 5px 0;
+    cursor: pointer;
 }
-.top-bar .button-drop .dropdown .list-drop li:last-child{
+/* .top-bar .button-drop .dropdown .list-drop li:last-child{
     display: none;
     padding: 0;
-}
+} */
 .top-bar .button-drop .dropdown .list-drop li a{
     color: #000 !important;
 }
@@ -618,7 +619,6 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-/* toggle */
 .nolongerexist{
     display: none !important;
 }
