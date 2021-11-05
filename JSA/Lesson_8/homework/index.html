@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'georama';
+            font-weight: 200;
+            font-size: 25px;
+            background-color: #F7F7F7;
+        }
+        p{
+            font-weight: 400;
+        }
+        #ex1{
+            list-style-type: none;
+            padding: 0;
+            font-weight: 400;
+        }
+        #ex1 li{
+            padding-left: 15px;
+        }
+        #ex1 li::before{
+            content: '\2192';
+            padding-right: 5px;
+            color: black;
+        }
+        #ex2{
+            list-style-type: lower-alpha;
+            font-weight: 400;
+        }
+        #answer, #convert{
+            list-style-type: lower-alpha;
+        }
+        input[ type=button ]{
+            background: #393E46;
+            border: 1px solid black;
+            width: 100px;
+            height: 40px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-family: 'Orbitron';
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        input[ type=button ]:hover{
+            background-color: whitesmoke;
+            color: #393E46;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Bài 1: Viết một function ở định dạng ES6, để giải phương trình có dạng: ax + b = 0. Thoả mãn các điều kiện sau: </p>
+    <ul id="ex1">
+        <li>Function có tên là equation </li>
+        <li>Function có 2 tham số được nhập vào tương ứng: a, b</li>
+        <li>Chạy Function vừa tạo để tìm ra kết quả của phương trình 5x + 8 = 0</li>
+    </ul>
+    <form action="" method="GET">
+        Nhập số a: <input type="text" id="a">
+        <br>
+        Nhập số b: <input type="text" id="b">
+        <br>
+        <input type="button" onclick="equation()" value="Submit!">
+    </form>
+    <div id="result"></div>
+
+    <p>Bài 2: Viết một function ở định dạng ES6 có tham số điền vào là 2 cạnh bên của tam giác vuông. Khi chạy hàm số sẽ đưa ra kết quả của:</p>
+    <ol id="ex2">
+        <li>Cạnh huyền</li>
+        <li>Đường cao của tam giác</li>
+        <li>Số đo của 2 góc bên trong tam giác</li>
+    </ol>
+    <form action="" method="GET">
+        Nhập số đo cạnh I: <input type="text" id="canh1">
+        <br>
+        Nhập số đo cạnh II: <input type="text" id="canh2">
+        <br>
+        <input type="button" onclick="triangleSus()" value="Submit!">
+    </form>
+    <div><ol id="answer"><ol></div>
+
+    <p>Bài 3: Chuyển các function sau sang dạng ES6:</p>
+    <img 
+        src="https://lh5.googleusercontent.com/twkT4WXRzFiLc9MimdRU1IY3vBxwL4fuERdfPpum7qqyCkLb9V8-sJ1J6RBPB59WDXsJ9ZFT-8idwPL3Q4msoQGJN0sU1ZjiQqpMu6lPiooJqKdZNYMALAA7H5V42Q-S2MtGw39h=s0"
+        alt="error">
+    <br>
+    <!-- <p>function foo(x,y,z) { console.log(x, y, z) }</p>
+    <p>function foo() { alert('Hello') }</p>
+    <p>function foo(a,b) { let m = a + b * 100 return m }</p> -->
+    <input type="button" onclick="convertible()" value="Convert!">
+    <ul id="convert"></ul>
+    
+    <p>Bài 4: (open console)</p>
+    <script src="./index.js"></script>
+</body>
+</html>

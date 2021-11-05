@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Landing Page</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body id="body">
+
+    <div class="login-popup">
+
+        <div class="img-container">
+
+            <img 
+                src="./img/avatar.png"
+                alt="Nothing here">
+
+        </div>
+        
+        <h1 class="head">CUSTOMER LOGIN</h1>
+
+        <div class="container">
+
+            <p class="name-tag">Username:</p>
+            <input type="text" placeholder="Enter Username" id="userName" required>
+            <p class="name-tag">Password:</p>
+            <input type="password" placeholder="Enter Password" id="userPsw" required>
+            <br>
+            <button type="submit" class="btn-login" onclick="check()">Login</button>
+            <input type="checkbox">
+            <label>Remember me</label>
+
+        </div>
+
+        <div class="container">
+
+            <button type="button" class="cancelBtn" onclick="backToHomePage()"><span>Main Page</span></button>
+            <a href="#">Forgot password?</a>
+
+        </div>
+
+    </div>
+
+    <script src="./js/dataLogin.js"></script>
+</body>
+</html>

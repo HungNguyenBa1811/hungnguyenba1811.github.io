@@ -1,0 +1,38 @@
+BODY:
+
+$ PC BUILD:
+***$ GRAPHICS CARDS (VGA):
+***$ CPU:
+***$ CASE:
+***$ RAM:
+***$ HDD:
+***$ MOTHERBOARDS:
+***$ MONITORS:
+
+# GEARS
+***# KEYBOARDS:
+***# GAMING MOUSE:
+***# MOUSE PADS:
+***# CONTROLLER:
+***# GAMING HEADSET:
+***# GAMING FURNITURE:
+***# SPEAKERS & MICROPHONE:
+***# WEBCAM:
+***# OTHER ACCESSORIES:
+
+
+STEPS:
+
+# create a js file to store products
+## export import products to another js file
+### create sign up & login landing page
+#### create main body theme {done}
+##### create js cart & js mafths (money)
+###### decoration
+####### create product details page & paying landing page
+######## bugs fix
+######### re-decorate page & check if the page works properly
+
+
+LINKS:
+https://limupa-theme.myshopify.com/?fts=0

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Landing Page</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body id="body">
+
+    <div class="login-popup">
+
+        <h1 class="head">REGISTER</h1>
+
+        <div class="container">
+
+            <p>Username:</p>
+            <input type="text" placeholder="Enter Username" id="name" required>
+            <p>Password:</p>
+            <input type="password" placeholder="Enter Password" id="psw" required>
+            <ul>
+                <li>Password must be at least 6 characters long.</li>
+                <li>Must contain a lowercase letter.</li>
+                <li>Must contain an uppercase letter.</li>
+            </ul>
+            <button type="submit" class="btn-login" onclick="store()">Register</button>
+
+        </div>
+
+        <div class="container">
+            <a href="./loginPage.html">Already have an account?</a>
+        </div>
+
+    </div>
+    <script src="./js/dataLogin.js"></script>
+</body>
+</html>
