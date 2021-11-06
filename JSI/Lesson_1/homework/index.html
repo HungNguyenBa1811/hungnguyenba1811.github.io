@@ -4,12 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin-top: 20px;
+        }
+        h1{
+            text-transform: uppercase;
+            font-family: 'Comfortaa';
+        }
+        thead{
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: bold;
+        }
+        tbody{
+            font-family: 'Roboto', sans-serif;
+        }
+        .container:first-child{
+            margin-bottom: 50px;
+        }
+    </style>
+    <title>Lab 1</title>
 </head>
 <body>
-    <ul class="call">
-        
-    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <img 
+                    src="./corona.png"
+                    alt="corona"
+                    width="100px">
+            </div>
+            <div class="col-lg-10">
+                <h1>Corona Laboratory</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td class="text-center">Confirmed</td>
+                    <td class="text-center">Recovered</td>
+                    <td class="text-center">Critical</td>
+                    <td class="text-center">Deaths</td>
+                    <td class="text-center">Last Change</td>
+                    <td class="text-center">Last Update</td>
+                </tr>
+            </thead>
+
+            <tbody class="call"></tbody>
+        </table>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>
