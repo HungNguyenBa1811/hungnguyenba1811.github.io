@@ -66,3 +66,8 @@ let playersModified = players.reduce((obj, item) => {
 console.log(playersModified)
 
 // cach 2
+let playersModified_a = {};
+for (var i = 0; i < players.length; ++i){
+    playersModified_a[i+11] = players[i];
+}
+console.log(playersModified_a)
