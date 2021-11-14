@@ -1,0 +1,16 @@
+OOP - lập trình hướng đối tượng là phương pháp lập trình dựa trên khái niệm về lớp và đối tượng
+Mục tiêu:
++ Quản lí source code
++ Tăng khả năng tái sử dụng
+Đối tượng (Object):
++ Thuộc tính: Thông tin, đặc điểm của đối tượng
++ Phương thức (Method): Hành vi của đối tượng
+Lớp (Class): là một khuôn mẫu định nghĩa các thuộc tính và phương thức chung cho tất cả các đối tượng cùng loại
+Ví dụ: Tài khoản:
++ Thuộc tính: Tên TK, STK, ngân hàng, số dư,...
++ Phương thức: Rút tiền, gửi tiền, kiểm tra số dư
+4 đặc tính của OOP:
++ Tính đóng gói
++ Tính kế thừa
++ Tính đa hình
++ Tính trừu tượng
