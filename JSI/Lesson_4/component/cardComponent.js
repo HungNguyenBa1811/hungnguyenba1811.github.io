@@ -1,0 +1,31 @@
+const style = `
+<style>
+    .card{
+
+    }
+    .card-body{
+
+    }
+</style>
+`
+class CardComponent extends HTMLElement {
+    constructor() {
+        super();
+        // khai bao shadow_dom
+        this._shadowDom = this.attachShadow({ mode: 'open' })
+        this.imgSrc = this.getAttribute('imgSrc')
+        this.title = this.getAttribute('title')
+        this.description = this.getAttribute('description')
+        this._shadowDom.innerHTML = `
+            ${style}
+            <div class="card">
+                <img src="${this.imgSrc}">
+                <div class="card-body">
+                    <div class="title">${this.title}</div>
+                    <div class="description">${this.description}</div>
+                </div>
+            </div>
+        `
+    }
+}
+window.customElements.define('card-container', CardComponent)
