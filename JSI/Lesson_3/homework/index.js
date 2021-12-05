@@ -87,7 +87,7 @@ class Fraction {
         if(this.denominator == 0) {
             alert('Sai phan so')
         }else{
-            console.log(`${this.numerator} / ${this.denominator}`)
+            console.log(`${this.phanSoToiGian(this.numerator, this.denominator)}`)
         }
     }
     phanSoToiGian(a,b) {
@@ -99,38 +99,40 @@ class Fraction {
         }
         return `${a} / ${b}`
     }
-    tong(a1,b1,a2,b2) {
-        if(b1 == b2){
-            let newNumerator = a1 + a2
+    tong(a1,b1) {
+        if(b1 == this.denominator){
+            let newNumerator = a1 + this.numerator
             let newDenominator = b1
-            return `${newNumerator} / ${newDenominator}`
+            this.phanSoToiGian(newNumerator,newDenominator)
         }
         else{
-            let newNumerator = a1*b2+a2*b1
-            let newDenominator = b1*b2
+            let newNumerator = a1*this.denominator + this.numerator*b1
+            let newDenominator = b1*this.denominator
             this.phanSoToiGian(newNumerator,newDenominator)
         }
     }
-    hieu(a1,b1,a2,b2) {
-        if(b1 == b2){
-            let newNumerator = a1 - a2
+    hieu(a1,b1) {
+        if(b1 == this.denominator){
+            let newNumerator = this.numerator - a1
             let newDenominator = b1
-            return `${newNumerator} / ${newDenominator}`
+            this.phanSoToiGian(newNumerator,newDenominator)
         }
         else{
-            let newNumerator = a1*b2 - a2*b1
-            let newDenominator = b1*b2
+            let newNumerator = this.numerator*b1 - a1*this.denominator
+            let newDenominator = b1*this.denominator
             this.phanSoToiGian(newNumerator,newDenominator)
         }
     }
-    tich(a1,b1,a2,b2) {
-        let newNumerator = a1*a2
-        let newDenominator = b1*b2
+    tich(a1,b1) {
+        let newNumerator = a1*this.numerator
+        let newDenominator = b1*this.denominator
         this.phanSoToiGian(newNumerator,newDenominator)
     }
-    thuong(a1,b1,a2,b2) {
-        let newNumerator = a1*b2
-        let newDenominator = b1*a2
+    thuong(a1,b1) {
+        let newNumerator = a1*this.denominator
+        let newDenominator = b1*this.numerator
         this.phanSoToiGian(newNumerator,newDenominator)
     }
 }
+const phanSoMoi = new Fraction(1,3)
+console.log(phanSoMoi.tong(2,9))
