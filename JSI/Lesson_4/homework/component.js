@@ -40,10 +40,10 @@ class Clock extends HTMLElement {
         }, 1000)
     }
     stop() {
-        
         clearInterval(myTimer);
     }
     stopAll() {
 
     }
 }
+window.customElements.define('clock', Clock)

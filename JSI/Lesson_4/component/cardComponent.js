@@ -1,10 +1,7 @@
 const style = `
 <style>
-    .card{
-
-    }
     .card-body{
-
+        text-align: center;
     }
 </style>
 `
@@ -19,7 +16,7 @@ class CardComponent extends HTMLElement {
         this._shadowDom.innerHTML = `
             ${style}
             <div class="card">
-                <img src="${this.imgSrc}">
+                <img src="${this.imgSrc}" width="100px">
                 <div class="card-body">
                     <div class="title">${this.title}</div>
                     <div class="description">${this.description}</div>
