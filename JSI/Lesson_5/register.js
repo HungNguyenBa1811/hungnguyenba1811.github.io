@@ -1,6 +1,6 @@
 const style = `
     .register-container {
-        background-image: url('https://c.tenor.com/FC-Hk1iXUikAAAAM/shang-abi.gif');
+        background-image: url('https://bizweb.dktcdn.net/100/196/750/products/apple-iphone-12-3.jpg?v=1602642702053');
         background-repeat: no-repeat;
         background-size: 100vh;
         display: flex;
