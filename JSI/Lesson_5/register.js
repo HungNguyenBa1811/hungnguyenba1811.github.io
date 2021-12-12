@@ -34,11 +34,11 @@ class RegisterScreen extends HTMLElement {
             <div class="register-container">
                 <div class="register-form">
                     <h1>JSI-03</h1>
-                    <input-wrapper type="text" placeholder="Enter your first name"></input-wrapper>
-                    <input-wrapper type="text" placeholder="Enter your last name"></input-wrapper>
-                    <input-wrapper type="text" placeholder="Enter your email"></input-wrapper>
+                    <input-wrapper type="text" placeholder="Enter your first name" err=""></input-wrapper>
+                    <input-wrapper type="text" placeholder="Enter your last name" err=""></input-wrapper>
+                    <input-wrapper type="text" placeholder="Enter your email" err="This email has already been taken"></input-wrapper>
                     <input-wrapper type="password" placeholder="Type your password"></input-wrapper>
-                    <input-wrapper type="password" placeholder="Retype your password"></input-wrapper>
+                    <input-wrapper type="password" placeholder="Retype your password" err="Wrong password"></input-wrapper>
                     <button>Register</button>
                     <a>Already have an account? Login</a>
                 </div>
