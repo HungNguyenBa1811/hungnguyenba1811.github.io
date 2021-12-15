@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data</title>
+    <style>
+        *{
+            font-size: 25px;
+        }
+        label{
+            display: inline-block; width: 150px;
+        }
+        input{
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+    
+    <label>Index</label> <input id="indBox" type="number"> <br>
+    <label>Name</label> <input id="nameBox" type="text"> <br>
+    <label>Company</label> <input id="compBox" type="text"> <br>
+    <label>Type</label> <input id="typeBox" type="text"> <br>
+    <label>Id</label> <input id="idBox" type="text"> <br>
+    <label>Image Url</label> <input id="urlBox" type="text"> <br>
+    <label>Price (Old)</label> <input id="priceBox" type="number"> <br>
+    <label>Sale Off</label> <input id="saleBox" type="text"> <br>
+    <label>Sale Value</label> <input id="saleValBox" type="number"> <br>
+    <label>Special</label> <input id="spcBox" type="text"> <br>
+
+    <hr>
+    <button id="insBtn">INSERT</button>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        import {getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDkvgS326bGNeSU34aqBoeqyLtKW6Rf2WA",
+            authDomain: "gaming-gear-project.firebaseapp.com",
+            projectId: "gaming-gear-project",
+            storageBucket: "gaming-gear-project.appspot.com",
+            messagingSenderId: "67679831371",
+            appId: "1:67679831371:web:56766ea0c13fc7cfaa94ce"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore()
+
+        let indBox = document.querySelector("#indBox")
+        let nameBox = document.querySelector("#nameBox")
+        let compBox = document.querySelector("#compBox")
+        let typeBox = document.querySelector("#typeBox")
+        let idBox = document.querySelector("#idBox")
+        let urlBox = document.querySelector("#urlBox")
+        let priceBox = document.querySelector("#priceBox")
+        let saleBox = document.querySelector("#saleBox")
+        let saleValBox = document.querySelector("#saleValBox")
+        let spcBox = document.querySelector("#spcBox")
+
+        let saleOffVal = Number(saleValBox.value)
+        let indexProduct = Number(indBox.value)
+        let priceProduct = Number(priceBox.value)
+
+        let insBtn = document.querySelector("#insBtn")
+
+        async function AddDocument_CustomID(){
+            var ref = doc(db, "products-list", `product-${indexProduct}`)
+
+            const docRef = await setDoc(
+                ref, {
+                    name: nameBox.value,
+                    company: compBox.value,
+                    type: typeBox.value,
+                    id: idBox.value,
+                    imgUrl: urlBox.value,
+                    oldPrice: priceProduct,
+                    saleOff: saleBox.value,
+                    saleOffValue: saleOffVal,
+                    special: spcBox.value
+                }
+            )
+            .then(() => {
+                alert("Data added successfully!!")
+            })
+            .catch((error) => {
+                alert("Unsuccessful operation, error:" + error);
+            })
+        }
+
+        insBtn.addEventListener("click", AddDocument_CustomID)
+    </script>
+
+</body>
+</html>

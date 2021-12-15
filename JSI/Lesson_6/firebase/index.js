@@ -1,0 +1,32 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js'
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyCJy22ZhlKtgNojJ9FoK-AWllLj4FJ71ts",
+    authDomain: "jsi-03.firebaseapp.com",
+    projectId: "jsi-03",
+    storageBucket: "jsi-03.appspot.com",
+    messagingSenderId: "1051973732252",
+    appId: "1:1051973732252:web:404e8537c723f2a8f8aa59"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore();
+
+// get data
+const docRef = doc(db, "user", "TWK99bWn1r6wGqg6Q63h")
+const docSnap = await getDoc(docRef);
+
+if (docSnap.exists()) {
+    console.log("Document data:", docSnap.data()); // return array of data
+} else {
+    // doc.data() will be undefined in this case
+    console.log("No such document!");
+}
+
+
