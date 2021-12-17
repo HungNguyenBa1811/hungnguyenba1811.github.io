@@ -64,14 +64,10 @@
         let saleValBox = document.querySelector("#saleValBox")
         let spcBox = document.querySelector("#spcBox")
 
-        let saleOffVal = Number(saleValBox.value)
-        let indexProduct = Number(indBox.value)
-        let priceProduct = Number(priceBox.value)
-
         let insBtn = document.querySelector("#insBtn")
 
         async function AddDocument_CustomID(){
-            var ref = doc(db, "products-list", `product-${indexProduct}`)
+            var ref = doc(db, "products-list", `product-${indBox.value}`)
 
             const docRef = await setDoc(
                 ref, {
@@ -80,9 +76,9 @@
                     type: typeBox.value,
                     id: idBox.value,
                     imgUrl: urlBox.value,
-                    oldPrice: priceProduct,
+                    oldPrice: priceBox.value,
                     saleOff: saleBox.value,
-                    saleOffValue: saleOffVal,
+                    saleOffValue: saleValBox.value,
                     special: spcBox.value
                 }
             )
