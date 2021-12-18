@@ -41,6 +41,7 @@ class RegisterScreen extends HTMLElement {
                     <input-wrapper type="password" placeholder="Retype your password" err="Wrong password"></input-wrapper>
                     <button>Register</button>
                     <a>Already have an account? Login</a>
+                    <button id="">
                 </div>
             </div>
         `
