@@ -1,12 +1,15 @@
 import {getAuth, signInAnonymously, onAuthStateChanged, FacebookAuthProvider, signInWithPopup} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
 const auth = getAuth();
-signInAnonymously(auth).then(() => { // Signed in..
-}).catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ...
-});
+signInAnonymously(auth)
+    .then(() => { 
+        // Signed in..
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ...
+    });
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
@@ -14,6 +17,8 @@ onAuthStateChanged(auth, (user) => {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
         const uid = user.uid;
+        const uname = user.displayName;
+        const email = user.email;
         // ...
     } else {
         // User is signed out
@@ -26,21 +31,23 @@ provider.addScope("user_birthday");
 auth.languageCode = "it";
 
 const auth = getAuth();
-signInWithPopup(auth, provider).then((result) => { // The signed-in user info.
-    const user = result.user;
+signInWithPopup(auth, provider)
+    .then((result) => { // The signed-in user info.
+        const user = result.user;
 
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-    const credential = FacebookAuthProvider.credentialFromResult(result);
-    const accessToken = credential.accessToken;
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        const credential = FacebookAuthProvider.credentialFromResult(result);
+        const accessToken = credential.accessToken;
 
-    // ...
-}).catch((error) => { // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.email;
-    // The AuthCredential type that was used.
-    const credential = FacebookAuthProvider.credentialFromError(error);
+        // ...
+    })
+    .catch((error) => { // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.email;
+        // The AuthCredential type that was used.
+        const credential = FacebookAuthProvider.credentialFromError(error);
 
-    // ...
-});
+        // ...
+    });
