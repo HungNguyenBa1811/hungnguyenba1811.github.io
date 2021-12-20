@@ -24,16 +24,23 @@ const signUp = document.querySelector("#signUpBtn")
 signUp.addEventListener('click', () => {
     let email = document.querySelector("#emailBox").value
     let password = document.querySelector("#passwordBox").value
+    let username = document.querySelector('#usernameBox').value
 
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            set(ref(database, 'user/' + user.uid),{
-                username: username,
-                email: email,
-            })
+            const uid = user.uid
             alert("User created!!!")
+            function writeUserData(userId, email, password) {
+                const db = getDatabase();
+                set(ref(db, 'users/' + userId), {
+                    username: username,
+                    email: email,
+                    password: password,
+                });
+            }
+            writeUserData(uid, email, password)
             // ...
         })
         .catch((error) => {

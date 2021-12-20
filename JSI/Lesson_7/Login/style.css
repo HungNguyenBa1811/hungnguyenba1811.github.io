@@ -10,7 +10,7 @@
 }
 .loginBox{
     position: relative;
-    margin: 3% auto;
+    margin: 8% auto;
     width: 620px;
     height: 400px;
     background: #fff;
@@ -38,7 +38,7 @@ h1{
 input[type="text"], input[type="password"]{
     display: block;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     padding: 4px;
     width: 220px;
     height: 32px;
@@ -48,8 +48,8 @@ input[type="text"], input[type="password"]{
     font-size: 15px;
 }
 input[type="text"]:focus, input[type="password"]:focus{
-    border-bottom: 2px solid #1ff;
-    color: #1aa;
+    border-bottom: 2px solid #22577A;
+    color: #38A3A5;
     transition: 0.2s ease;
 }
 input[ type= "submit" ]{
@@ -106,9 +106,9 @@ input[type = "submit"]:hover{
     color: #fff;
 }
 .facebook{
-    background: #5584AC;
+    background: #3b5998;
 }
 
 .google{
-    background: #f05454;
+    background: #db4a39;
 }
