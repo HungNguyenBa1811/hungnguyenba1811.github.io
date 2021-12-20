@@ -1,17 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@300;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     background: #fff;
     font-size: 14px;
     color: #000;
-    font-family: sans-serif;
+    font-family: "Roboto";
     font-weight: 300;
 }
 .loginBox{
     position: relative;
-    margin: 8% auto;
-    width: 620px;
+    /* margin: 8% auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    max-width: 620px;
+    height: 400px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.signUpBox{
+    position: relative;
+    /* margin: 8% auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    max-width: 400px;
     height: 400px;
     background: #fff;
     border-radius: 2px;
@@ -46,6 +61,9 @@ input[type="text"], input[type="password"]{
     border-bottom: 1px solid gray;
     font-weight: 400;
     font-size: 15px;
+}
+.signUpBox input[type = "text"], .signUpBox input[type = "password"]{
+    width: 300px !important;
 }
 input[type="text"]:focus, input[type="password"]:focus{
     border-bottom: 2px solid #22577A;
@@ -111,4 +129,11 @@ input[type = "submit"]:hover{
 
 .google{
     background: #db4a39;
+}
+/* Main Page */
+.appeared{
+    display: block;
+}
+.disappeared{
+    display: none;
 }

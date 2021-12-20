@@ -27,10 +27,12 @@ logIn.addEventListener("click", () => {
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
+            console.log(user)
             alert("Log In successfully!!!")
+            window.location = './mainpage.html'
         })
         .catch((error) => {
-            const errorCode = error.code;
+            // const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage)
         });
