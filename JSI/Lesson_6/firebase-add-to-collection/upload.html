@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Images</title>
+    <style>
+        img{
+            min-height: 200px;
+            min-width: 200px;
+            max-height: 550px;
+            max-width: 1000px;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <label>Image Name: </label> <input type="text" id="nameBox"> <br><br>
+    <img id="myImg"> <label id="upProgress"></label> <br>
+    <hr>
+    <button id="select">Select Image</button>
+    <button id="upload">Upload Image</button>
+
+    <script id="mainScript">
+        import { initializeApp } from 'https://gstatic.com/firebasejs/9.6.1/firebase-app.js'
+        // import {} from 'https://gstatic.com/firebasejs/9.6.1/firebase-auth.js'
+        // import {} from 'https://gstatic.com/firebasejs/9.6.1/firebase-database.js'
+        import { getStorage, ref, uploadBytes } from 'https://gstatic.com/firebasejs/9.6.1/firebase-storage.js'
+
+        var imgName, imgUrl;
+        var files = [];
+        var reader;
+
+        const firebaseConfig = { 
+            apiKey : "AIzaSyDkvgS326bGNeSU34aqBoeqyLtKW6Rf2WA" , 
+            authDomain : "gaming-gear-project.firebaseapp.com" , 
+            databaseURL : "https://gaming-gear-project-default-rtdb.firebaseio.com" , 
+            projectId : "gaming-gear-project" , 
+            storageBucket : "gaming-gear-project.appspot.com" , 
+            messagingSenderId : "67679831371" , 
+            appId : "1: 67679831371: web: 56766ea0c13fc7cfaa94ce" 
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const storage = getStorage();
+        // const storageRef = ref(storage, "images");
+
+        const selectBtn = document.querySelector("#select")
+        const uploadBtn = document.querySelector("#upload")
+
+        const myImg = document.querySelector("#myImg")
+        // const imgName = document.querySelector("#nameBox").value
+
+        selectBtn.addEventListener("click", (e) => {
+            let input = document.createElement('input')
+            input.type = 'file';
+
+            input.onchange = (e) => {
+                files = e.target.files;
+                reader = new FileReader();
+                reader.onload = () => {
+                    myImg.src = reader.result;
+                }
+                reader.readAsDataURL(files[0])
+            }
+            input.click();
+        })
+
+        uploadBtn.addEventListener("click", () => {
+            const metadata = {
+                contentType: "image/png",
+            }
+            const storageRef = ref(storage, 'images/' + imgName);
+            const uploadTask = uploadBytesResumable(storageRef, file[0], metadata);
+
+            // Listen for state changes, errors, and completion of the upload.
+            uploadTask.on('state_changed', (snapshot) => {
+                // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log('Upload is ' + progress + '% done');
+                switch (snapshot.state) {
+                    case 'paused':
+                        console.log('Upload is paused');
+                        break;
+                    case 'running':
+                        console.log('Upload is running');
+                        break;
+                    }
+                }, (error) => {
+                    // A full list of error codes is available at
+                    // https://firebase.google.com/docs/storage/web/handle-errors
+                    switch (error.code) {
+                    case 'storage/unauthorized':
+                        // User doesn't have permission to access the object
+                        break;
+                    case 'storage/canceled':
+                        // User canceled the upload
+                        break;
+
+                    // ...
+
+                    case 'storage/unknown':
+                        // Unknown error occurred, inspect error.serverResponse
+                        break;
+                    }
+                }, () => {
+                    // Upload completed successfully, now we can get the download URL
+                    getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                    console.log('File available at', downloadURL);
+                    });
+                }
+            );
+        })
+    </script>
+
+</body>
+</html>
