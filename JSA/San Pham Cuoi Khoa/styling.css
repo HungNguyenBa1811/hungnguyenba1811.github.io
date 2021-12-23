@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@300;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-size: 14px;
+    color: #000;
+    font-family: "Roboto";
+    font-weight: 300;
+}
+.loginBox{
+    position: relative;
+    /* margin: 8% auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    max-width: 620px;
+    height: 400px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.signUpBox{
+    position: relative;
+    /* margin: 8% auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    max-width: 400px;
+    height: 400px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    box-sizing: border-box;
+}
+h1{
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+    color: #222;
+}
+.header{
+    margin-bottom: 30px;
+}
+input[type="text"], input[type="password"]{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    padding: 4px;
+    width: 220px;
+    height: 32px;
+    border: 0;
+    border-bottom: 1px solid gray;
+    font-weight: 400;
+    font-size: 15px;
+}
+.signUpBox input[type = "text"], .signUpBox input[type = "password"]{
+    width: 300px !important;
+}
+input[type="text"]:focus, input[type="password"]:focus{
+    border-bottom: 2px solid #22577A;
+    color: #38A3A5;
+    transition: 0.2s ease;
+}
+input[ type= "submit" ]{
+    margin-top: 20px;
+    width: 120px;
+    height: 32px;
+    background: darkgreen;
+    border-radius: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+input[type = "submit"]:hover{
+    opacity: 0.6;
+}
+.or{
+    position: absolute;
+    top: 180px;
+    left: 300px;
+    width: 40px;
+    height: 40px;
+    background: #eee;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    line-height: 40px;
+}
+.right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    background: #bbb;
+}
+.right .signInWith{
+    display: block;
+    margin-bottom: 30px;
+    font-size: 20px;
+    background-color: #bbb;
+    color: #222;
+    text-align: center;
+}
+.socialSignIn{
+    margin-bottom: 20px;
+    width: 220px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 2px;
+    border: none;
+    font-weight: 500;
+    color: #fff;
+}
+.facebook{
+    background: #3b5998;
+}
+
+.google{
+    background: #db4a39;
+}
+/* Main Page */
+.appeared{
+    display: block;
+}
+.disappeared{
+    display: none;
+}

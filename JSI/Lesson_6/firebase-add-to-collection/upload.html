@@ -35,7 +35,7 @@
         const firebaseConfig = { 
             apiKey : "AIzaSyDkvgS326bGNeSU34aqBoeqyLtKW6Rf2WA" , 
             authDomain : "gaming-gear-project.firebaseapp.com" , 
-            databaseURL : "https://gaming-gear-project-default-rtdb.firebaseio.com" , 
+            // databaseURL : "https://gaming-gear-project-default-rtdb.firebaseio.com" , 
             projectId : "gaming-gear-project" , 
             storageBucket : "gaming-gear-project.appspot.com" , 
             messagingSenderId : "67679831371" , 
@@ -44,8 +44,10 @@
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const storage = getStorage();
+        // const storage = getStorage();
         // const storageRef = ref(storage, "images");
+        const storage = getStorage(app)
+        const storageRef = ref(storage, 'images/' + imgName);
 
         const selectBtn = document.querySelector("#select")
         const uploadBtn = document.querySelector("#upload")
@@ -72,7 +74,6 @@
             const metadata = {
                 contentType: "image/png",
             }
-            const storageRef = ref(storage, 'images/' + imgName);
             const uploadTask = uploadBytesResumable(storageRef, file[0], metadata);
 
             // Listen for state changes, errors, and completion of the upload.
