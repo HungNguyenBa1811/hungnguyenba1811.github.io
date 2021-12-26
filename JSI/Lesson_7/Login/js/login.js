@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js'
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, updateProfile } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
+import { getAuth, signInWithEmailAndPassword, updateProfile, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyCJy22ZhlKtgNojJ9FoK-AWllLj4FJ71ts",
@@ -33,7 +33,7 @@ if(logIn != null){
                 console.log(user)
                 console.log(user.uid)
                 alert("Log In successfully!!!")
-                // setInterval(() => window.location = './mainpage.html', 30000)
+                setInterval(() => window.location = './userinfo.html', 3000)
             })
             .catch((error) => {
                 // const errorCode = error.code;
@@ -44,51 +44,56 @@ if(logIn != null){
 }
 
 if(seeInfo != null){
+
     const user = auth.currentUser;
     const name = document.querySelector('#displayName')
     const phone = document.querySelector('#phoneNumber')
+
     seeInfo.addEventListener("click", () => {
-        if(user){
-            console.log(user)
-            document.querySelector("#show").innerHTML = `
-            <div>
-                <h1>BASIC INFORMATION</h1>
-                <h3>Name: ${user.displayName}</h3>
-                <h4>Email: ${user.email}</h4>
-                <h4>Password (Hashed): ${user.reloadUserInfo.passwordHash}</h4>
-            </div>
-            <div>
-                <h1>MORE INFORMATION</h1>
-                <h3>Access TOken: ${user.accessToken}</h3>
-                <h3>User id: ${user.uid}</h3>
-                <h4>Anonymous? ${user.isAnonymous}</h4>
-                <h4>Email Verified? ${user.emailVerified}</h4>
-                <h4>Phone Number: ${user.phoneNumber}</h4>
-                <h4>Photo Url</h4>
-                <img src="${user.photoURL}" alt="No Image found or maybe broken">
-            </div>
-        `
-        }
-        else{
-            alert("Not logged in!")
-        }
+        onAuthStateChanged(auth, (user) => {
+            if(user !== null){
+                user.providerData.forEach((profile) => {
+                    document.querySelector("#show").innerHTML = `
+                        <div>
+                            <h1>BASIC INFORMATION</h1>
+                            <h3>Name: ${profile.displayName}</h3>
+                            <h4>Email: ${profile.email}</h4>
+                        </div>
+                        <div>
+                            <h1>MORE INFORMATION</h1>
+                            <h3>Access TOken: ${profile.accessToken}</h3>
+                            <h3>User id: ${profile.uid}</h3>
+                            <h4>Email Verified? ${profile.emailVerified}</h4>
+                            <h4>Phone Number: ${profile.phoneNumber}</h4>
+                        </div>
+                    `
+                });
+            //     console.log(user)
+            }
+            else{
+                alert("Not logged in!")
+            }
+        })
     })
-    updateUser.addEventListener("click",() => {
-        if(user){
-            updateProfile(user, {
-                displayName: name,
-                phoneNumber: phone,
-            })
-            .then(() => {
-                alert("Profile updated!")
-            })
-            .catch((error) => {
-                const errorMessage = error.message
-                alert(errorMessage)
-                // An error occurred
-                // ...
-            });
-        }
+    updateUser.addEventListener("click", () => {
+        onAuthStateChanged(auth, (user) => {
+            if(user !== null){
+                console.log(name.value, phone.value)
+                updateProfile(user, {
+                    displayName: name.value,
+                    phoneNumber: phone.value,
+                })
+                .then(() => {
+                    alert("Profile updated!")
+                })
+                .catch((error) => {
+                    const errorMessage = error.message
+                    alert(errorMessage)
+                });
+            } else {
+                alert("Not logged in!")
+            }
+        })
     })
 }
 
