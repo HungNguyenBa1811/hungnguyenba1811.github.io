@@ -31,16 +31,18 @@ signUp.addEventListener('click', () => {
             // Signed in 
             const user = userCredential.user;
             const uid = user.uid
+            const passwordHash = user.reloadUserInfo.passwordHash
+            console.log(user)
             alert("User created!!!")
+            console.log(uid, passwordHash)
             function writeUserData(userId, email, password) {
-                const db = getDatabase();
-                set(ref(db, 'users/' + userId), {
+                set(ref(database, 'users/' + userId), {
                     username: username,
                     email: email,
                     password: password,
                 });
             }
-            writeUserData(uid, email, password)
+            writeUserData(uid, email, passwordHash)
             // ...
         })
         .catch((error) => {
