@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"
 
 const firebaseConfig = {
@@ -16,7 +16,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
-const database = getDatabase(app)
+const database = getDatabase()
 const auth = getAuth();
 
 const signUp = document.querySelector("#signUpBtn")
@@ -24,27 +24,29 @@ const signUp = document.querySelector("#signUpBtn")
 signUp.addEventListener('click', () => {
     let email = document.querySelector("#emailBox").value
     let password = document.querySelector("#passwordBox").value
-    let username = document.querySelector('#usernameBox').value
+    // let username = document.querySelector('#usernameBox').value
 
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
             const uid = user.uid
+            const passwordHash = user.reloadUserInfo.passwordHash
+            console.log(user)
             alert("User created!!!")
+            console.log(uid, passwordHash)
             function writeUserData(userId, email, password) {
-                const db = getDatabase();
-                set(ref(db, 'users/' + userId), {
-                    username: username,
+                set(ref(database, 'users/' + userId), {
+                    // username: username,
                     email: email,
                     password: password,
                 });
             }
-            writeUserData(uid, email, password)
+            writeUserData(uid, email, passwordHash)
             // ...
         })
         .catch((error) => {
-            const errorCode = error.code;
+            // const errorCode = error.code;
             const errorMessage = error.message;
             // ..
             alert(errorMessage)
