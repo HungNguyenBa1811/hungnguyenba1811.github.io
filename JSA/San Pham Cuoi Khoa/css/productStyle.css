@@ -24,17 +24,19 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
-    -webkit-transition: ease-in-out all .3s;
-    -moz-transition: ease-in-out all .3s;
-    transition: ease-in-out all .3s;
 }
 .product-grid:hover .product-thumb {
     position: relative;
     z-index: 1;
-    margin-bottom: -67px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
     border-color: #e1e1e1;
     background: #fff;
+    transform: rotateY(360deg);
+}
+.transition{
+    -webkit-transition: ease-in-out all 2s;
+    -moz-transition: ease-in-out all 2s;
+    transition: ease-in-out all 2s;
 }
 .product-grid .product-intro{
     opacity: 0;
