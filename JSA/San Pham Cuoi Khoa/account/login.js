@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js'
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyCJy22ZhlKtgNojJ9FoK-AWllLj4FJ71ts",
@@ -29,7 +29,7 @@ logIn.addEventListener("click", () => {
             const user = userCredential.user;
             console.log(user)
             alert("Log In successfully!!!")
-            window.location = './mainpage.html'
+            window.location = '../index.html'
         })
         .catch((error) => {
             // const errorCode = error.code;

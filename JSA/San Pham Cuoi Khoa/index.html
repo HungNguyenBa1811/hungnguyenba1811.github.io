@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/productStyle.css">
-    <link rel="stylesheet" href="../css/cartDesign.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/productStyle.css">
+    <link rel="stylesheet" href="./css/cartDesign.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
-    <title>Registration Page</title>
-    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/gaming-gear-project.appspot.com/o/logo-title.png?alt=media&token=fac695d5-3221-4735-ba47-8b81dbd1ed27">
+    <title>Shopping</title>
 </head>
 
 <body>
@@ -62,7 +61,7 @@
                                             <li><a id="sign" href="./loginPage.html">Sign in</a></li>
                                             <li><a id="reg" href="./signupPage.html">Register</a></li>
                                             <li><a href="./viewCart.html">View Cart</a></li>
-                                            <li><a id="out">Sign Out</a></li>
+                                            <li><a id="out" class="nolongerexist" href="#">Sign Out</a></li>
                                         </ul>
 
                                     </li>
@@ -90,7 +89,7 @@
             <div class="row">
 
                 <div class="icon-bar col-lg-3">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/gaming-gear-project.appspot.com/o/logogo.png?alt=media&token=ce1009d3-fa52-461c-98e4-7028d3a2e60f" alt="logo" width="230px">
+                    <img src="./img/logogo.png" alt="logo" width="230px">
                 </div>
                 <div class="col-lg-9 search-system">
 
@@ -146,13 +145,14 @@
                                                 <tr class="count">
                                                     <td class="text-left">Subtotal :</td>
                                                     <td class="text-right" id="cart-subtotal">
-                                                        <span class="currency">$</span>
-                                                        <span class="money">0.00</span>
+                                                        <span class="money">$0.00</span>
                                                     </td>
                                                 </tr>
                                             </tbody>
 
                                         </table>
+
+                                        <!-- <div class="show-cart-item"></div> -->
 
                                         <p class="text-center cart-button">
                                             <a href="./viewCart.html">View Cart</a>
@@ -181,7 +181,10 @@
         <div class="container">
             <ul class="list-unstyled menu-list">
                 <li>
-                    <a href="../index.html" class="title">HOME</a>
+                    <a href="./index.html" class="title">HOME</a>
+                    <!-- <ul class="drop-down-ul list-unstyled">
+                        <li><a href="#">ABOUT US</a></li>
+                    </ul> -->
                 </li>
                 <li>
                     <a href="#" class="title title-dropdown">CATALOG</a>
@@ -194,88 +197,239 @@
                     </ul>
                 </li>
                 <li><a class="title g-ft">FEATURED PRODUCTS</a></li>
-                <li><a href="https://www.facebook.com/H%E1%BA%A3o-h%C3%A1n-A1-k47-353076152409757" class="title">ABOUT
-                        US</a></li>
+                <li><a href="https://www.facebook.com/H%E1%BA%A3o-h%C3%A1n-A1-k47-353076152409757" class="title">ABOUT US</a></li>
             </ul>
         </div>
     </div>
 
-    <div class="headerSpace" style="height:70px">
-        <ul class="breadcrumb">
+    <div class="headerSpace" style="height:70px"></div>
 
-            <div class="container">
-                <li><a class="linked" href="../index.html">Home</a></li>
-                <li><a href="./register.html">Register</a></li>                
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-8">
+                    <div class="slideshow">
+                        <div class="mySlide">
+
+                            <div class="slide-text">
+                                <h5>Sale Offer <span class="diff-color">-10% Off</span> This Week</h5>
+                                <h4>Phantom 4 Pro+</h4>
+                                <h4>Obsidian</h4>
+                                <p>Starting at <span class="diff-color">$1849.00</span></p>
+                                <button class="banner-btn">Shop Now</button>
+                            </div>
+                            <img src="./img/banner_top_1.jpg" alt="">
+
+                        </div>
+                        <div class="mySlide">
+
+                            <div class="slide-text">
+                                <h5>Sale Offer <span class="diff-color">-20% Off</span> This Week</h5>
+                                <h4>Samsung</h4>
+                                <h4>Galaxy S9 | S9+</h4>
+                                <p>Starting at <span class="diff-color">$1209.00</span> </p>
+                                <button class="banner-btn">Shop Now</button>
+                            </div>
+                            <img src="./img/banner_top_2.jpg" alt="">
+
+                        </div>
+                        <div class="mySlide">
+
+                            <div class="slide-text">
+                                <h5>Sale Offer <span class="diff-color">Black Friday</span> This Week</h5>
+                                <h4>Work Desk</h4>
+                                <h4>Surface Studio 2018</h4>
+                                <p>Starting at <span class="diff-color">$824.00</span></p>
+                                <button class="banner-btn">Shop Now</button>
+                            </div>
+                            <img src="./img/banner_top_3.jpg" alt="">
+
+                        </div>
+                        <div class="dot-container">
+                            <span class="dot active-ball" onclick="currentSlide(0)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 feature-new">
+                    <div class="banner-text">
+                        <div class="text-content">
+
+                            <h5>Full HD Display</h5>
+                            <h4>Smartphone meizu m5</h4>
+                            <h4>New color green</h4>
+                            <p class="diff-color">Sale 20% off</p>
+
+                        </div>
+                        <img src="./img/feature-1.jpg" alt="">
+                    </div>
+                    <div class="banner-text">
+                        <div class="text-content">
+
+                            <h5>sale 20% off all store</h5>
+                            <h4>Playstation VR Plus</h4>
+                            <h4>network 2018</h4>
+                            <p class="diff-color">Sale 20% off</p>
+
+                        </div>
+                        <img src="./img/feature-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 sale-off">
+                    <p class="coupon">Gift Special: Gift every single day on Weekends - New Coupon code "<span
+                            id="coupon_code">AMOGUSSALEOFF</span>"</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="title-container no-border">
+                <ul class="heading nav scr-sp">
+                    <li class="elem-1 toggle-2 active-list">
+                        <a>
+                            <span>Best selling</span>
+                        </a>
+                    </li>
+                    <li class="elem-2 toggle-1">
+                        <a>
+                            <span>Cheapest</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-        </ul>
-    </div>
+            <div class="product-toggle">
+                <div class="module-image"></div>
+                <div class="product-container-feature-1 outer visible-haha"></div>
+                <div class="product-container-feature-2 outer nolongerexist"></div>
+            </div>
 
-    <div class="container">
-        <div class="row">
-            <div id="content" class="col-sm-12">
-                <h1>Create Account</h1>
-                <form id="create_customer">
+        </div>
 
-                    <input type="hidden" name="form_type" value="create_customer"><input type="hidden" name="utf8" value="✓">
-                    <div id="create-account-form ">
-                        
-                        <fieldset id="account" class="form-horizontal">
+        <div class="headerSpace" style="height:90px"></div>
 
-                            <legend>Your Personal Details</legend>
-                            <div class="form-group required">
-                                
-                                <label class="col-sm-2 control-label" for="first_name">First Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="first-name" placeholder="First Name" class="form-control">
-                                </div>
+        <div class="container spaces">
+            <div class="title-container scr-1">
+                <div class="module-title">
+                    <h2 class="title">Keyboards</h2>
+                </div>
+            </div>
+            <div class="module-image"></div>
+            <div class="product-container-1 outer"></div>
+        </div>
 
+        <div class="container spaces">
+            <div class="title-container scr-2">
+                <div class="module-title">
+                    <h2 class="title">Headphones</h2>
+                </div>
+            </div>
+            <div class="module-image"></div>
+            <div class="product-container-2 outer"></div>
+        </div>
+
+        <div class="container spaces">
+            <div class="title-container scr-3">
+                <div class="module-title">
+                    <h2 class="title">Chair</h2>
+                </div>
+            </div>
+            <div class="module-image"></div>
+            <div class="product-container-3 outer"></div>
+        </div>
+
+        <div class="container spaces">
+            <div class="title-container scr-4">
+                <div class="module-title">
+                    <h2 class="title">Mouse</h2>
+                </div>
+            </div>
+            <div class="module-image"></div>
+            <div class="product-container-4 outer"></div>
+        </div>
+
+        <div class="container spaces">
+            <div class="title-container scr-5">
+                <div class="module-title">
+                    <h2 class="title">Engine/ Hardware/ Graphic</h2>
+                </div>
+            </div>
+            <div class="module-image"></div>
+            <div class="product-container-5 outer"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 big-banner">
+
+                    <div class="text-content">
+                        <h6>Sale Offer <span class="diff-color">-20% Off</span> This Week</h6>
+                        <h4>Featured Product</h4>
+                        <h4>Cyberpunk 2077</h4>
+                        <p>Starting at <span class="diff-color">$669.00</span></p>
+                        <button class="banner-btn">Shopping Now</button>
+                    </div>
+                    <img src="./img/banner_giga_chad.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="mid-end">
+            <div class="container">
+                <div class="row">
+                    <div class="static-policy">
+
+                        <div class="col col-md-3 col-xs-6">
+                            <div class="col-img icon-wrapper">
+                                <i class="fa fa-motorcycle"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>Free Delivery</h3>
+                                <p>And free returns. See checkout for delivery dates.</p>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-3 col-xs-6">
+                            <div class="col-img icon-wrapper">
+                                <i class="fa fa-credit-card"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>Safe Payment</h3>
+                                <p>Pay with the world's most popular and secure payment method.</p>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-3 col-xs-6">
+                            <div class="col-img icon-wrapper">
+                                <i class="fa fa-shield-alt"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>Shop with Confidence</h3>
+                                <p>Our Buyer Protection covers your purchase from click to delivery.</p>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-3 col-xs-6">
+                            <div class="col-img icon-wrapper">
+                                <i class="fa fa-comments"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>24/7 Help Center</h3>
+                                <p>Have a question? Call a Specialist or chat online.</p>
                             </div>
 
-                            <div class="form-group required">
-
-                                <label class="col-sm-2 control-label" for="last_name">Last Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="last-name" placeholder="Last Name" class="form-control">
-                                </div>
-
-                            </div>
-
-                            <div class="form-group required">
-
-                                <label class="col-sm-2 control-label" for="email">Email</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="email" placeholder="Email" class="form-control">
-                                </div>
-
-                            </div>
-
-                            <div class="form-group required">
-
-                                <label class="col-sm-2 control-label" for="password">Password</label>
-                                <div class="col-sm-10">
-                                    <input type="password" id="password" placeholder="Password" class="form-control">
-                                </div>
-                            </div>
-                        </fieldset>
-                        <div class="submit">
-                            <button id="button-account" type="submit" class="btn-proceed">
-                                <span>
-                                    <i class="fa fa-user left"></i>
-                                    Create
-                                </span>
-                            </button>
-                            &nbsp;
-                            or <a class="linked" href="../index.html">Return to Store</a>
-        
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-
-    <footer style="margin-top: 50px;">
+    <footer>
         <div class="middle-footer">
             <div class="container">
                 <div class="row">
@@ -285,7 +439,7 @@
                             <div class="logo-f">
 
                                 <a href="#">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/gaming-gear-project.appspot.com/o/logogo2.png?alt=media&token=f8a0771d-6185-492b-ad94-a75d29ac5077" alt="">
+                                    <img src="./img/logogo2.png" alt="">
                                 </a>
 
                             </div>
@@ -399,11 +553,14 @@
         <div id="back-top">
             <i class="fa fa-angle-up"></i>
         </div>
-        <div class="table-cart" style="display: none;"></div>
-        <div class="money" style="display: none;"></div>
     </footer>
-
-    <script type="module" src="./signup.js"></script>
+    
+    <script src="./js/slideshow.js"></script>
+    <script src="./js/dataLogin.js"></script>
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/cart.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
