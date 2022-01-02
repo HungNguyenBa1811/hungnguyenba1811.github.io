@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/animate.css">
+    <link rel="stylesheet" href="./CSS/bootstrap-theme.css">
+    <link rel="stylesheet" href="./CSS/owl-carousel.css">
+    <link rel="stylesheet" href="./CSS/print.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
     <title>Shopping</title>
@@ -19,7 +23,7 @@
                     <div class="container-inner">
                         <div class="row">
                             <div class="col-sm-4">
-                                <div class="switcher language switcher-language" data-ui-id="language-switcher" id="switcher-language">
+                                <div class="switcher language switcher-language" id="switcher-language">
                                     <strong class="label switcher-label">
                                         <span>Language:</span>
                                     </strong>
@@ -48,7 +52,7 @@
                                         </div>
                                         <ul class="dropdown switcher-dropdown">
                                             <li class="currency-EUR switcher-option">
-                                                <a href="#">EUR</a>
+                                                <a href="#">USD</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -58,9 +62,9 @@
                                 <div class="my-acount">
                                     <strong class="label">
                                         <span>
-                                            <i class="ion-android-settings"></i>
+                                            <i class="fal fa-cog"></i>
                                             Setting
-                                            <i class="ion-ios-arrow-down">&nbsp;</i>
+                                            <i class="fal fa-chevron-down">&nbsp;</i>
                                         </span>
                                     </strong>
                                     <ul class="header links">
@@ -77,11 +81,11 @@
                                 </div>
                                 <div class="block-header">
                                     <p>
-                                        <i class="icon ion-android-alarm-clock"></i>
+                                        <i class="fal fa-alarm-clock"></i>
                                         Ordered before 17:30, shipped today - Support: (012) 800 456 789
                                     </p>
                                     <p>
-                                        <i class="icon ion-clipboard"></i>
+                                        <i class="fal fa-clipboard-list"></i>
                                         <a href="#">Track Your Order</a>
                                     </p>
                                 </div>
@@ -91,7 +95,413 @@
                 </div>
             </div>
         </header>
-    </div>
+        <div class="header-content">
+            <div class="container-inner">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="logo-home"><span data-action="toggle-nav" class="action nav-toggle"><span>Toggle
+                                    Nav</span></span>
+                            <strong class="logo">
+                                <img src="http://plazathemes.com/demo/boxstore/pub/media/logo/stores/5/logo.png"
+                                    alt="Magento Commerce" width="203" height="50">
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div data-block="minicart" class="minicart-wrapper">
+                            <a class="action showcart"
+                                href="http://plazathemes.com/demo/boxstore/english5/checkout/cart/"
+                                data-bind="scope: 'minicart_content'">
+                                <span class="text">My Cart</span>
+                                <span class="counter qty empty"
+                                    data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
+                                    <span class="counter-number">0</span>
+                                    <span class="counter-label"></span>
+                                </span>
+                            </a>
+                            <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog"
+                                tabindex="-1" role="dialog" aria-describedby="ui-id-1" style="display: none;">
+                                <div class="block block-minicart empty ui-dialog-content ui-widget-content"
+                                    data-role="dropdownDialog" id="ui-id-1" style="display: block;">
+                                    <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                                        <div class="block-title">
+                                            <strong>
+                                                <span class="text">
+                                                    <span>My Cart</span>
+                                                </span>
+                                                <span class="qty empty" title="Items in Cart">0</span>
+                                            </strong>
+                                        </div>
+                                        <div class="block-content">
+                                            <button type="button" id="btn-minicart-close" class="action close"
+                                                data-action="close" data-bind="attr: { title: $t('Close') }"
+                                                title="Close">
+                                                <span>
+                                                    <span>Close</span>
+                                                </span>
+                                            </button>
+                                            <strong class="subtitle empty" data-bind="visible: closeSidebar()">
+                                                <span>You have no items in your shopping cart.</span>
+                                            </strong>
+                                            <div id="minicart-widgets" class="minicart-widgets">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="wishlist-link">
+                            <a href="http://plazathemes.com/demo/boxstore/english5/wishlist/">
+                                <i class="icon ion-android-star"></i>
+                            </a>
+                        </p>
+                        <form class="form minisearch" id="search_mini_form"
+                            action="http://plazathemes.com/demo/boxstore/english5/catalogsearch/result/" method="get">
+                            <div class="field search">
+                                <input id="search" type="text" name="q" value="" placeholder="Search for item..."
+                                    class="input-text" maxlength="128" role="combobox" aria-haspopup="false"
+                                    aria-autocomplete="both" autocomplete="off">
+
+
+                                <button type="submit" title="Search" class="action fa fa-search" disabled="">
+                                    <span></span>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="nav-ozmegamenu">
+                    <div class="container-inner">
+                        <div class="nav-ozmegamenu-inner">
+                            <nav class="nav-container visible-lg visible-md">
+                                <div id="pt_custommenu" class="pt_custommenu">
+                                    <div id="pt_menu_home" class="pt_menu act">
+                                        <div class="parentMenu">
+                                            <a href="http://plazathemes.com/demo/boxstore/english5/">
+                                                <span>Home</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="pt_menu3" class="pt_menu readmore nav-1">
+                                        <div class="parentMenu">
+                                            <a href="http://plazathemes.com/demo/boxstore/english5/vegetables.html"
+                                                class="pt_cate ">
+                                                <span>vegetables</span>
+                                                <span class="is_sale"></span>
+                                                <span class="is_new"></span>
+                                            </a>
+                                        </div>
+                                        <div id="popup3" class="popup" style="width: 1145px; top: 60px; left: 3px; display: none;">
+                                            <div class="block1" id="block13" style="width: 1145px;">
+                                                <div class="column first col1">
+                                                    <div class="itemMenu level1">
+                                                        <a class="itemMenuName level1" href="http://plazathemes.com/demo/boxstore/english5/vegetables/jackets.html">
+                                                            <span>Jackets</span>
+                                                        </a>
+                                                        <div class="itemSubMenu level1">
+                                                            <div class="itemMenu level2">
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/jackets/tops-tees.html">
+                                                                    <span>Tops &amp; Tees</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/jackets/polo-short-sleeve.html">
+                                                                    <span>Polo
+                                                                        Short Sleeve</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/jackets/graphic-t-shirts.html">
+                                                                    <span>Graphic
+                                                                        T-Shirts</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/jackets/jackets-coats.html">
+                                                                    <span>Jackets &amp; Coats</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/jackets/fashion-jackets.html">
+                                                                    <span>Fashion Jackets</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="column col2">
+                                                    <div class="itemMenu level1">
+                                                        <a class="itemMenuName level1" href="http://plazathemes.com/demo/boxstore/english5/vegetables/weaters.html">
+                                                            <span>weaters</span>
+                                                        </a>
+                                                        <div class="itemSubMenu level1">
+                                                            <div class="itemMenu level2">
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/weaters/crochet.html">
+                                                                    <span>Crochet</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/weaters/sleeveless.html">
+                                                                    <span>Sleeveless</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/weaters/stripes.html">
+                                                                    <span>Stripes</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/weaters/sweaters.html">
+                                                                    <span>Sweaters</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/weaters/hoodies.html">
+                                                                    <span>hoodies</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="column col3">
+                                                    <div class="itemMenu level1">
+                                                        <a class="itemMenuName level1" href="http://plazathemes.com/demo/boxstore/english5/vegetables/tops.html">
+                                                            <span>Bottoms</span>
+                                                        </a>
+                                                        <div class="itemSubMenu level1">
+                                                            <div class="itemMenu level2">
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/tops/heeled-sandals.html">
+                                                                    <span>Heeled sandals</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/tops/polo-short-sleeve.html">
+                                                                    <span>Polo Short Sleeve</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/tops/flat-sandals.html">
+                                                                    <span>Flat sandals</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/tops/short-sleeve.html">
+                                                                    <span>Short Sleeve</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/vegetables/tops/long-sleeve.html">
+                                                                    <span>Long Sleeve</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="column last col4">
+                                                    <div class="itemMenu level1">
+                                                        <a class="itemMenuName level1" href="http://plazathemes.com/demo/boxstore/english5/vegetables/bottoms.html">
+                                                            <span>Bottoms</span>
+                                                        </a>
+                                                        <div class="itemSubMenu level1">
+                                                            <div class="itemMenu level2">
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/kids/bottoms/shorts.html">
+                                                                    <span>Shorts</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/kids/bottoms/dresses.html">
+                                                                    <span>Dresses</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/kids/bottoms/trousers.html">
+                                                                    <span>Trousers</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/kids/bottoms/jeans.html">
+                                                                    <span>Jeans</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clearBoth"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="pt_menu4" class="pt_menu readmore nav-2">
+                                        <div class="parentMenu">
+                                            <a href="http://plazathemes.com/demo/boxstore/english5/fruits.html" class="pt_cate ">
+                                                <span>Fruits</span>
+                                                <span class="is_sale"></span>
+                                                <span class="is_new"></span>
+                                            </a>
+                                        </div>
+                                        <div id="popup4" class="popup" style="width: 1145px; top: 60px; left: 3px; display: none;">
+                                            <div class="block1" id="block14" style="width: 1145px;">
+                                                <div class="column first col1">
+                                                    <div class="itemMenu level1">
+                                                        <a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/fruits/shirts.html">
+                                                        <span>Shirts</span></a>
+                                                        <div class="itemSubMenu level1">
+                                                            <div class="itemMenu level2">
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/fruits/shirts/tops-tees.html">
+                                                                    <span>Tops &amp; Tees</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/fruits/shirts/sweaters.html">
+                                                                    <span>Sweaters</span>
+                                                                </a>
+                                                                <a class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/shirts/hoodies.html">
+                                                                    <span>Hoodies
+                                                                    </span>
+                                                                </a>
+                                                                <a class="itemMenuName level2" href="http://plazathemes.com/demo/boxstore/english5/fruits/shirts/jackets-coats.html">
+                                                                    <span>Jackets &amp; Coats</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="column col2">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/fruits/tops-tees.html"><span>Tops
+                                                                &amp; Tees</span></a>
+                                                        <div class="itemSubMenu level1">
+                                                            <div class="itemMenu level2"><a class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/tops-tees/long-sleeve.html"><span>Long
+                                                                        Sleeve </span></a><a class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/tops-tees/short-sleeve.html"><span>Short
+                                                                        Sleeve</span></a><a class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/tops-tees/polo-short-sleeve.html"><span>Polo
+                                                                        Short Sleeve</span></a><a
+                                                                    class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/tops-tees/sleeveless.html"><span>Sleeveless</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="column col3">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/fruits/jackets.html"><span>Jackets</span></a>
+                                                        <div class="itemSubMenu level1">
+                                                            <div class="itemMenu level2"><a class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/jackets/jeans-pants.html"><span>Sweaters</span></a><a
+                                                                    class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/jackets/hoodies.html"><span>Hoodies</span></a><a
+                                                                    class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/jackets/wedges.html"><span>Wedges</span></a><a
+                                                                    class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/jackets/vests.html"><span>Vests</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="column last col4">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/fruits/jeans-pants.html"><span>Jeans
+                                                                pants</span></a>
+                                                        <div class="itemSubMenu level1">
+                                                            <div class="itemMenu level2"><a class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/jeans-pants/polo-short-sleeve.html"><span>Polo
+                                                                        Short Sleeve </span></a><a
+                                                                    class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/jeans-pants/sleeveless.html"><span>Sleeveless
+                                                                    </span></a><a class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/jeans-pants/graphic-t-shirts.html"><span>Graphic
+                                                                        T-Shirts </span></a><a
+                                                                    class="itemMenuName level2"
+                                                                    href="http://plazathemes.com/demo/boxstore/english5/fruits/jeans-pants/hoodies.html"><span>Hoodies</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clearBoth"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="pt_menu63" class="pt_menu readmore nav-3">
+                                        <div class="parentMenu" style="">
+                                            <a href="http://plazathemes.com/demo/boxstore/english5/breads.html"
+                                                class="pt_cate ">
+                                                <span>Breads</span>
+                                                <span class="is_sale"></span>
+                                                <span class="is_new"></span>
+                                            </a>
+                                        </div>
+                                        <div id="popup63" class="popup"
+                                            style="width: 1145px; top: 60px; left: 3px; display: none;">
+                                            <div class="block1" id="block163" style="width: 1145px;">
+                                                <div class="column first col1">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/breads/coats-jackets.html"><span>Coats
+                                                                &amp; Jackets</span></a></div>
+                                                </div>
+                                                <div class="column col2">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/breads/blazers.html"><span>Blazers</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="column col3">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/breads/jackets.html"><span>Jackets</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="column last col4">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/breads/trousers.html"><span>Trousers</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="clearBoth"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="pt_menu64" class="pt_menu readmore nav-4">
+                                        <div class="parentMenu" style="">
+                                            <a href="http://plazathemes.com/demo/boxstore/english5/trousers.html"
+                                                class="pt_cate ">
+                                                <span>Trousers</span>
+                                                <span class="is_sale"></span>
+                                                <span class="is_new"></span>
+                                                <span class="thumbnail-image"><img
+                                                        src="http://plazathemes.com/demo/boxstore/pub/media/catalog/category/ba4.jpg"
+                                                        alt="Thumbnail"></span>
+                                            </a>
+                                        </div>
+                                        <div id="popup64" class="popup"
+                                            style="width: 305px; top: 60px; left: 435px; display: none;">
+                                            <div class="block1" id="block164" style="width: 305px;">
+                                                <div class="column last col1">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/trousers/casual.html"><span>Casual</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="clearBoth"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="pt_menu68" class="pt_menu readmore nav-5">
+                                        <div class="parentMenu" style="">
+                                            <a href="http://plazathemes.com/demo/boxstore/english5/raincoats.html"
+                                                class="pt_cate ">
+                                                <span>Raincoats</span>
+                                                <span class="is_sale"></span>
+                                                <span class="is_new"></span>
+                                            </a>
+                                        </div>
+                                        <div id="popup68" class="popup"
+                                            style="width: 1145px; top: 60px; left: 3px; display: none;">
+                                            <div class="block1" id="block168" style="width: 1145px;">
+                                                <div class="column first col1">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/raincoats/joggers.html"><span>Joggers</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="column col2">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/raincoats/chinos.html"><span>Chinos</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="column col3">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/raincoats/jeans.html"><span>Jeans</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="column last col4">
+                                                    <div class="itemMenu level1"><a class="itemMenuName level1"
+                                                            href="http://plazathemes.com/demo/boxstore/english5/raincoats/tailored.html"><span>Tailored</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="clearBoth"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearBoth"></div>
+                                </div>
+                            </nav>
+
+
+                            <div class="mobile-bar-icon">
+                                <span>mobile icon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </body>
 
 </html>
