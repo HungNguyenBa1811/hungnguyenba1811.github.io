@@ -115,8 +115,8 @@
   })
 
 // Audio playback
-let audio = document.querySelector("#myaudio")
-audio.volume = 0.1;
+// let audio = document.querySelector("#myaudio")
+// audio.volume = 0.1;
 
 // // Search bar
 // let input_search = document.getElementById('input');

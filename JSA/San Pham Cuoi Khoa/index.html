@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <title>Shopping</title>
+    <link rel="icon" href="./img/logo-title.png">
 </head>
 
 <body>
@@ -47,7 +48,7 @@
                                         </button>
                                         <ul class="sub-menu list-drop">
                                             <li><a href="#" class="usd">USD $</a></li>
-                                            <li></li>
+                                            <!-- <li></li> -->
                                             <!-- fixed bug -->
                                         </ul>
                                     </li>
@@ -61,7 +62,7 @@
                                             <li><a id="sign" href="./loginPage.html">Sign in</a></li>
                                             <li><a id="reg" href="./signupPage.html">Register</a></li>
                                             <li><a href="./viewCart.html">View Cart</a></li>
-                                            <li><a id="out" class="nolongerexist" href="#">Sign Out</a></li>
+                                            <li><a id="out">Sign Out</a></li>
                                         </ul>
 
                                     </li>
@@ -145,14 +146,13 @@
                                                 <tr class="count">
                                                     <td class="text-left">Subtotal :</td>
                                                     <td class="text-right" id="cart-subtotal">
-                                                        <span class="money">$0.00</span>
+                                                        <span class="currency">$</span>
+                                                        <span class="money">0.00</span>
                                                     </td>
                                                 </tr>
                                             </tbody>
 
                                         </table>
-
-                                        <!-- <div class="show-cart-item"></div> -->
 
                                         <p class="text-center cart-button">
                                             <a href="./viewCart.html">View Cart</a>
@@ -182,9 +182,6 @@
             <ul class="list-unstyled menu-list">
                 <li>
                     <a href="./index.html" class="title">HOME</a>
-                    <!-- <ul class="drop-down-ul list-unstyled">
-                        <li><a href="#">ABOUT US</a></li>
-                    </ul> -->
                 </li>
                 <li>
                     <a href="#" class="title title-dropdown">CATALOG</a>
@@ -553,14 +550,19 @@
         <div id="back-top">
             <i class="fa fa-angle-up"></i>
         </div>
+        <div class="table-cart" style="display: none;"></div>
+        <div class="money" style="display: none;"></div>
+        <audio autoplay loop id="myaudio">
+            <source src="./Lofi Ching Cheng Hanji.mp3">
+        </audio>
     </footer>
-    
+
     <script src="./js/slideshow.js"></script>
     <script src="./js/dataLogin.js"></script>
-    
+
     <script src="./js/index.js"></script>
     <script src="./js/cart.js"></script>
     <script type="module" src="./js/main.js"></script>
 </body>
 
-</html>
+</html> 
