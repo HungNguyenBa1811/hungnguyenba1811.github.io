@@ -3,13 +3,13 @@ import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCJy22ZhlKtgNojJ9FoK-AWllLj4FJ71ts",
-    authDomain: "jsi-03.firebaseapp.com",
-    projectId: "jsi-03",
-    storageBucket: "jsi-03.appspot.com",
-    databaseURL: "https://jsi-03-default-rtdb.firebaseio.com/",
-    messagingSenderId: "1051973732252",
-    appId: "1:1051973732252:web:404e8537c723f2a8f8aa59"
+    apiKey: "AIzaSyDkvgS326bGNeSU34aqBoeqyLtKW6Rf2WA",
+    authDomain: "gaming-gear-project.firebaseapp.com",
+    databaseURL: "https://gaming-gear-project-default-rtdb.firebaseio.com",
+    projectId: "gaming-gear-project",
+    storageBucket: "gaming-gear-project.appspot.com",
+    messagingSenderId: "67679831371",
+    appId: "1:67679831371:web:56766ea0c13fc7cfaa94ce"
 };
 
 // Initialize Firebase

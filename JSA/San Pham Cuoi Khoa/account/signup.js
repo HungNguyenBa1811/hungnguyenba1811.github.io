@@ -1,16 +1,16 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCJy22ZhlKtgNojJ9FoK-AWllLj4FJ71ts",
-    authDomain: "jsi-03.firebaseapp.com",
-    projectId: "jsi-03",
-    storageBucket: "jsi-03.appspot.com",
-    databaseURL: "https://jsi-03-default-rtdb.firebaseio.com/",
-    messagingSenderId: "1051973732252",
-    appId: "1:1051973732252:web:404e8537c723f2a8f8aa59"
+    apiKey: "AIzaSyDkvgS326bGNeSU34aqBoeqyLtKW6Rf2WA",
+    authDomain: "gaming-gear-project.firebaseapp.com",
+    databaseURL: "https://gaming-gear-project-default-rtdb.firebaseio.com",
+    projectId: "gaming-gear-project",
+    storageBucket: "gaming-gear-project.appspot.com",
+    messagingSenderId: "67679831371",
+    appId: "1:67679831371:web:56766ea0c13fc7cfaa94ce"
 };
 
 // Initialize Firebase
@@ -24,7 +24,8 @@ const signUp = document.querySelector("#signUpBtn")
 signUp.addEventListener('click', () => {
     let email = document.querySelector("#emailBox").value
     let password = document.querySelector("#passwordBox").value
-    let username = document.querySelector('#usernameBox').value
+    let firstName = document.querySelector('#firstNameBox').value
+    let lastName = document.querySelector('#lastNameBox').value
 
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -32,10 +33,21 @@ signUp.addEventListener('click', () => {
             const user = userCredential.user;
             const uid = user.uid
             alert("User created!!!")
+            updateProfile(user,{
+                displayName: `${firstName} ${lastName}`,
+            })
+            .then(() => {
+                alert(`Name: ${firstName} ${lastName}`)
+            })
+            .catch((error) => {
+                const errorMessage = error.message
+                alert(errorMessage)
+            });
             function writeUserData(userId, email, password) {
                 const db = getDatabase();
                 set(ref(db, 'users/' + userId), {
-                    username: username,
+                    first_name: firstName,
+                    last_name: lastName,
                     email: email,
                     password: password,
                 });
