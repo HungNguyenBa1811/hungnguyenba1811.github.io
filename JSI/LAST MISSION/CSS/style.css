@@ -154,41 +154,38 @@
   font-size: 1.3rem;
   line-height: 35px;
 }
-.owl-item:nth-child(2) .products-grid.style2 {
+.owl-item:nth-child(2) .products-grid .style2 {
   border-right: 0;
 }
-.products-grid.style2 .product-item {
+.products-grid .style2 .product-item {
   border-bottom: 1px solid #eee;
 }
-.products-grid.style2 .product-item:last-child {
+.products-grid .style2 .product-item:last-child {
   border-bottom: 0;
 }
-.products-grid.style2 .product-item-info2 {
+.products-grid .style2 .product-item-info2 {
   overflow: hidden;
 }
-.products-grid.style2
+.products-grid .style2
   .product-item-info2:hover
   .product-item-images
   .product-item-actions {
   opacity: 1;
   visibility: visible;
 }
-.products-grid.style2
+.products-grid .style2
   .product-item-info2:hover
   .product-item-details
   .add-to-cart-primary {
   opacity: 1;
   visibility: visible;
 }
-.products-grid.style2 .product-item-info2 .add-to-cart-primary {
+.products-grid .style2 .product-item-info2 .add-to-cart-primary {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
-.products-grid.style2 .product-item-info2 .add-to-cart-primary .tocart {
+.products-grid .style2 .product-item-info2 .add-to-cart-primary .tocart {
   width: 90%;
   max-width: 170px;
   height: 35px;
@@ -197,7 +194,7 @@
   font-size: 1.3rem;
   line-height: 35px;
 }
-.products-grid.style2 .product-item-info2 .add-to-links-secondary a.action {
+.products-grid .style2 .product-item-info2 .add-to-links-secondary a.action {
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -209,36 +206,36 @@
   display: inline-block;
   vertical-align: middle;
 }
-.products-grid.style2
+.products-grid .style2
   .product-item-info2
   .add-to-links-secondary
   a.action:before {
   content: "\f4a8";
-  font-family: "Ionicons";
+  font-family: "Font Awesome\ 5 Pro";
   display: block;
   font-size: 1.8rem;
   line-height: 35px;
 }
-.products-grid.style2
+.products-grid .style2
   .product-item-info2
   .add-to-links-secondary
   a.action.wishlist:before {
   content: "\f387";
 }
-.products-grid.style2
+.products-grid .style2
   .product-item-info2
   .add-to-links-secondary
   a.action:hover {
   background: #68b501;
   color: #fff;
 }
-.products-grid.style2 .product-item-info2 .product-item-images {
+.products-grid .style2 .product-item-info2 .product-item-images {
   float: left;
   width: 40%;
   max-width: 160px;
   position: relative;
 }
-.products-grid.style2
+.products-grid .style2
   .product-item-info2
   .product-item-images
   .product-item-actions {
@@ -251,16 +248,13 @@
   text-align: center;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
-.products-grid.style2 .product-item-info2 .product-item-details {
+.products-grid .style2 .product-item-info2 .product-item-details {
   overflow: hidden;
   zoom: 1;
 }
-.products-grid.style2
+.products-grid .style2
   .product-item-info2
   .product-item-details
   .product-reviews-summary
@@ -299,7 +293,7 @@
   .add-to-links-secondary
   a.action:before {
   content: "\f4a8";
-  font-family: "Ionicons";
+  font-family: "Font Awesome\ 5 Pro";
   display: block;
   font-size: 1.8rem;
   line-height: 35px;
@@ -520,7 +514,7 @@
   .product-addto-links
   .tocompare:before {
   content: "\f387";
-  font-family: "Ionicons";
+  font-family: "Font Awesome\ 5 Pro";
   display: block;
   font-size: 1.8rem;
   line-height: 35px;
@@ -746,7 +740,7 @@
   .product-addto-links
   .tocompare:before {
   content: "\f387";
-  font-family: "Ionicons";
+  font-family: "Font Awesome\ 5 Pro";
   display: block;
   font-size: 1.8rem;
   line-height: 35px;
@@ -1008,7 +1002,7 @@
   .product-addto-links
   .tocompare:before {
   content: "\f387";
-  font-family: "Ionicons";
+  font-family: "Font Awesome\ 5 Pro";
   display: block;
   font-size: 1.8rem;
   line-height: 35px;
@@ -1123,7 +1117,7 @@ body .swatch-option.text {
 }
 .pt-testimonial-container li .pt-testimonial .des:after {
   content: "\f10d";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Pro";
   position: absolute;
   left: 0;
   top: 0;
@@ -1721,7 +1715,7 @@ body .swatch-option.text {
   }
   .modes-mode:before {
     content: "\f35c";
-    font-family: "Ionicons";
+    font-family: "Font Awesome\ 5 Pro";
   }
   .modes-mode:last-child {
     border: 0;
@@ -1731,7 +1725,7 @@ body .swatch-option.text {
   }
   .mode-list:before {
     content: "\f00b";
-    font-family: FontAwesome;
+    font-family: "Font Awesome\ 5 Pro";
     font-size: 18px;
     margin: 3px 0 0;
   }
@@ -1965,10 +1959,7 @@ select:not([disabled]):focus {
   border-radius: 0;
   font-size: 1.4rem;
   font-family: "Rubik", sans-serif;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .block-cart-failed .action.continue:hover,
 .cart-container .form-cart .action.continue:hover {
@@ -1995,10 +1986,7 @@ select:not([disabled]):focus {
   border-radius: 0;
   font-size: 1.4rem;
   font-family: "Rubik", sans-serif;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .cart-summary .checkout-methods-items li button:hover {
   background-color: #4b8201;
@@ -2370,7 +2358,7 @@ select:not([disabled]):focus {
 }
 .verticalmenu-container .megamenu-title:after {
   content: "\f107";
-  font-family: "FontAwesome";
+  font-family: "Font Awesome\ 5 Pro";
   font-size: 1.8rem;
   position: absolute;
   right: 22px;
@@ -2379,7 +2367,7 @@ select:not([disabled]):focus {
 }
 .verticalmenu-container .megamenu-title:before {
   content: "\f03b";
-  font-family: "FontAwesome";
+  font-family: "Font Awesome\ 5 Pro";
   font-size: 1.8rem;
   position: absolute;
   left: 22px;
@@ -2433,7 +2421,7 @@ select:not([disabled]):focus {
 }
 .verticalmenu-container .pt_vmegamenu .pt_menu .parentMenu a:after {
   content: "\f105";
-  font-family: "FontAwesome";
+  font-family: "Font Awesome\ 5 Pro";
   display: inline-block;
   vertical-align: top;
   position: absolute;
@@ -2442,7 +2430,7 @@ select:not([disabled]):focus {
 }
 .verticalmenu-container .pt_vmegamenu .pt_menu .parentMenu a:before {
   content: "\f1db";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Pro";
   margin-right: 10px;
   font-size: 10px;
   color: #c8c8c8;
@@ -2609,6 +2597,15 @@ select:not([disabled]):focus {
   .column.blockright {
   width: auto;
 }
+.popup{
+  display: none;
+}
+.popup a{
+  color: #363f4d !important;
+}
+.popup a:hover {
+  color: #717a64 !important;
+}
 .verticalmenu-container .pt_vmegamenu #show_more.hide_more span:before {
   content: "\f056";
 }
@@ -2622,14 +2619,11 @@ select:not([disabled]):focus {
   position: relative;
   text-align: left;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .verticalmenu-container .pt_vmegamenu #show_more span:before {
   content: "\f055";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Pro";
   display: inline-block;
   vertical-align: top;
   float: left;
@@ -2660,13 +2654,10 @@ a:visited,
 }
 a {
   color: #363f4d;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #68b501;
 }
 a:focus {
@@ -2698,10 +2689,7 @@ button {
   border-radius: 0;
   font-size: 1.4rem;
   font-family: "Rubik", sans-serif;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 button:hover {
   background-color: #4b8201;
@@ -2775,7 +2763,7 @@ h6,
   font-size: 12px;
   box-sizing: border-box;
   line-height: 1.15;
-  text-align: left;
+  /* text-align: center; */
 }
 img,
 object,
@@ -2818,7 +2806,7 @@ dd {
 }
 .mobile-bar-icon:before {
   content: "\f0c9";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Pro";
   display: inline-block;
   vertical-align: top;
   font-size: 20px;
@@ -2867,7 +2855,7 @@ dd {
 }
 .mobile-bar-content .mobile-bar-close:before {
   content: "\f00d";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Pro";
   display: inline-block;
   vertical-align: top;
   font-size: 1.4rem;
@@ -2944,7 +2932,7 @@ dd {
     display: table-cell;
     vertical-align: middle;
     position: relative;
-    float: none;
+    /* float: none; */
     padding: 0;
   }
 }
@@ -2979,12 +2967,14 @@ dd {
   position: relative;
   display: inline-block;
 }
+.switcher-options a{
+  color: #000 ;
+}
 .switcher-language .switcher-options .switcher-trigger,
 .switcher-currency .switcher-options .switcher-trigger {
   display: inline-block;
   font-size: 10px;
   text-transform: capitalize;
-  cursor: pointer;
 }
 .switcher-language .switcher-options .switcher-trigger i,
 .switcher-currency .switcher-options .switcher-trigger i {
@@ -3096,6 +3086,7 @@ dd {
   display: block;
   font-size: 1.2rem;
   padding: 7px 15px 7px 15px;
+  color: #000;
 }
 .my-acount ul.header.links a:hover {
   color: #68b501;
@@ -3116,10 +3107,11 @@ dd {
   padding-left: 65px;
 }
 .minicart-wrapper a.action.showcart:after {
-  content: "\f370";
-  font-family: "Ionicons";
+  content: "\f07a";
+  font-family: "Font Awesome\ 5 Pro";
   width: 48px;
   height: 48px;
+  font-weight: 900;
   line-height: 46px;
   font-size: 2rem;
   color: #fff;
@@ -3148,7 +3140,7 @@ dd {
   line-height: 50px;
   font-size: 1.2rem;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
   color: #fff;
 }
 .minicart-wrapper .action .showcart .counter .qty {
@@ -3189,10 +3181,7 @@ dd {
   border-radius: 0;
   font-size: 1.4rem;
   font-family: "Rubik", sans-serif;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   width: 100%;
 }
 .minicart-wrapper .block-minicart .block-content .actions .viewcart:hover {
@@ -3206,7 +3195,7 @@ dd {
   margin: 0 0 0 30px;
   font-size: 3.2rem;
 }
-.wishlist-link a {
+.wishlist-link a i{
   width: 48px;
   height: 48px;
   line-height: 46px;
@@ -3743,10 +3732,7 @@ dd {
   border-radius: 0;
   font-size: 1.4rem;
   font-family: "Rubik", sans-serif;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .main-content
   .cart-container
@@ -3902,7 +3888,7 @@ dd {
 }
 .block.filter .filter-content .filter-options-item .filter-options-title:after {
   content: "\f078";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Pro";
   font-size: 8px;
   float: right;
 }
@@ -4061,18 +4047,17 @@ dd {
 .filter-current .action.remove span {
   display: none;
 }
-.filter-current .action.remove:before {
+.filter-current .action .remove:before {
   -webkit-font-smoothing: antialiased;
   font-size: 1.2rem;
   line-height: 15px;
   color: #999;
   content: "\f00d";
-  font-family: "FontAwesome";
+  font-family: "Font Awesome\ 5 Pro";
   vertical-align: middle;
   display: inline-block;
   font-weight: normal;
   overflow: hidden;
-  speak: none;
   text-align: center;
 }
 .minicart-items .item-qty {
@@ -4102,10 +4087,7 @@ dd {
   border-radius: 0;
   font-size: 1.4rem;
   font-family: "Rubik", sans-serif;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   width: 100%;
 }
 .block-minicart .block-content .actions .primary .action.primary:hover {
@@ -4178,7 +4160,7 @@ dd {
   text-transform: uppercase;
   font-size: 1.3rem;
   position: relative;
-  font-weight: 500;
+  font-weight: bold;
   color: #fff;
   font-family: "Rubik", sans-serif;
 }
@@ -4191,9 +4173,9 @@ dd {
 .pt_custommenu div.pt_menu .parentMenu a:after,
 .pt_custommenu div.pt_menu .parentMenu span.block-title:after {
   display: inline-block;
-  font-family: FontAwesome;
+  font-family: 'Font Awesome\ 5 Pro';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 900;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -4423,9 +4405,9 @@ dd {
 .mobilemenu li.level0.last {
   margin-bottom: 10px;
 }
-.mobilemenu li.active a {
-  /*background: url('../images/close.gif') no-repeat center right;*/
-}
+/* .mobilemenu li.active a {
+  background: url('../images/close.gif') no-repeat center right;
+} */
 .mobilemenu li div {
   padding: 20px;
   background: #aef;
@@ -4485,9 +4467,9 @@ dd {
 .mobilemenu ul ul ul li.active ul a:hover {
   color: #68b501 !important;
 }
-.mobilemenu li.parent a {
-  /*background: url('../images/open.gif') no-repeat center right;*/
-}
+/* .mobilemenu li.parent a {
+  background: url('../images/open.gif') no-repeat center right;
+} */
 .mobilemenu li ul li {
   font-size: 0.9em;
 }
@@ -4555,7 +4537,7 @@ dd {
   letter-spacing: 2px;
   color: #e1e1e1;
   content: "\f005""\f005""\f005""\f005""\f005";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Pro";
 }
 .product-reviews-summary .rating-result span:before {
   color: #fdb828;
@@ -4564,7 +4546,7 @@ dd {
   height: 20px;
   letter-spacing: 2px;
   content: "\f005""\f005""\f005""\f005""\f005";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Pro";
 }
 @media (min-width: 768px) {
   .footer-top .ma_newsletter {
@@ -4677,7 +4659,7 @@ dd {
 }
 .footer-top .ma_newsletter .title div:before {
   content: "\f384";
-  font-family: "Ionicons";
+  font-family: "Font Awesome\ 5 Pro";
   position: absolute;
   left: 0;
   top: 7px;
@@ -4839,7 +4821,7 @@ dd {
 }
 #back_top:before {
   content: "\f077";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Pro";
 }
 .owl-theme .owl-controls {
   margin: 0 !important;
@@ -4860,13 +4842,10 @@ dd {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .owl-theme .owl-controls .owl-buttons div:before {
-  font-family: "Ionicons";
+  font-family: "Font Awesome\ 5 Pro";
   content: "\f3d1";
   font-size: 1.8rem;
   display: block;
@@ -4918,13 +4897,13 @@ dd {
   width: 100%;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   border: none;
-  -webkit-animation-name: fadeInDown;
-  -webkit-animation-duration: 5s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-  -webkit-animation-play-state: running;
-  -webkit-animation-fill-mode: forwards;
+  animation-name: fadeInDown;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
   -moz-animation-name: anim_titles;
   -moz-animation-duration: 5s;
   -moz-animation-timing-function: linear;
@@ -4932,7 +4911,7 @@ dd {
   -moz-animation-direction: normal;
   -moz-animation-play-state: running;
   -moz-animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
   -moz-animation-delay: 1s;
   -webkit-animation-iteration-count: 1;
   -moz-animation-iteration-count: 1;
@@ -5306,4 +5285,7 @@ form#contact-form {
 .minicart-wrapper .block-minicart {
   position: absolute;
   top: 100%;
+}
+.show{
+  display: block !important;
 }
