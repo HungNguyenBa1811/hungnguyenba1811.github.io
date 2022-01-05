@@ -5798,7 +5798,7 @@ body.catalog-product-compare-index .action.print {
   position: absolute;
 }
 .minicart-wrapper .block-minicart {
-  padding: 25px 20px;
+  padding: 25px 20px !important;
   right: 0;
   width: 320px;
 }
@@ -5891,7 +5891,7 @@ fieldset[disabled] .minicart-wrapper .action.close {
 .minicart-wrapper .action.showcart {
   white-space: nowrap;
 }
-.minicart-wrapper .action.showcart .counter.qty {
+/* .minicart-wrapper .action.showcart .counter.qty {
   background: #ff5501;
   color: #fff;
   height: 24px;
@@ -5904,7 +5904,7 @@ fieldset[disabled] .minicart-wrapper .action.close {
   padding: 0 3px;
   text-align: center;
   white-space: normal;
-}
+} */
 .minicart-wrapper .action.showcart .counter.qty.empty {
   display: none;
 }

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/style-m.css">
+    <link rel="stylesheet" href="./CSS/style-l.css">
     <link rel="stylesheet" href="./CSS/animate.css">
     <link rel="stylesheet" href="./CSS/bootstrap-theme.css">
     <link rel="stylesheet" href="./CSS/owl-carousel.css">
@@ -111,13 +112,13 @@
                             <div class="minicart-wrapper">
                                 <a class="action showcart" href="">
                                     <span class="text">My Cart</span>
-                                    <span class="counter qty empty">
+                                    <span class="counter qty">
                                         <span class="counter-number">0</span>
                                         <span class="counter-label"></span>
                                     </span>
                                 </a>
                                 <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog" style="display: none;">
-                                    <div class="block block-minicart empty ui-dialog-content ui-widget-content" id="ui-id-1" style="display: block;">
+                                    <div class="block block-minicart empty ui-dialog-content ui-widget-content" id="ui-id-1" style="display: block; text-align: center;">
                                         <div id="minicart-content-wrapper">
                                             <div class="block-title">
                                                 <strong>
@@ -128,11 +129,6 @@
                                                 </strong>
                                             </div>
                                             <div class="block-content">
-                                                <button type="button" id="btn-minicart-close" class="action close" title="Close">
-                                                    <span>
-                                                        <span>Close</span>
-                                                    </span>
-                                                </button>
                                                 <strong class="subtitle empty">
                                                     <span>You have no items in your shopping cart.</span>
                                                 </strong>
@@ -154,9 +150,12 @@
                                     <input id="search" type="text" value="" placeholder="Search for item..." class="input-text">
     
     
-                                    <button type="submit" title="Search" class="action fa fa-search" disabled="">
+                                    <button type="submit" title="Search" class="action fa fa-search">
                                         <span></span>
                                     </button>
+                                    <ul class="results-list" id="result">
+
+                                    </ul>
                                 </div>
     
                             </form>
@@ -182,31 +181,29 @@
                                                     <span class="is_new"></span>
                                                 </a>
                                             </div>
-                                            <div id="popup3" class="popup" style="width: 1145px; top: 60px; left: 3px;">
+                                            <div id="popup1" class="popup" style="width: 1145px; top: 60px; left: 3px;">
                                                 <div class="block1" id="block13" style="width: 1145px;">
                                                     <div class="column first col1">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>Jackets</span>
+                                                                <span>Greens</span>
                                                             </a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Tops &amp; Tees</span>
+                                                                        <span>Spinach</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Polo
-                                                                            Short Sleeve</span>
+                                                                        <span>Lettuce</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Graphic
-                                                                            T-Shirts</span>
+                                                                        <span>Tango</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Jackets &amp; Coats</span>
+                                                                        <span>Asparagus</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Fashion Jackets</span>
+                                                                        <span>Broccoli</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -215,24 +212,24 @@
                                                     <div class="column col2">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>weaters</span>
+                                                                <span>Fungus</span>
                                                             </a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Crochet</span>
+                                                                        <span>Truffles</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Sleeveless</span>
+                                                                        <span>White button mushroom</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Stripes</span>
+                                                                        <span>Shitake mushroom</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Sweaters</span>
+                                                                        <span>Oyster mushroom</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>hoodies</span>
+                                                                        <span>Porcini</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -241,24 +238,21 @@
                                                     <div class="column col3">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>Bottoms</span>
+                                                                <span>Roots & tubers</span>
                                                             </a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Heeled sandals</span>
+                                                                        <span>Carrots</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Polo Short Sleeve</span>
+                                                                        <span>Radishes</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Flat sandals</span>
+                                                                        <span>Onions</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Short Sleeve</span>
-                                                                    </a>
-                                                                    <a class="itemMenuName level2" href="#">
-                                                                        <span>Long Sleeve</span>
+                                                                        <span>Potato</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -267,21 +261,21 @@
                                                     <div class="column last col4">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>Bottoms</span>
+                                                                <span>Pods & seeds</span>
                                                             </a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Shorts</span>
+                                                                        <span>Peas</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Dresses</span>
+                                                                        <span>Beans</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Trousers</span>
+                                                                        <span>Soybeans</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Jeans</span>
+                                                                        <span>Green Peppers</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -299,26 +293,26 @@
                                                     <span class="is_new"></span>
                                                 </a>
                                             </div>
-                                            <div id="popup4" class="popup" style="width: 1145px; top: 60px; left: 3px; display: none;">
+                                            <div id="popup2" class="popup" style="width: 1145px; top: 60px; left: 3px; display: none;">
                                                 <div class="block1" id="block14" style="width: 1145px;">
                                                     <div class="column first col1">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1"
                                                                 href="#">
-                                                            <span>Shirts</span></a>
+                                                            <span>Tropical Fruits</span></a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Tops &amp; Tees</span>
+                                                                        <span>Bananas</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Sweaters</span>
+                                                                        <span>Apples</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2"  href="#">
-                                                                        <span>Hoodies</span>
+                                                                        <span>Mangoes</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Jackets &amp; Coats</span>
+                                                                        <span>Lemons</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -327,21 +321,21 @@
                                                     <div class="column col2">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>Tops &amp; Tees</span>
+                                                                <span>Melons & Citrus</span>
                                                                 </a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Long Sleeve </span>
+                                                                        <span>Oranges</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Short Sleeve</span>
+                                                                        <span>Watermelons</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Polo Short Sleeve</span>
+                                                                        <span>Grapefruits</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Sleeveless</span>
+                                                                        <span>Cantaloupes</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -349,20 +343,22 @@
                                                     </div>
                                                     <div class="column col3">
                                                         <div class="itemMenu level1">
-                                                            <a class="itemMenuName level1" href="#"><span>Jackets</span></a>
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Berries</span>
+                                                            </a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Sweaters</span>
+                                                                        <span>Strawberries</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Hoodies</span>
+                                                                        <span>Grapes</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Wedges</span>
+                                                                        <span>Raspberries</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Vests</span>
+                                                                        <span>Cranberries</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -371,21 +367,21 @@
                                                     <div class="column last col4">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>Jeans pants</span>
+                                                                <span>Drupes</span>
                                                             </a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Polo Short Sleeve </span>
+                                                                        <span>Cherries</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Sleeveless</span>
+                                                                        <span>Peaches</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Graphic T-Shirts</span>
+                                                                        <span>Apricots</span>
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
-                                                                        <span>Hoodies</span>
+                                                                        <span>Plums</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -397,65 +393,39 @@
                                         </div>
                                         <div id="pt_menu63" class="pt_menu readmore nav-3">
                                             <div class="parentMenu" id="div_3">
-                                                <a href="" class="pt_cate">
+                                                <a href="#" class="pt_cate">
                                                     <span>Breads</span>
                                                     <span class="is_sale"></span>
                                                     <span class="is_new"></span>
                                                 </a>
                                             </div>
-                                            <div id="popup63" class="popup" style="width: 1145px; top: 60px; left: 3px">
+                                            <div id="popup3" class="popup" style="width: 1145px; top: 60px; left: 3px">
                                                 <div class="block1" id="block163" style="width: 1145px;">
                                                     <div class="column first col1">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>Coats &amp; Jackets</span>
+                                                                <span>White Bread</span>
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="column col2">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>Blazers</span>
+                                                                <span>Whole Grain Bread</span>
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="column col3">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>Jackets</span>
+                                                                <span>Baguette</span>
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="column last col4">
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
-                                                                <span>Trousers</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="clearBoth"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="pt_menu64" class="pt_menu readmore nav-4">
-                                            <div class="parentMenu" id="div_4">
-                                                <a href="#" class="pt_cate">
-                                                    <span>Trousers</span>
-                                                    <span class="is_sale"></span>
-                                                    <span class="is_new"></span>
-                                                    <span class="thumbnail-image">
-                                                        <img 
-                                                            src="http://plazathemes.com/demo/boxstore/pub/media/catalog/category/ba4.jpg" 
-                                                            alt="Thumbnail">
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <div id="popup64" class="popup" style="width: 305px; top: 60px; left: 435px">
-                                                <div class="block1" id="block164" style="width: 305px;">
-                                                    <div class="column last col1">
-                                                        <div class="itemMenu level1">
-                                                            <a class="itemMenuName level1" href="#">
-                                                                <span>Casual</span>
+                                                                <span>Rye Bread</span>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -464,35 +434,42 @@
                                             </div>
                                         </div>
                                         <div id="pt_menu68" class="pt_menu readmore nav-5">
-                                            <div class="parentMenu">
+                                            <div class="parentMenu" id="div_4">
                                                 <a href="#"
                                                     class="pt_cate ">
-                                                    <span>Raincoats</span>
+                                                    <span>Others</span>
                                                     <span class="is_sale"></span>
                                                     <span class="is_new"></span>
                                                 </a>
                                             </div>
-                                            <div id="popup68" class="popup"
-                                                style="width: 1145px; top: 60px; left: 3px; display: none;">
+                                            <div id="popup4" class="popup" style="width: 1145px; top: 60px; left: 3px">
                                                 <div class="block1" id="block168" style="width: 1145px;">
                                                     <div class="column first col1">
-                                                        <div class="itemMenu level1"><a class="itemMenuName level1"
-                                                                href="#"><span>Joggers</span></a>
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Hot Chillies & Pepper</span>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="column col2">
-                                                        <div class="itemMenu level1"><a class="itemMenuName level1"
-                                                                href="#"><span>Chinos</span></a>
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Honey</span>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="column col3">
-                                                        <div class="itemMenu level1"><a class="itemMenuName level1"
-                                                                href="#"><span>Jeans</span></a>
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Ginger</span>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="column last col4">
-                                                        <div class="itemMenu level1"><a class="itemMenuName level1"
-                                                                href="#"><span>Tailored</span></a>
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Garlic</span>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="clearBoth"></div>
@@ -512,7 +489,316 @@
                 </div>
             </div>
         </header>
+        <div class="main-container">
+            <div class="ma-banner">
+                <div class="container-inner">
+                    <div class="row">
+
+                        <div class="col-sm-9">
+                            <div class="pt-banner-container" style="display: block;">
+                                <ul class="ptowl owl-carousel owl-theme" style="opacity: 1; display: block;">
+                                    <div class="owl-wrapper-outer">
+                                        <div class="owl-wrapper" style="width: 3480px; left: 0px; display: block; transform: translate3d(0px, 0px, 0px); transition: all 500ms ease 0s;">
+                                            <div class="owl-item" style="width: 870px;">
+                                                <li class="mySlide">
+                                                    <img 
+                                                        alt="Slide 1"
+                                                        src="./IMG/slide_banner_1.jpg">
+                                                </li>
+                                            </div>
+                                            <div class="owl-item" style="width: 870px;">
+                                                <li class="mySlide">
+                                                    <img 
+                                                        alt="Slide 2"
+                                                        src="./IMG/slide_banner_2.jpg">
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-controls clickable">
+                                        <div class="owl-pagination">
+                                            <div class="owl-page dot active" onclick="currentSlide(0)">
+                                                <span></span>
+                                            </div>
+                                            <div class="owl-page dot" onclick="currentSlide(1)">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="owl-buttons">
+                                            <div class="owl-prev">prev</div>
+                                            <div class="owl-next">next</div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="banner-home">
+                                <div class="banner-box">
+                                    <a href="#">
+                                        <img
+                                            src="./IMG/banner_1.jpg" 
+                                            alt="Banner 1">
+                                    </a>
+                                </div>
+                                <div class="banner-box">
+                                    <a href="#">
+                                        <img
+                                            src="./IMG/banner_2.jpg" 
+                                            alt=" Banner 2">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corporate-about">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="box">
+                                    <div class="images">
+                                        <img
+                                            src="./IMG/icon_1.jpg"
+                                            alt="icon 1">
+                                    </div>
+                                    <h3>Free Delivery</h3>
+                                    <p>Free shipping on all order</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="box">
+                                    <div class="images">
+                                        <img
+                                            src="./IMG/icon_2.jpg"
+                                            alt="icon 2">
+                                    </div>
+                                    <h3>Online Support 24/7</h3>
+                                    <p>Support online 24 hours a day</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="box">
+                                    <div class="images">
+                                        <img
+                                            src="./IMG/icon_3.jpg"
+                                            alt="icon 3">
+                                    </div>
+                                    <h3>Money Return</h3>
+                                    <p>Back guarantee under 7 days</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="box">
+                                    <div class="images">
+                                        <img
+                                            src="./IMG/icon_4.jpg"
+                                            alt="icon 4">
+                                    </div>
+                                    <h3>Member Discount</h3>
+                                    <p>Onevery order over $120.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>		
+                </div>	
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="footer-container">
+            <div class="ma-brand">
+                <div class="container-inner">
+                    <div class="brandslider-container">
+                        <div class="title">
+                            <!--<div class="ma-title"><h3><span></span></h3></div>-->
+                        </div>
+                        <div class="pt-brand-container">
+                            <ul class="ptowl owl-carousel owl-theme" style="opacity: 1; display: block;"> 
+                                <div class="owl-wrapper-outer">
+                                    <div class="owl-wrapper" style="width: 2808px; left: 0px; display: block;">
+                                        <div class="owl-item active" style="width: 234px;">
+                                            <li>
+                                                <div class="pt-brand">
+                                                    <img
+                                                        alt=""
+                                                        src="http://plazathemes.com/demo/boxstore/pub/media/Plazathemes/brandslider/images/b/1/b1.png">
+                                                    <p></p>
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <div class="owl-item active" style="width: 234px;">
+                                            <li>
+                                                <div class="pt-brand">
+                                                    <img
+                                                        alt=""
+                                                        src="http://plazathemes.com/demo/boxstore/pub/media/Plazathemes/brandslider/images/b/2/b2.png">
+                                                    <p></p>
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <div class="owl-item active" style="width: 234px;">
+                                            <li>
+                                                <div class="pt-brand">         
+                                                    <img 
+                                                        alt=""
+                                                        src="http://plazathemes.com/demo/boxstore/pub/media/Plazathemes/brandslider/images/b/3/b3.png">
+                                                    <p></p>
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <div class="owl-item active" style="width: 234px;">
+                                            <li>
+                                                <div class="pt-brand">
+                                                    <img
+                                                        alt=""
+                                                        src="http://plazathemes.com/demo/boxstore/pub/media/Plazathemes/brandslider/images/b/4/b4.png">
+                                                    <p></p>
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <div class="owl-item active" style="width: 234px;">
+                                            <li>
+                                                <div class="pt-brand">
+                                                    <img
+                                                        alt=""
+                                                        src="http://plazathemes.com/demo/boxstore/pub/media/Plazathemes/brandslider/images/b/5/b5.png">
+                                                    <p></p>
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <div class="owl-item" style="width: 234px;">
+                                            <li>
+                                                <div class="pt-brand">
+                                                    <img
+                                                        alt=""
+                                                        src="http://plazathemes.com/demo/boxstore/pub/media/Plazathemes/brandslider/images/b/3/b3_1.png">
+                                                    <p></p>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top">
+                <div class="container-inner">
+                    <div class="container-size">
+                        <div class="row footer-static">
+                            <div class="col-sm-4">
+                                <p class="logof">
+                                    <img
+                                        src="http://plazathemes.com/demo/boxstore/pub/media/wysiwyg/logof.png"
+                                        alt="">
+                                </p>
+                                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum [...]</p>
+                                <p>Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
+                                <p>Phone: (012) 800 456 789</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <h3>Our Service</h3>
+                                <ul class="links">
+                                    <li class="first"><a href="#">Our Blog</a></li>
+                                    <li><a href="#">About Our Shop</a></li>
+                                    <li><a href="#">Returns</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                    <li class="last"><a href="#">Secure Shopping</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2">
+                                <h3>Customer service</h3>
+                                <ul class="links">
+                                    <li class="first"><a href="#">Site Map</a></li>
+                                    <li><a href="#">Specials</a></li>
+                                    <li><a href="#">Returns</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                    <li class="last"><a href="#">My Account</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3>follow us</h3>
+                                <ul class="link-follow">
+                                    <li class="first"><a class="twitter fa fa-twitter" title="Twitter" href="https://twitter.com/plazathemes"><span>twitter</span></a></li>
+                                    <li><a class="google fa fa-google-plus" title="Google" href="#"><span>google </span></a></li>
+                                    <li><a class="facebook fa fa-facebook" title="Facebook" href="https://www.facebook.com/plazathemes1"><span>facebook</span></a></li>
+                                    <li><a class="youtube fa fa-youtube" title="Youtube" href="https://www.youtube.com/user/plazathemes"><span>youtube </span></a></li>
+                                    <li><a class="flickr fa fa-flickr" title="Flickr" href="https://www.youtube.com/user/plazathemes"><span>Flickr </span></a></li>
+                                </ul>
+                                <h3>Download Apps</h3>
+                                <p class="app">
+                                    <img
+                                        src="http://plazathemes.com/demo/boxstore/pub/media/wysiwyg/imgapp.png"
+                                        alt="">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ma_newsletter">
+                            <div class="title">
+                                <div>
+                                    <h3><span>Sign Up For Newsletters </span></h3>
+                                    <p>Get E-mail updates about our latest shop and special offers.</p>
+                                </div>
+                            </div>
+                            <form class="form subscribe" action="http://plazathemes.com/demo/boxstore/english5/newsletter/subscriber/new/" method="post" id="newsletter-validate-detail">
+                                <div class="control">
+                                    <input type="email" id="newsletter" placeholder="Enter your email address">            
+                                    <button class="action subscribe primary" title="Subscribe" type="submit">
+                                        <span><i class="icon ion-ios-paperplane"></i></span>
+                                    </button>			
+                                </div>
+                            </form>
+                        </div>
+                        <div class="footer-bottom">
+                            <div class="container-inner">
+                                <small class="copyright">
+                                    <span>Copyright © 2017 Magento, Inc. All rights reserved.</span>
+                                </small>
+                                <div class="link-paypal">
+                                    <img
+                                        src="http://plazathemes.com/demo/boxstore/pub/media/wysiwyg/paypal.png"
+                                        alt="">
+                                </div>
+                                <div class="switcher store switcher-store" id="switcher-store">
+                                    <strong class="label switcher-label">
+                                        <span>Select Store</span>
+                                    </strong>
+                                    <div class="actions dropdown options switcher-options">
+                                        <div class="action toggle switcher-trigger" id="switcher-store-trigger">
+                                            <strong>
+                                                <span>organic Store</span>
+                                            </strong>
+                                        </div>
+                                        <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog" style="display: none;">
+                                            <ul class="dropdown switcher-dropdown ui-dialog-content ui-widget-content" id="ui-id-2" style="display: block;">
+                                                <li class="switcher-option">
+                                                    <a href="#">
+                                                        Contruction Store
+                                                    </a>
+                                                </li>
+                                                <li class="switcher-option">
+                                                    <a href="#">
+                                                        Digital Store   
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="back_top" style="display: block;">
+                                <a href="#back-top"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
     <script src="./JS/index.js"></script>
+    <script src="./JS/slideshow.js"></script>
 </body>
 
 </html>

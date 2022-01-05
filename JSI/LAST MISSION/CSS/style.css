@@ -2264,7 +2264,6 @@ select:not([disabled]):focus {
   background: #f3f3f3;
   padding: 30px 0;
   margin-bottom: 50px;
-  background: #f3f3f3 url(../images/bkg-top.jpg) repeat;
 }
 .corporate-about {
   overflow: hidden;
@@ -2604,7 +2603,7 @@ select:not([disabled]):focus {
   color: #363f4d !important;
 }
 .popup a:hover {
-  color: #717a64 !important;
+  color: #68b501 !important;
 }
 .verticalmenu-container .pt_vmegamenu #show_more.hide_more span:before {
   content: "\f056";
@@ -3143,7 +3142,7 @@ dd {
   font-weight: bold;
   color: #fff;
 }
-.minicart-wrapper .action .showcart .counter .qty {
+.minicart-wrapper .action.showcart .counter.qty {
   margin: 0;
   min-width: 28px;
   height: 28px;
@@ -3273,6 +3272,9 @@ dd {
 .hot-sale {
   background: #68b501;
 }
+.mySlide{
+  animation: bounceIn 2.5s ease-in-out;
+}
 .pt-banner-container {
   overflow: hidden;
   display: none;
@@ -3282,9 +3284,9 @@ dd {
   padding: 0;
   margin: 0;
 }
-.pt-banner-container ul li img {
+/* .pt-banner-container ul li img {
   width: 100%;
-}
+} */
 .pt-banner-container .owl-controls .owl-pagination {
   position: absolute;
   left: 20px;
@@ -3833,7 +3835,7 @@ dd {
 .block .block-title {
   position: relative;
   border-bottom: 1px solid #eee;
-  padding: 0 0 10px;
+  padding: 0 0 10px !important;
   margin-bottom: 30px;
 }
 .block .block-title strong {
@@ -5283,9 +5285,18 @@ form#contact-form {
   display: block !important;
 }
 .minicart-wrapper .block-minicart {
-  position: absolute;
+  position: absolute !important;
   top: 100%;
+}
+.block-minicart #minicart-content-wrapper,
+.block-minicart #minicart-content-wrapper .block-content{
+  width: 370px;
+}
+.block-content span{
+  font-size: 14px;
 }
 .show{
   display: block !important;
 }
+/* animation-name: bounceInRight;
+animation-duration: 4s; */

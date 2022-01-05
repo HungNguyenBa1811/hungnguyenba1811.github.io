@@ -1,11 +1,25 @@
-function toggleSystem(popupID,divID){
-    function toggleOnOff(){
-        var pop1 = document.getElementById(popupID);
-        pop1.classList.toggle("show");
-    }
-    document.querySelector(divID).addEventListener("click", toggleOnOff)
+function displayOtherIDInArray(numID){ // Filter Other ID
+    let array = ["1","2","3","4","5"]
+    let newArray = array.filter(x => x != numID)
+    return newArray
 }
-toggleSystem("popup3","#div_1")
-toggleSystem("popup4","#div_2")
-toggleSystem("popup63","#div_3")
-toggleSystem("popup64","#div_4")
+function toggleSystem(ID){
+    document.getElementById(`div_${ID}`).addEventListener("click", () => {
+        // Display Element Chosen
+        let popUp = document.getElementById(`popup${ID}`);
+        popUp.classList.toggle("show");
+    
+        // Remove class "show" if necessary
+        let newArr = displayOtherIDInArray(ID)
+        for(let x of newArr){
+            if(document.getElementById(`popup${x}`).classList.contains("show")){
+                document.getElementById(`popup${x}`).classList.remove("show")
+            }
+        }
+    })
+}
+toggleSystem("1")
+toggleSystem("2")
+toggleSystem("3")
+toggleSystem("4")
+toggleSystem("5")
