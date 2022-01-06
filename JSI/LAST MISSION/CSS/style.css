@@ -4616,11 +4616,12 @@ dd {
   color: #919292;
   border-top: 1px solid #ebebeb;
 }
-.footer-top a {
-  color: #636363;
+.footer-top .services a {
+  color: #636363 !important;
+  font-size: 1.3rem;
 }
-.footer-top a:hover {
-  color: #68b501;
+.footer-top .services a:hover {
+  color: #68b501 !important;
 }
 .footer-top h3,
 .footer-top h4,
@@ -4660,19 +4661,22 @@ dd {
   overflow: hidden;
 }
 .footer-top .ma_newsletter .title div:before {
-  content: "\f384";
+  content: "\f657";
   font-family: "Font Awesome\ 5 Pro";
   position: absolute;
   left: 0;
   top: 7px;
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 1;
   color: #68b501;
 }
-.footer-top .ma_newsletter .title div h3 {
+.footer-top .ma_newsletter .title div h3,
+.footer-top .ma_newsletter .title div h3 span {
   font-size: 2rem;
   font-weight: 500;
+  font-family: "Rubik";
 }
+
 .footer-top .ma_newsletter .title div p {
   color: #666666;
 }
@@ -5298,5 +5302,4 @@ form#contact-form {
 .show{
   display: block !important;
 }
-/* animation-name: bounceInRight;
-animation-duration: 4s; */
+/* icon */

@@ -1,5 +1,5 @@
 function displayOtherIDInArray(numID){ // Filter Other ID
-    let array = ["1","2","3","4","5"]
+    let array = ["1","2","3","4"]
     let newArray = array.filter(x => x != numID)
     return newArray
 }
@@ -22,4 +22,3 @@ toggleSystem("1")
 toggleSystem("2")
 toggleSystem("3")
 toggleSystem("4")
-toggleSystem("5")
