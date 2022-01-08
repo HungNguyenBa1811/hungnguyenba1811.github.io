@@ -1,125 +1,142 @@
 <div class="categorytab-container product-tab">
-		<div class="tab-title">
-			<div class="title"><h3><span>Orange Juice</span></h3></div>
-			<ul class="tabs tabs-2332323"> 
-			   						<li class="active" rel="tab3-2332323">vegetables</li>
-										<li class="" rel="tab4-2332323">Fruits</li>
-										<li class="" rel="tab5-2332323">Kids</li>
-							</ul>
+	<div class="tab-title">
+		<div class="title">
+			<h3>
+				<span>Orange Juice</span>
+			</h3>
 		</div>
+		<ul class="tabs tabs-2332323"> 
+			<li class="active" rel="tab3-2332323">vegetables</li>
+			<li class="" rel="tab4-2332323">Fruits</li>
+			<li class="" rel="tab5-2332323">Kids</li>
+		</ul>
+	</div>
 
      	<div class="tab_container"> 
-				<div id="tab3-2332323" class="tab_content_2332323" style="display: block;"> 
-		<div class="owl-container row-content">		
-			<div class="category_tab_slider_2332323 owl-carousel owl-theme" style="opacity: 1; display: block;">
-								 <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 5232px; left: 0px; display: block;"><div class="owl-item" style="width: 218px;"><div class="products-grid"> 					<div class="product-item">
-						<div class="product-item-info">	
-							<div class=" product-item-images">
-								
-								<a href="http://plazathemes.com/demo/boxstore/english5/teton-pullover-hoodie.html" class="product-item-photo">
-									
-<span class="product-image-container" style="width:198px;">
-    <span class="product-image-wrapper" style="padding-bottom: 100%;">
-        <img class="product-image-photo" src="http://plazathemes.com/demo/boxstore/pub/media/catalog/product/cache/small_image/198x198/beff4985b56e3afdbeabfc89641a4582/1/o/1organic.jpg" width="198" height="198" alt="Teton Pullover Hoodie"></span>
-</span>
-								</a>
-							</div>
-							<div class="product-item-details">
-
-								<strong class="product-item-name">
-									<a title="Teton Pullover Hoodie" href="http://plazathemes.com/demo/boxstore/english5/teton-pullover-hoodie.html" class="product-item-link">
-										Teton Pullover Hoodie									</a>
-								</strong>
-
-								<div class="product-reviews-summary" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
-        <div class="rating-summary">
-         <span class="label"><span>Rating:</span></span>
-         <div class="rating-result" title="53%">
-             <span style="width:53%"><span><span itemprop="ratingValue">53</span>% of <span itemprop="bestRating">100</span></span></span>
-         </div>
-     </div>
-        <div class="reviews-actions">
-        <a class="action view" href="http://plazathemes.com/demo/boxstore/english5/teton-pullover-hoodie.html#reviews"><span itemprop="reviewCount">1</span>&nbsp;<span>Review</span></a>
-        <a class="action add" href="http://plazathemes.com/demo/boxstore/english5/teton-pullover-hoodie.html#review-form">Add Your Review</a>
-    </div>
-</div>
-								<div class="price-box price-final_price" data-role="priceBox" data-product-id="32">
-    
-
-<span class="price-container price-final_price tax weee">
-        <span data-price-amount="70" data-price-type="finalPrice" class="price-wrapper ">
-        <span class="price">$70.00</span>    </span>
-        </span>
-
-</div>								<div class="product-item-actions">	
-									<div class="add-to-links-secondary">
-
-																																<a href="#" class="action compare" data-post="{&quot;action&quot;:&quot;http:\/\/plazathemes.com\/demo\/boxstore\/english5\/catalog\/product_compare\/add\/&quot;,&quot;data&quot;:{&quot;product&quot;:&quot;32&quot;,&quot;uenc&quot;:&quot;aHR0cDovL3BsYXphdGhlbWVzLmNvbS9kZW1vL2JveHN0b3JlL2VuZ2xpc2g1Lw,,&quot;}}" title="Add to Compare">
-												<span>Add to Compare</span>
-											</a>
-										
-																					<a href="#" data-post="{&quot;action&quot;:&quot;http:\/\/plazathemes.com\/demo\/boxstore\/english5\/wishlist\/index\/add\/&quot;,&quot;data&quot;:{&quot;product&quot;:&quot;32&quot;,&quot;uenc&quot;:&quot;aHR0cDovL3BsYXphdGhlbWVzLmNvbS9kZW1vL2JveHN0b3JlL2VuZ2xpc2g1Lw,,&quot;}}" class="action wishlist" data-action="add-to-wishlist" title="Add to Wishlist">
-												<span>Add to Wishlist</span>
-											</a>
-										
-									</div>
-									<div class="add-to-cart-primary">
-																																	<button class="action tocart primary" type="button" title="Add to Cart">
-													<span>Add to Cart</span>
-												</button>
-																														</div>	
+		<div id="tab3-2332323" class="tab_content_2332323" style="display: block;"> 
+			<div class="owl-container row-content">		
+				<div class="category_tab_slider_2332323 owl-carousel owl-theme" style="opacity: 1; display: block;">
+					<div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 5232px; left: 0px; display: block;"><div class="owl-item" style="width: 218px;"><div class="products-grid"> 										<div class="product-item">
+							<div class="product-item-info">	
+								<div class=" product-item-images">
+									<a href="http://plazathemes.com/demo/boxstore/english5/teton-pullover-hoodie.html" class="product-item-photo">
+										<span class="product-image-container" style="width:198px;">
+    											<span class="product-image-wrapper" style="padding-bottom: 100%;">
+        											<img
+													class="product-image-photo"
+													src="http://plazathemes.com/demo/boxstore/pub/media/catalog/product/cache/small_image/198x198/beff4985b56e3afdbeabfc89641a4582/1/o/1organic.jpg" 
+													width="198"
+													height="198"
+													alt="Teton Pullover Hoodie">
+											</span>
+										</span>
+									</a>
 								</div>
+								<div class="product-item-details">
+
+									<strong class="product-item-name">
+										<a title="Teton Pullover Hoodie" href="http://plazathemes.com/demo/boxstore/english5/teton-pullover-hoodie.html" class="product-item-link">Teton Pullover Hoodie</a>
+									</strong>
+
+									<div class="product-reviews-summary" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+        									<div class="rating-summary">
+											<span class="label">
+												<span>Rating:</span>
+											</span>
+         										<div class="rating-result" title="53%">
+											<span style="width:53%">
+												<span>
+													<span itemprop="ratingValue">53</span>
+													% of 
+													<span itemprop="bestRating">100</span>
+												</span>
+											</span>
+										</div>
+     									</div>
+									<div class="reviews-actions">
+										<a class="action view" href="http://plazathemes.com/demo/boxstore/english5/teton-pullover-hoodie.html#reviews">
+											<span itemprop="reviewCount">1</span>
+												&nbsp;
+											<span>Review</span>
+										</a>
+										<a class="action add" href="http://plazathemes.com/demo/boxstore/english5/teton-pullover-hoodie.html#review-form">Add Your Review</a>
+									</div>
+								</div>
+								<div class="price-box price-final_price" data-role="priceBox" data-product-id="32">
+
+									<span class="price-container price-final_price tax weee">
+										<span data-price-amount="70" data-price-type="finalPrice" class="price-wrapper">
+										<span class="price">$70.00</span></span>
+        								</span>
+								</div>								
+								<div class="product-item-actions">	
+									<div class="add-to-links-secondary">																				<a href="#" class="action compare" data-post="{&quot;action&quot;:&quot;http:\/\/plazathemes.com\/demo\/boxstore\/english5\/catalog\/product_compare\/add\/&quot;,&quot;data&quot;:{&quot;product&quot;:&quot;32&quot;,&quot;uenc&quot;:&quot;aHR0cDovL3BsYXphdGhlbWVzLmNvbS9kZW1vL2JveHN0b3JlL2VuZ2xpc2g1Lw,,&quot;}}" title="Add to Compare">
+										<span>Add to Wishlist</span>
+									</div>
+									<div class="add-to-cart-primary">																				<button class="action tocart primary" type="button" title="Add to Cart">
+										<span>Add to Cart</span>																				</div>	
+									</div>
 	
+								</div>
 							</div>
 						</div>
 					</div>
-						 </div></div><div class="owl-item" style="width: 218px;"><div class="products-grid"> 					<div class="product-item">
-						<div class="product-item-info">	
-							<div class=" product-item-images">
-								
-								<a href="http://plazathemes.com/demo/boxstore/english5/overnight-duffle.html" class="product-item-photo">
-									
-<span class="product-image-container" style="width:198px;">
-    <span class="product-image-wrapper" style="padding-bottom: 100%;">
-        <img class="product-image-photo" src="http://plazathemes.com/demo/boxstore/pub/media/catalog/product/cache/small_image/198x198/beff4985b56e3afdbeabfc89641a4582/2/o/2organic_1.jpg" width="198" height="198" alt="Overnight Duffle"></span>
-</span>
-								</a>
-							</div>
-							<div class="product-item-details">
+				</div>
+				<div class="owl-item" style="width: 218px;">
+					<div class="products-grid">
+						<div class="product-item">
+							<div class="product-item-info">	
+								<div class=" product-item-images">
+									<a href="http://plazathemes.com/demo/boxstore/english5/overnight-duffle.html" class="product-item-photo">	
+										<span class="product-image-container" style="width:198px;">
+										<span class="product-image-wrapper" style="padding-bottom: 100%;">
+											<img class="product-image-photo" src="http://plazathemes.com/demo/boxstore/pub/media/catalog/product/cache/small_image/198x198/beff4985b56e3afdbeabfc89641a4582/2/o/2organic_1.jpg" width="198" height="198" alt="Overnight Duffle"></span>
+										</span>
+									</a>
+								</div>
+								<div class="product-item-details">
 
-								<strong class="product-item-name">
-									<a title="Overnight Duffle" href="http://plazathemes.com/demo/boxstore/english5/overnight-duffle.html" class="product-item-link">
-										Overnight Duffle									</a>
-								</strong>
+									<strong class="product-item-name">
+										<a title="Overnight Duffle" href="http://plazathemes.com/demo/boxstore/english5/overnight-duffle.html" class="product-item-link">Overnight Duffle</a>
+									</strong>
 
-								<div class="product-reviews-summary" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
-        <div class="rating-summary">
-         <span class="label"><span>Rating:</span></span>
-         <div class="rating-result" title="67%">
-             <span style="width:67%"><span><span itemprop="ratingValue">67</span>% of <span itemprop="bestRating">100</span></span></span>
-         </div>
-     </div>
-        <div class="reviews-actions">
-        <a class="action view" href="http://plazathemes.com/demo/boxstore/english5/overnight-duffle.html#reviews"><span itemprop="reviewCount">1</span>&nbsp;<span>Review</span></a>
-        <a class="action add" href="http://plazathemes.com/demo/boxstore/english5/overnight-duffle.html#review-form">Add Your Review</a>
-    </div>
-</div>
-								<div class="price-box price-final_price" data-role="priceBox" data-product-id="33">
-    
-
-<span class="price-container price-final_price tax weee">
-        <span data-price-amount="45" data-price-type="finalPrice" class="price-wrapper ">
-        <span class="price">$45.00</span>    </span>
-        </span>
-
-</div>								<div class="product-item-actions">	
-									<div class="add-to-links-secondary">
-
-																																<a href="#" class="action compare" data-post="{&quot;action&quot;:&quot;http:\/\/plazathemes.com\/demo\/boxstore\/english5\/catalog\/product_compare\/add\/&quot;,&quot;data&quot;:{&quot;product&quot;:&quot;33&quot;,&quot;uenc&quot;:&quot;aHR0cDovL3BsYXphdGhlbWVzLmNvbS9kZW1vL2JveHN0b3JlL2VuZ2xpc2g1Lw,,&quot;}}" title="Add to Compare">
-												<span>Add to Compare</span>
+									<div class="product-reviews-summary" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+										<div class="rating-summary">
+         										<span class="label">
+												<span>Rating:</span>
+											</span>
+         										<div class="rating-result" title="67%">
+             											<span style="width:67%">
+													<span>
+														<span itemprop="ratingValue">67</span>
+															% of 
+														<span itemprop="bestRating">100</span>
+													</span>
+												</span>
+         										</div>
+										</div>
+        									<div class="reviews-actions">
+        										<a class="action view" href="http://plazathemes.com/demo/boxstore/english5/overnight-duffle.html#reviews">
+												<span itemprop="reviewCount">1</span>
+													&nbsp;
+												<span>Review</span>
 											</a>
-										
-																					<a href="#" data-post="{&quot;action&quot;:&quot;http:\/\/plazathemes.com\/demo\/boxstore\/english5\/wishlist\/index\/add\/&quot;,&quot;data&quot;:{&quot;product&quot;:&quot;33&quot;,&quot;uenc&quot;:&quot;aHR0cDovL3BsYXphdGhlbWVzLmNvbS9kZW1vL2JveHN0b3JlL2VuZ2xpc2g1Lw,,&quot;}}" class="action wishlist" data-action="add-to-wishlist" title="Add to Wishlist">
+        										<a class="action add" href="http://plazathemes.com/demo/boxstore/english5/overnight-duffle.html#review-form">Add Your Review</a>
+    										</div>
+									</div>
+									<div class="price-box price-final_price" data-role="priceBox" data-product-id="33">
+
+										<span class="price-container price-final_price tax weee">
+											<span data-price-amount="45" data-price-type="finalPrice" class="price-wrapper ">
+												<span class="price">$45.00</span>
+											</span>
+										</span>
+
+									</div>
+									<div class="product-item-actions">	
+										<div class="add-to-links-secondary">
+<a href="#" class="action compare" title="Add to Compare">
+											<span>Add to Compare</span>									<a href="#" data-post="{&quot;action&quot;:&quot;http:\/\/plazathemes.com\/demo\/boxstore\/english5\/wishlist\/index\/add\/&quot;,&quot;data&quot;:{&quot;product&quot;:&quot;33&quot;,&quot;uenc&quot;:&quot;aHR0cDovL3BsYXphdGhlbWVzLmNvbS9kZW1vL2JveHN0b3JlL2VuZ2xpc2g1Lw,,&quot;}}" class="action wishlist" data-action="add-to-wishlist" title="Add to Wishlist">
 												<span>Add to Wishlist</span>
 											</a>
 										

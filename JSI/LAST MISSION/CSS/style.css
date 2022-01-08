@@ -2596,9 +2596,9 @@ select:not([disabled]):focus {
   .column.blockright {
   width: auto;
 }
-.popup{
+/* .popup{
   display: none;
-}
+} */
 .popup a{
   color: #363f4d !important;
 }
@@ -4676,7 +4676,6 @@ dd {
   font-weight: 500;
   font-family: "Rubik";
 }
-
 .footer-top .ma_newsletter .title div p {
   color: #666666;
 }
