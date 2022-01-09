@@ -1689,7 +1689,7 @@ body .swatch-option.text {
   .form.send.confirmation,
   .form.password.forget,
   .form.create.account {
-    width: 80%;
+    width: 80% !important;
   }
   .modes-mode {
     border: 0;
@@ -2596,9 +2596,9 @@ select:not([disabled]):focus {
   .column.blockright {
   width: auto;
 }
-/* .popup{
+.popup{
   display: none;
-} */
+}
 .popup a{
   color: #363f4d !important;
 }
@@ -2635,7 +2635,7 @@ select:not([disabled]):focus {
 /*=============================================================*/
 body {
   background: #ffffff;
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif !important;
   line-height: 25px;
   font-size: 1.3rem;
   font-style: normal;
@@ -2705,14 +2705,14 @@ button:hover {
   line-height: 40px;
   height: 40px;
   font-weight: normal;
-  border-radius: 0;
+  border-radius: 2px;
   font-family: "Rubik", sans-serif;
 }
 .action.primary:hover {
-  background-color: #4b8201;
+  background-color: #417202 !important;
   color: #fff;
   border: 0;
-  border-color: #4b8201;
+  border-color: #417202 !important;
 }
 button:hover,
 a.action.primary:hover,
@@ -2738,6 +2738,7 @@ select:not([disabled]):focus {
 }
 p {
   margin: 0 0 10px;
+  line-height: 25px;
 }
 h1,
 h2,
@@ -2762,6 +2763,7 @@ h6,
   font-size: 12px;
   box-sizing: border-box;
   line-height: 1.15;
+  scroll-behavior: smooth;
   /* text-align: center; */
 }
 img,
@@ -3824,7 +3826,7 @@ dd {
   position: relative;
   z-index: 12;
 }
-.page-title {
+.page-title, .page-title span {
   font-size: 30px;
   margin: 0 0 20px;
 }
@@ -4741,7 +4743,7 @@ dd {
   font-size: 1.2rem;
 }
 .footer-container {
-  background: #f7f7f7 url(../images/bkg-footer.jpg) no-repeat center bottom;
+  background: url(../IMG/background_footer.jpg) no-repeat center bottom;
   background-size: cover;
 }
 .footer-bottom {
@@ -5300,5 +5302,14 @@ form#contact-form {
 }
 .show{
   display: block !important;
+}
+a.action.remind {
+  color: #363f4d;
+}
+.field.note, .creates{
+  color: #666666;
+}
+.legend span{
+  font-size: 20px;
 }
 /* icon */

@@ -107,13 +107,13 @@
   .form.send.friend .fieldset .field:not(.choice) .control {
     width: 50%;
   }
-  .abs-margin-for-forms-desktop,
+  /* .abs-margin-for-forms-desktop,
   .fieldset .legend,
   .column:not(.sidebar-main) form .actions-toolbar,
   .column:not(.sidebar-additional) form .actions-toolbar,
   .login-container .fieldset:after {
     margin-left: 25.8%;
-  }
+  } */
   .abs-visually-hidden-desktop,
   .modes-label,
   .block-search .label,
@@ -788,9 +788,9 @@
   .actions-toolbar:after {
     clear: both;
   }
-  .actions-toolbar .primary {
+  /* .actions-toolbar .primary {
     float: left;
-  }
+  } */
   .actions-toolbar .secondary {
     float: right;
   }

@@ -3467,7 +3467,7 @@ fieldset[disabled] ._has-datepicker ~ .ui-datepicker-trigger {
 .sidebar .fieldset .fields .field .control {
   width: 100%;
 }
-@font-face {
+/* @font-face {
   font-family: "Font Awesome\ 5 Pro";
   src: url("../fonts/Blank-Theme-Icons/Blank-Theme-Icons.eot");
   src: url("../fonts/Blank-Theme-Icons/Blank-Theme-Icons.eot?#iefix")
@@ -3479,7 +3479,7 @@ fieldset[disabled] ._has-datepicker ~ .ui-datepicker-trigger {
       format("svg");
   font-weight: normal;
   font-style: normal;
-}
+} */
 button,
 a.action.primary,
 .cart.table-wrapper .actions-toolbar .action,
@@ -3500,20 +3500,20 @@ a.action.primary:active,
 a.action.primary:focus {
   text-decoration: none;
 }
-.action.primary {
+/* .action.primary {
   background-image: none;
   background: #1979c3;
   border: 1px solid #1979c3;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  /* font-family: "Open Sans", "Open Sans"; */
+  font-family: "Open Sans", "Open Sans";
   font-weight: 700;
   padding: 7px 15px;
   font-size: 1.4rem;
   box-sizing: border-box;
   vertical-align: middle;
-}
+} */
 .action.primary:focus,
 .action.primary:active {
   background: #006bb4;

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +15,8 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
-    <title>Shopping</title>
+    <title>Sign Up</title>
 </head>
-
 <body>
     <div class="page-wrapper">
         <header class="header-container">
@@ -35,7 +33,9 @@
                                     <div class="actions dropdown options switcher-options">
                                         <div class="action toggle switcher-trigger" id="switcher-language-trigger">
                                             <strong class="view-english5">
-                                                <span>English</span>
+                                                <span>
+                                                    English
+                                                </span>
                                             </strong>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@
                                             <a href="#">My Wish List</a>
                                         </li>
                                         <li class="authorization-link">
-                                            <a href="./login.html">Sign In</a>
+                                            <a href="#">Sign In</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -106,12 +106,11 @@
 
                         <div class="col-md-3 col-sm-3">
                             <div class="logo-home">
-                                <span class="action nav-toggle">
-                                    <span>Toggle Nav</span>
-                                
-                                </span>
                                 <strong class="logo">
-                                    <img src="./IMG/logo_style_2.png" alt="Magento Commerce" width="203" height="50">
+                                    <img
+                                        src="./IMG/logo_style_2.png"
+                                        width="203"
+                                        height="50">
                                 </strong>
                             </div>
                         </div>
@@ -498,389 +497,264 @@
                 </div>
             </div>
         </header>
-        <div class="main-container">
-            <div class="ma-banner">
-                <div class="container-inner">
-                    <div class="row">
 
-                        <div class="col-sm-9">
-                            <div class="pt-banner-container" style="display: block;">
-                                <ul class="ptowl owl-carousel owl-theme" style="opacity: 1; display: block;">
-                                    <div class="owl-wrapper-outer">
-                                        <div class="owl-wrapper" style="width: 3480px; left: 0px; display: block; transform: translate3d(0px, 0px, 0px); transition: all 500ms ease 0s;">
-                                            <div class="owl-item" style="width: 870px;">
-                                                <li class="mySlide">
-                                                    <img 
-                                                        alt="Slide 1"
-                                                        src="./IMG/slide_banner_1.jpg">
-                                                </li>
-                                            </div>
-                                            <div class="owl-item" style="width: 870px;">
-                                                <li class="mySlide">
-                                                    <img 
-                                                        alt="Slide 2"
-                                                        src="./IMG/slide_banner_2.jpg">
-                                                </li>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-controls clickable">
-                                        <div class="owl-pagination">
-                                            <div class="owl-page dot active" onclick="currentSlide(0)">
-                                                <span></span>
-                                            </div>
-                                            <div class="owl-page dot" onclick="currentSlide(1)">
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                        <div class="owl-buttons">
-                                            <div class="owl-prev">prev</div>
-                                            <div class="owl-next">next</div>
-                                        </div>
-                                    </div>
-                                </ul>
-                            </div>
-                        </div>
+        <main id="maincontent" class="page-main">
+            <div class="container">
+                <div class="page-title-wrapper">
+                    <h1 class="page-title">
+                        <span class="base">Create New Customer Account</span>
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column main">
 
-                        <div class="col-sm-3">
-                            <div class="banner-home">
-                                <div class="banner-box">
-                                    <a href="#">
-                                        <img
-                                            src="./IMG/banner_1.jpg" 
-                                            alt="Banner 1">
+                        <form class="form create account form-create-account">
+                            <fieldset class="fieldset create info">
+                                <legend class="legend">
+                                    <span>Personal Information</span>
+                                </legend>
+                                <br>
+                                <div class="field field-name-firstname required">
+                                    <label class="label" for="firstname">
+                                        <span>First Name</span>
+                                    </label>
+                        
+                                    <div class="control">
+                                        <input type="text" id="firstname" name="firstname" value="" title="First Name" class="input-text required-entry">
+                                    </div>
+                                </div>
+                                <div class="field field-name-lastname required">
+                                    <label class="label" for="lastname">
+                                        <span>Last Name</span>
+                                    </label>
+                        
+                                    <div class="control">
+                                        <input type="text" id="lastname" value="" title="Last Name" class="input-text required-entry">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="fieldset create account" data-hasrequired="* Required Fields">
+                                <legend class="legend">
+                                    <span>Sign-in Information</span>
+                                </legend>
+                                <br>
+                                <div class="field required">
+                                    <label for="email_address" class="label">
+                                        <span>Email</span>
+                                    </label>
+                                    <div class="control">
+                                        <input type="email" id="email_address" value="" title="Email" class="input-text">
+                                    </div>
+                                </div>
+                                <div class="field password required">
+                                    <label for="password" class="label">
+                                        <span>Password</span>
+                                    </label>
+                                    <div class="control">
+                                        <input type="password" id="password" title="Password" class="input-text">
+                                    </div>
+                                </div>
+                                <div class="field confirmation required">
+                                    <label for="password-confirmation" class="label">
+                                        <span>Confirm Password</span>
+                                    </label>
+                                    <div class="control">
+                                        <input type="password" id="password-confirmation" class="input-text">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="actions-toolbar">
+                                <div class="primary">
+                                    <button type="submit" class="action submit primary" title="Create an Account">
+                                        <span>Create an Account</span>
+                                    </button>
+                                </div>
+                                <div class="secondary">
+                                    <a class="action back" href="./login.html">
+                                        <span>Back</span>
                                     </a>
                                 </div>
-                                <div class="banner-box">
-                                    <a href="#">
-                                        <img
-                                            src="./IMG/banner_2.jpg" 
-                                            alt=" Banner 2">
-                                    </a>
-                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="corporate-about">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="box">
-                                    <div class="images">
-                                        <img
-                                            src="./IMG/icon_1.jpg"
-                                            alt="icon 1">
-                                    </div>
-                                    <h3>Free Delivery</h3>
-                                    <p>Free shipping on all order</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="box">
-                                    <div class="images">
-                                        <img
-                                            src="./IMG/icon_2.jpg"
-                                            alt="icon 2">
-                                    </div>
-                                    <h3>Online Support 24/7</h3>
-                                    <p>Support online 24 hours a day</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="box">
-                                    <div class="images">
-                                        <img
-                                            src="./IMG/icon_3.jpg"
-                                            alt="icon 3">
-                                    </div>
-                                    <h3>Money Return</h3>
-                                    <p>Back guarantee under 7 days</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="box">
-                                    <div class="images">
-                                        <img
-                                            src="./IMG/icon_4.jpg"
-                                            alt="icon 4">
-                                    </div>
-                                    <h3>Member Discount</h3>
-                                    <p>Onevery order over $120.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>		
-                </div>	
-            </div>
-        </div>
-    </div>
-
-    <div class="container-inner">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="categorytab-container product-tab">
-                    <div class="tab-title">
-                        <div class="title">
-                            <h3>
-                                <span>Vegetables</span>
-                            </h3>
-                        </div>
-                        <ul class="tabs tabs-2332323">
-                            <li class="active" rel="tab3-2332323">Greens</li>
-                            <li class="" rel="tab4-2332323">Tubers</li>
-                            <li class="" rel="tab5-2332323">Fungus</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="banner-box banner-box1">
-                    <a href="#">
-                        <img
-                            src="./IMG/banner_3.jpg"
-                            alt="">
-                    </a>
-                </div>
-                <div class="banner-box banner-box1">
-                    <a href="#">
-                        <img
-                            src="./IMG/banner_4.jpg"
-                            alt="">
-                    </a>
-                </div>
-                <div class="banner-box banner-box1">
-                    <a href="#">
-                        <img
-                            src="./IMG/banner_5.jpg"
-                            alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="banner-home banner-home2">
-                    <div class="banner-box">
-                        <a href="#">
-                            <img
-                                src="./IMG/banner_right_1.jpg"
-                                alt="">
-                        </a>
-                    </div>
-                    <div class="banner-box">
-                        <a href="#">
-                            <img
-                                src="./IMG/banner_right_2.jpg"
-                                alt="">
-                        </a>
-                    </div>
-                    <div class="banner-box">
-                        <a href="#">
-                            <img
-                                src="./IMG/banner_right_3.jpg"
-                                alt="">
-                        </a>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="container-inner">
-        <div class="banner-home banner-home3">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="banner-box">
-                        <a href="#">
-                            <img
-                                src="./IMG/banner_a.jpg"
-                                alt="">
-                        </a>
-                    </div>      
-                </div>
-                <div class="col-sm-6">
-                    <div class="banner-box">
-                        <a href="#">
-                            <img
-                                src="./IMG/banner_b.jpg"
-                                alt="">
-                        </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="page-footer">
-        <div class="footer-container">
-            <div class="ma-brand">
-                <div class="container-inner">
-                    <div class="brandslider-container">
-                        <div class="title">
-                            <!--<div class="ma-title"><h3><span></span></h3></div>-->
-                        </div>
-                        <div class="pt-brand-container">
-                            <ul class="ptowl owl-carousel owl-theme" style="opacity: 1; display: block;"> 
-                                <div class="owl-wrapper-outer">
-                                    <div class="owl-wrapper" style="width: 2808px; left: 0px; display: block;">
-                                        <div class="owl-item active" style="width: 234px;">
-                                            <li>
-                                                <div class="pt-brand">
-                                                    <img
-                                                        alt=""
-                                                        src="./IMG/collab_1.png">
-                                                    <p></p>
-                                                </div>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item active" style="width: 234px;">
-                                            <li>
-                                                <div class="pt-brand">
-                                                    <img
-                                                        alt=""
-                                                        src="./IMG/collab_2.png">
-                                                    <p></p>
-                                                </div>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item active" style="width: 234px;">
-                                            <li>
-                                                <div class="pt-brand">         
-                                                    <img 
-                                                        alt=""
-                                                        src="./IMG/collab_3.png">
-                                                    <p></p>
-                                                </div>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item active" style="width: 234px;">
-                                            <li>
-                                                <div class="pt-brand">
-                                                    <img
-                                                        alt=""
-                                                        src="./IMG/collab_4.png">
-                                                    <p></p>
-                                                </div>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item active" style="width: 234px;">
-                                            <li>
-                                                <div class="pt-brand">
-                                                    <img
-                                                        alt=""
-                                                        src="./IMG/collab_5.png">
-                                                    <p></p>
-                                                </div>
-                                            </li>
-                                        </div>
-                                    </div>
-                                </div>  
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-top">
-                <div class="container-inner">
-                    <div class="container-size">
-                        <div class="row footer-static">
-                            <div class="col-sm-4">
-                                <p class="logof">
-                                    <img
-                                        src="./IMG/logo_style_1.png"
-                                        alt=""
-                                        width="80%">
-                                </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <p>Address: 36 Hai Phong, Viet Nam.</p>
-                                <p>Phone: (+84) 945 826 433</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <h3>Our Service</h3>
-                                <ul class="links services">
-                                    <li class="first"><a href="#">Our Blog</a></li>
-                                    <li><a href="#">About Our Shop</a></li>
-                                    <li><a href="#">Returns</a></li>
-                                    <li><a href="#">Order History</a></li>
-                                    <li class="last"><a href="#">Secure Shopping</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-2">
-                                <h3>Customer service</h3>
-                                <ul class="links services">
-                                    <li class="first"><a href="#">Site Map</a></li>
-                                    <li><a href="#">Specials</a></li>
-                                    <li><a href="#">Returns</a></li>
-                                    <li><a href="#">Order History</a></li>
-                                    <li class="last"><a href="#">My Account</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-4">
-                                <h3>follow us</h3>
-                                <ul class="link-follow">
-                                    <li class="first">
-                                        <a class="twitter" title="Twitter" href="https://twitter.com/NguynBH36708888">
-                                            <i class="fab fa-twitter fa-lg"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="google" title="Google" href="#">
-                                            <i class="fab fa-google-plus-g fa-lg"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="facebook" title="Facebook" href="https://www.facebook.com/hung.nguyen.ba.18.11.05">
-                                            <i class="fab fa-facebook-f fa-lg"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="youtube" title="Youtube" href="#">
-                                            <i class="fab fa-youtube fa-lg"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h3>Download Apps</h3>
-                                <p class="app">
-                                    <img
-                                        src="./IMG/download.png"
-                                        alt="">
-                                </p>
-                            </div>
-                        </div>
-                        <div class="ma_newsletter">
+        </main>
+        <footer class="page-footer">
+            <div class="footer-container">
+                <div class="ma-brand">
+                    <div class="container-inner">
+                        <div class="brandslider-container">
                             <div class="title">
-                                <div>
-                                    <h3><span>Sign Up For Newsletters </span></h3>
-                                    <p>Get E-mail updates about our latest shop and special offers.</p>
-                                </div>
+                                <!--<div class="ma-title"><h3><span></span></h3></div>-->
                             </div>
-                            <form class="form subscribe" id="newsletter-validate-detail">
-                                <div class="control">
-                                    <input type="email" id="newsletter" placeholder="Enter your email address">            
-                                    <button class="action subscribe primary" title="Subscribe" type="submit">
-                                        <span>
-                                            <i class="fas fa-paper-plane fa-2x"></i>
-                                        </span>
-                                    </button>			
-                                </div>
-                            </form>
+                            <div class="pt-brand-container">
+                                <ul class="ptowl owl-carousel owl-theme" style="opacity: 1; display: block;"> 
+                                    <div class="owl-wrapper-outer">
+                                        <div class="owl-wrapper" style="width: 2808px; left: 0px; display: block;">
+                                            <div class="owl-item active" style="width: 234px;">
+                                                <li>
+                                                    <div class="pt-brand">
+                                                        <img
+                                                            alt=""
+                                                            src="./IMG/collab_1.png">
+                                                        <p></p>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 234px;">
+                                                <li>
+                                                    <div class="pt-brand">
+                                                        <img
+                                                            alt=""
+                                                            src="./IMG/collab_2.png">
+                                                        <p></p>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 234px;">
+                                                <li>
+                                                    <div class="pt-brand">         
+                                                        <img 
+                                                            alt=""
+                                                            src="./IMG/collab_3.png">
+                                                        <p></p>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 234px;">
+                                                <li>
+                                                    <div class="pt-brand">
+                                                        <img
+                                                            alt=""
+                                                            src="./IMG/collab_4.png">
+                                                        <p></p>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 234px;">
+                                                <li>
+                                                    <div class="pt-brand">
+                                                        <img
+                                                            alt=""
+                                                            src="./IMG/collab_5.png">
+                                                        <p></p>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </ul>
+                            </div>
                         </div>
-                        <div class="footer-bottom">
-                            <div class="container-inner">
-                                <small class="copyright">
-                                    <span>Copyright © 2022 G-Room, Inc. All rights reserved.</span>
-                                </small>
-                                <div class="link-paypal">
-                                    <img
-                                        src="./IMG/icon_payment.png"
-                                        alt="">
+                    </div>
+                </div>
+                <div class="footer-top">
+                    <div class="container-inner">
+                        <div class="container-size">
+                            <div class="row footer-static">
+                                <div class="col-sm-4">
+                                    <p class="logof">
+                                        <img
+                                            src="./IMG/logo_style_1.png"
+                                            alt=""
+                                            width="80%">
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Address: 36 Hai Phong, Viet Nam.</p>
+                                    <p>Phone: (+84) 945 826 433</p>
+                                </div>
+                                <div class="col-sm-2">
+                                    <h3>Our Service</h3>
+                                    <ul class="links services">
+                                        <li class="first"><a href="#">Our Blog</a></li>
+                                        <li><a href="#">About Our Shop</a></li>
+                                        <li><a href="#">Returns</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                        <li class="last"><a href="#">Secure Shopping</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2">
+                                    <h3>Customer service</h3>
+                                    <ul class="links services">
+                                        <li class="first"><a href="#">Site Map</a></li>
+                                        <li><a href="#">Specials</a></li>
+                                        <li><a href="#">Returns</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                        <li class="last"><a href="#">My Account</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3>follow us</h3>
+                                    <ul class="link-follow">
+                                        <li class="first">
+                                            <a class="twitter" title="Twitter" href="https://twitter.com/NguynBH36708888">
+                                                <i class="fab fa-twitter fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="google" title="Google" href="#">
+                                                <i class="fab fa-google-plus-g fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="facebook" title="Facebook" href="https://www.facebook.com/hung.nguyen.ba.18.11.05">
+                                                <i class="fab fa-facebook-f fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="youtube" title="Youtube" href="#">
+                                                <i class="fab fa-youtube fa-lg"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h3>Download Apps</h3>
+                                    <p class="app">
+                                        <img
+                                            src="./IMG/download.png"
+                                            alt="">
+                                    </p>
                                 </div>
                             </div>
-                            <div id="back_top" style="display: block;">
-                                <a href="#"></a>
+                            <div class="ma_newsletter">
+                                <div class="title">
+                                    <div>
+                                        <h3><span>Sign Up For Newsletters </span></h3>
+                                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                                    </div>
+                                </div>
+                                <form class="form subscribe" id="newsletter-validate-detail">
+                                    <div class="control">
+                                        <input type="email" id="newsletter" placeholder="Enter your email address">            
+                                        <button class="action subscribe primary" title="Subscribe" type="submit">
+                                            <span>
+                                                <i class="fas fa-paper-plane fa-2x"></i>
+                                            </span>
+                                        </button>			
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="footer-bottom">
+                                <div class="container-inner">
+                                    <small class="copyright">
+                                        <span>Copyright © 2022 G-Room, Inc. All rights reserved.</span>
+                                    </small>
+                                    <div class="link-paypal">
+                                        <img
+                                            src="./IMG/icon_payment.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div id="back_top" style="display: block;">
+                                    <a href="#"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
     <script src="./JS/index.js"></script>
-    <script src="./JS/slideshow.js"></script>
 </body>
-
 </html>
