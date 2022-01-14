@@ -21,7 +21,6 @@
     
     <label>Index</label> <input id="indBox" type="number"> <br>
     <label>Name</label> <input id="nameBox" type="text"> <br>
-    <label>Company</label> <input id="compBox" type="text"> <br>
     <label>Type</label> <input id="typeBox" type="text"> <br>
     <label>Id</label> <input id="idBox" type="text"> <br>
     <label>Image Url</label> <input id="urlBox" type="text"> <br>
@@ -41,21 +40,19 @@
         import {getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"
         // Your web app's Firebase configuration
         const firebaseConfig = {
-            apiKey: "AIzaSyDkvgS326bGNeSU34aqBoeqyLtKW6Rf2WA",
-            authDomain: "gaming-gear-project.firebaseapp.com",
-            projectId: "gaming-gear-project",
-            storageBucket: "gaming-gear-project.appspot.com",
-            messagingSenderId: "67679831371",
-            appId: "1:67679831371:web:56766ea0c13fc7cfaa94ce"
+            apiKey: "AIzaSyCE-DYbX3Q33Yu2oLJ9oyhclVT0IatE4v4",
+            authDomain: "organic-store-233b0.firebaseapp.com",
+            projectId: "organic-store-233b0",
+            storageBucket: "organic-store-233b0.appspot.com",
+            messagingSenderId: "749835060914",
+            appId: "1:749835060914:web:58e2471c625ec153172bab"
         };
-      
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getFirestore()
 
         let indBox = document.querySelector("#indBox")
         let nameBox = document.querySelector("#nameBox")
-        let compBox = document.querySelector("#compBox")
         let typeBox = document.querySelector("#typeBox")
         let idBox = document.querySelector("#idBox")
         let urlBox = document.querySelector("#urlBox")
@@ -72,14 +69,14 @@
             const docRef = await setDoc(
                 ref, {
                     name: nameBox.value,
-                    company: compBox.value,
                     type: typeBox.value,
                     id: idBox.value,
                     imgUrl: urlBox.value,
                     oldPrice: priceBox.value,
                     saleOff: saleBox.value,
                     saleOffValue: saleValBox.value,
-                    special: spcBox.value
+                    special: spcBox.value,
+                    quantity: 0
                 }
             )
             .then(() => {
