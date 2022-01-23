@@ -4599,7 +4599,7 @@ fieldset[disabled] .action-braintree-paypal-logo {
 }
 .product-item-info {
   max-width: 100%;
-  width: 152px;
+  /* width: 152px; */
 }
 .page-products .product-item-info {
   width: 240px;
@@ -4621,9 +4621,9 @@ fieldset[disabled] .action-braintree-paypal-logo {
   margin-top: 5px;
   text-transform: lowercase;
 }
-.product-item .price-box {
+/* .product-item .price-box {
   margin: 10px 0 25px;
-}
+} */
 .product-item .price-box .price {
   font-size: 1.4rem;
   font-weight: 700;
@@ -4648,9 +4648,9 @@ fieldset[disabled] .action-braintree-paypal-logo {
 .product-item .minimal-price .price-including-tax + .price-excluding-tax {
   display: block;
 }
-.product-item .special-price {
+/* .product-item .special-price {
   display: block;
-}
+} */
 .product-item .old-price .price {
   font-weight: 400;
 }

@@ -6,7 +6,7 @@ const style = `
 .card .face{
     width: 300px;
     height: 200px;
-    transition:.4s;  
+    transition:.4s;
 }
 
 .card .face.face1{
@@ -106,6 +106,7 @@ class ProductsCard extends HTMLElement {
         this.productImgUrl = this.getAttribute("productImgUrl")
         this.productPrice = this.getAttribute("productPrice")
         this.productSaleOff = this.getAttribute("productSaleOff")
+        this.productSaleOffValue = this.getAttribute("productSaleOffValue")
         this._shadowDom.innerHTML = `
             <style>
                 ${style}
@@ -114,9 +115,8 @@ class ProductsCard extends HTMLElement {
 
                 <div class="face face1">
 
-                    <div class="content">
-                        <i class="fab fa-users"></i>            
-                        <h3>Windows</h3>
+                    <div class="content">   
+                        <h3>Products</h3>
                     </div>
 
                 </div>
@@ -130,6 +130,8 @@ class ProductsCard extends HTMLElement {
                         <h1>${this.productName}</h1>
                         <p>Price: $ ${this.productPrice}</p>
                         <p>(Sale Off ${this.productSaleOff})</p>
+                        <hr>
+                        <p>Total: ${Math.round(Number(this.productPrice * (1 - this.productSaleOffValue)) * 100) / 100}</p>
                     </div>
 
                 </div>

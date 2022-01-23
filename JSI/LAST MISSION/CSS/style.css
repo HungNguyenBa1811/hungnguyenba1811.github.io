@@ -303,7 +303,7 @@
   .product-item-actions
   .add-to-links-secondary
   a.action.wishlist:before {
-  content: "\f387";
+  content: "\f302";
 }
 .product-item-info
   .product-item-details
@@ -323,7 +323,8 @@
   margin-left: -10px;
 }
 .product-item .price-box {
-  margin: 5px 0;
+  margin: 10px 0;
+  padding: 5px;
 }
 .product-item .product-reviews-summary .rating-summary {
   margin: 0;

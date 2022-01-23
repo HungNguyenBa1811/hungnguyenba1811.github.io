@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import "./products-component.js"
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import { getFirestore, doc, getDoc, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js'
+import { getFirestore, doc, getDoc, getDocs , collection, addDoc, updateDoc, deleteDoc, deleteField } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -46,7 +46,49 @@ products_list.forEach((object) => {
             productName="${object["name"]}"
             productImgUrl="${object["imgUrl"]}"
             productPrice="${object["oldPrice"]}"
-            productSaleOff="${object["saleOff"]}">
+            productSaleOff="${object["saleOff"]}"
+            productSaleOffValue="${object["saleOffValue"]}">
         </product-card>
     `
 })
+
+// import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js";
+
+// const storage = getStorage();
+// const imgFileName = document.querySelector("#imgUpdate")
+// getDownloadURL(ref(storage, `PRODUCTS/${imgFileName.value}.png`))
+//   .then((url) => {
+//     console.log(url)
+//     async function UpdateFunction(){
+//         const indexBox = document.querySelector("#indexUpdate")
+//         var ref = doc(db, "products-list", `product-${indexBox.value}`)
+
+//         const docRef = await updateDoc(
+//             ref, {
+//                 imgUrl: url
+//             }
+//         )
+//         .then(() => {
+//             alert("Data added successfully!!")
+//         })
+//         .catch((error) => {
+//             alert("Unsuccessful operation, error:" + error.message);
+//         })
+//     }
+//     document.querySelector(".updateBtn").addEventListener("click", UpdateFunction)
+//     // This can be downloaded directly:
+//     // const xhr = new XMLHttpRequest();
+//     // xhr.responseType = 'blob';
+//     // xhr.onload = (event) => {
+//     //   const blob = xhr.response;
+//     // };
+//     // xhr.open('GET', url);
+//     // xhr.send();
+
+//     // Or inserted into an <img> element
+//     // const img = document.getElementById('myimg');
+//     // img.setAttribute('src', url);
+//   })
+//   .catch((error) => {
+//     alert("Error: ", error.message)
+//   });
