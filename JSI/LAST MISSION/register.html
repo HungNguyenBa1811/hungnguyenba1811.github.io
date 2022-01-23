@@ -32,9 +32,7 @@
                                     <div class="actions dropdown options switcher-options">
                                         <div class="action toggle switcher-trigger" id="switcher-language-trigger">
                                             <strong class="view-english5">
-                                                <span>
-                                                    English
-                                                </span>
+                                                <span>English</span>
                                             </strong>
                                         </div>
                                     </div>
@@ -72,13 +70,13 @@
                                     </strong>
                                     <ul class="header links">
                                         <li>
-                                            <a href="#">My Account</a>
+                                            <a href="#" id="my_account">My Account</a>
                                         </li>
                                         <li class="link wishlist">
                                             <a href="#">My Wish List</a>
                                         </li>
                                         <li class="authorization-link">
-                                            <a href="#">Sign In</a>
+                                            <a href="./login.html" id="auth_false">Sign In</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -105,11 +103,12 @@
 
                         <div class="col-md-3 col-sm-3">
                             <div class="logo-home">
+                                <span class="action nav-toggle">
+                                    <span>Toggle Nav</span>
+                                
+                                </span>
                                 <strong class="logo">
-                                    <img
-                                        src="./IMG/logo_style_2.png"
-                                        width="203"
-                                        height="50">
+                                    <img src="./IMG/logo_style_2.png" alt="Magento Commerce" width="203" height="50">
                                 </strong>
                             </div>
                         </div>
@@ -314,12 +313,6 @@
                                                                     </a>
                                                                     <a class="itemMenuName level2" href="#">
                                                                         <span>Apples</span>
-                                                                    </a>
-                                                                    <a class="itemMenuName level2"  href="#">
-                                                                        <span>Mangoes</span>
-                                                                    </a>
-                                                                    <a class="itemMenuName level2" href="#">
-                                                                        <span>Lemons</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -758,5 +751,6 @@
     </div>
     <script src="./JS/authenticate.js" type="module"></script>
     <script src="./JS/index.js"></script>
+    <script src="./JS/observer.js" type="module"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
 
 const firebaseConfig = {
@@ -11,47 +11,68 @@ const firebaseConfig = {
     messagingSenderId: "1079383200282",
     appId: "1:1079383200282:web:2a370bcfa756b18819b7a3"
 };
-      
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth();
 
 const signUp = document.querySelector("#signUpBtn")
-signUp.addEventListener('click', () => {
-    let email = document.querySelector("#email_address").value
-    let password = document.querySelector("#password").value
-    let passwordConfirm = document.querySelector("#password-confirmation").value
-    let first_name = document.querySelector("#firstname").value
-    let last_name = document.querySelector("#lastname").value
-    
-    if(password === passwordConfirm && password != null){
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            const uid = user.uid
-            alert("User created!!!")
-            console.log(user)
-            function writeUserData(userId, email, password) {
-                set(ref(database, 'users/' + userId), {
-                    first_name: first_name,
-                    last_name: last_name,
-                    email: email,
-                    password: password,
+const signIn = document.querySelector("#signInBtn")
+
+if(signUp !== null){
+    signUp.addEventListener('click', () => {
+        let email = document.querySelector("#email_address").value
+        let password = document.querySelector("#password").value
+        let passwordConfirm = document.querySelector("#password-confirmation").value
+        let first_name = document.querySelector("#firstname").value
+        let last_name = document.querySelector("#lastname").value
+        
+        if(password === passwordConfirm && password != null){
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    const uid = user.uid
+                    alert("User created!!!")
+                    console.log(user)
+                    function writeUserData(userId, email, password) {
+                        set(ref(database, 'users/' + userId), {
+                            first_name: first_name,
+                            last_name: last_name,
+                            email: email,
+                            password: password,
+                        });
+                    }
+                    writeUserData(uid, email, password)
+                })
+                .catch((error) => {
+                    // const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // ..
+                    alert(errorMessage)
                 });
-            }
-            writeUserData(uid, email, password)
-        })
-        .catch((error) => {
-            // const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-            alert(errorMessage)
-        });
-    }
-    else{
-        alert("U Dumb Ass")
-        window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    }
-})
+        }
+        else{
+            alert("U Dumb Ass")
+            window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+    })
+} else {
+    signIn.addEventListener("click", () => {
+
+        let email = document.querySelector("#email").value
+        let password = document.querySelector("#pass").value
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user)
+                alert("User Logged In!!!!!!")
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                alert("Error: ", errorMessage)
+            });
+    })
+}
