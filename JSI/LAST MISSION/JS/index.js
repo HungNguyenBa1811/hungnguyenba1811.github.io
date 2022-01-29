@@ -1,3 +1,4 @@
+// Toggle Menus
 function displayOtherIDInArray(numID){ // Filter Other ID
     let array = ["1","2","3","4"]
     let newArray = array.filter(x => x != numID)
@@ -22,6 +23,9 @@ toggleSystem("1")
 toggleSystem("2")
 toggleSystem("3")
 toggleSystem("4")
+
+// Toggle Items
+
 // Scroll to top
 let scrollButton = document.querySelector("#back_top")
 let scroll_1 = document.querySelector('.header-container')

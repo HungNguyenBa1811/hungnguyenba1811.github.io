@@ -35,7 +35,7 @@
 	transition: height 500ms ease-in-out;
 }
 	
-.owl-carousel .owl-item{
+.owl-item{
 	float: left;
 }
 .owl-controls .owl-page,
