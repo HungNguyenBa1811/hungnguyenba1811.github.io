@@ -5313,4 +5313,13 @@ a.action.remind {
 .legend span{
   font-size: 20px;
 }
+.row-content{
+  overflow: hidden;
+}
+.pd-tab-1{
+  width: 5382px;
+}
+.pd-tab-1 .item{
+  display: inline-block;
+}
 /* icon */

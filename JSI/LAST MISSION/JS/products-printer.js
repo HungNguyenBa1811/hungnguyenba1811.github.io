@@ -21,9 +21,9 @@ let dataProduct = localStorage.getItem('Products-list')
 
 let items_tab_1 = document.querySelector(".pd-tab-1")
 
-let HTMLContent = (x) =>
+let HTMLContent_Grid_1 = (x) =>
 `
-    <div class="owl-item" style="width: 218px;">
+    <div class="item">
         <div class="products-grid">
             <div class="product-item">
                 <div class="product-item-info">	
@@ -128,22 +128,24 @@ var products_tab_1 = products_list.filter( (organic) => organic.special == `Tab_
 var products_tab_2 = products_list.filter( (organic) => organic.special == `Tab_2` );
 var products_tab_3 = products_list.filter( (organic) => organic.special == `Tab_3` );
 
+console.log(products_tab_1)
+
 let update_tab_1 = () => {
     items_tab_1.innerHTML = '';
     for(let x of products_tab_1){
-        items_tab_1.insertAdjacentHTML('beforeend', HTMLContent(x))
+        items_tab_1.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
 }
 let update_tab_2 = () => {
     items_tab_1.innerHTML = '';
     for(let x of products_tab_2){
-        items_tab_1.insertAdjacentHTML('beforeend', HTMLContent(x))
+        items_tab_1.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
 }
 let update_tab_3 = () => {
     items_tab_1.innerHTML = '';
     for(let x of products_tab_3){
-        items_tab_1.insertAdjacentHTML('beforeend', HTMLContent(x))
+        items_tab_1.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
 }
 
