@@ -124,27 +124,52 @@
                                 <a class="action showcart" href="">
                                     <span class="text">My Cart</span>
                                     <span class="counter qty">
-                                        <span class="counter-number">0</span>
+                                        <span class="counter-number"></span>
                                         <span class="counter-label"></span>
                                     </span>
                                 </a>
                                 <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog" style="display: none;">
                                     <div class="block block-minicart empty ui-dialog-content ui-widget-content" id="ui-id-1" style="display: block; text-align: center;">
                                         <div id="minicart-content-wrapper">
-                                            <div class="block-title">
-                                                <strong>
-                                                    <span class="text">
-                                                        <span>My Cart</span>
-                                                    </span>
-                                                    <span class="qty empty" title="Items in Cart">0</span>
-                                                </strong>
-                                            </div>
+                                            
                                             <div class="block-content">
-                                                <strong class="subtitle empty">
-                                                    <span>You have no items in your shopping cart.</span>
-                                                </strong>
-                                                <div id="minicart-widgets" class="minicart-widgets">
-    
+                                                <div class="items-total">
+                                                    <span class="count"></span>
+                                                    <span>items</span>
+                                                </div>
+                                                <div class="subtotal">
+                                                    <span class="label">
+                                                        <span>Cart Subtotal</span>
+                                                    </span>
+                                                    <div class="amount price-container">
+                                                        <span class="price-wrapper">
+                                                            <span class="price"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="actions">
+                                                    <div class="primary">
+                                                        <button id="top-cart-btn-checkout" type="button" class="action primary checkout" title="Go to Checkout">
+                                                            <span>Go to Checkout</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="minicart-items-wrapper">
+                                                        <ol id="mini-cart" class="minicart-items">
+
+                                                        </ol>
+                                                    </div>
+
+                                                    <div class="actions">
+                                                        <div class="secondary">
+                                                            <a class="action viewcart" href="">
+                                                                <span><span>View and edit cart</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="minicart-widgets" class="minicart-widgets">
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -502,39 +527,17 @@
 
                         <div class="col-sm-9">
                             <div class="pt-banner-container" style="display: block;">
-                                <ul class="ptowl owl-carousel owl-theme" style="opacity: 1; display: block;">
-                                    <div class="owl-wrapper-outer">
-                                        <div class="owl-wrapper" style="width: 3480px; left: 0px; display: block; transform: translate3d(0px, 0px, 0px); transition: all 500ms ease 0s;">
-                                            <div class="owl-item" style="width: 870px;">
-                                                <li class="mySlide">
-                                                    <img 
-                                                        alt="Slide 1"
-                                                        src="./IMG/slide_banner_1.jpg">
-                                                </li>
-                                            </div>
-                                            <div class="owl-item" style="width: 870px;">
-                                                <li class="mySlide">
-                                                    <img 
-                                                        alt="Slide 2"
-                                                        src="./IMG/slide_banner_2.jpg">
-                                                </li>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-controls clickable">
-                                        <div class="owl-pagination">
-                                            <div class="owl-page dot active" onclick="currentSlide(0)">
-                                                <span></span>
-                                            </div>
-                                            <div class="owl-page dot" onclick="currentSlide(1)">
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                        <div class="owl-buttons">
-                                            <div class="owl-prev">prev</div>
-                                            <div class="owl-next">next</div>
-                                        </div>
-                                    </div>
+                                <ul class="slideshow owl-carousel owl-theme">
+                                    <li class="mySlide">
+                                        <img 
+                                            alt="Slide 1"
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fslide_banner_1.jpg?alt=media&token=adb2e3d8-a141-4958-a326-16fff67a3765">
+                                    </li>
+                                    <li class="mySlide">
+                                        <img 
+                                            alt="Slide 2"
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fslide_banner_2.jpg?alt=media&token=e1b0de5d-abd2-47b6-a476-aefdcd116071">
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -544,14 +547,14 @@
                                 <div class="banner-box">
                                     <a href="#">
                                         <img
-                                            src="./IMG/banner_1.jpg" 
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_1.jpg?alt=media&token=75e72568-2187-4dd5-b81b-a06d900c1bda" 
                                             alt="Banner 1">
                                     </a>
                                 </div>
                                 <div class="banner-box">
                                     <a href="#">
                                         <img
-                                            src="./IMG/banner_2.jpg" 
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_2.jpg?alt=media&token=98f175da-19e5-4150-9f45-77f5ca954a31" 
                                             alt=" Banner 2">
                                     </a>
                                 </div>
@@ -564,7 +567,7 @@
                                 <div class="box">
                                     <div class="images">
                                         <img
-                                            src="./IMG/icon_1.jpg"
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_1.jpg?alt=media&token=c9e42342-31bd-45e2-909c-9d88c8f6253d"
                                             alt="icon 1">
                                     </div>
                                     <h3>Free Delivery</h3>
@@ -575,7 +578,7 @@
                                 <div class="box">
                                     <div class="images">
                                         <img
-                                            src="./IMG/icon_2.jpg"
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_2.jpg?alt=media&token=5b5546e3-1d9e-41bc-856b-b9bd19b1541d"
                                             alt="icon 2">
                                     </div>
                                     <h3>Online Support 24/7</h3>
@@ -586,7 +589,7 @@
                                 <div class="box">
                                     <div class="images">
                                         <img
-                                            src="./IMG/icon_3.jpg"
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_3.jpg?alt=media&token=12714c1e-e5f6-4e10-9dd8-14148417fcc6"
                                             alt="icon 3">
                                     </div>
                                     <h3>Money Return</h3>
@@ -597,7 +600,7 @@
                                 <div class="box">
                                     <div class="images">
                                         <img
-                                            src="./IMG/icon_4.jpg"
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_4.jpg?alt=media&token=b0856731-a466-4a4b-87d2-1c303c0ace27"
                                             alt="icon 4">
                                     </div>
                                     <h3>Member Discount</h3>
@@ -633,11 +636,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="banner-box banner-box1">
                     <a href="#">
                         <img
-                            src="./IMG/banner_3.jpg"
+                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_3.jpg?alt=media&token=e53fcad2-8ccc-423f-a396-d638b6526cb9"
                             alt="">
                     </a>
                 </div>
@@ -648,26 +650,34 @@
                         </div>
                     </div>
                     <div class="tab-container">
-                        <div class="owl-container row-content">
-                            <div class="owl-theme">
-                                <div class="owl-wrapper-outer">
-                                    <div class="owl-wrapper pd-tab-2" style="width: 5232px; left: 0px; display: block;"></div>
-                                </div>
-                            </div>
+                        <div class="row-content">
+                            <div class="owl-theme pd-tab-2"></div>
                         </div>
                     </div>
                 </div>
                 <div class="banner-box banner-box1">
                     <a href="#">
                         <img
-                            src="./IMG/banner_4.jpg"
+                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_4.jpg?alt=media&token=1c0c260b-024d-4e73-83a6-5d03f12d86c8"
                             alt="">
                     </a>
+                </div>
+                <div class="categorytab-container product-tab">
+                    <div class="tab-title">
+                        <div class="title">
+                            <h3>Spicy Food</h3>
+                        </div>
+                    </div>
+                    <div class="tab-container">
+                        <div class="row-content">
+                            <div class="owl-theme pd-tab-3"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="banner-box banner-box1">
                     <a href="#">
                         <img
-                            src="./IMG/banner_5.jpg"
+                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_5.jpg?alt=media&token=1259df5b-2407-457c-bbed-fee5a7f1c06d"
                             alt="">
                     </a>
                 </div>
@@ -677,21 +687,21 @@
                     <div class="banner-box">
                         <a href="#">
                             <img
-                                src="./IMG/banner_right_1.jpg"
+                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_right_1.jpg?alt=media&token=f0190645-3079-4059-bca9-eb7891ee46b5"
                                 alt="">
                         </a>
                     </div>
                     <div class="banner-box">
                         <a href="#">
                             <img
-                                src="./IMG/banner_right_2.jpg"
+                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_right_2.jpg?alt=media&token=0bac89d7-4241-4578-957a-b9c48c250e77"
                                 alt="">
                         </a>
                     </div>
                     <div class="banner-box">
                         <a href="#">
                             <img
-                                src="./IMG/banner_right_3.jpg"
+                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_right_3.jpg?alt=media&token=8e7a0a75-2d8e-49af-9efb-a713627d46d5"
                                 alt="">
                         </a>
                     </div>
@@ -706,7 +716,7 @@
                     <div class="banner-box">
                         <a href="#">
                             <img
-                                src="./IMG/banner_a.jpg"
+                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_a.jpg?alt=media&token=17fcfb1e-059b-4065-ab81-4fb8c94ec169"
                                 alt="">
                         </a>
                     </div>      
@@ -715,7 +725,7 @@
                     <div class="banner-box">
                         <a href="#">
                             <img
-                                src="./IMG/banner_b.jpg"
+                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_b.jpg?alt=media&token=b2902b8c-6f8c-4cfb-b558-26fafb090dde"
                                 alt="">
                         </a></div>
                     </div>
@@ -733,12 +743,12 @@
                             <!--<div class="ma-title"><h3><span></span></h3></div>-->
                         </div>
                         <div class="pt-brand-container">
-                            <ul class="ptowl owl-carousel owl-theme" style="opacity: 1; display: block;"> 
+                            <ul class="ptowl owl-carousel owl-theme"> 
                                 <li>
                                     <div class="pt-brand">
                                         <img
                                             alt=""
-                                            src="./IMG/collab_1.png">
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_1.png?alt=media&token=47033320-20f8-4d41-9781-8532c7001d76">
                                         <p></p>
                                     </div>
                                 </li>
@@ -746,7 +756,7 @@
                                     <div class="pt-brand">
                                         <img
                                             alt=""
-                                            src="./IMG/collab_2.png">
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_2.png?alt=media&token=eed0f2f9-2d9c-4934-97af-4ce885d68c67">
                                         <p></p>
                                     </div>
                                 </li>
@@ -754,7 +764,7 @@
                                     <div class="pt-brand">         
                                         <img 
                                             alt=""
-                                            src="./IMG/collab_3.png">
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_3.png?alt=media&token=7d7f7901-a73f-4842-a927-d505e678135a">
                                         <p></p>
                                     </div>
                                 </li>
@@ -762,7 +772,7 @@
                                     <div class="pt-brand">
                                         <img
                                             alt=""
-                                            src="./IMG/collab_4.png">
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_4.png?alt=media&token=a485e17f-411d-42b4-b878-ecfc9de12d2d">
                                         <p></p>
                                     </div>
                                 </li>
@@ -770,7 +780,7 @@
                                     <div class="pt-brand">
                                         <img
                                             alt=""
-                                            src="./IMG/collab_5.png">
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_5.png?alt=media&token=bcd56657-b84b-43e7-922a-74a797c1f767">
                                         <p></p>
                                     </div>
                                 </li>
@@ -786,7 +796,7 @@
                             <div class="col-sm-4">
                                 <p class="logof">
                                     <img
-                                        src="./IMG/logo_style_1.png"
+                                        src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Flogo_style_1.png?alt=media&token=6c1d0fdf-3cde-426a-a1db-fd65277122c0"
                                         alt=""
                                         width="80%">
                                 </p>
@@ -841,7 +851,7 @@
                                 <h3>Download Apps</h3>
                                 <p class="app">
                                     <img
-                                        src="./IMG/download.png"
+                                        src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fdownload.png?alt=media&token=5a65595c-ea88-4512-855c-9be7aa6c2026"
                                         alt="">
                                 </p>
                             </div>
@@ -871,7 +881,7 @@
                                 </small>
                                 <div class="link-paypal">
                                     <img
-                                        src="./IMG/icon_payment.png"
+                                        src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_payment.png?alt=media&token=45208b18-a9cd-4903-a010-217c99c3c9bf"
                                         alt="">
                                 </div>
                             </div>
@@ -887,31 +897,10 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./JS/products-printer.js" type="module"></script>
-    <script type="text/javascript">
-        $(".ptowl").owlCarousel({
-            loop: true,
-            nav: false,
-            dots: false,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-            // itemsDesktop : [1199,4],
-            // itemsDesktopSmall : [992,3],
-            // itemsTablet: [767,2],
-            // itemsMobile : [479,1]
-        });
-    </script>
     <script src="./JS/observer.js" type="module"></script>    
     <script src="./JS/index.js"></script>
     <script src="./JS/slideshow.js"></script>
+    <script defer src="./JS/cart.js"></script>
 </body>
 
 </html>

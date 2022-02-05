@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
+import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyApWwoJ3mGbwXJkh4eiiIi_DC-zpBUzRm8",
@@ -20,6 +20,7 @@ const auth = getAuth();
 const signUp = document.querySelector("#signUpBtn")
 const signIn = document.querySelector("#signInBtn")
 
+
 if(signUp !== null){
     signUp.addEventListener('click', () => {
         let email = document.querySelector("#email_address").value
@@ -34,7 +35,7 @@ if(signUp !== null){
                     // Signed in 
                     const user = userCredential.user;
                     const uid = user.uid
-                    alert("User created!!!")
+                    alert("User created!!! Login Successfully!!")
                     console.log(user)
                     function writeUserData(userId, email, password) {
                         set(ref(database, 'users/' + userId), {
@@ -43,8 +44,10 @@ if(signUp !== null){
                             email: email,
                             password: password,
                         });
+                        localStorage.setItem("Cart", [])
                     }
                     writeUserData(uid, email, password)
+                    setTimeout(() => window.location = "./index.html", 5000)
                 })
                 .catch((error) => {
                     // const errorCode = error.code;
@@ -67,8 +70,20 @@ if(signUp !== null){
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
+                const uid = user.id
                 console.log(user)
                 alert("User Logged In!!!!!!")
+                get(child(ref(getDatabase()), `/users/${uid}/cart`))
+                    .then((snapshot) => {
+                        if(snapshot.exists()){
+                            console.log(snapshot.val())
+                        } else {
+                            console.log("No data")
+                        }
+                    })
+                    .catch((error) => {
+                        console.error(error)
+                    })
             })
             .catch((error) => {
                 const errorMessage = error.message;

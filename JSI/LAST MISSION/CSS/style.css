@@ -36,9 +36,9 @@
 .block.crosssell {
   margin-bottom: 50px;
 }
-.block.related .owl-theme .owl-controls .owl-buttons,
-.block.upsell .owl-theme .owl-controls .owl-buttons,
-.block.crosssell .owl-theme .owl-controls .owl-buttons {
+.block.related .owl-theme .owl-dots .owl-nav,
+.block.upsell .owl-theme .owl-dots .owl-nav,
+.block.crosssell .owl-theme .owl-dots .owl-nav {
   bottom: -45px;
   right: 8px;
 }
@@ -1435,13 +1435,13 @@ body .swatch-option.text {
 .columns .pt-recentproduct-container .owl-item .products-grid {
   border: 0;
 }
-.columns .pt-recentproduct-container .owl-theme .owl-controls .owl-buttons {
+.columns .pt-recentproduct-container .owl-theme .owl-dots .owl-buttons {
   top: -40px;
 }
 .columns
   .pt-recentproduct-container
   .owl-theme
-  .owl-controls
+  .owl-dots
   .owl-buttons
   div {
   color: #f49d97;
@@ -1449,7 +1449,7 @@ body .swatch-option.text {
 .columns
   .pt-recentproduct-container
   .owl-theme
-  .owl-controls
+  .owl-dots
   .owl-buttons
   div.owl-prev:after {
   background: #f17870;
@@ -1457,7 +1457,7 @@ body .swatch-option.text {
 .columns
   .pt-recentproduct-container
   .owl-theme
-  .owl-controls
+  .owl-dots
   .owl-buttons
   div:hover {
   color: #fff;
@@ -2930,7 +2930,7 @@ dd {
     padding: 10px 0;
     margin: 0;
   }
-  .header-content .row div {
+  .header-content .row > div {
     display: table-cell;
     vertical-align: middle;
     position: relative;
@@ -3290,17 +3290,17 @@ dd {
 /* .pt-banner-container ul li img {
   width: 100%;
 } */
-.pt-banner-container .owl-controls .owl-pagination {
+.pt-banner-container .owl-dots {
   position: absolute;
   left: 20px;
   bottom: 20px;
 }
-.pt-banner-container .owl-controls .owl-pagination .owl-page span {
+.pt-banner-container .owl-dots .owl-dot span {
   width: 8px;
   height: 8px;
   background: #d7d7d7;
 }
-.pt-banner-container .owl-controls .owl-pagination .owl-page.active span {
+.pt-banner-container .owl-dots .owl-dot.active span {
   -webkit-box-shadow: inset 0 0 0 3px #68b501;
   -moz-box-shadow: inset 0 0 0 3px #68b501;
   box-shadow: inset 0 0 0 3px #68b501;
@@ -4744,7 +4744,7 @@ dd {
   font-size: 1.2rem;
 }
 .footer-container {
-  background: url(../IMG/background_footer.jpg) no-repeat center bottom;
+  background: url(https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbackground_footer.jpg?alt=media&token=3b3c6766-15b8-476f-a227-f06bd16884fc) no-repeat center bottom;
   background-size: cover;
 }
 .footer-bottom {
@@ -4831,16 +4831,16 @@ dd {
   content: "\f077";
   font-family: "Font Awesome\ 5 Pro";
 }
-.owl-theme .owl-controls {
+.owl-theme .owl-dots {
   margin: 0 !important;
 }
-.owl-theme .owl-controls .owl-buttons {
+.owl-theme .owl-dots .owl-buttons {
   position: absolute;
   right: 15px;
   top: -58px;
   z-index: 11;
 }
-.owl-theme .owl-controls .owl-buttons div {
+.owl-theme .owl-dots .owl-buttons div {
   width: 30px;
   height: 30px;
   text-align: right;
@@ -4852,19 +4852,19 @@ dd {
   position: relative;
   transition: all 0.3s ease-out;
 }
-.owl-theme .owl-controls .owl-buttons div:before {
+.owl-theme .owl-dots .owl-buttons div:before {
   font-family: "Font Awesome\ 5 Pro";
   content: "\f3d1";
   font-size: 1.8rem;
   display: block;
 }
-.owl-theme .owl-controls .owl-buttons div:hover {
+.owl-theme .owl-dots .owl-buttons div:hover {
   color: #68b501;
 }
-.owl-theme .owl-controls .owl-buttons div.owl-prev:before {
+.owl-theme .owl-dots .owl-buttons div.owl-prev:before {
   content: "\f3cf";
 }
-.owl-theme .owl-controls .owl-buttons div.owl-prev:after {
+.owl-theme .owl-dots .owl-buttons div.owl-prev:after {
   content: "";
   height: 13px;
   width: 1px;
@@ -4873,29 +4873,35 @@ dd {
   right: -12px;
   top: 8px;
 }
-.proup-products .owl-theme .owl-controls .owl-buttons,
-.timerproducts .owl-theme .owl-controls .owl-buttons,
-.new-product-slider .owl-theme .owl-controls .owl-buttons {
+.proup-products .owl-theme .owl-dots .owl-buttons,
+.timerproducts .owl-theme .owl-dots .owl-buttons,
+.new-product-slider .owl-theme .owl-dots .owl-buttons {
   right: 15px;
   top: -39px;
 }
-.proup-products .owl-theme .owl-controls .owl-buttons div,
-.timerproducts .owl-theme .owl-controls .owl-buttons div,
-.new-product-slider .owl-theme .owl-controls .owl-buttons div {
+.proup-products .owl-theme .owl-dots .owl-buttons div,
+.timerproducts .owl-theme .owl-dots .owl-buttons div,
+.new-product-slider .owl-theme .owl-dots .owl-buttons div {
   color: #95e32d;
 }
-.proup-products .owl-theme .owl-controls .owl-buttons div.owl-prev:after,
-.timerproducts .owl-theme .owl-controls .owl-buttons div.owl-prev:after,
-.new-product-slider .owl-theme .owl-controls .owl-buttons div.owl-prev:after {
+.proup-products .owl-theme .owl-dots .owl-buttons div.owl-prev:after,
+.timerproducts .owl-theme .owl-dots .owl-buttons div.owl-prev:after,
+.new-product-slider .owl-theme .owl-dots .owl-buttons div.owl-prev:after {
   background: #96cb4e;
 }
-.proup-products .owl-theme .owl-controls .owl-buttons div:hover,
-.timerproducts .owl-theme .owl-controls .owl-buttons div:hover,
-.new-product-slider .owl-theme .owl-controls .owl-buttons div:hover {
+.proup-products .owl-theme .owl-dots .owl-buttons div:hover,
+.timerproducts .owl-theme .owl-dots .owl-buttons div:hover,
+.new-product-slider .owl-theme .owl-dots .owl-buttons div:hover {
   color: #fff;
 }
-.product-tab .owl-theme .owl-controls .owl-buttons {
-  right: 0;
+.product-tab .owl-theme .owl-nav {
+  position: absolute;
+  right: 5px;
+  zoom: 0.8;
+  margin-top: -80px;
+}
+.product-tab .owl-theme .owl-nav button{
+  width: 2.5vw;
 }
 .fix-nav-ozmegamenu {
   z-index: 999;
@@ -5296,7 +5302,7 @@ form#contact-form {
 }
 .block-minicart #minicart-content-wrapper,
 .block-minicart #minicart-content-wrapper .block-content{
-  width: 370px;
+  width: 350px;
 }
 .block-content span{
   font-size: 14px;
@@ -5315,9 +5321,6 @@ a.action.remind {
 }
 .row-content{
   overflow: hidden;
-}
-.pd-tab-1{
-  width: 5382px;
 }
 .pd-tab-1 .item{
   display: inline-block;

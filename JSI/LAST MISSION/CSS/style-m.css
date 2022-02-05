@@ -6061,16 +6061,16 @@ fieldset[disabled] .minicart-wrapper .action.close {
 .minicart-items .action.edit:before,
 .minicart-items .action.delete:before {
   -webkit-font-smoothing: antialiased;
-  font-size: 28px;
+  font-size: 18px;
+  font-weight: bold;
   line-height: 28px;
   color: #303030;
-  content: "\e606";
+  content: "\f044";
   font-family: "Font Awesome\ 5 Pro";
   vertical-align: middle;
   display: inline-block;
   font-weight: normal;
   overflow: hidden;
-  speak: none;
   text-align: center;
 }
 .minicart-items .action.edit:hover:before,
@@ -6082,7 +6082,7 @@ fieldset[disabled] .minicart-wrapper .action.close {
   color: #303030;
 }
 .minicart-items .action.delete:before {
-  content: "\e604";
+  content: "\f1f8";
 }
 .checkout-container {
   margin: 0 0 20px;

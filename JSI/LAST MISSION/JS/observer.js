@@ -1,5 +1,6 @@
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
+import { getDatabase, ref, child, get, update, push } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyApWwoJ3mGbwXJkh4eiiIi_DC-zpBUzRm8",
@@ -12,6 +13,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+const dbRef = ref(getDatabase());
 
 const myAccount = document.querySelector("#my_account")
 let auth_false = document.querySelector("#auth_false")
@@ -28,6 +30,7 @@ onAuthStateChanged(auth, (user) => {
                     auth_false.innerHTML = "Sign In"
                     auth_false.setAttribute("href", "./login.html")
                     alert("Signed Out!!!!")
+                    localStorage.clear()
                 })
                 .catch((error) => {
                     alert("Error: ", error)
@@ -35,6 +38,32 @@ onAuthStateChanged(auth, (user) => {
         })
 
         console.log("Current users: ", uid)
+
+        get(child(dbRef, `users/${uid}`))
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    console.log(snapshot.val());
+                    let parseData = JSON.stringify(snapshot.val())
+                    localStorage.setItem("Current Data", parseData)
+                } else {
+                    console.log("No data available");
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+
+        let addCartBtn = document.querySelectorAll(".tocart");
+        for(let i = 0, j = addCartBtn.length; i<j;i++){
+            addCartBtn[i].addEventListener("click", () => {
+                console.log(JSON.parse(localStorage.getItem("Cart")))
+                const updates = {}
+                updates['/carts/' + uid + '/'] = JSON.stringify(cart)
+                updates['/users/' + uid + '/cart/'] = JSON.stringify(cart)
+                update(dbRef, updates)
+            })
+        }
+
     } else {
         console.log("Not Logged In!!!!")
         myAccount.addEventListener("click", () => {
