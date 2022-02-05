@@ -20,6 +20,8 @@ const db = getFirestore();
 let dataProduct = localStorage.getItem('Products-list')
 
 let items_tab_1 = document.querySelector(".pd-tab-1")
+let items_tab_1_a = document.querySelector(".pd-tab-1-a")
+let items_tab_1_b = document.querySelector(".pd-tab-1-b")
 let items_tab_2 = document.querySelector(".pd-tab-2")
 let items_tab_3 = document.querySelector(".pd-tab-3")
 
@@ -89,7 +91,7 @@ let HTMLContent_Grid_1 = (x) =>
 
                             </div>
                             <div class="add-to-cart-primary">
-                                <button class="action tocart primary" id="${x.id}" type="button" title="Add to Cart">
+                                <button class="action tocart primary" id="${x.id}" type="button" title="${x.name}">
                                     <span>Add to Cart</span>
                                 </button>
                             </div>	
@@ -156,50 +158,61 @@ var setCarousel = (class_carousel,boolean) => {
         }
     })
 }
+var resetProduct = () => {
+    for(let i = 0; i < document.querySelectorAll(".pd-tab").length; i++){
+        if(!document.querySelectorAll(".pd-tab")[i].classList.contains("hide")){
+            document.querySelectorAll(".pd-tab")[i].classList.add("hide")
+        }
+    }
+}
 
-let update_tab_1 = () => {
-    resetCarousel(items_tab_1, ".pd-tab-1")
-
+let print = () => {
+    
+    // Tab 1
     for(let x of products_tab_1){
         items_tab_1.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
     setCarousel(".pd-tab-1", true)
 
-}
-let update_tab_2 = () => {
-    resetCarousel(items_tab_1, ".pd-tab-1")
-
     for(let x of products_tab_2){
-        items_tab_1.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
+        items_tab_1_a.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
-    setCarousel(".pd-tab-1", true)
-
-}
-let update_tab_3 = () => {
-
-    resetCarousel(items_tab_1, ".pd-tab-1")
+    setCarousel(".pd-tab-1-a", true)
 
     for(let x of products_tab_3){
-        items_tab_1.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
+        items_tab_1_b.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
-    setCarousel(".pd-tab-1", true)
+    setCarousel(".pd-tab-1-b", true)
 
-}
-let update_fruit_1 = () => {
+    // Fruit
     for(let x of products_fruit_1){
         items_tab_2.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
     setCarousel(".pd-tab-2", false)
-}
-let update_spicy = () => {
+
+    // Spice
     for(let x of products_spice){
         items_tab_3.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
     setCarousel(".pd-tab-3", false)
 }
+
+
+let update_tab_1 = () => {
+    resetProduct()
+    items_tab_1.classList.remove("hide")
+}
+let update_tab_2 = () => {
+    resetProduct()
+    items_tab_1_a.classList.remove("hide")
+}
+let update_tab_3 = () => {
+    resetProduct()
+    items_tab_1_b.classList.remove("hide")
+}
+
+print()
 update_tab_1()
-update_fruit_1()
-update_spicy()
 
 document.querySelector("#tab_1_1").addEventListener("click", update_tab_1)
 document.querySelector("#tab_1_2").addEventListener("click", update_tab_2)

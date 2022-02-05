@@ -312,7 +312,6 @@
   .cart-container .cart-gift-item {
     float: left;
     position: relative;
-    width: 73%;
   }
   .abs-shopping-cart-items-desktop .actions,
   .block-cart-failed .actions,
@@ -1139,7 +1138,6 @@
   .cart-summary {
     float: right;
     position: relative;
-    width: 23%;
   }
   .column.main .cart-summary .actions-toolbar > .secondary {
     float: none;

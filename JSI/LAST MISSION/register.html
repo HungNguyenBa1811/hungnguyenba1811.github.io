@@ -118,27 +118,52 @@
                                 <a class="action showcart" href="">
                                     <span class="text">My Cart</span>
                                     <span class="counter qty">
-                                        <span class="counter-number">0</span>
+                                        <span class="counter-number"></span>
                                         <span class="counter-label"></span>
                                     </span>
                                 </a>
                                 <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog" style="display: none;">
                                     <div class="block block-minicart empty ui-dialog-content ui-widget-content" id="ui-id-1" style="display: block; text-align: center;">
                                         <div id="minicart-content-wrapper">
-                                            <div class="block-title">
-                                                <strong>
-                                                    <span class="text">
-                                                        <span>My Cart</span>
-                                                    </span>
-                                                    <span class="qty empty" title="Items in Cart">0</span>
-                                                </strong>
-                                            </div>
+                                            
                                             <div class="block-content">
-                                                <strong class="subtitle empty">
-                                                    <span>You have no items in your shopping cart.</span>
-                                                </strong>
-                                                <div id="minicart-widgets" class="minicart-widgets">
-    
+                                                <div class="items-total">
+                                                    <span class="count"></span>
+                                                    <span>items</span>
+                                                </div>
+                                                <div class="subtotal">
+                                                    <span class="label">
+                                                        <span>Cart Subtotal</span>
+                                                    </span>
+                                                    <div class="amount price-container">
+                                                        <span class="price-wrapper">
+                                                            <span class="price"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="actions">
+                                                    <div class="primary">
+                                                        <button id="top-cart-btn-checkout" type="button" class="action primary checkout" title="Go to Checkout">
+                                                            <span>Go to Checkout</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="minicart-items-wrapper">
+                                                        <ol id="mini-cart" class="minicart-items">
+
+                                                        </ol>
+                                                    </div>
+
+                                                    <div class="actions">
+                                                        <div class="secondary">
+                                                            <a class="action viewcart" href="./view-cart.html">
+                                                                <span><span>View and edit cart</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="minicart-widgets" class="minicart-widgets">
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -489,7 +514,6 @@
                 </div>
             </div>
         </header>
-
         <main id="maincontent" class="page-main">
             <div class="container">
                 <div class="page-title-wrapper">
@@ -578,66 +602,50 @@
                     <div class="container-inner">
                         <div class="brandslider-container">
                             <div class="title">
-                                <div class="ma-title">
-                                    <h3><span>Collaboration with</span></h3>
-                                </div>
+                                <!--<div class="ma-title"><h3><span></span></h3></div>-->
                             </div>
                             <div class="pt-brand-container">
-                                <ul class="ptowl owl-carousel owl-theme" style="opacity: 1; display: block;"> 
-                                    <div class="owl-wrapper-outer">
-                                        <div class="owl-wrapper" style="width: 2808px; left: 0px; display: block;">
-                                            <div class="owl-item active" style="width: 234px;">
-                                                <li>
-                                                    <div class="pt-brand">
-                                                        <img
-                                                            alt=""
-                                                            src="./IMG/collab_1.png">
-                                                        <p></p>
-                                                    </div>
-                                                </li>
-                                            </div>
-                                            <div class="owl-item active" style="width: 234px;">
-                                                <li>
-                                                    <div class="pt-brand">
-                                                        <img
-                                                            alt=""
-                                                            src="./IMG/collab_2.png">
-                                                        <p></p>
-                                                    </div>
-                                                </li>
-                                            </div>
-                                            <div class="owl-item active" style="width: 234px;">
-                                                <li>
-                                                    <div class="pt-brand">         
-                                                        <img 
-                                                            alt=""
-                                                            src="./IMG/collab_3.png">
-                                                        <p></p>
-                                                    </div>
-                                                </li>
-                                            </div>
-                                            <div class="owl-item active" style="width: 234px;">
-                                                <li>
-                                                    <div class="pt-brand">
-                                                        <img
-                                                            alt=""
-                                                            src="./IMG/collab_4.png">
-                                                        <p></p>
-                                                    </div>
-                                                </li>
-                                            </div>
-                                            <div class="owl-item active" style="width: 234px;">
-                                                <li>
-                                                    <div class="pt-brand">
-                                                        <img
-                                                            alt=""
-                                                            src="./IMG/collab_5.png">
-                                                        <p></p>
-                                                    </div>
-                                                </li>
-                                            </div>
+                                <ul class="ptowl owl-carousel owl-theme"> 
+                                    <li>
+                                        <div class="pt-brand">
+                                            <img
+                                                alt=""
+                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_1.png?alt=media&token=47033320-20f8-4d41-9781-8532c7001d76">
+                                            <p></p>
                                         </div>
-                                    </div>  
+                                    </li>
+                                    <li>
+                                        <div class="pt-brand">
+                                            <img
+                                                alt=""
+                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_2.png?alt=media&token=eed0f2f9-2d9c-4934-97af-4ce885d68c67">
+                                            <p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pt-brand">         
+                                            <img 
+                                                alt=""
+                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_3.png?alt=media&token=7d7f7901-a73f-4842-a927-d505e678135a">
+                                            <p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pt-brand">
+                                            <img
+                                                alt=""
+                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_4.png?alt=media&token=a485e17f-411d-42b4-b878-ecfc9de12d2d">
+                                            <p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pt-brand">
+                                            <img
+                                                alt=""
+                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_5.png?alt=media&token=bcd56657-b84b-43e7-922a-74a797c1f767">
+                                            <p></p>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -650,7 +658,7 @@
                                 <div class="col-sm-4">
                                     <p class="logof">
                                         <img
-                                            src="./IMG/logo_style_1.png"
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Flogo_style_1.png?alt=media&token=6c1d0fdf-3cde-426a-a1db-fd65277122c0"
                                             alt=""
                                             width="80%">
                                     </p>
@@ -705,7 +713,7 @@
                                     <h3>Download Apps</h3>
                                     <p class="app">
                                         <img
-                                            src="./IMG/download.png"
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fdownload.png?alt=media&token=5a65595c-ea88-4512-855c-9be7aa6c2026"
                                             alt="">
                                     </p>
                                 </div>
@@ -735,7 +743,7 @@
                                     </small>
                                     <div class="link-paypal">
                                         <img
-                                            src="./IMG/icon_payment.png"
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_payment.png?alt=media&token=45208b18-a9cd-4903-a010-217c99c3c9bf"
                                             alt="">
                                     </div>
                                 </div>

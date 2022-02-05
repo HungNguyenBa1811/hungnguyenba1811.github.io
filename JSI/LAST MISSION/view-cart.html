@@ -12,35 +12,13 @@
     <link rel="stylesheet" href="./CSS/owl-carousel.css">
     <link rel="stylesheet" href="./CSS/print.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
-
-    <title>Shopping</title>
-    <!-- <script>
-        document.onkeydown = function(e) {
-        if(event.keyCode == 123) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-        }
-    </script> -->
+    <title>View Cart</title>
 </head>
 
-<body oncontextmenu="return false">
+<body>
     <div class="page-wrapper">
         <header class="header-container">
             <div class="top-bar visible-lg visible-md">
@@ -129,7 +107,7 @@
                             <div class="logo-home">
                                 <span class="action nav-toggle">
                                     <span>Toggle Nav</span>
-                                
+
                                 </span>
                                 <strong class="logo">
                                     <img src="./IMG/logo_style_2.png" alt="Magento Commerce" width="203" height="50">
@@ -146,10 +124,12 @@
                                         <span class="counter-label"></span>
                                     </span>
                                 </a>
-                                <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog" style="display: none;">
-                                    <div class="block block-minicart empty ui-dialog-content ui-widget-content" id="ui-id-1" style="display: block; text-align: center;">
+                                <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog"
+                                    style="display: none;">
+                                    <div class="block block-minicart empty ui-dialog-content ui-widget-content"
+                                        id="ui-id-1" style="display: block; text-align: center;">
                                         <div id="minicart-content-wrapper">
-                                            
+
                                             <div class="block-content">
                                                 <div class="items-total">
                                                     <span class="count"></span>
@@ -167,7 +147,8 @@
                                                 </div>
                                                 <div class="actions">
                                                     <div class="primary">
-                                                        <button id="top-cart-btn-checkout" type="button" class="action primary checkout" title="Go to Checkout">
+                                                        <button id="top-cart-btn-checkout" type="button"
+                                                            class="action primary checkout" title="Go to Checkout">
                                                             <span>Go to Checkout</span>
                                                         </button>
                                                     </div>
@@ -180,9 +161,7 @@
                                                     <div class="actions">
                                                         <div class="secondary">
                                                             <a class="action viewcart" href="./view-cart.html">
-                                                                <span>
-                                                                    <span>View and edit cart</span>
-                                                                </span>
+                                                                <span><span>View and edit cart</span></span>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -203,9 +182,10 @@
                             </p>
                             <form class="form minisearch" id="search_mini_form" method="get">
                                 <div class="field search">
-                                    <input id="search" type="text" value="" placeholder="Search for item..." class="input-text">
-    
-    
+                                    <input id="search" type="text" value="" placeholder="Search for item..."
+                                        class="input-text">
+
+
                                     <button type="submit" title="Search" class="action fa fa-search">
                                         <span></span>
                                     </button>
@@ -213,7 +193,7 @@
 
                                     </ul>
                                 </div>
-    
+
                             </form>
                         </div>
                     </div>
@@ -350,13 +330,13 @@
                                                     <span class="is_new"></span>
                                                 </a>
                                             </div>
-                                            <div id="popup2" class="popup" style="width: 1145px; top: 60px; left: 3px; display: none;">
+                                            <div id="popup2" class="popup"
+                                                style="width: 1145px; top: 60px; left: 3px; display: none;">
                                                 <div class="block1" id="block14" style="width: 1145px;">
                                                     <div class="column first col1">
                                                         <div class="itemMenu level1">
-                                                            <a class="itemMenuName level1"
-                                                                href="#">
-                                                            <span>Tropical Fruits</span></a>
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Tropical Fruits</span></a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
@@ -373,7 +353,7 @@
                                                         <div class="itemMenu level1">
                                                             <a class="itemMenuName level1" href="#">
                                                                 <span>Melons & Citrus</span>
-                                                                </a>
+                                                            </a>
                                                             <div class="itemSubMenu level1">
                                                                 <div class="itemMenu level2">
                                                                     <a class="itemMenuName level2" href="#">
@@ -486,8 +466,7 @@
                                         </div>
                                         <div id="pt_menu68" class="pt_menu readmore nav-5">
                                             <div class="parentMenu" id="div_4">
-                                                <a href="#"
-                                                    class="pt_cate ">
+                                                <a href="#" class="pt_cate ">
                                                     <span>Others</span>
                                                     <span class="is_sale"></span>
                                                     <span class="is_new"></span>
@@ -540,223 +519,154 @@
                 </div>
             </div>
         </header>
-        <div class="main-container">
-            <div class="ma-banner">
-                <div class="container-inner">
-                    <div class="row">
+        <main id="maincontent" class="page-main">
+            <div class="container">
+                <div class="page-title-wrapper">
+                    <h1 class="page-title">
+                        <span class="base">Shopping Cart</span>
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column main">
+                        <div class="cart-container">
+                            <div class="cart-summary" style="top: 0px;">
+                                <strong class="summary title">Summary</strong>
 
-                        <div class="col-sm-9">
-                            <div class="pt-banner-container" style="display: block;">
-                                <ul class="slideshow owl-carousel owl-theme">
-                                    <li class="mySlide">
-                                        <img 
-                                            alt="Slide 1"
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fslide_banner_1.jpg?alt=media&token=adb2e3d8-a141-4958-a326-16fff67a3765">
+                                <div id="cart-totals" class="cart-totals">
+
+                                    <div class="table-wrapper">
+                                        <table class="data table totals">
+                                            <caption class="table-caption">Total</caption>
+                                            <tbody>
+                                                <tr class="totals sub">
+                                                    <th class="mark">Subtotal</th>
+                                                    <td class="amount">
+                                                        <span class="price-total"></span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="totals shipping excl">
+                                                    <th class="mark">
+                                                        <span class="label">Shipping</span>
+                                                        <span class="value">(Flat Rate - Fixed)</span>
+                                                    </th>
+                                                    <td class="amount">
+                                                        <span class="price-tax"></span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="grand totals">
+                                                    <th class="mark">
+                                                        <strong>Order Total</strong>
+                                                    </th>
+                                                    <td class="amount">
+                                                        <strong>
+                                                            <span class="price-final"></span>
+                                                        </strong>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                                <ul class="checkout methods items checkout-methods-items">
+                                    <li class="item">
+                                        <button type="button" title="Proceed to Checkout" class="action primary checkout">
+                                            <span>Proceed to Checkout</span>
+                                        </button>
                                     </li>
-                                    <li class="mySlide">
-                                        <img 
-                                            alt="Slide 2"
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fslide_banner_2.jpg?alt=media&token=e1b0de5d-abd2-47b6-a476-aefdcd116071">
-                                    </li>
+
                                 </ul>
                             </div>
-                        </div>
+                            <form id="form-validate" class="form form-cart" novalidate="novalidate">
+                                <div class="cart table-wrapper">
+                                    <table id="shopping-cart-table" class="cart items data table">
+                                        <caption role="heading" class="table-caption">Shopping Cart Items</caption>
+                                        <thead>
+                                            <tr>
+                                                <th class="col item"><span>Item</span></th>
+                                                <th class="col price"><span>Price</span></th>
+                                                <th class="col qty"><span>Qty</span></th>
+                                                <th class="col subtotal"><span>Subtotal</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="cart item">
+                                            <!-- <tr class="item-info">
+                                                <td class="col item">
+                                                    <a href="#" title="" class="product-item-photo">
 
-                        <div class="col-sm-3">
-                            <div class="banner-home">
-                                <div class="banner-box">
-                                    <a href="#">
-                                        <img
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_1.jpg?alt=media&token=75e72568-2187-4dd5-b81b-a06d900c1bda" 
-                                            alt="Banner 1">
+                                                        <span class="product-image-container" style="width:165px;">
+                                                            <span class="product-image-wrapper"
+                                                                style="padding-bottom: 100%;">
+                                                                <img
+                                                                    class="product-image-photo"
+                                                                    src=""
+                                                                    width="165"
+                                                                    height="165"
+                                                                    alt="">
+                                                            </span>
+                                                        </span>
+
+                                                    </a>
+                                                    <div class="product-item-details">
+                                                        <strong class="product-item-name">
+                                                            <a href="#"></a>
+                                                        </strong>
+                                                    </div>
+                                                </td>
+
+                                                <td class="col price">
+
+                                                    <span class="price-excluding-tax">
+                                                        <span class="cart-price">
+                                                            <span class="price">$50.00</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+
+                                                <td class="col qty">
+                                                    <div class="field qty">
+                                                        <label class="label" for="">
+                                                            <span>Qty</span>
+                                                        </label>
+                                                        <div class="control qty">
+                                                            <input id="" name="" value="" type="number" size="4" title="Qty" class="input-text qty" maxlength="12">
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="col subtotal">
+
+                                                    <span class="price-excluding-tax">
+                                                        <span class="cart-price">
+                                                            <span class="price">$50.00</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="cart main actions">
+                                    <a class="action continue" href="./index.html" title="Continue Shopping">
+                                        <span>Continue Shopping</span>
                                     </a>
+                                    <button type="button" name="update_cart_action" value="empty_cart" title="Clear Shopping Cart" class="action clear" id="empty_cart_button">
+                                        <span>Clear Shopping Cart</span>
+                                    </button>
+                                    <button type="button" name="update_cart_action" value="update_qty" title="Update Shopping Cart" class="action update">
+                                        <span>Update Shopping Cart</span>
+                                    </button>
                                 </div>
-                                <div class="banner-box">
-                                    <a href="#">
-                                        <img
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_2.jpg?alt=media&token=98f175da-19e5-4150-9f45-77f5ca954a31" 
-                                            alt=" Banner 2">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="corporate-about">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="box">
-                                    <div class="images">
-                                        <img
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_1.jpg?alt=media&token=c9e42342-31bd-45e2-909c-9d88c8f6253d"
-                                            alt="icon 1">
-                                    </div>
-                                    <h3>Free Delivery</h3>
-                                    <p>Free shipping on all order</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="box">
-                                    <div class="images">
-                                        <img
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_2.jpg?alt=media&token=5b5546e3-1d9e-41bc-856b-b9bd19b1541d"
-                                            alt="icon 2">
-                                    </div>
-                                    <h3>Online Support 24/7</h3>
-                                    <p>Support online 24 hours a day</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="box">
-                                    <div class="images">
-                                        <img
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_3.jpg?alt=media&token=12714c1e-e5f6-4e10-9dd8-14148417fcc6"
-                                            alt="icon 3">
-                                    </div>
-                                    <h3>Money Return</h3>
-                                    <p>Back guarantee under 7 days</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="box">
-                                    <div class="images">
-                                        <img
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_4.jpg?alt=media&token=b0856731-a466-4a4b-87d2-1c303c0ace27"
-                                            alt="icon 4">
-                                    </div>
-                                    <h3>Member Discount</h3>
-                                    <p>Onevery order over $120.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>		
-                </div>	
-            </div>
-        </div>
-        <div class="container-inner">
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="categorytab-container product-tab">
-                        <div class="tab-title">
-                            <div class="title">
-                                <h3>
-                                    <span>Vegetables</span>
-                                </h3>
-                            </div>
-                            <ul class="tabs tab_1">
-                                <li class="active" id="tab_1_1">Greens</li>
-                                <li class="" id="tab_1_2">Tubers</li>
-                                <li class="" id="tab_1_3">Fungus</li>
-                            </ul>
-                        </div>
-                        <div class="tab-container">
-                            <div class="row-content">
-                                <div class="owl-theme pd-tab pd-tab-1"></div>
-                            </div>
-                            <div class="row-content">
-                                <div class="owl-theme pd-tab pd-tab-1-a"></div>
-                            </div>
-                            <div class="row-content">
-                                <div class="owl-theme pd-tab pd-tab-1-b"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-box banner-box1">
-                        <a href="#">
-                            <img
-                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_3.jpg?alt=media&token=e53fcad2-8ccc-423f-a396-d638b6526cb9"
-                                alt="">
-                        </a>
-                    </div>
-                    <div class="categorytab-container product-tab">
-                        <div class="tab-title">
-                            <div class="title">
-                                <h3>Fresh fruits</h3>
-                            </div>
-                        </div>
-                        <div class="tab-container">
-                            <div class="row-content">
-                                <div class="owl-theme pd-tab-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-box banner-box1">
-                        <a href="#">
-                            <img
-                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_4.jpg?alt=media&token=1c0c260b-024d-4e73-83a6-5d03f12d86c8"
-                                alt="">
-                        </a>
-                    </div>
-                    <div class="categorytab-container product-tab">
-                        <div class="tab-title">
-                            <div class="title">
-                                <h3>Spicy Food</h3>
-                            </div>
-                        </div>
-                        <div class="tab-container">
-                            <div class="row-content">
-                                <div class="owl-theme pd-tab-3"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-box banner-box1">
-                        <a href="#">
-                            <img
-                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_5.jpg?alt=media&token=1259df5b-2407-457c-bbed-fee5a7f1c06d"
-                                alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="banner-home banner-home2">
-                        <div class="banner-box">
-                            <a href="#">
-                                <img
-                                    src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_right_1.jpg?alt=media&token=f0190645-3079-4059-bca9-eb7891ee46b5"
-                                    alt="">
-                            </a>
-                        </div>
-                        <div class="banner-box">
-                            <a href="#">
-                                <img
-                                    src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_right_2.jpg?alt=media&token=0bac89d7-4241-4578-957a-b9c48c250e77"
-                                    alt="">
-                            </a>
-                        </div>
-                        <div class="banner-box">
-                            <a href="#">
-                                <img
-                                    src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_right_3.jpg?alt=media&token=8e7a0a75-2d8e-49af-9efb-a713627d46d5"
-                                    alt="">
-                            </a>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container-inner">
-            <div class="banner-home banner-home3">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="banner-box">
-                            <a href="#">
-                                <img
-                                    src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_a.jpg?alt=media&token=17fcfb1e-059b-4065-ab81-4fb8c94ec169"
-                                    alt="">
-                            </a>
-                        </div>      
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="banner-box">
-                            <a href="#">
-                                <img
-                                    src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_b.jpg?alt=media&token=b2902b8c-6f8c-4cfb-b558-26fafb090dde"
-                                    alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </main>
         <footer class="page-footer">
             <div class="footer-container">
                 <div class="ma-brand">
@@ -766,43 +676,38 @@
                                 <!--<div class="ma-title"><h3><span></span></h3></div>-->
                             </div>
                             <div class="pt-brand-container">
-                                <ul class="ptowl owl-carousel owl-theme"> 
+                                <ul class="ptowl owl-carousel owl-theme">
                                     <li>
                                         <div class="pt-brand">
-                                            <img
-                                                alt=""
+                                            <img alt=""
                                                 src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_1.png?alt=media&token=47033320-20f8-4d41-9781-8532c7001d76">
                                             <p></p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="pt-brand">
-                                            <img
-                                                alt=""
+                                            <img alt=""
                                                 src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_2.png?alt=media&token=eed0f2f9-2d9c-4934-97af-4ce885d68c67">
                                             <p></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pt-brand">         
-                                            <img 
-                                                alt=""
+                                        <div class="pt-brand">
+                                            <img alt=""
                                                 src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_3.png?alt=media&token=7d7f7901-a73f-4842-a927-d505e678135a">
                                             <p></p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="pt-brand">
-                                            <img
-                                                alt=""
+                                            <img alt=""
                                                 src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_4.png?alt=media&token=a485e17f-411d-42b4-b878-ecfc9de12d2d">
                                             <p></p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="pt-brand">
-                                            <img
-                                                alt=""
+                                            <img alt=""
                                                 src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_5.png?alt=media&token=bcd56657-b84b-43e7-922a-74a797c1f767">
                                             <p></p>
                                         </div>
@@ -818,12 +723,15 @@
                             <div class="row footer-static">
                                 <div class="col-sm-4">
                                     <p class="logof">
-                                        <img
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Flogo_style_1.png?alt=media&token=6c1d0fdf-3cde-426a-a1db-fd65277122c0"
-                                            alt=""
-                                            width="80%">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Flogo_style_1.png?alt=media&token=6c1d0fdf-3cde-426a-a1db-fd65277122c0"
+                                            alt="" width="80%">
                                     </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <p>Address: 36 Hai Phong, Viet Nam.</p>
                                     <p>Phone: (+84) 945 826 433</p>
                                 </div>
@@ -851,7 +759,8 @@
                                     <h3>follow us</h3>
                                     <ul class="link-follow">
                                         <li class="first">
-                                            <a class="twitter" title="Twitter" href="https://twitter.com/NguynBH36708888">
+                                            <a class="twitter" title="Twitter"
+                                                href="https://twitter.com/NguynBH36708888">
                                                 <i class="fab fa-twitter fa-lg"></i>
                                             </a>
                                         </li>
@@ -861,7 +770,8 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="facebook" title="Facebook" href="https://www.facebook.com/hung.nguyen.ba.18.11.05">
+                                            <a class="facebook" title="Facebook"
+                                                href="https://www.facebook.com/hung.nguyen.ba.18.11.05">
                                                 <i class="fab fa-facebook-f fa-lg"></i>
                                             </a>
                                         </li>
@@ -873,8 +783,7 @@
                                     </ul>
                                     <h3>Download Apps</h3>
                                     <p class="app">
-                                        <img
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fdownload.png?alt=media&token=5a65595c-ea88-4512-855c-9be7aa6c2026"
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fdownload.png?alt=media&token=5a65595c-ea88-4512-855c-9be7aa6c2026"
                                             alt="">
                                     </p>
                                 </div>
@@ -888,12 +797,12 @@
                                 </div>
                                 <form class="form subscribe" id="newsletter-validate-detail">
                                     <div class="control">
-                                        <input type="email" id="newsletter" placeholder="Enter your email address">            
+                                        <input type="email" id="newsletter" placeholder="Enter your email address">
                                         <button class="action subscribe primary" title="Subscribe" type="submit">
                                             <span>
                                                 <i class="fas fa-paper-plane fa-2x"></i>
                                             </span>
-                                        </button>			
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -903,8 +812,7 @@
                                         <span>Copyright © 2022 G-Room, Inc. All rights reserved.</span>
                                     </small>
                                     <div class="link-paypal">
-                                        <img
-                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_payment.png?alt=media&token=45208b18-a9cd-4903-a010-217c99c3c9bf"
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_payment.png?alt=media&token=45208b18-a9cd-4903-a010-217c99c3c9bf"
                                             alt="">
                                     </div>
                                 </div>
@@ -918,7 +826,6 @@
             </div>
         </footer>
     </div>
-
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./JS/products-printer.js" type="module"></script>

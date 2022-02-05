@@ -326,7 +326,6 @@ table tbody tr td,
 table tfoot tr td {
   padding: 8px 10px;
 }
-button,
 .cart.table-wrapper .actions-toolbar .action,
 .cart.table-wrapper .action-gift {
   background-image: none;
@@ -335,7 +334,6 @@ button,
   color: #333;
   cursor: pointer;
   display: inline-block;
-  /* font-family: "Open Sans", "Open Sans"; */
   font-weight: 700;
   margin: 0;
   padding: 7px 15px;
@@ -1688,7 +1686,6 @@ fieldset[disabled] .block-bundle-summary .action.towishlist {
 .form-address-edit .actions-toolbar .action.primary,
 .multicheckout .action.primary {
   line-height: 2.2rem;
-  padding: 14px 17px;
   font-size: 1.8rem;
 }
 .abs-action-remove,
@@ -2231,15 +2228,13 @@ fieldset[disabled] .form.send.friend .action.remove {
   font-size: 1.2rem;
   white-space: nowrap;
 }
-.block-cart-failed .action.continue,
-.cart-container .form-cart .action.continue {
+/* .block-cart-failed .action.continue{
   border-radius: 3px;
   background-image: none;
   background: #f2f2f2;
   border: 1px solid #cdcdcd;
   color: #333;
   cursor: pointer;
-  /* font-family: "Open Sans", "Open Sans"; */
   font-weight: 700;
   margin: 0;
   padding: 7px 15px 7px 0;
@@ -2249,33 +2244,29 @@ fieldset[disabled] .form.send.friend .action.remove {
   vertical-align: middle;
   display: inline-block;
   text-decoration: none;
-}
+} */
 .abs-shopping-cart-items .action.continue:hover,
 .abs-shopping-cart-items .action.continue:active,
 .abs-shopping-cart-items .action.continue:focus,
 .block-cart-failed .action.continue:hover,
 .block-cart-failed .action.continue:active,
-.block-cart-failed .action.continue:focus,
-.cart-container .form-cart .action.continue:hover,
-.cart-container .form-cart .action.continue:active,
-.cart-container .form-cart .action.continue:focus {
+.block-cart-failed .action.continue:focus {
   text-decoration: none;
 }
 .abs-shopping-cart-items .action.continue:before,
 .block-cart-failed .action.continue:before,
 .cart-container .form-cart .action.continue:before {
   -webkit-font-smoothing: antialiased;
-  font-size: 32px;
-  line-height: 16px;
+  padding: 0 7px;
+  font-size: 15px;
   color: inherit;
-  content: "\e617";
+  content: "\f053";
   font-family: "Font Awesome\ 5 Pro";
   margin: 0;
   vertical-align: top;
   display: inline-block;
   font-weight: normal;
   overflow: hidden;
-  speak: none;
   text-align: center;
 }
 .abs-shopping-cart-items .action.continue:hover:before,
@@ -2332,10 +2323,10 @@ fieldset[disabled] .cart-container .form-cart .action.continue {
 .block-cart-failed .action.update:before,
 .cart-container .form-cart .action.update:before {
   -webkit-font-smoothing: antialiased;
-  font-size: 32px;
+  padding: 0 7px;
   line-height: 16px;
   color: inherit;
-  content: "\e603";
+  content: "\f021";
   font-family: "Font Awesome\ 5 Pro";
   margin: 0;
   vertical-align: top;
@@ -5484,13 +5475,11 @@ body.catalog-product-compare-index .action.print {
   margin-bottom: 10px;
 }
 .cart-summary {
-  background: #fff;
   margin-bottom: 25px;
   padding: 1px 15px 25px;
 }
-.cart-summary .title {
+.cart-summary > .title {
   display: block;
-  font-weight: 300;
   line-height: 1.1;
   font-size: 1.8rem;
   margin-top: 1.5rem;
@@ -5526,7 +5515,6 @@ body.catalog-product-compare-index .action.print {
   border-top: 1px solid #d1d1d1;
 }
 .cart.table-wrapper .items .item {
-  border-bottom: 1px solid #d1d1d1;
   position: relative;
 }
 .cart.table-wrapper .col {

@@ -1962,6 +1962,9 @@ select:not([disabled]):focus {
   font-family: "Rubik", sans-serif;
   transition: all 0.3s ease-out;
 }
+.cart-container .form-cart .action.continue span{
+  font-size: 14px;
+}
 .block-cart-failed .action.continue:hover,
 .cart-container .form-cart .action.continue:hover {
   background-color: #4b8201;
@@ -1995,7 +1998,7 @@ select:not([disabled]):focus {
   border: 0;
   border-color: #4b8201;
 }
-.cart-summary .title {
+.cart-summary > .title {
   font-weight: bold;
 }
 .cart-container .checkout-methods-items .action.primary {
@@ -5324,5 +5327,26 @@ a.action.remind {
 }
 .pd-tab-1 .item{
   display: inline-block;
+}
+.hide{
+  display: none !important;
+}
+.cart .update span,
+.cart #empty_cart_button span,
+.checkout span {
+  font-size: 14px;
+}
+.cart-summary {
+  background-color: #eee;
+}
+.mark{
+  background-color: #eee !important;
+}
+.summary,
+.col span,
+tr th,
+tr th span,
+tr td span {
+  color: #666666
 }
 /* icon */

@@ -35,7 +35,7 @@ if(signUp !== null){
                     // Signed in 
                     const user = userCredential.user;
                     const uid = user.uid
-                    alert("User created!!! Login Successfully!!")
+                    alert("User created!!! Login Successfully!! Redirect in 3 seconds!")
                     console.log(user)
                     function writeUserData(userId, email, password) {
                         set(ref(database, 'users/' + userId), {
@@ -47,7 +47,7 @@ if(signUp !== null){
                         localStorage.setItem("Cart", [])
                     }
                     writeUserData(uid, email, password)
-                    setTimeout(() => window.location = "./index.html", 5000)
+                    setTimeout(() => window.location = "./index.html", 3000)
                 })
                 .catch((error) => {
                     // const errorCode = error.code;
@@ -72,7 +72,7 @@ if(signUp !== null){
                 const user = userCredential.user;
                 const uid = user.id
                 console.log(user)
-                alert("User Logged In!!!!!!")
+                alert("User Logged In!!!!!! Redirect in 3 seconds!")
                 get(child(ref(getDatabase()), `/users/${uid}/cart`))
                     .then((snapshot) => {
                         if(snapshot.exists()){
@@ -84,6 +84,7 @@ if(signUp !== null){
                     .catch((error) => {
                         console.error(error)
                     })
+                setTimeout(() => window.location = "./index.html", 3000)
             })
             .catch((error) => {
                 const errorMessage = error.message;

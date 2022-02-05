@@ -22,6 +22,7 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
 
+
         auth_false.innerHTML = "Sign Out"
         auth_false.setAttribute("href", "#")
         auth_false.addEventListener("click", () => {
@@ -31,30 +32,28 @@ onAuthStateChanged(auth, (user) => {
                     auth_false.setAttribute("href", "./login.html")
                     alert("Signed Out!!!!")
                     localStorage.clear()
+                    window.location.reload()
                 })
                 .catch((error) => {
                     alert("Error: ", error)
                 });
         })
 
-        console.log("Current users: ", uid)
-
-        get(child(dbRef, `users/${uid}`))
+        get(child(dbRef, `users/${uid}/cart`))
             .then((snapshot) => {
-                if (snapshot.exists()) {
-                    console.log(snapshot.val());
-                    let parseData = JSON.stringify(snapshot.val())
-                    localStorage.setItem("Current Data", parseData)
+                if (snapshot.exists()){
+                    localStorage.setItem("Cart", snapshot.val())
                 } else {
-                    console.log("No data available");
+                    localStorage.setItem("Cart", "[]")
                 }
             })
-            .catch((error) => {
-                console.error(error);
-            });
+
+        console.log("Current users: ", uid)
 
         let addCartBtn = document.querySelectorAll(".tocart");
+
         for(let i = 0, j = addCartBtn.length; i<j;i++){
+
             addCartBtn[i].addEventListener("click", () => {
                 console.log(JSON.parse(localStorage.getItem("Cart")))
                 const updates = {}
@@ -62,12 +61,34 @@ onAuthStateChanged(auth, (user) => {
                 updates['/users/' + uid + '/cart/'] = JSON.stringify(cart)
                 update(dbRef, updates)
             })
+
+        }
+        if (cart.length > 0) {
+
+            let deleteBtn = document.querySelectorAll(".delete");
+
+            for(let i = 0, j = cart.length; i<j; i++ ){
+                deleteBtn[i].addEventListener("click", () => {
+                    const updates = {}
+                    updates['/carts/' + uid + '/'] = JSON.stringify(cart)
+                    updates['/users/' + uid + '/cart/'] = JSON.stringify(cart)
+                    update(dbRef, updates)
+                })
+            }
+
+        } else {
+            const updates = {}
+            updates['/carts/' + uid + '/'] = JSON.stringify(cart)
+            updates['/users/' + uid + '/cart/'] = JSON.stringify(cart)
+            update(dbRef, updates)
         }
 
     } else {
         console.log("Not Logged In!!!!")
+        // alert("Not Logged In! Redirect you in 10 seconds")
+        // setTimeout( ()=> window.location.href = "./login.html" ,10000)
         myAccount.addEventListener("click", () => {
-            alert("Not Logged In!!!! Try to create an account!!!")
+            alert("Not Logged In!!!! Try creating an account!!!")
         })
     }
 });

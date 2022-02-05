@@ -30,11 +30,12 @@ if(dataCart){
 }
 
 let addCartBtn = document.querySelectorAll(".tocart");
-let deleteBtn = document.querySelectorAll(".delete")
+let deleteBtn = document.querySelectorAll(".delete");
 
+// ADD DATA
 for(let i = 0, j = addCartBtn.length; i<j ; i++){
     addCartBtn[i].addEventListener("click", () => {
-        alert(addCartBtn[i].id)
+        alert('Added ' + addCartBtn[i].title + ' to your cart')
         let products = JSON.parse(localStorage.getItem('Products-list'))
         for(let x = 0, y = products.length; x<y ;x++){
             if(products[x]["id"] === addCartBtn[i].id){
@@ -65,102 +66,18 @@ for(let i = 0, j = addCartBtn.length; i<j ; i++){
     })
 }
 
-
-// function setData(name, imageURL, company, price, id) {
-//     let item = {
-//         name: name,
-//         image: imageURL,
-//         company: company,
-//         price: price,
-//         id: id,
-//     };
-//     money += Math.round(Number(price) * 100) / 100; // Money Increasing
-//     showMoney.innerHTML = Math.round(money * 100) / 100; // push money
-//     cartShowMoney.innerHTML = Math.round(money * 100) / 100; // push cart money
-//     cart.push(item); // push item
-//     alert('Đã thêm vào giỏ hàng!')
-
-//     localStorage.setItem("Total", Math.round(money * 100) / 100);
-//     localStorage.setItem("Cart", JSON.stringify(cart));
-
-//     render();
-// }
-
-// // Delete DATA
+// Delete DATA
 function removeItem(Id) {
-    for (let i in cart) {
-        if (cart[i].id === Id) {
-            {
-                cart.splice(i, 1);
-                break;
-            }
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].id === `${Id}`) {
+            cart.splice(i, 1);
         }
     }
+    localStorage.setItem("Cart", JSON.stringify(cart))
     render();
 }
-// // Render
-// function render() {
-//     getData();
-//     document.querySelector(".cart-item-count").innerHTML = cart.length;
-//     document.querySelector(".show-cart-item").innerHTML = "";
-//     for (let x of cart) {
-//         document.querySelector(".show-cart-item").innerHTML += `
-//         <tr>
-//             <td class="text-center">
-//                 <a href="#">
-//                 <img 
-//                     src="${x.image}"
-//                     class="cart-image">
-//                 </a>
-//             </td>
-//             <td class="text-left info-item">
-//                 <a href="#" class="cart-name">
-//                 ${x.name}
-//                 </a>
-//                 <p class="cart-quantity"> × 1</p>
-//                 <p class="cart-price">
-//                 <span class="pricing">${"$" + x.price}</span>
-//                 </p>
-//             </td>
-//             <td class="text-center cart-close">
-//                 <button type="button" onclick ='removeItem("${x.id}")' title="Remove" class="btn btn-danger btn-xs">
-//                 <i class="fas fa-times-circle"></i>
-//                 </button>
-//             </td>
-//         </tr>
-//         `;
-//         document.querySelector(".table-cart").innerHTML += `
-//             <tr>
-//                 <td class="text-center">
-//                     <img 
-//                         src="${x.image}"
-//                         class="cart-image">
-//                 </td>
-//                 <td class="text-center">
-//                     <a href="" class="cart-name">
-//                         ${x.name}
-//                     </a>
-//                     <br>
-//                     <small>${x.company}</small>
-//                 </td>
-//                 <td class="text-left">
-//                     <div class="input-group btn-block" style="max-width: 200px;">
-//                         <input type="text" value="1" class="form-control">
-//                         <span class="input-group-btn">
-//                         </span>
-//                     </div>
-//                 </td>
-//                 <td class="text-right">
-//                     <span class="money">${x.price}</span>
-//                 </td>
-//                 <td class="text-right">
-//                     <span class="money">${x.price}</span>
-//                 </td>
-//             </tr>
-//             `
-//     }
-// }
-// render();
+
+// RENDER
 function render(){
 
     let money = 0
@@ -203,18 +120,18 @@ function render(){
     
                             <div class="details-qty qty">
                                 <label class="label">Qty</label>
-                                <input type="number" size="4" class="item-qty cart-item-qty" maxlength="12" value="${products.quantity}">
+                                <input type="number" size="4" class="item-qty cart-item-qty" maxlength="12" value="${products.quantity}" disabled="disabled">
                             </div>
                         </div>
 
                         <div class="product actions">
                             <div class="primary">
-                                <a class="action edit" href="#" title="Edit item">
-                                    <span>Edit</span>
+                                <a class="action edit" href="${products.imgUrl}" title="View item">
+                                    <span>View</span>
                                 </a>
                             </div>
                             <div class="secondary">
-                                <a href="#" class="action delete" type="button" onclick="removeItem("${products.id}")" title="Remove item">
+                                <a href="#" class="action delete" type="button" onclick="removeItem( '${products.id}' )" title="Remove item">
                                     <span>Remove</span>
                                 </a>
                             </div>
@@ -226,5 +143,81 @@ function render(){
     }
 
     document.querySelector(".price").innerHTML = `$${Math.round(money * 100) / 100}`
+
+    if(document.querySelector(".cart.item")){
+        for(products of cart){
+            document.querySelector(".cart.item").insertAdjacentHTML("beforeend", `
+                <tr class="item-info">
+                    <td class="col item">
+                        <a href="#" title="" class="product-item-photo">
+
+                            <span class="product-image-container" style="width:165px;">
+                                <span class="product-image-wrapper"
+                                    style="padding-bottom: 100%;">
+                                    <img
+                                        class="product-image-photo"
+                                        src="${products.imgUrl}"
+                                        width="165"
+                                        height="165"
+                                        alt="${products.name}">
+                                </span>
+                            </span>
+
+                        </a>
+                        <div class="product-item-details">
+                            <strong class="product-item-name">
+                                <a href="#">${products.name}</a>
+                            </strong>
+                        </div>
+                    </td>
+
+                    <td class="col price">
+
+                        <span class="price-excluding-tax">
+                            <span class="cart-price">
+                                <span class="price">${products.price}</span>
+                            </span>
+                        </span>
+                    </td>
+
+                    <td class="col qty">
+                        <div class="field qty">
+                            <label class="label" for="qty-${products.id}">
+                                <span>Qty</span>
+                            </label>
+                            <div class="control qty">
+                                <input id="" name="qty-${products.id}" value="${products.quantity}" type="number" size="4" title="Qty" class="input-text qty" maxlength="12" disabled="disabled">
+                            </div>
+                        </div>
+                    </td>
+
+                    <td class="col subtotal">
+
+                        <span class="price-excluding-tax">
+                            <span class="cart-price">
+                                <span class="price">$${Math.round(products.price * products.quantity * 100) / 100}</span>
+                            </span>
+                        </span>
+
+                    </td>
+                </tr>
+                <tr class="item-actions">
+                    <td colspan="100">
+                        <div class="actions-toolbar">
+                            <a href="#" title="Remove item" class="action action-delete">
+                                <span> Remove item </span>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            `) 
+        }
+    }
+
+    if(document.querySelector(".price-total")){
+        document.querySelector(".price-total").innerHTML = '$' + money
+        document.querySelector(".price-tax").innerHTML = '$' + Math.round(money * 11) / 100
+        document.querySelector(".price-final").innerHTML = '$' + Math.round(money * 111) / 100
+    }
 }
 render()
