@@ -17,7 +17,7 @@ body{
     flex-wrap:wrap;
 }
   
-.container .card{
+product-card .cart{
     position: relative;
 }
   
