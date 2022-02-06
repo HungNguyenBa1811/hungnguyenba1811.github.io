@@ -185,17 +185,14 @@ let update_tab_3 = () => {
     items_tab_1_b.classList.remove("hide")
 }
 
-print()
-update_tab_1()
+if(items_tab_1){
+    print()
+    update_tab_1()
 
-document.querySelector("#tab_1_1").addEventListener("click", update_tab_1)
-document.querySelector("#tab_1_2").addEventListener("click", update_tab_2)
-document.querySelector("#tab_1_3").addEventListener("click", update_tab_3)
-
-var script = document.createElement('script');
-script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
-script.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(script);
+    document.querySelector("#tab_1_1").addEventListener("click", update_tab_1)
+    document.querySelector("#tab_1_2").addEventListener("click", update_tab_2)
+    document.querySelector("#tab_1_3").addEventListener("click", update_tab_3)
+}
 
 $(".pd-tab-1").owlCarousel({
     loop: true,

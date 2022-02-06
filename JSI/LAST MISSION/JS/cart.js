@@ -1,26 +1,4 @@
-// let cart;
-// let dataMoney = localStorage.getItem('Total')
-
-// if (dataMoney) {
-//     var money = dataMoney
-// } else {
-//     var money = 0
-// }
-
 // Get DATA
-// function getData() {
-//     let userData = JSON.parse(localStorage.getItem("Current Data"))
-//     // let localKeys = Object.keys(localStorage);
-//     // if (localKeys.indexOf("Cart") != -1) {
-//     //     cart = JSON.parse(localStorage.getItem("Cart"));
-//     //     let empty = document.querySelector(".has-scroll");
-//     //     empty.className = empty.className.replace("show", " hide");
-//     // } else {
-//     //     cart = [];
-//     // }
-// }
-
-// Set DATA
 var cart;
 let dataCart = localStorage.getItem("Cart")
 if(dataCart){
@@ -32,7 +10,7 @@ if(dataCart){
 let addCartBtn = document.querySelectorAll(".tocart");
 let deleteBtn = document.querySelectorAll(".delete");
 
-// ADD DATA
+// Set DATA
 for(let i = 0, j = addCartBtn.length; i<j ; i++){
     addCartBtn[i].addEventListener("click", () => {
         alert('Added ' + addCartBtn[i].title + ' to your cart')
@@ -86,7 +64,9 @@ function render(){
     document.querySelector("#mini-cart").innerHTML = ""
 
     for(products of cart){
+        
         money += products.price * products.quantity
+
         document.querySelector("#mini-cart").innerHTML += `
             <li class="item product product-item" id="${products.id}">
                 <div class="product">
