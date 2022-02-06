@@ -5331,6 +5331,9 @@ a.action.remind {
 .hide{
   display: none !important;
 }
+.hidden{
+  display: none;
+}
 .cart .update span,
 .cart #empty_cart_button span,
 .checkout span {

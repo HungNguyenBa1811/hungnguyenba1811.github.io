@@ -20,7 +20,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <title>Shopping</title>
-    <!-- <script>
+    <script>
+        document.onload = () => localStorage.clear()
         document.onkeydown = function(e) {
         if(event.keyCode == 123) {
             window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
@@ -38,7 +39,7 @@
             window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
         }
         }
-    </script> -->
+    </script>
 </head>
 
 <body oncontextmenu="return false">
@@ -140,14 +141,14 @@
 
                         <div class="col-md-9 col-sm-9">
                             <div class="minicart-wrapper">
-                                <a class="action showcart" href="">
+                                <a class="action showcart" href="#">
                                     <span class="text">My Cart</span>
                                     <span class="counter qty">
                                         <span class="counter-number"></span>
                                         <span class="counter-label"></span>
                                     </span>
                                 </a>
-                                <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog" style="display: none;">
+                                <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog hidden">
                                     <div class="block block-minicart empty ui-dialog-content ui-widget-content" id="ui-id-1" style="display: block; text-align: center;">
                                         <div id="minicart-content-wrapper">
                                             
