@@ -192,27 +192,81 @@ document.querySelector("#tab_1_1").addEventListener("click", update_tab_1)
 document.querySelector("#tab_1_2").addEventListener("click", update_tab_2)
 document.querySelector("#tab_1_3").addEventListener("click", update_tab_3)
 
-function setCarousel(class_carousel,boolean){
-    $(class_carousel).owlCarousel({
-        loop: true,
-        items: 4,
-        nav: boolean,
-        dots: false,
-        responsive:{
-            0:{
-                items: 1
-            },
-            1000:{
-                items: 4
-            }
+var script = document.createElement('script');
+script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
+$(".pd-tab-1").owlCarousel({
+    loop: true,
+    items: 4,
+    nav: true,
+    dots: false,
+    responsive:{
+        0:{
+            items: 1
+        },
+        1000:{
+            items: 4
         }
-    })
-}
-setCarousel(".pd-tab-1", true)
-setCarousel(".pd-tab-1-a", true)
-setCarousel(".pd-tab-1-b", true)
-setCarousel(".pd-tab-2", false)
-setCarousel(".pd-tab-3", false)
+    }
+})
+$(".pd-tab-1-a").owlCarousel({
+    loop: true,
+    items: 4,
+    nav: true,
+    dots: false,
+    responsive:{
+        0:{
+            items: 1
+        },
+        1000:{
+            items: 4
+        }
+    }
+})
+$(".pd-tab-1-b").owlCarousel({
+    loop: true,
+    items: 4,
+    nav: true,
+    dots: false,
+    responsive:{
+        0:{
+            items: 1
+        },
+        1000:{
+            items: 4
+        }
+    }
+})
+$(".pd-tab-2").owlCarousel({
+    loop: true,
+    items: 4,
+    nav: false,
+    dots: false,
+    responsive:{
+        0:{
+            items: 1
+        },
+        1000:{
+            items: 4
+        }
+    }
+})
+$(".pd-tab-3").owlCarousel({
+    loop: true,
+    items: 4,
+    nav: false,
+    dots: false,
+    responsive:{
+        0:{
+            items: 1
+        },
+        1000:{
+            items: 4
+        }
+    }
+})
 // Slideshow
 $(".slideshow").owlCarousel({
     autoplay: 3000,
