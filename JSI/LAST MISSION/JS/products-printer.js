@@ -137,27 +137,6 @@ var products_spice = products_list.filter( (organic) => organic.special == `Spic
 
 console.log(products_fruit_1)
 
-var resetCarousel = (tabs, class_tab) => {
-    tabs.innerHTML = '';
-    let owl = $(class_tab)
-    owl.trigger('destroy.owl.carousel', [0]);
-}
-var setCarousel = (class_carousel,boolean) => {
-    $(class_carousel).owlCarousel({
-        loop: true,
-        items: 4,
-        nav: boolean,
-        dots: false,
-        responsive:{
-            0:{
-                items: 1
-            },
-            1000:{
-                items: 4
-            }
-        }
-    })
-}
 var resetProduct = () => {
     for(let i = 0; i < document.querySelectorAll(".pd-tab").length; i++){
         if(!document.querySelectorAll(".pd-tab")[i].classList.contains("hide")){
@@ -172,29 +151,24 @@ let print = () => {
     for(let x of products_tab_1){
         items_tab_1.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
-    setCarousel(".pd-tab-1", true)
 
     for(let x of products_tab_2){
         items_tab_1_a.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
-    setCarousel(".pd-tab-1-a", true)
 
     for(let x of products_tab_3){
         items_tab_1_b.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
-    setCarousel(".pd-tab-1-b", true)
 
     // Fruit
     for(let x of products_fruit_1){
         items_tab_2.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
-    setCarousel(".pd-tab-2", false)
 
     // Spice
     for(let x of products_spice){
         items_tab_3.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
-    setCarousel(".pd-tab-3", false)
 }
 
 
@@ -218,6 +192,27 @@ document.querySelector("#tab_1_1").addEventListener("click", update_tab_1)
 document.querySelector("#tab_1_2").addEventListener("click", update_tab_2)
 document.querySelector("#tab_1_3").addEventListener("click", update_tab_3)
 
+function setCarousel(class_carousel,boolean){
+    $(class_carousel).owlCarousel({
+        loop: true,
+        items: 4,
+        nav: boolean,
+        dots: false,
+        responsive:{
+            0:{
+                items: 1
+            },
+            1000:{
+                items: 4
+            }
+        }
+    })
+}
+setCarousel(".pd-tab-1", true)
+setCarousel(".pd-tab-1-a", true)
+setCarousel(".pd-tab-1-b", true)
+setCarousel(".pd-tab-2", false)
+setCarousel(".pd-tab-3", false)
 // Slideshow
 $(".slideshow").owlCarousel({
     autoplay: 3000,
@@ -242,22 +237,3 @@ $(".ptowl").owlCarousel({
         }
     }
 });
-// $(".pd-tab-1").owlCarousel({
-//     loop: true,
-//     
-//     items: 4,
-//     nav: true,
-//     dots: false,
-//     responsive:{
-//         0:{
-//             items: 1
-//         },
-//         600:{
-//             items: 2
-//         },
-//         1000:{
-//             items: 4
-//         }
-//     }
-// })
-console.log(document.querySelectorAll(".owl-item:not(.cloned) .pd_t1"))
