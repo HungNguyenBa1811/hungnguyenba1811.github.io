@@ -15,12 +15,12 @@ const auth = getAuth();
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        let amogus = "sus"
+        console.log("Sus")
     } else {
         alert("Not Logged In! Redirect you in 10 seconds!")
         setTimeout( ()=> {
             localStorage.clear()
             window.location.href = "./login.html"
-        },10000)
+        }, 10000)
     }
 });

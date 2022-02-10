@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draft</title>
+    <script type="module" src="./JS/connect-component.js"></script>
+</head>
+<body>
+    <clock-timer
+        date="12"
+        hour="5"
+        minute="40"
+        second="30">
+    </clock-timer>
+    <script>
+        function render(date,hour,minute,second) {
+        let dateToday = new Date();
+        
+        let dates = dateToday.getDate();
+        let dates_left = date - dates
+        
+        let hours = dateToday.getHours();
+        let hours_left = hour - hours
+        
+        let mins = dateToday.getMinutes();
+        let mins_left = minute - mins
+        
+        let secs = dateToday.getSeconds();
+        let secs_left = second - secs
+
+        if (secs_left < 0) {
+            secs_left += 60
+            mins_left -= 1
+        }
+        if (mins_left < 0) {
+            mins_left += 60
+            hours_left -= 1
+        }
+        if (hours_left < 0) {
+            hours_left += 24
+            dates_left -= 1
+        }
+        // if (hours < 10) hours = "0" + hours;
+        // if (mins < 10) mins = "0" + mins;
+        // if (secs < 10) secs = "0" + secs;
+        
+        let currentTime = dates_left + ":" + hours_left + ":" + mins_left + ":" + secs_left;
+        
+        console.log(currentTime);
+    }
+    function start(){
+        render(5,12,23,12);
+        setInterval(() => render(5,12,23,12), 1000);
+    }
+    // start()
+    </script>
+</body>
+</html>

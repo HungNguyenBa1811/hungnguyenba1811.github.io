@@ -24,6 +24,7 @@ let items_tab_1_a = document.querySelector(".pd-tab-1-a")
 let items_tab_1_b = document.querySelector(".pd-tab-1-b")
 let items_tab_2 = document.querySelector(".pd-tab-2")
 let items_tab_3 = document.querySelector(".pd-tab-3")
+let items_tab_right = document.querySelector(".daily-deal-products")
 
 let HTMLContent_Grid_1 = (x) =>
 `
@@ -32,8 +33,8 @@ let HTMLContent_Grid_1 = (x) =>
             <div class="product-item">
                 <div class="product-item-info">	
                     <div class=" product-item-images">
-                        <span class="hot-sale">${x.saleOff} off</span>
-                        <a href="" class="product-item-photo">
+                        <span class="hot-sale">-${x.saleOff} off</span>
+                        <a href="${x.imgUrl}" class="product-item-photo">
                             
                             <span class="product-image-container" style="width:198px;">
                                 <span class="product-image-wrapper" style="padding-bottom: 100%;">
@@ -51,7 +52,7 @@ let HTMLContent_Grid_1 = (x) =>
                     <div class="product-item-details">
 
                         <strong class="product-item-name">
-                            <a href="" class="product-item-link">
+                            <a href="${x.imgUrl}" class="product-item-link">
                                 ${x.name}
                             </a>
                         </strong>
@@ -90,11 +91,107 @@ let HTMLContent_Grid_1 = (x) =>
                                 </a>
 
                             </div>
+
                             <div class="add-to-cart-primary">
                                 <button class="action tocart primary" id="${x.id}" type="button" title="${x.name}">
                                     <span>Add to Cart</span>
                                 </button>
                             </div>	
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+`
+let HTMLContent_Grid_2 = (x) => 
+`
+    <div class="products-grid">
+        <div class="product-item">
+            <div class="item-inner">
+                <div class="product-item-info">
+                    <div class="product-images">
+
+                        <span class="hot-sale">-${x.saleOff} Off</span>
+
+                        <a href="${x.imgUrl}" class="product-item-photo">
+                            <span class="product-image-container" style="width:198px;">
+                                <span class="product-image-wrapper" style="padding-bottom: 100%;">
+                                    <img
+                                        class="product-image-photo"
+                                        src="${x.imgUrl}"
+                                        width="198"
+                                        height="198"
+                                        alt="${x.name}">
+                                </span>
+                            </span>
+                        </a>
+                        
+                        <div class="countbox-35 countdown-container">
+                            <div class="countdown-inner">
+                                <span class="timer day">
+                                    <span class="timer-inner">
+                                        <b></b>
+                                        <span>Days</span>
+                                    </span>
+                                </span>
+                                <span class="timer hour">
+                                    <span class="timer-inner">
+                                        <b></b>
+                                        <span>Hours</span>
+                                    </span>
+                                </span>
+                                <span class="timer min">
+                                    <span class="timer-inner">
+                                        <b></b>
+                                        <span>Mins</span>
+                                    </span>
+                                </span>
+                                <span class="timer sec">
+                                    <span class="timer-inner">
+                                        <b></b>
+                                        <span>Secs</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="product-item-details">
+
+                        <strong class="product name product-item-name">
+
+                            <a title="${x.name}" href="${x.imgUrl}" class="product-item-link">
+                                ${x.name}
+                            </a>
+
+                        </strong>
+
+                        <div class="price-box price-final_price">
+
+                            <span class="special-price">
+
+                                <span class="price-container price-final_price tax weee">
+                                    <span class="price-label">Special Price</span>
+                                    <span data-price-amount="8" class="price-wrapper">
+                                        <span class="price">$${Math.round((x.oldPrice * (1 - x.saleOffValue)) * 100) / 100}</span>
+                                    </span>
+                                </span>
+
+                            </span>
+
+                            <span class="old-price">
+
+                                <span class="price-container price-final_price tax weee">
+                                    <span class="price-label">Regular Price</span>
+                                    <span class="price-wrapper">
+                                        <span class="price">$${x.oldPrice}</span>
+                                    </span>
+                                </span>
+
+                            </span>
 
                         </div>
 
@@ -169,6 +266,11 @@ let print = () => {
     for(let x of products_spice){
         items_tab_3.insertAdjacentHTML('beforeend', HTMLContent_Grid_1(x))
     }
+
+    // Right
+    for(let x of products_fruit_2){
+        items_tab_right.insertAdjacentHTML("beforeend", HTMLContent_Grid_2(x))
+    }
 }
 
 
@@ -194,6 +296,7 @@ if(items_tab_1){
     document.querySelector("#tab_1_3").addEventListener("click", update_tab_3)
 }
 
+// Slideshow products
 $(".pd-tab-1").owlCarousel({
     loop: true,
     items: 4,
@@ -264,7 +367,14 @@ $(".pd-tab-3").owlCarousel({
         }
     }
 })
-// Slideshow
+$(".daily-deal-products").owlCarousel({
+    autoplay: 7500,
+    loop: true,
+    items: 1,
+    dots: false,
+    nav: true,
+})
+
 $(".slideshow").owlCarousel({
     autoplay: 3000,
     loop: true,
