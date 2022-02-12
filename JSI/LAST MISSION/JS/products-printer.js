@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore, getDocs , collection } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js'
+import './component/timer.js'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
@@ -129,34 +130,7 @@ let HTMLContent_Grid_2 = (x) =>
                             </span>
                         </a>
                         
-                        <div class="countbox-35 countdown-container">
-                            <div class="countdown-inner">
-                                <span class="timer day">
-                                    <span class="timer-inner">
-                                        <b></b>
-                                        <span>Days</span>
-                                    </span>
-                                </span>
-                                <span class="timer hour">
-                                    <span class="timer-inner">
-                                        <b></b>
-                                        <span>Hours</span>
-                                    </span>
-                                </span>
-                                <span class="timer min">
-                                    <span class="timer-inner">
-                                        <b></b>
-                                        <span>Mins</span>
-                                    </span>
-                                </span>
-                                <span class="timer sec">
-                                    <span class="timer-inner">
-                                        <b></b>
-                                        <span>Secs</span>
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
+                       <timer-countdown></timer-countdown>
 
                     </div>
                     <div class="product-item-details">

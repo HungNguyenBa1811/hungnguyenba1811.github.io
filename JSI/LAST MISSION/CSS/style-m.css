@@ -251,12 +251,6 @@ input[type="datetime"]:disabled,
 input[type="email"]:disabled {
   opacity: 0.5;
 }
-input[type="checkbox"] {
-  margin: 2px 5px 0 0;
-}
-input[type="checkbox"]:disabled {
-  opacity: 0.5;
-}
 input[type="radio"] {
   margin: 2px 5px 0 0;
 }
@@ -276,8 +270,6 @@ input:not([disabled]):focus{
   box-shadow: 0 0 3px 1px #68a8e0;
 }
 .product-items,
-.cart-container .checkout-methods-items,
-.checkout-agreements-items,
 .items,
 .footer.content ul{
   margin: 0;
@@ -285,8 +277,6 @@ input:not([disabled]):focus{
   list-style: none none;
 }
 .product-items li,
-.cart-container .checkout-methods-items li,
-.checkout-agreements-items li,
 .items li,
 .footer.content ul li{
   margin: 0;
@@ -338,7 +328,6 @@ input:not([disabled]):focus{
   margin-bottom: 20px;
 }
 .cart.table-wrapper .col.qty .input-text,
-.table.grouped .control .qty,
 .account .table-wrapper .data.table.wishlist .box-tocart .qty,
 .products-grid.wishlist .product-item .box-tocart input.qty{
   text-align: center;
@@ -365,9 +354,7 @@ input:not([disabled]):focus{
 .product-item-actions .actions-secondary .action span,
 .cart.table-wrapper .col.qty .label,
 .minicart-wrapper .action.showcart .text,
-.minicart-wrapper .action.showcart .counter-label,
-.checkout-index-index .page-title-wrapper,
-.checkout-onepage-success .page-title-wrapper{
+.minicart-wrapper .action.showcart .counter-label{
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -382,13 +369,11 @@ input:not([disabled]):focus{
   content: "";
   display: table;
 }
-.product-item-actions .actions-secondary .action,
-.product-items .wishlist.split.button .action.split{
+.product-item-actions .actions-secondary .action{
   display: inline-block;
   text-decoration: none;
 }
-.product-item-actions .actions-secondary .action span,
-.product-items .wishlist.split.button .action.split span{
+.product-item-actions .actions-secondary .action span{
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -398,8 +383,7 @@ input:not([disabled]):focus{
   position: absolute;
   width: 1px;
 }
-.product-item-actions .actions-secondary .action:before,
-.product-items .wishlist.split.button .action.split:before{
+.product-item-actions .actions-secondary .action:before{
   -webkit-font-smoothing: antialiased;
   font-size: 29px;
   line-height: 24px;
@@ -412,30 +396,14 @@ input:not([disabled]):focus{
   
   text-align: center;
 }
-.product-item-actions .actions-secondary .action:hover:before,
-.product-items .wishlist.split.button .action.split:hover:before{
+.product-item-actions .actions-secondary .action:hover:before{
   color: #333;
 }
 .product-info-main .box-tocart .action.tocart,
 .product-options-bottom .box-tocart .action.tocart,
-.cart-container .checkout-methods-items .action.primary,
 .block-minicart .block-content .actions .primary .action.primary{
   line-height: 2.2rem;
   font-size: 1.8rem;
-}
-.action-auth-toggle,
-.checkout-agreements-block .action-show,
-.product-items .wishlist.split.button .action{
-  line-height: 1.42857143;
-  padding: 0;
-  color: #1979c3;
-  text-decoration: none;
-  background: none;
-  border: 0;
-  display: inline;
-  border-radius: 0;
-  font-size: inherit;
-  font-weight: 400;
 }
 .cart-summary .actions-toolbar .primary button,
 .cart-summary
@@ -481,31 +449,6 @@ input:not([disabled]):focus{
 .minicart-items .details-qty .label:after,
 .minicart-items .price-minicart .label:after {
   content: ": ";
-}
-.wishlist.split.button .action.new{
-  display: inline-block;
-  text-decoration: none;
-}
-.wishlist.split.button .action.new:before{
-  -webkit-font-smoothing: antialiased;
-  font-size: 10px;
-  line-height: 10px;
-  color: inherit;
-  content: "\e61c";
-  font-family: "Font Awesome\ 5 Pro";
-  vertical-align: middle;
-  display: inline-block;
-  font-weight: normal;
-  overflow: hidden;
-  
-  text-align: center;
-}
-.wishlist.split.button .items .item:last-child:hover {
-  background: #e8e8e8;
-}
-.wishlist.split.button .action.new:before {
-  margin-left: -17px;
-  margin-right: 5px;
 }
 .no-display,
 .cart-totals .table-caption{
@@ -826,42 +769,6 @@ table caption {
 .fieldset .fields .field .label + br {
   display: none;
 }
-.fieldset .field .choice input,
-.fieldset .fields .field .choice input {
-  vertical-align: top;
-}
-.fieldset .field .fields.group:before,
-.fieldset .fields .field .fields.group:before,
-.fieldset .field .fields.group:after,
-.fieldset .fields .field .fields.group:after {
-  content: "";
-  display: table;
-}
-.fieldset .field .fields.group:after,
-.fieldset .fields .field .fields.group:after {
-  clear: both;
-}
-.fieldset .field .fields.group .field,
-.fieldset .fields .field .fields.group .field {
-  box-sizing: border-box;
-  float: left;
-}
-.fieldset .field .fields.group.group-2 .field,
-.fieldset .fields .field .fields.group.group-2 .field {
-  width: 50% !important;
-}
-.fieldset .field .fields.group.group-3 .field,
-.fieldset .fields .field .fields.group.group-3 .field {
-  width: 33.3% !important;
-}
-.fieldset .field .fields.group.group-4 .field,
-.fieldset .fields .field .fields.group.group-4 .field {
-  width: 25% !important;
-}
-.fieldset .field .fields.group.group-5 .field,
-.fieldset .fields .field .fields.group.group-5 .field {
-  width: 20% !important;
-}
 .fieldset .field.required .label:after,
 .fieldset .fields .field.required .label:after,
 .fieldset .field._required .label:after,
@@ -892,27 +799,6 @@ table caption {
   overflow: hidden;
   
   text-align: center;
-}
-.fieldset .field.choice .label,
-.fieldset .fields .field.choice .label {
-  display: inline;
-  font-weight: normal;
-}
-.column:not(.main) .fieldset .field .label,
-.column:not(.main) .fieldset .fields .field .label {
-  font-weight: normal;
-}
-.fieldset .field .field.choice,
-.fieldset .fields .field .field.choice {
-  margin-bottom: 10px;
-}
-.fieldset .field .field.choice:last-child,
-.fieldset .fields .field .field.choice:last-child {
-  margin-bottom: 0;
-}
-.fieldset .field input[type="file"],
-.fieldset .fields .field input[type="file"] {
-  margin: 5px 0;
 }
 .legend + .fieldset,
 .legend + div {
@@ -994,65 +880,6 @@ fieldset.field {
 input:focus ~ .tooltip .tooltip-content,
 select:focus ~ .tooltip .tooltip-content {
   display: block;
-}
-._has-datepicker ~ .ui-datepicker-trigger {
-  background-image: none;
-  background: none;
-  border: 0;
-  box-shadow: none;
-  line-height: inherit;
-  margin: 0;
-  padding: 0;
-  text-shadow: none;
-  font-weight: 400;
-  display: block;
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: middle;
-}
-._has-datepicker ~ .ui-datepicker-trigger:focus,
-._has-datepicker ~ .ui-datepicker-trigger:active {
-  background: none;
-  border: none;
-}
-._has-datepicker ~ .ui-datepicker-trigger:hover {
-  background: none;
-  border: none;
-}
-._has-datepicker ~ .ui-datepicker-trigger.disabled,
-._has-datepicker ~ .ui-datepicker-trigger[disabled],
-fieldset[disabled] ._has-datepicker ~ .ui-datepicker-trigger {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.5;
-}
-._has-datepicker ~ .ui-datepicker-trigger span {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-._has-datepicker ~ .ui-datepicker-trigger:before {
-  -webkit-font-smoothing: antialiased;
-  font-size: 40px;
-  line-height: 40px;
-  color: #7d7d7d;
-  content: "\e612";
-  font-family: "Font Awesome\ 5 Pro";
-  vertical-align: middle;
-  display: inline-block;
-  font-weight: normal;
-  overflow: hidden;
-  
-  text-align: center;
-}
-._has-datepicker ~ .ui-datepicker-trigger:focus {
-  box-shadow: none;
-  outline: 0;
 }
 button,
 a.action.primary,
@@ -1844,24 +1671,6 @@ fieldset[disabled] .ui-dialog-titlebar-close {
   margin: 15px 0;
   position: absolute;
 }
-.form.search.advanced .fields.range .field:first-child {
-  position: relative;
-}
-.form.search.advanced .fields.range .field:first-child .control {
-  padding-right: 25px;
-}
-.form.search.advanced .fields.range .field:first-child .control:after {
-  content: " \2013 ";
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 6px;
-  width: 25px;
-}
-.form.search.advanced .fields.range .field:last-child {
-  position: relative;
-}
 .search.summary {
   margin-bottom: 10px;
 }
@@ -1962,20 +1771,6 @@ fieldset[disabled] .ui-dialog-titlebar-close {
 }
 .cart.table-wrapper .product-item-name + .item-options {
   margin-top: 10px;
-}
-.cart.table-wrapper .action.configure {
-  display: inline-block;
-  margin: 0 0 20px;
-}
-.cart-container .checkout-methods-items {
-  margin-top: 20px;
-  text-align: center;
-}
-.cart-container .checkout-methods-items .action.primary {
-  width: 100%;
-}
-.cart-container .checkout-methods-items .item + .item {
-  margin-top: 20px;
 }
 .cart-tax-info + .cart-tax-total,
 .cart .cart-tax-info + .cart-tax-total {
@@ -2401,39 +2196,11 @@ fieldset[disabled] .minicart-wrapper .action.close {
 .minicart-items .action.delete:before {
   content: "\f1f8";
 }
-.checkout-container {
-  margin: 0 0 20px;
-}
-.checkout-index-index .nav-sections,
-.checkout-index-index .nav-toggle {
-  display: none;
-}
-.checkout-index-index .logo {
-  margin-left: 0;
-}
-.field.choice .field-tooltip {
-  display: inline-block;
-  margin-left: 10px;
-  position: relative;
-  top: -3px;
-}
-.field.choice .field-tooltip-action {
-  line-height: 24px;
-}
 .field-tooltip {
   cursor: pointer;
   position: absolute;
   right: 0;
   top: 1px;
-}
-.field-tooltip._active {
-  z-index: 100;
-}
-.field-tooltip._active .field-tooltip-content {
-  display: block;
-}
-.field-tooltip._active .field-tooltip-action:before {
-  color: #333;
 }
 .field-tooltip .field-tooltip-action {
   display: inline-block;
@@ -2626,437 +2393,8 @@ fieldset[disabled] .minicart-wrapper .action.close {
 .page-product-downloadable .product-options-bottom .field.qty {
   display: none !important;
 }
-.table.grouped thead tr th,
-.table.grouped tbody tr th,
-.table.grouped tfoot tr th,
-.table.grouped thead tr td,
-.table.grouped tbody tr td,
-.table.grouped tfoot tr td {
-  border-top: 1px solid #d1d1d1;
-}
-.table.grouped caption + thead tr:first-child th,
-.table.grouped colgroup + thead tr:first-child th,
-.table.grouped thead:first-child tr:first-child th,
-.table.grouped caption + thead tr:first-child td,
-.table.grouped colgroup + thead tr:first-child td,
-.table.grouped thead:first-child tr:first-child td {
-  border-top: 0;
-}
-.table.grouped tbody + tbody {
-  border-top: 1px solid #d1d1d1;
-}
-.table.grouped thead tr th {
-  border-bottom: 0;
-}
-.table.grouped .product-item-name {
-  font-weight: 400;
-}
-.table.grouped .price-box .price {
-  font-size: 14px;
-}
-.table.grouped .stock.unavailable {
-  font-weight: normal;
-  margin: 0;
-  text-transform: none;
-  white-space: nowrap;
-}
-.table.grouped .row-tier-price td {
-  border-top: 0;
-}
-.wishlist.split.button {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-}
-.wishlist.split.button:before,
-.wishlist.split.button:after {
-  content: "";
-  display: table;
-}
-.wishlist.split.button:after {
-  clear: both;
-}
-.wishlist.split.button .action.split {
-  float: left;
-  margin: 0;
-}
-.wishlist.split.button .action.toggle {
-  float: right;
-  margin: 0;
-}
-.wishlist.split.button button.action.split,
-.wishlist.split.button
-  .cart.table-wrapper
-  .actions-toolbar
-  .action.action.split {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-.wishlist.split.button button + .action.toggle,
-.wishlist.split.button
-  .cart.table-wrapper
-  .actions-toolbar
-  .action
-  + .action.toggle{
-  border-bottom-left-radius: 0;
-  border-left: 0;
-  border-top-left-radius: 0;
-}
-.wishlist.split.button .action.toggle {
-  display: inline-block;
-  text-decoration: none;
-}
-.wishlist.split.button .action.toggle span {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-.wishlist.split.button .action.toggle:after {
-  -webkit-font-smoothing: antialiased;
-  font-size: 22px;
-  line-height: 22px;
-  color: #7d7d7d;
-  content: "\e622";
-  font-family: "Font Awesome\ 5 Pro";
-  margin: 0;
-  vertical-align: top;
-  display: inline-block;
-  font-weight: normal;
-  overflow: hidden;
-  
-  text-align: center;
-}
-.wishlist.split.button .action.toggle:hover:after {
-  color: #333;
-}
-.wishlist.split.button .action.toggle:active:after {
-  color: inherit;
-}
-.wishlist.split.button .action.toggle.active {
-  display: inline-block;
-  text-decoration: none;
-}
-.wishlist.split.button .action.toggle.active span {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-.wishlist.split.button .action.toggle.active:after {
-  -webkit-font-smoothing: antialiased;
-  font-size: 22px;
-  line-height: 22px;
-  color: #7d7d7d;
-  content: "\e621";
-  font-family: "Font Awesome\ 5 Pro";
-  margin: 0;
-  vertical-align: top;
-  display: inline-block;
-  font-weight: normal;
-  overflow: hidden;
-  
-  text-align: center;
-}
-.wishlist.split.button .action.toggle.active:hover:after {
-  color: #333;
-}
-.wishlist.split.button .action.toggle.active:active:after {
-  color: inherit;
-}
-.wishlist.split.button .items {
-  margin: 0;
-  padding: 0;
-  list-style: none none;
-  background: #fff;
-  border: 1px solid #bbb;
-  margin-top: 4px;
-  min-width: 200px;
-  z-index: 100;
-  box-sizing: border-box;
-  display: none;
-  top: 100%;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
-}
-.wishlist.split.button .items li {
-  margin: 0;
-  padding: 5px 5px 5px 23px;
-}
-.wishlist.split.button .items li:hover {
-  background: #e8e8e8;
-  cursor: pointer;
-}
-.wishlist.split.button .items:before,
-.wishlist.split.button .items:after {
-  border-bottom-style: solid;
-  content: "";
-  display: block;
-  height: 0;
-  position: absolute;
-  width: 0;
-}
-.wishlist.split.button .items:before {
-  border: 6px solid;
-  border-color: transparent transparent #fff transparent;
-  z-index: 99;
-}
-.wishlist.split.button .items:after {
-  border: 7px solid;
-  border-color: transparent transparent #bbb transparent;
-  z-index: 98;
-}
-.wishlist.split.button .items:before {
-  left: 10px;
-  top: -12px;
-}
-.wishlist.split.button .items:after {
-  left: 9px;
-  top: -14px;
-}
-.wishlist.split.button.active {
-  overflow: visible;
-}
-.wishlist.split.button.active .items {
-  display: block;
-  position: absolute;
-}
-.wishlist.split.button .items {
-  text-align: left;
-}
-.wishlist.split.button .items .item:last-child:hover {
-  background: #e8e8e8;
-}
-.product-items .wishlist.split.button .action.split:before {
-  content: "\e601";
-}
-.product-items .wishlist.split.button .action:active,
-.product-items .wishlist.split.button .action:focus,
-.product-items .wishlist.split.button .action:hover {
-  color: #333;
-}
-.product-items .wishlist.split.button .action.toggle:before {
-  border-left: 1px solid #c9c9c9;
-  content: "";
-  float: left;
-  height: 15px;
-  margin-top: 3px;
-}
-.cart.table-wrapper .wishlist.split.button {
-  margin-bottom: 10px;
-}
-.cart.table-wrapper .wishlist.split.button .action.toggle {
-  padding: 4px 5px;
-}
-.wishlist.window.popup {
-  box-sizing: border-box;
-  background: #fff;
-  border: 1px solid #aeaeae;
-  padding: 22px;
-  width: 100%;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
-  transition: opacity 0.3s linear;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1001;
-  display: none;
-  opacity: 0;
-}
-.wishlist.window.popup .popup-header {
-  margin: 0 0 25px;
-  padding-right: 22px;
-}
-.wishlist.window.popup .popup-header .title {
-  font-weight: 300;
-  line-height: 1.1;
-  font-size: 1.8rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-}
-.wishlist.window.popup .popup-actions .action.close {
-  position: absolute;
-  display: inline-block;
-  background-image: none;
-  background: none;
-  border: 0;
-  box-shadow: none;
-  line-height: inherit;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  text-shadow: none;
-  font-weight: 400;
-  right: 10px;
-  top: 10px;
-}
-.wishlist.window.popup .popup-actions .action.close span {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-.wishlist.window.popup .popup-actions .action.close:before {
-  -webkit-font-smoothing: antialiased;
-  font-size: 22px;
-  line-height: 22px;
-  color: inherit;
-  content: "\e616";
-  font-family: "Font Awesome\ 5 Pro";
-  margin: 0;
-  vertical-align: top;
-  display: inline-block;
-  font-weight: normal;
-  overflow: hidden;
-  
-  text-align: center;
-}
-.wishlist.window.popup .popup-actions .action.close:hover:before {
-  color: inherit;
-}
-.wishlist.window.popup .popup-actions .action.close:active:before {
-  color: inherit;
-}
-.wishlist.window.popup .popup-actions .action.close:focus,
-.wishlist.window.popup .popup-actions .action.close:active {
-  background: none;
-  border: none;
-}
-.wishlist.window.popup .popup-actions .action.close:hover {
-  background: none;
-  border: none;
-}
-.wishlist.window.popup .popup-actions .action.close.disabled,
-.wishlist.window.popup .popup-actions .action.close[disabled],
-fieldset[disabled] .wishlist.window.popup .popup-actions .action.close {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.5;
-}
-.wishlist.window.popup.active {
-  opacity: 1;
-}
-.wishlist.window.popup.active {
-  display: block;
-}
-.wishlist.overlay {
-  transition: opacity 0.15s linear;
-  background: #000;
-  z-index: 899;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-}
-.wishlist.overlay.active {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
-.wishlist.overlay.active {
-  display: block;
-}
-.block-reward-info .reward-rates:not(:last-child),
-.block-reward-info .reward-expiring:not(:last-child) {
-  margin-bottom: 25px;
-}
-.block-reward-info .reward-rates .title,
-.block-reward-info .reward-expiring .title {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-.form-create-return .field .control span,
-.form-create-return .field address {
-  display: inline-block;
-  padding-top: 6px;
-}
-.form-create-return .additional:first-child {
-  margin-top: 0;
-}
-.form-create-return .additional .field:nth-last-child(2) {
-  margin-bottom: 0;
-}
-.form-create-return .additional .field:last-child {
-  margin-top: 20px;
-}
-.form-create-return .field.comment {
-  margin-top: 55px;
-}
-.block-returns-comments .returns-comments dt,
-.block-returns-comments .returns-comments dd {
-  margin: 0;
-}
-.block-returns-comments .returns-comments dt {
-  font-weight: 400;
-}
-.block-returns-comments .returns-comments dd {
-  margin-bottom: 15px;
-}
-.block-returns-comments .returns-comments dd:last-child {
-  margin-bottom: 0;
-}
-.block-returns-comments .fieldset {
-  margin-bottom: 20px;
-}
 .account .page-title-wrapper .page-title{
   margin-right: 25px;
-}
-.form-orders-search .field.email,
-.form-orders-search .field.zip {
-  margin-bottom: 0;
-}
-.block-reorder .product-item .checkbox {
-  position: relative;
-  top: 2px;
-  vertical-align: baseline;
-}
-.block-reorder .product-item .field.item {
-  display: inline-block;
-}
-.block-reorder .product-item-name {
-  display: inline-block;
-}
-.block-reorder .actions-toolbar {
-  margin: 17px 0;
-  max-width: 178px;
-}
-.action.mailto.friend {
-  margin-left: -7px;
-  display: inline-block;
-  text-decoration: none;
-}
-.action.mailto.friend:before {
-  -webkit-font-smoothing: antialiased;
-  font-size: 28px;
-  line-height: 28px;
-  color: inherit;
-  content: "\e61d";
-  font-family: "Font Awesome\ 5 Pro";
-  vertical-align: top;
-  display: inline-block;
-  font-weight: normal;
-  overflow: hidden;
-  
-  text-align: center;
-}
-.action.mailto.friend span {
-  display: inline-block;
-  line-height: 28px;
-  vertical-align: top;
 }
 body {
   background-color: #fff;
@@ -3112,13 +2450,6 @@ body {
 .account
   .table-wrapper
   .data.table.wishlist
-  colgroup
-  + thead
-  tr:first-child
-  th,
-.account
-  .table-wrapper
-  .data.table.wishlist
   thead:first-child
   tr:first-child
   th,
@@ -3126,13 +2457,6 @@ body {
   .table-wrapper
   .data.table.wishlist
   caption
-  + thead
-  tr:first-child
-  td,
-.account
-  .table-wrapper
-  .data.table.wishlist
-  colgroup
   + thead
   tr:first-child
   td,
