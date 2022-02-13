@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style-m.css">
+    <link rel="stylesheet" href="./CSS/style-l.css">
+    <link rel="stylesheet" href="./CSS/animate.css">
+    <link rel="stylesheet" href="./CSS/owl-carousel.css">
+    <link rel="stylesheet" href="./CSS/print.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header-container">
+            <div class="top-bar visible-lg visible-md">
+                <div class="top-bar visible-lg visible-md">
+                    <div class="container-inner">
+                        <div class="row">
+
+                            <div class="col-sm-4">
+                                <div class="switcher language switcher-language" id="switcher-language">
+                                    <strong class="label switcher-label">
+                                        <span>Language:</span>
+                                    </strong>
+                                    <div class="actions dropdown options switcher-options">
+                                        <div class="action toggle switcher-trigger" id="switcher-language-trigger">
+                                            <strong class="view-english5">
+                                                <span>English</span>
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="switcher currency switcher-currency" id="switcher-currency">
+                                    <strong class="label switcher-label">
+                                        <span>Currency:</span>
+                                    </strong>
+                                    <div class="actions dropdown options switcher-options">
+                                        <div class="action toggle switcher-trigger" id="switcher-currency-trigger">
+                                            <strong class="language-USD">
+                                                <span>
+                                                    US Dollar
+                                                    <i class="ion-ios-arrow-down">&nbsp;</i>
+                                                </span>
+                                            </strong>
+                                        </div>
+                                        <ul class="dropdown switcher-dropdown">
+                                            <li class="currency-EUR switcher-option">
+                                                <a href="#">USD</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-8">
+                                <div class="my-acount">
+                                    <strong class="label">
+                                        <span>
+                                            <i class="fal fa-cog"></i>
+                                            Setting
+                                            <i class="fal fa-chevron-down">&nbsp;</i>
+                                        </span>
+                                    </strong>
+                                    <ul class="header links">
+                                        <li>
+                                            <a href="#" class="auth-check"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" id="my_account">My Account</a>
+                                        </li>
+                                        <li class="link wishlist">
+                                            <a href="#">My Wish List</a>
+                                        </li>
+                                        <li class="authorization-link">
+                                            <a href="./login.html" id="auth_false">Sign In</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="block-header">
+                                    <p>
+                                        <i class="fal fa-alarm-clock"></i>
+                                        Ordered before 17:30, shipped today - Support: (012) 800 456 789
+                                    </p>
+                                    <p>
+                                        <i class="fal fa-clipboard-list"></i>
+                                        <a href="#">Track Your Order</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-content">
+                <div class="container-inner">
+
+                    <div class="row">
+
+                        <div class="col-md-3 col-sm-3">
+                            <div class="logo-home">
+                                <span class="action nav-toggle">
+                                    <span>Toggle Nav</span>
+                                
+                                </span>
+                                <strong class="logo">
+                                    <img src="./IMG/logo_style_2.png" alt="Magento Commerce" width="203" height="50">
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 col-sm-9">
+                            <div class="minicart-wrapper">
+                                <a class="action showcart" href="">
+                                    <span class="text">My Cart</span>
+                                    <span class="counter qty">
+                                        <span class="counter-number"></span>
+                                        <span class="counter-label"></span>
+                                    </span>
+                                </a>
+                                <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog" style="display: none;">
+                                    <div class="block block-minicart empty ui-dialog-content ui-widget-content" id="ui-id-1" style="display: block; text-align: center;">
+                                        <div id="minicart-content-wrapper">
+                                            
+                                            <div class="block-content">
+                                                <div class="items-total">
+                                                    <span class="count"></span>
+                                                    <span>items</span>
+                                                </div>
+                                                <div class="subtotal">
+                                                    <span class="label">
+                                                        <span>Cart Subtotal</span>
+                                                    </span>
+                                                    <div class="amount price-container">
+                                                        <span class="price-wrapper">
+                                                            <span class="price"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="actions">
+                                                    <div class="primary">
+                                                        <button id="top-cart-btn-checkout" type="button" class="action primary checkout" title="Go to Checkout">
+                                                            <span>Go to Checkout</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="minicart-items-wrapper">
+                                                        <ol id="mini-cart" class="minicart-items">
+
+                                                        </ol>
+                                                    </div>
+
+                                                    <div class="actions">
+                                                        <div class="secondary">
+                                                            <a class="action viewcart" href="./view-cart.html">
+                                                                <span><span>View and edit cart</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="minicart-widgets" class="minicart-widgets">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="wishlist-link">
+                                <a href="#">
+                                    <i class="fas fa-star"></i>
+                                </a>
+                            </p>
+                            <form class="form minisearch" id="search_mini_form" method="get">
+                                <div class="field search">
+                                    <input id="search" type="text" value="" placeholder="Search for item..." class="input-text">
+    
+    
+                                    <button type="submit" title="Search" class="action fa fa-search">
+                                        <span></span>
+                                    </button>
+                                    <ul class="results-list" id="result">
+
+                                    </ul>
+                                </div>
+    
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="nav-ozmegamenu">
+                        <div class="container-inner">
+                            <div class="nav-ozmegamenu-inner">
+                                <nav class="nav-container visible-lg visible-md">
+                                    <div id="pt_custommenu" class="pt_custommenu">
+                                        <div id="pt_menu_home" class="pt_menu act">
+                                            <div class="parentMenu toggle_1">
+                                                <a href="./index.html">
+                                                    <span>Home</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="pt_menu3" class="pt_menu readmore nav-1">
+                                            <div class="parentMenu" id="div_1">
+                                                <a href="#" class="pt_cate">
+                                                    <span>vegetables</span>
+                                                    <span class="is_sale"></span>
+                                                    <span class="is_new"></span>
+                                                </a>
+                                            </div>
+                                            <div id="popup1" class="popup" style="width: 1145px; top: 60px; left: 3px;">
+                                                <div class="block1" id="block13" style="width: 1145px;">
+                                                    <div class="column first col1">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Greens</span>
+                                                            </a>
+                                                            <div class="itemSubMenu level1">
+                                                                <div class="itemMenu level2">
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Spinach</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Lettuce</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Tango</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Asparagus</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Broccoli</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column col2">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Fungus</span>
+                                                            </a>
+                                                            <div class="itemSubMenu level1">
+                                                                <div class="itemMenu level2">
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Truffles</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>White button mushroom</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Shitake mushroom</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Oyster mushroom</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Porcini</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column col3">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Roots & tubers</span>
+                                                            </a>
+                                                            <div class="itemSubMenu level1">
+                                                                <div class="itemMenu level2">
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Carrots</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Radishes</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Onions</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Potato</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column last col4">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Pods & seeds</span>
+                                                            </a>
+                                                            <div class="itemSubMenu level1">
+                                                                <div class="itemMenu level2">
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Peas</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Beans</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Soybeans</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Green Peppers</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearBoth"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="pt_menu4" class="pt_menu readmore nav-2">
+                                            <div class="parentMenu" id="div_2">
+                                                <a href="#" class="pt_cate">
+                                                    <span>Fruits</span>
+                                                    <span class="is_sale"></span>
+                                                    <span class="is_new"></span>
+                                                </a>
+                                            </div>
+                                            <div id="popup2" class="popup" style="width: 1145px; top: 60px; left: 3px; display: none;">
+                                                <div class="block1" id="block14" style="width: 1145px;">
+                                                    <div class="column first col1">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1"
+                                                                href="#">
+                                                            <span>Tropical Fruits</span></a>
+                                                            <div class="itemSubMenu level1">
+                                                                <div class="itemMenu level2">
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Bananas</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Apples</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column col2">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Melons & Citrus</span>
+                                                                </a>
+                                                            <div class="itemSubMenu level1">
+                                                                <div class="itemMenu level2">
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Oranges</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Watermelons</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Grapefruits</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Cantaloupes</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column col3">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Berries</span>
+                                                            </a>
+                                                            <div class="itemSubMenu level1">
+                                                                <div class="itemMenu level2">
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Strawberries</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Grapes</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Raspberries</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Cranberries</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column last col4">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Drupes</span>
+                                                            </a>
+                                                            <div class="itemSubMenu level1">
+                                                                <div class="itemMenu level2">
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Cherries</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Peaches</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Apricots</span>
+                                                                    </a>
+                                                                    <a class="itemMenuName level2" href="#">
+                                                                        <span>Plums</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearBoth"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="pt_menu63" class="pt_menu readmore nav-3">
+                                            <div class="parentMenu" id="div_3">
+                                                <a href="#" class="pt_cate">
+                                                    <span>Breads</span>
+                                                    <span class="is_sale"></span>
+                                                    <span class="is_new"></span>
+                                                </a>
+                                            </div>
+                                            <div id="popup3" class="popup" style="width: 1145px; top: 60px; left: 3px">
+                                                <div class="block1" id="block163" style="width: 1145px;">
+                                                    <div class="column first col1">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>White Bread</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column col2">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Whole Grain Bread</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column col3">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Baguette</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column last col4">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Rye Bread</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearBoth"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="pt_menu68" class="pt_menu readmore nav-5">
+                                            <div class="parentMenu" id="div_4">
+                                                <a href="#"
+                                                    class="pt_cate ">
+                                                    <span>Others</span>
+                                                    <span class="is_sale"></span>
+                                                    <span class="is_new"></span>
+                                                </a>
+                                            </div>
+                                            <div id="popup4" class="popup" style="width: 1145px; top: 60px; left: 3px">
+                                                <div class="block1" id="block168" style="width: 1145px;">
+                                                    <div class="column first col1">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Hot Chillies & Pepper</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column col2">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Honey</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column col3">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Ginger</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column last col4">
+                                                        <div class="itemMenu level1">
+                                                            <a class="itemMenuName level1" href="#">
+                                                                <span>Garlic</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearBoth"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearBoth"></div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+        </main>
+        <footer class="page-footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="container-inner">
+                        <div class="container-size">
+                            <div class="row footer-static">
+                                <div class="col-sm-4">
+                                    <p class="logof">
+                                        <img
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Flogo_style_1.png?alt=media&token=6c1d0fdf-3cde-426a-a1db-fd65277122c0"
+                                            alt=""
+                                            width="80%">
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Address: 36 Hai Phong, Viet Nam.</p>
+                                    <p>Phone: (+84) 945 826 433</p>
+                                </div>
+                                <div class="col-sm-2">
+                                    <h3>Our Service</h3>
+                                    <ul class="links services">
+                                        <li class="first"><a href="#">Our Blog</a></li>
+                                        <li><a href="#">About Our Shop</a></li>
+                                        <li><a href="#">Returns</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                        <li class="last"><a href="#">Secure Shopping</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2">
+                                    <h3>Customer service</h3>
+                                    <ul class="links services">
+                                        <li class="first"><a href="#">Site Map</a></li>
+                                        <li><a href="#">Specials</a></li>
+                                        <li><a href="#">Returns</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                        <li class="last"><a href="#">My Account</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3>follow us</h3>
+                                    <ul class="link-follow">
+                                        <li class="first">
+                                            <a class="twitter" title="Twitter" href="https://twitter.com/NguynBH36708888">
+                                                <i class="fab fa-twitter fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="google" title="Google" href="#">
+                                                <i class="fab fa-google-plus-g fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="facebook" title="Facebook" href="https://www.facebook.com/hung.nguyen.ba.18.11.05">
+                                                <i class="fab fa-facebook-f fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="youtube" title="Youtube" href="#">
+                                                <i class="fab fa-youtube fa-lg"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h3>Download Apps</h3>
+                                    <p class="app">
+                                        <img
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fdownload.png?alt=media&token=5a65595c-ea88-4512-855c-9be7aa6c2026"
+                                            alt="">
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ma_newsletter">
+                                <div class="title">
+                                    <div>
+                                        <h3><span>Sign Up For Newsletters </span></h3>
+                                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                                    </div>
+                                </div>
+                                <form class="form subscribe" id="newsletter-validate-detail">
+                                    <div class="control">
+                                        <input type="text" class="feedback-name" placeholder="Your name">
+                                    </div>
+                                    <div class="control">
+                                        <input type="email" id="newsletter" class="feedback-email" placeholder="Your email address">            
+                                    </div>
+                                    <div class="control" id="messages">
+                                        <textarea placeholder="Your message" class="feedback-text"></textarea>
+                                    </div>
+                                    <div class="control">
+                                        <button class="action subscribe primary" id="subscribeBtn" title="Subscribe" type="button">
+                                            <span style="font-size: 14px; text-transform: uppercase; vertical-align: middle;">
+                                                Send message
+                                            </span>
+                                            <span>
+                                                <i class="fas fa-paper-plane fa-2x"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="footer-bottom">
+                                <div class="container-inner">
+                                    <small class="copyright">
+                                        <span>Copyright © 2022 G-Room, Inc. All rights reserved.</span>
+                                    </small>
+                                    <div class="link-paypal">
+                                        <img
+                                            src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Ficon_payment.png?alt=media&token=45208b18-a9cd-4903-a010-217c99c3c9bf"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div id="back_top" style="display: block;">
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./JS/observer.js" type="module"></script>
+    <script src="./JS/feedback.js" type="module"></script>
+    <script src="./JS/index.js"></script>
+</body>
+</html>

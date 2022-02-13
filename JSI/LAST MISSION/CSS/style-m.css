@@ -1138,6 +1138,7 @@ fieldset[disabled] .action.primary {
 .actions-toolbar .primary:last-child,
 .actions-toolbar .secondary:last-child {
   margin-bottom: 0;
+  margin-right: 10px;
 }
 .breadcrumbs {
   margin: 0 0 20px;

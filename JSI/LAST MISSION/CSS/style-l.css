@@ -930,3 +930,15 @@
     margin-left: 85px;
   }
 }
+@media (min-width: 768px), print{
+  .login-container .block:nth-child(odd){
+    clear: left;
+    float: left;
+  }
+  .login-container .block:nth-child(even){
+    float: right;
+  }
+  .login-container .block{
+    width: 48.8%;
+  }
+}
