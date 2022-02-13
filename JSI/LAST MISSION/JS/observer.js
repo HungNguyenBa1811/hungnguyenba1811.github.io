@@ -17,11 +17,11 @@ const dbRef = ref(getDatabase());
 
 const myAccount = document.querySelector("#my_account")
 let auth_false = document.querySelector("#auth_false")
+let auth_check = document.querySelector(".auth-check")
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
-
 
         auth_false.innerHTML = "Sign Out"
         auth_false.setAttribute("href", "#")
@@ -38,6 +38,16 @@ onAuthStateChanged(auth, (user) => {
                     alert("Error: ", error)
                 });
         })
+
+        get(child(dbRef, `users/${uid}`))
+            .then((snapshot) => {
+                if (snapshot.exists()){
+                    auth_check.innerHTML = `Welcome back, ${snapshot.val().last_name + " " + snapshot.val().first_name}`
+                    console.log(snapshot.val())
+                } else {
+                    console.log("No user")
+                }
+            })
 
         get(child(dbRef, `users/${uid}/cart`))
             .then((snapshot) => {

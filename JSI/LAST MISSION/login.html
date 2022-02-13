@@ -70,6 +70,9 @@
                                     </strong>
                                     <ul class="header links">
                                         <li>
+                                            <a href="#" class="auth-check"></a>
+                                        </li>
+                                        <li>
                                             <a href="#" id="my_account">My Account</a>
                                         </li>
                                         <li class="link wishlist">
@@ -504,10 +507,6 @@
                                         <div class="clearBoth"></div>
                                     </div>
                                 </nav>
-
-                                <div class="mobile-bar-icon">
-                                    <span>mobile icon</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -588,59 +587,6 @@
         </main>
         <footer class="page-footer">
             <div class="footer-container">
-                <div class="ma-brand">
-                    <div class="container-inner">
-                        <div class="brandslider-container">
-                            <div class="title">
-                                <!--<div class="ma-title"><h3><span></span></h3></div>-->
-                            </div>
-                            <div class="pt-brand-container">
-                                <ul class="ptowl owl-carousel owl-theme"> 
-                                    <li>
-                                        <div class="pt-brand">
-                                            <img
-                                                alt=""
-                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_1.png?alt=media&token=47033320-20f8-4d41-9781-8532c7001d76">
-                                            <p></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="pt-brand">
-                                            <img
-                                                alt=""
-                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_2.png?alt=media&token=eed0f2f9-2d9c-4934-97af-4ce885d68c67">
-                                            <p></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="pt-brand">         
-                                            <img 
-                                                alt=""
-                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_3.png?alt=media&token=7d7f7901-a73f-4842-a927-d505e678135a">
-                                            <p></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="pt-brand">
-                                            <img
-                                                alt=""
-                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_4.png?alt=media&token=a485e17f-411d-42b4-b878-ecfc9de12d2d">
-                                            <p></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="pt-brand">
-                                            <img
-                                                alt=""
-                                                src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fcollab_5.png?alt=media&token=bcd56657-b84b-43e7-922a-74a797c1f767">
-                                            <p></p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="footer-top">
                     <div class="container-inner">
                         <div class="container-size">
@@ -717,12 +663,23 @@
                                 </div>
                                 <form class="form subscribe" id="newsletter-validate-detail">
                                     <div class="control">
-                                        <input type="email" id="newsletter" placeholder="Enter your email address">            
-                                        <button class="action subscribe primary" title="Subscribe" type="submit">
+                                        <input type="text" class="feedback-name" placeholder="Your name">
+                                    </div>
+                                    <div class="control">
+                                        <input type="email" id="newsletter" class="feedback-email" placeholder="Your email address">            
+                                    </div>
+                                    <div class="control" id="messages">
+                                        <textarea placeholder="Your message" class="feedback-text"></textarea>
+                                    </div>
+                                    <div class="control">
+                                        <button class="action subscribe primary" id="subscribeBtn" title="Subscribe" type="button">
+                                            <span style="font-size: 14px; text-transform: uppercase; vertical-align: middle;">
+                                                Send message
+                                            </span>
                                             <span>
                                                 <i class="fas fa-paper-plane fa-2x"></i>
                                             </span>
-                                        </button>			
+                                        </button>
                                     </div>
                                 </form>
                             </div>

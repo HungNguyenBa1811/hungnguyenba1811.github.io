@@ -17,7 +17,7 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log("Sus")
     } else {
-        alert("Not Logged In! Redirect you in 10 seconds!")
+        alert("Not Logged In!")
         setTimeout( ()=> {
             localStorage.clear()
             window.location.href = "./login.html"

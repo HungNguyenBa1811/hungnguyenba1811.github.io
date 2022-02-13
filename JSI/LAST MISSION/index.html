@@ -96,6 +96,9 @@
                                     </strong>
                                     <ul class="header links">
                                         <li>
+                                            <a href="#" class="auth-check"></a>
+                                        </li>
+                                        <li>
                                             <a href="#" id="my_account">My Account</a>
                                         </li>
                                         <li class="link wishlist">
@@ -533,9 +536,6 @@
                                     </div>
                                 </nav>
 
-                                <div class="mobile-bar-icon">
-                                    <span>mobile icon</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -700,13 +700,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="banner-box banner-box1">
+                    <!-- <div class="banner-box banner-box1">
                         <a href="#">
                             <img
                                 src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_5.jpg?alt=media&token=1259df5b-2407-457c-bbed-fee5a7f1c06d"
                                 alt="">
                         </a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-3">
                     <div class="timerproducts">
@@ -742,6 +742,16 @@
                                     src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Fbanner_right_3.jpg?alt=media&token=8e7a0a75-2d8e-49af-9efb-a713627d46d5"
                                     alt="">
                             </a>
+                        </div>
+                    </div>
+                    <div class="new-product-slider">
+                        <div class="ma-title">
+                            <h3>
+                                <span>New Products</span>
+                            </h3>
+                        </div>
+                        <div id="new_product_slider">
+                            <div class="products-grid new-pd owl-theme"></div>
                         </div>
                     </div>
                 </div>
@@ -902,12 +912,23 @@
                                 </div>
                                 <form class="form subscribe" id="newsletter-validate-detail">
                                     <div class="control">
-                                        <input type="email" id="newsletter" placeholder="Enter your email address">            
-                                        <button class="action subscribe primary" title="Subscribe" type="submit">
+                                        <input type="text" class="feedback-name" placeholder="Your name">
+                                    </div>
+                                    <div class="control">
+                                        <input type="email" id="newsletter" class="feedback-email" placeholder="Your email address">            
+                                    </div>
+                                    <div class="control" id="messages">
+                                        <textarea placeholder="Your message" class="feedback-text"></textarea>
+                                    </div>
+                                    <div class="control">
+                                        <button class="action subscribe primary" id="subscribeBtn" title="Subscribe" type="button">
+                                            <span style="font-size: 14px; text-transform: uppercase; vertical-align: middle;">
+                                                Send message
+                                            </span>
                                             <span>
                                                 <i class="fas fa-paper-plane fa-2x"></i>
                                             </span>
-                                        </button>			
+                                        </button>
                                     </div>
                                 </form>
                             </div>

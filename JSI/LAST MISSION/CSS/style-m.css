@@ -1305,13 +1305,9 @@ fieldset[disabled] .ui-dialog.popup .action.close {
 }
 .product-item-info {
   max-width: 100%;
-  /* width: 152px; */
 }
 .page-products .product-item-info {
   width: 240px;
-}
-.product-item-actions {
-  display: none;
 }
 .product-item-actions .actions-secondary .action:before {
   margin: 0;

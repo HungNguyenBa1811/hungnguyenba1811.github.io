@@ -195,7 +195,7 @@ function render(){
     }
 
     if(document.querySelector(".price-total")){
-        document.querySelector(".price-total").innerHTML = '$' + money
+        document.querySelector(".price-total").innerHTML = '$' + Math.round(money * 100) / 100
         document.querySelector(".price-tax").innerHTML = '$' + Math.round(money * 11) / 100
         document.querySelector(".price-final").innerHTML = '$' + Math.round(money * 111) / 100
     }

@@ -29,7 +29,6 @@ class Clock extends HTMLElement {
 
         // Set the date
         let countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-        console.log(this._shadowDOM)
         // Update the count down every 1 second
         
             setInterval( () => {
@@ -46,7 +45,6 @@ class Clock extends HTMLElement {
                 let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 // Output the result
-                console.log(days + "d " + hours + "h " + minutes + "m " + seconds + "s ")
                 this._shadowDOM.innerHTML = `
                     <style>
                         ${style}

@@ -63,9 +63,6 @@
     flex-shrink: 0;
     flex-basis: auto;
   }
-  .page-main {
-    width: auto;
-  }
   .columns {
     display: block;
   }
