@@ -407,6 +407,9 @@
 .ma-brand .pt-brand {
   text-align: center;
 }
+.ma-brand .pt-brand img{
+  width: 80% !important;
+}
 .owl-item .products-grid {
   border-right: 1px solid #eee;
 }
@@ -679,6 +682,7 @@ input:not([disabled]):focus{
 }
 .page-title-wrapper .page-title {
   margin: 20px 0;
+  font-weight: 400 !important;
 }
 .form-cart .table thead tr th,
 .form-cart .table tbody tr th,
@@ -749,6 +753,27 @@ input:not([disabled]):focus{
 }
 .cart-empty a {
   font-weight: bold;
+}
+.block-collapsible-nav .title {
+  text-transform: uppercase;
+  border-bottom: 2px solid #f1f1f1;
+  padding: 0 0 10px;
+}
+.block-collapsible-nav .content ul.nav {
+  background-color: #f4f4f4;
+}
+.block-collapsible-nav .content ul.nav > li > strong {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.block-collapsible-nav .content ul.nav > li.current > strong {
+  background-color: #eee;
+  margin: 0;
+}
+.block-collapsible-nav .content ul.nav li a {
+  color: #666666;
+  font-size: 1.3rem;
 }
 .modal-content {
   box-shadow: none;
@@ -3111,6 +3136,17 @@ tr td span {
   .cart-container .form-cart {
       width: 67%;
   }
+}
+@media (min-width: 768px), print{
+  .account.page-layout-2columns-left .column.main {
+    width: 75%;
+    float: right;
+  }
+  .account.page-layout-2columns-left .sidebar-main {
+    width: 25%;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: right;
 }
 @media (min-width: 768px) {
   .footer-top .ma_newsletter {

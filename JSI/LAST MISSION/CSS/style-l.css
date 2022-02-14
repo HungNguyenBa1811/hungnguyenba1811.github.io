@@ -66,9 +66,6 @@
   .columns {
     display: block;
   }
-  .column.main {
-    min-height: 300px;
-  }
   .panel.header {
     padding: 10px 20px;
   }
@@ -931,14 +928,17 @@
   }
 }
 @media (min-width: 768px), print{
-  .login-container .block:nth-child(odd){
+  .login-container .block:nth-child(odd),
+  .account .column.main .block:not(.widget) .block-content .box:nth-child(odd){
     clear: left;
     float: left;
   }
-  .login-container .block:nth-child(even){
+  .login-container .block:nth-child(even),
+  .account .column.main .block:not(.widget) .block-content .box:nth-child(even){
     float: right;
   }
-  .login-container .block{
+  .login-container .block,
+  .account .column.main .block:not(.widget) .block-content .box{
     width: 48.8%;
   }
 }

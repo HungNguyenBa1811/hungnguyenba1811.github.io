@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/style-m.css">
-    <link rel="stylesheet" href="./CSS/style-l.css">
-    <link rel="stylesheet" href="./CSS/animate.css">
-    <link rel="stylesheet" href="./CSS/owl-carousel.css">
-    <link rel="stylesheet" href="./CSS/print.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style-m.css">
+    <link rel="stylesheet" href="../CSS/style-l.css">
+    <link rel="stylesheet" href="../CSS/print.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
     <title>Sign In</title>
 </head>
-<body>
+<body class="account customer-account-index page-layout-2columns-left">
     <div class="page-wrapper">
         <header class="header-container">
             <div class="top-bar visible-lg visible-md">
@@ -78,7 +76,7 @@
                                             <a href="#">My Wish List</a>
                                         </li>
                                         <li class="authorization-link">
-                                            <a href="./login.html" id="auth_false">Sign In</a>
+                                            <a href="../login.html" id="auth_false">Sign In</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -110,14 +108,18 @@
                                 
                                 </span>
                                 <strong class="logo">
-                                    <img src="./IMG/logo_style_2.png" alt="Magento Commerce" width="203" height="50">
+                                    <img
+                                        src="https://firebasestorage.googleapis.com/v0/b/organic-store-2dff9.appspot.com/o/SURFACE%2Flogo_style_1.png?alt=media&token=6c1d0fdf-3cde-426a-a1db-fd65277122c0"
+                                        alt="Magento Commerce"
+                                        width="203"
+                                        height="50">
                                 </strong>
                             </div>
                         </div>
 
                         <div class="col-md-9 col-sm-9">
                             <div class="minicart-wrapper">
-                                <a class="action showcart" href="">
+                                <a class="action showcart" href="#">
                                     <span class="text">My Cart</span>
                                     <span class="counter qty">
                                         <span class="counter-number"></span>
@@ -130,7 +132,7 @@
                                             
                                             <div class="block-content">
                                                 <div class="items-total">
-                                                    <span class="count"></span>
+                                                    <span class="count">0</span>
                                                     <span>items</span>
                                                 </div>
                                                 <div class="subtotal">
@@ -157,8 +159,10 @@
 
                                                     <div class="actions">
                                                         <div class="secondary">
-                                                            <a class="action viewcart" href="./view-cart.html">
-                                                                <span><span>View and edit cart</span></span>
+                                                            <a class="action viewcart" href="../view-cart.html">
+                                                                <span>
+                                                                    <span>View and edit cart</span>
+                                                                </span>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -201,7 +205,7 @@
                                     <div id="pt_custommenu" class="pt_custommenu">
                                         <div id="pt_menu_home" class="pt_menu act">
                                             <div class="parentMenu toggle_1">
-                                                <a href="./index.html">
+                                                <a href="../index.html">
                                                     <span>Home</span>
                                                 </a>
                                             </div>
@@ -210,8 +214,6 @@
                                             <div class="parentMenu" id="div_1">
                                                 <a href="#" class="pt_cate">
                                                     <span>vegetables</span>
-                                                    <span class="is_sale"></span>
-                                                    <span class="is_new"></span>
                                                 </a>
                                             </div>
                                             <div id="popup1" class="popup" style="width: 1145px; top: 60px; left: 3px;">
@@ -322,8 +324,6 @@
                                             <div class="parentMenu" id="div_2">
                                                 <a href="#" class="pt_cate">
                                                     <span>Fruits</span>
-                                                    <span class="is_sale"></span>
-                                                    <span class="is_new"></span>
                                                 </a>
                                             </div>
                                             <div id="popup2" class="popup" style="width: 1145px; top: 60px; left: 3px; display: none;">
@@ -422,8 +422,6 @@
                                             <div class="parentMenu" id="div_3">
                                                 <a href="#" class="pt_cate">
                                                     <span>Breads</span>
-                                                    <span class="is_sale"></span>
-                                                    <span class="is_new"></span>
                                                 </a>
                                             </div>
                                             <div id="popup3" class="popup" style="width: 1145px; top: 60px; left: 3px">
@@ -462,11 +460,8 @@
                                         </div>
                                         <div id="pt_menu68" class="pt_menu readmore nav-5">
                                             <div class="parentMenu" id="div_4">
-                                                <a href="#"
-                                                    class="pt_cate ">
+                                                <a href="#" class="pt_cate ">
                                                     <span>Others</span>
-                                                    <span class="is_sale"></span>
-                                                    <span class="is_new"></span>
                                                 </a>
                                             </div>
                                             <div id="popup4" class="popup" style="width: 1145px; top: 60px; left: 3px">
@@ -512,7 +507,104 @@
                 </div>
             </div>
         </header>
-        <main>
+        <main id="maincontent" class="page-main">
+            <div class="column main">
+                <div class="page-title-wrapper">
+                    <h1 class="page-title">
+                        <span class="base">My Dashboard</span>
+                    </h1>
+                </div>
+                <div class="block block-dashboard-info">
+                    <div class="block-title">
+                        <strong>Account Information</strong>
+                    </div>
+                    <div class="block-content">
+                        <div class="box box-information">
+                            <strong class="box-title">
+                                <span>Contact Information</span>
+                            </strong>
+                            <div class="box-content contact_change">
+
+                            </div>
+                            <div class="box-actions">
+                                <a href="#" class="action edit">Edit</a>
+                                <a href="#" class="action change-password">Change Password</a>
+                            </div>
+                        </div>
+                        <div class="box box-newsletter">
+                            <strong class="box-title">
+                                <span>Newsletters</span>
+                            </strong>
+                            <div class="box-content _newsletter">
+                                
+                            </div>
+                            <div class="box-actions">
+                                <a href="#" class="action edit">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block block-dashboard-addresses">
+                    <div class="block-title">
+                        <strong>Address Book</strong>
+                        <a href="#" class="action edit">
+                            <span>Manage Addresses</span>
+                        </a>
+                    </div>
+                    <div class="block-content">
+                        <div class="box">
+                            <strong class="box-title">
+                                <span>Default Email Address</span>
+                            </strong>
+                            <div class="box-content address_change">
+
+                            </div>
+                            <div class="box-actions">
+                                <a href="#" class="action edit">
+                                    <span>Edit Address</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <strong class="box-title">
+                                <span>Default Phone Number</span>
+                            </strong>
+                            <div class="box-content phone_change">
+
+                            </div>
+                            <div class="box-actions">
+                                <a href="#" class="action edit">
+                                    <span>Edit Phone Number</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar sidebar-main">
+                <div class="block block-collapsible-nav">
+                    <div class="title block-collapsible-nav-title">
+                        <strong>Account Dashboard</strong>
+                    </div>
+                    <div class="content block-collapsible-nav-content" id="block-collapsible-nav">
+                        <ul class="nav items">
+                            <li class="nav item current">
+                                <strong>Account Dashboard</strong>
+                            </li>
+                            <li class="nav item">
+                                <a href="./account-information.html">Account Information</a>
+                            </li>
+                            <li class="nav item">
+                                <a href="./address-book.html">Address Book</a>
+                            </li>
+                            <li class="nav item acc-cart">
+                                <a href="../view-cart.html">View & Edit Cart</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer class="page-footer">
             <div class="footer-container">
@@ -634,8 +726,12 @@
         </footer>
     </div>
 
-    <script src="./JS/observer.js" type="module"></script>
-    <script src="./JS/feedback.js" type="module"></script>
-    <script src="./JS/index.js"></script>
+    <script src="../JS/observer.js" type="module"></script>
+    <script src="../JS/feedback.js" type="module"></script>
+    <script src="../JS/index.js"></script>
+    <script defer src="../JS/cart.js"></script>
+    <script>
+        document.querySelector(".acc-cart").addEventListener("click", () => window.location.href = '')
+    </script>
 </body>
 </html>

@@ -18,11 +18,16 @@ const dbRef = ref(getDatabase());
 const myAccount = document.querySelector("#my_account")
 let auth_false = document.querySelector("#auth_false")
 let auth_check = document.querySelector(".auth-check")
+let contact_information = document.querySelector(".contact_change")
+let is_newsletter = document.querySelector("._newsletter")
+let address_information = document.querySelector(".address_change")
+let phone_change = document.querySelector(".phone_change")
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
 
+        myAccount.addEventListener("click", () => window.location.href = 'https://hungnguyenba1811.github.io/JSI/LAST%20MISSION/customer/myaccount.html')
         auth_false.innerHTML = "Sign Out"
         auth_false.setAttribute("href", "#")
         auth_false.addEventListener("click", () => {
@@ -44,6 +49,24 @@ onAuthStateChanged(auth, (user) => {
                 if (snapshot.exists()){
                     auth_check.innerHTML = `Welcome back, ${snapshot.val().last_name + " " + snapshot.val().first_name}`
                     console.log(snapshot.val())
+                    if(is_newsletter){
+                        contact_information.innerHTML = `
+                            <p style="font-size: 1.3rem; margin: 0;">First Name: ${snapshot.val().last_name}</p>
+                            <p style="font-size: 1.3rem; margin-bottom: 10px;">Last Name: ${snapshot.val().first_name}</p>
+                        `
+                        address_information.innerHTML = `
+                            <p style="font-size: 1.3rem; margin-bottom: 10px;">Email: ${snapshot.val().email}</p>
+                        `
+                        if(!snapshot.val().phone_number){
+                            phone_change.innerHTML = `
+                                <p style="font-size: 1.3rem; margin-bottom: 10px;">You don't have a phone number.</p>
+                            `
+                        } else {
+                            phone_change.innerHTML = `
+                                <p style="font-size: 1.3rem; margin-bottom: 10px;">Phone Number: ${snapshot.val().phone_number}</p>
+                            `
+                        }
+                    }
                 } else {
                     console.log("No user")
                 }

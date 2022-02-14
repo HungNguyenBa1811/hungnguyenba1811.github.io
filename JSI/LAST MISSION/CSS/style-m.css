@@ -306,12 +306,25 @@ input:not([disabled]):focus{
   display: inline-block;
   margin: 0 0 5px;
 }
-.account .column.main .block:not(.widget) .box-title span{
+.account .column.main .block:not(.widget) .box-title span,
+.sidebar .block strong{
   font-weight: 700;
   line-height: 1.1;
   font-size: 1.4rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  color: #666666;
+}
+.sidebar .block ul li strong{
+  font-size: 1.3rem;
+}
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.nav{
+  flex-direction: column;
 }
 .account .column.main .block:not(.widget) .box-title .action{
   font-weight: 400;
@@ -326,6 +339,28 @@ input:not([disabled]):focus{
 }
 .account .column.main .block:not(.widget) .block-content .box{
   margin-bottom: 20px;
+}
+.account .column.main .block:not(.widget) .block-title>strong{
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.account .column.main .block:not(.widget) .block-content a.action,
+.account .column.main .block:not(.widget) .block-title a.action{
+  color: #363f4d !important;
+  font-size: 1.4rem;
+}
+.account .column.main .block:not(.widget) .block-title a.action span{
+  font-size: 1.3rem;
+}
+.account .column.main .block:not(.widget) .block-content a.action {
+  margin-right: 25px;
+}
+.account .column.main .block:not(.widget) .block-content,
+.account .column.main .block:not(.widget) .block-title{
+  font-size: 14px;
 }
 .cart.table-wrapper .col.qty .input-text,
 .account .table-wrapper .data.table.wishlist .box-tocart .qty,
