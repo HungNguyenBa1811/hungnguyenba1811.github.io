@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"
 import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
 
 const firebaseConfig = {
@@ -35,7 +35,7 @@ if(signUp !== null){
                     // Signed in 
                     const user = userCredential.user;
                     const uid = user.uid
-                    alert("User created! Login Successfully! Redirect you in 3 seconds!")
+                    alert("User created")
                     console.log(user)
                     function writeUserData(userId, email, password) {
                         set(ref(database, 'users/' + userId), {
@@ -47,7 +47,14 @@ if(signUp !== null){
                         localStorage.setItem("Cart", [])
                     }
                     writeUserData(uid, email, password)
-                    setTimeout(() => window.location = "./index.html", 3000)
+                    setTimeout(() => window.location = "./index.html", 2000)
+                    updateProfile(auth.currentUser, {
+                        displayName: `${first_name} ${last_name}`
+                    }) .then(() => {
+                        console.log(first_name + " " + last_name)
+                    }).catch((error) => {
+                        alert(error)
+                    });
                 })
                 .catch((error) => {
                     // const errorCode = error.code;
@@ -72,7 +79,7 @@ if(signUp !== null){
                 const user = userCredential.user;
                 const uid = user.id
                 console.log(user)
-                alert("User Logged In! Redirect you in 3 seconds!")
+                alert("User Logged In")
                 get(child(ref(getDatabase()), `/users/${uid}/cart`))
                     .then((snapshot) => {
                         if(snapshot.exists()){
@@ -84,7 +91,7 @@ if(signUp !== null){
                     .catch((error) => {
                         console.error(error)
                     })
-                setTimeout(() => window.location = "./index.html", 3000)
+                setTimeout(() => window.location = "./index.html", 1000)
             })
             .catch((error) => {
                 const errorMessage = error.message;

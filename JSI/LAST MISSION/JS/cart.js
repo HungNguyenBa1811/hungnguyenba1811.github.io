@@ -9,6 +9,7 @@ if(dataCart){
 
 let addCartBtn = document.querySelectorAll(".tocart");
 let deleteBtn = document.querySelectorAll(".delete");
+let delBtn = document.querySelectorAll(".del")
 
 // Set DATA
 for(let i = 0, j = addCartBtn.length; i<j ; i++){
@@ -125,7 +126,11 @@ function render(){
     document.querySelector(".price").innerHTML = `$${Math.round(money * 100) / 100}`
 
     if(document.querySelector(".cart.item")){
+
+        document.querySelector(".cart.item").innerHTML = ''
+
         for(products of cart){
+
             document.querySelector(".cart.item").insertAdjacentHTML("beforeend", `
                 <tr class="item-info">
                     <td class="col item">
@@ -184,20 +189,31 @@ function render(){
                 <tr class="item-actions">
                     <td colspan="100">
                         <div class="actions-toolbar">
-                            <a href="#" title="Remove item" class="action action-delete">
-                                <span> Remove item </span>
+                            <a href="#" title="Remove item" class="action action-delete del" id="${products.id}">
+                                <span>Remove item</span>
                             </a>
                         </div>
                     </td>
                 </tr>
             `) 
         }
+
+
     }
 
     if(document.querySelector(".price-total")){
         document.querySelector(".price-total").innerHTML = '$' + Math.round(money * 100) / 100
         document.querySelector(".price-tax").innerHTML = '$' + Math.round(money * 11) / 100
         document.querySelector(".price-final").innerHTML = '$' + Math.round(money * 111) / 100
+    }
+
+    delBtn = document.querySelectorAll(".del")
+    if(delBtn){
+        for(let i = 0, j= delBtn.length; i<j ; i++){
+            delBtn[i].addEventListener("click", () => {
+                removeItem(delBtn[i].id)
+            })
+        }
     }
 }
 render()

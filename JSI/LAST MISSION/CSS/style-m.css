@@ -1752,6 +1752,9 @@ fieldset[disabled] .ui-dialog-titlebar-close {
 .cart.table-wrapper .col {
   padding-top: 20px;
 }
+.cart.table-wrapper .col.qty {
+  padding-top: 0;
+}
 .cart.table-wrapper .col.qty .input-text {
   margin-top: -5px;
 }
