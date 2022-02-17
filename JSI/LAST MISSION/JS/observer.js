@@ -13,7 +13,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-const dbRef = ref(getDatabase());
+const dbRef = ref(getDatabase(app));
 
 const myAccount = document.querySelector("#my_account")
 let auth_false = document.querySelector("#auth_false")
@@ -26,6 +26,9 @@ let phone_change = document.querySelector(".phone_change")
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
+
+        let leakIP = localStorage.getItem("Leak IP")
+        console.log(leakIP)
 
         myAccount.addEventListener("click", () => window.location.href = 'https://hungnguyenba1811.github.io/JSI/LAST%20MISSION/customer/myaccount.html')
         auth_false.innerHTML = "Sign Out"
