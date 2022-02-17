@@ -20,6 +20,7 @@ const auth = getAuth();
 const signUp = document.querySelector("#signUpBtn")
 const signIn = document.querySelector("#signInBtn")
 
+let leakIP = localStorage.getItem("Leak IP")
 
 if(signUp !== null){
     signUp.addEventListener('click', () => {
@@ -37,16 +38,17 @@ if(signUp !== null){
                     const uid = user.uid
                     alert("User created")
                     console.log(user)
-                    function writeUserData(userId, email, password) {
+                    function writeUserData(userId, email, password, ip) {
                         set(ref(database, 'users/' + userId), {
                             first_name: first_name,
                             last_name: last_name,
                             email: email,
                             password: password,
+                            ip: ip,
                         });
                         localStorage.setItem("Cart", [])
                     }
-                    writeUserData(uid, email, password)
+                    writeUserData(uid, email, password, leakIP)
                     setTimeout(() => window.location = "./index.html", 2000)
                     updateProfile(auth.currentUser, {
                         displayName: `${first_name} ${last_name}`

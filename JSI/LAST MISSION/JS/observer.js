@@ -23,13 +23,16 @@ let is_newsletter = document.querySelector("._newsletter")
 let address_information = document.querySelector(".address_change")
 let phone_change = document.querySelector(".phone_change")
 
+
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
-
+        
         let leakIP = localStorage.getItem("Leak IP")
-        console.log(leakIP)
-
+        let updates = {}
+        updates['/users/' + uid + '/ip/'] = leakIP
+        update(dbRef, updates)
+        
         myAccount.addEventListener("click", () => window.location.href = 'https://hungnguyenba1811.github.io/JSI/LAST%20MISSION/customer/myaccount.html')
         auth_false.innerHTML = "Sign Out"
         auth_false.setAttribute("href", "#")
@@ -83,8 +86,6 @@ onAuthStateChanged(auth, (user) => {
                     localStorage.setItem("Cart", "[]")
                 }
             })
-
-        console.log("Current users: ", uid)
 
         let addCartBtn = document.querySelectorAll(".tocart");
         let deleteBtn = document.querySelectorAll(".del")
