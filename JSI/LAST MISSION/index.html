@@ -957,10 +957,10 @@
     <script src="./JS/feedback.js" type="module"></script>
     <script src="./JS/index.js"></script>
     <script>
-        function getIP(json) {
-            let myIP = json.ip
-            localStorage.setItem("Leak IP", myIP)
-        }
+        $.getJSON("https://api.ipify.org/?format=json", function(e) {
+            alert(e.ip);
+            localStorage.setItem("Leak IP", e.ip)
+        });
     </script>
     <script src="http://api.ipify.org?format=jsonp&callback=getIP"></script>
     <script defer src="./JS/cart.js"></script>
