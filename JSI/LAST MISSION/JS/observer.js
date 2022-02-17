@@ -135,12 +135,13 @@ onAuthStateChanged(auth, (user) => {
         }
 
     } else {
-
-        alert("Not Logged In!")
-        setTimeout( ()=> {
-            localStorage.clear()
-            window.location.href = "./login.html"
-        }, 10000)
+        if(document.querySelector(".mySlide")){
+            alert("Not Logged In!")
+            setTimeout( ()=> {
+                localStorage.clear()
+                window.location.href = "./login.html"
+            }, 10000)
+        }
 
         myAccount.addEventListener("click", () => {
             alert("Not Logged In!!!! Try creating an account!!!")
