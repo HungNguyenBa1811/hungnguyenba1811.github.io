@@ -33,7 +33,7 @@
         }
     </script>
 </head>
-<body>
+<body class="account customer-account-edit page-layout-2columns-left">
     <div class="page-wrapper">
         <header class="header-container">
             <div class="top-bar visible-lg visible-md">
@@ -142,7 +142,7 @@
                                 <a class="action showcart" href="">
                                     <span class="text">My Cart</span>
                                     <span class="counter qty">
-                                        <span class="counter-number"></span>
+                                        <span class="counter-number">0</span>
                                         <span class="counter-label"></span>
                                     </span>
                                 </a>
@@ -191,7 +191,7 @@
                             </div>
                             <p class="wishlist-link">
                                 <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-user"></i>
                                 </a>
                             </p>
                             <form class="form minisearch" id="search_mini_form" method="get">
@@ -473,7 +473,7 @@
                                         </div>
                                         <div id="pt_menu68" class="pt_menu readmore nav-5">
                                             <div class="parentMenu" id="div_4">
-                                                <a href="#" class="pt_cate ">
+                                                <a href="#" class="pt_cate">
                                                     <span>Others</span>
                                                 </a>
                                             </div>
@@ -528,7 +528,7 @@
                     </h1>
                 </div>
                 <form class="form-address-edit" id="form-validate">
-                    <fieldset id="fieldset">
+                    <fieldset class="fieldset">
                         <legend class="legend">
                             <span>Account Information</span>
                         </legend>
@@ -546,14 +546,14 @@
                                 <span>Last Name</span>
                             </label>
                             <div class="control">
-                                <input type="text" name="last_name" title="Change Phone Number" class="input-text required-entry" id="change-last-name">
+                                <input type="text" name="last_name" title="Change Last Name" class="input-text required-entry" id="change-last-name">
                             </div>
                         </div>
                     </fieldset>
                 </form>
                 <div class="actions-toolbar">
                     <div class="primary">
-                        <button type="button" class="action save primary" title="Save Address">
+                        <button type="button" class="action save-info primary" title="Save Address">
                             <span>Save</span>
                         </button>
                     </div>
@@ -571,17 +571,17 @@
                     </div>
                     <div class="content block-collapsible-nav-content" id="block-collapsible-nav">
                         <ul class="nav items">
-                            <li class="nav item acc-dsb">
-                                <strong>Account Dashboard</strong>
+                            <li class="nav item">
+                                <a href="./myaccount.html">Account Dashboard</a>
                             </li>
                             <li class="nav item current">
                                 <strong>Account Information</strong>
                             </li>
-                            <li class="nav item acc-adr">
-                                <strong>Address Book</strong>
+                            <li class="nav item">
+                                <a href="./address-book.html">Address Book</a>
                             </li>
                             <li class="nav item acc-cart">
-                                <strong>My Cart</strong>
+                                <a href="../view-cart.html">View & Edit Cart</a>
                             </li>
                         </ul>
                     </div>
@@ -708,14 +708,10 @@
         </footer>
     </div>
 
-    <script src="./JS/observer.js" type="module"></script>
-    <script src="./JS/feedback.js" type="module"></script>
-    <script src="./JS/index.js"></script>
+    <script src="../JS/observer.js" type="module"></script>
+    <script src="../JS/feedback.js" type="module"></script>
+    <script src="../JS/update-info.js" type="module"></script>
+    <script src="../JS/index.js"></script>
     <script defer src="../JS/cart.js"></script>
-    <script>
-        document.querySelector(".acc-dsb").addEventListener("click", () => window.location.href = './myaccount.html')
-        document.querySelector(".acc-adr").addEventListener("click", () => window.location.href = './address-book.html')
-        document.querySelector(".acc-cart").addEventListener("click", () => window.location.href = '../view-cart.html')
-    </script>
 </body>
 </html>

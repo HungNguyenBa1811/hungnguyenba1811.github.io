@@ -1,6 +1,6 @@
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
-import { getDatabase, ref, child, get, update, push } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
+import { getDatabase, ref, child, get, update } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyApWwoJ3mGbwXJkh4eiiIi_DC-zpBUzRm8",
@@ -16,13 +16,18 @@ const auth = getAuth();
 const dbRef = ref(getDatabase(app));
 
 const myAccount = document.querySelector("#my_account")
+
 let auth_false = document.querySelector("#auth_false")
 let auth_check = document.querySelector(".auth-check")
 let contact_information = document.querySelector(".contact_change")
 let is_newsletter = document.querySelector("._newsletter")
 let address_information = document.querySelector(".address_change")
 let phone_change = document.querySelector(".phone_change")
-
+let new_address = document.querySelector("#change-address")
+let new_telephone = document.querySelector("#change-telephone")
+let new_first_name = document.querySelector("#change-first-name")
+let new_last_name = document.querySelector("#change-last-name")
+let delAll = document.querySelector(".clear_cart")
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -53,16 +58,23 @@ onAuthStateChanged(auth, (user) => {
         get(child(dbRef, `users/${uid}`))
             .then((snapshot) => {
                 if (snapshot.exists()){
-                    auth_check.innerHTML = `Welcome back, ${snapshot.val().last_name + " " + snapshot.val().first_name}`
+                    auth_check.innerHTML = `Welcome back, ${snapshot.val().first_name} ${snapshot.val().last_name}`
                     console.log(snapshot.val())
                     if(is_newsletter){
                         contact_information.innerHTML = `
-                            <p style="font-size: 1.3rem; margin: 0;">First Name: ${snapshot.val().last_name}</p>
-                            <p style="font-size: 1.3rem; margin-bottom: 10px;">Last Name: ${snapshot.val().first_name}</p>
-                        `
-                        address_information.innerHTML = `
+                            <p style="font-size: 1.3rem; margin: 0;">First Name: ${snapshot.val().first_name}</p>
+                            <p style="font-size: 1.3rem; margin: 0;">Last Name: ${snapshot.val().last_name}</p>
                             <p style="font-size: 1.3rem; margin-bottom: 10px;">Email: ${snapshot.val().email}</p>
                         `
+                        if(!snapshot.val().shipping_address){
+                            address_information.innerHTML = `
+                                <p style="font-size: 1.3rem; margin-bottom: 10px;">You don't have shipping address.</p>
+                            `
+                        } else {
+                            address_information.innerHTML = `
+                                <p style="font-size: 1.3rem; margin-bottom: 10px;">Shipping Address: ${snapshot.val().shipping_address}</p>
+                            `
+                        }
                         if(!snapshot.val().phone_number){
                             phone_change.innerHTML = `
                                 <p style="font-size: 1.3rem; margin-bottom: 10px;">You don't have a phone number.</p>
@@ -72,6 +84,13 @@ onAuthStateChanged(auth, (user) => {
                                 <p style="font-size: 1.3rem; margin-bottom: 10px;">Phone Number: ${snapshot.val().phone_number}</p>
                             `
                         }
+                    }
+                    if(new_address){
+                        new_address.value = snapshot.val().shipping_address
+                        new_telephone.value = snapshot.val().phone_number
+                    }else if(new_first_name){
+                        new_first_name.value = snapshot.val().first_name
+                        new_last_name.value = snapshot.val().last_name
                     }
                 } else {
                     console.log("No user")
@@ -116,16 +135,22 @@ onAuthStateChanged(auth, (user) => {
 
         if (cart.length > 0) {
 
-            let deleteBtn = document.querySelectorAll(".delete");
+            let deleteCartBtn = document.querySelectorAll(".delete");
 
             for(let i = 0, j = cart.length; i<j; i++ ){
-                deleteBtn[i].addEventListener("click", () => {
+                deleteCartBtn[i].addEventListener("click", () => {
                     const updates = {}
                     updates['/carts/' + uid + '/'] = JSON.stringify(cart)
                     updates['/users/' + uid + '/cart/'] = JSON.stringify(cart)
                     update(dbRef, updates)
                 })
             }
+            delAll.addEventListener("click", () => {
+                const updates = {}
+                updates['/carts/' + uid + '/'] = JSON.stringify(cart)
+                updates['/users/' + uid + '/cart/'] = JSON.stringify(cart)
+                update(dbRef, updates)
+            })
 
         } else {
             const updates = {}
@@ -135,16 +160,15 @@ onAuthStateChanged(auth, (user) => {
         }
 
     } else {
-        if(document.querySelector(".mySlide")){
-            alert("Not Logged In!")
-            setTimeout( ()=> {
+        if(document.querySelector(".mySlide") || document.querySelector("#view-cart") || document.querySelector(".page-layout-2columns-left")){
+            setTimeout( () => {
                 localStorage.clear()
                 window.location.href = "./login.html"
-            }, 10000)
+            }, 5000)
         }
 
         myAccount.addEventListener("click", () => {
-            alert("Not Logged In!!!! Try creating an account!!!")
+            window.location.href = './login.html'
         })
     }
 });

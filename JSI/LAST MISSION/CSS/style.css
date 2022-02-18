@@ -765,7 +765,7 @@ input:not([disabled]):focus{
 .block-collapsible-nav .content ul.nav > li > strong {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 15px 20px;
 }
 .block-collapsible-nav .content ul.nav > li.current > strong {
   background-color: #eee;
@@ -3132,6 +3132,18 @@ tr th span,
 tr td span {
   color: #666666
 }
+a.action.back{
+  color: #363f4d;
+}
+a.action.back:hover{
+  color: #68b501;
+}
+.actions-toolbar{
+  font-size: 14px;
+}
+.actions-toolbar span{
+  font-size: 1.3rem;
+}
 @media all and (min-width: 768px), print{
   .cart-container .form-cart {
       width: 67%;
@@ -3147,6 +3159,7 @@ tr td span {
     padding-right: 15px;
     padding-left: 15px;
     float: right;
+  }
 }
 @media (min-width: 768px) {
   .footer-top .ma_newsletter {

@@ -321,7 +321,7 @@ input:not([disabled]):focus{
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 15px 20px;
 }
 .nav{
   flex-direction: column;
@@ -792,10 +792,10 @@ table caption {
   margin: 0 0 5px;
   display: inline-block;
 }
-.fieldset .field:last-child,
+/* .fieldset .field:last-child,
 .fieldset .fields .field:last-child {
   margin-bottom: 0;
-}
+} */
 .fieldset .field .label,
 .fieldset .fields .field .label {
   font-weight: 700;
@@ -1173,7 +1173,7 @@ fieldset[disabled] .action.primary {
 .actions-toolbar .primary:last-child,
 .actions-toolbar .secondary:last-child {
   margin-bottom: 0;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .breadcrumbs {
   margin: 0 0 20px;

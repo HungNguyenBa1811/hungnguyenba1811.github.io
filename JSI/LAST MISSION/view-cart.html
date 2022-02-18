@@ -38,7 +38,7 @@
     </script>
 </head>
 
-<body>
+<body id="view-cart">
     <div class="page-wrapper">
         <header class="header-container">
             <div class="top-bar visible-lg visible-md">
@@ -147,7 +147,7 @@
                                 <a class="action showcart" href="">
                                     <span class="text">My Cart</span>
                                     <span class="counter qty">
-                                        <span class="counter-number"></span>
+                                        <span class="counter-number">0</span>
                                         <span class="counter-label"></span>
                                     </span>
                                 </a>
@@ -159,7 +159,7 @@
 
                                             <div class="block-content">
                                                 <div class="items-total">
-                                                    <span class="count"></span>
+                                                    <span class="count">0</span>
                                                     <span>items</span>
                                                 </div>
                                                 <div class="subtotal">
@@ -168,7 +168,7 @@
                                                     </span>
                                                     <div class="amount price-container">
                                                         <span class="price-wrapper">
-                                                            <span class="price"></span>
+                                                            <span class="price">$0.00</span>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -198,7 +198,7 @@
                             </div>
                             <p class="wishlist-link">
                                 <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-user"></i>
                                 </a>
                             </p>
                             <form class="form minisearch" id="search_mini_form" method="get">
@@ -614,7 +614,7 @@
                                     <a class="action continue" href="./index.html" title="Continue Shopping">
                                         <span>Continue Shopping</span>
                                     </a>
-                                    <button type="button" name="update_cart_action" value="empty_cart" title="Clear Shopping Cart" class="action clear" id="empty_cart_button">
+                                    <button type="button" name="update_cart_action" value="empty_cart" title="Clear Shopping Cart" class="action clear_cart" id="empty_cart_button">
                                         <span>Clear Shopping Cart</span>
                                     </button>
                                     <button type="button" name="update_cart_action" value="update_qty" title="Update Shopping Cart" class="action update">

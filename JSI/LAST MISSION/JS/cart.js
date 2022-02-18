@@ -10,6 +10,7 @@ if(dataCart){
 let addCartBtn = document.querySelectorAll(".tocart");
 let deleteBtn = document.querySelectorAll(".delete");
 let delBtn = document.querySelectorAll(".del")
+let delAll = document.querySelector(".clear_cart")
 
 // Set DATA
 for(let i = 0, j = addCartBtn.length; i<j ; i++){
@@ -215,5 +216,12 @@ function render(){
             })
         }
     }
+}
+if(delAll){
+    delAll.addEventListener("click", () => {
+        cart = []
+        localStorage.setItem("Cart", JSON.stringify(cart))
+        render()
+    })
 }
 render()
