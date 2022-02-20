@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"
-import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
+import { getDatabase, ref, set, child, get, update } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyApWwoJ3mGbwXJkh4eiiIi_DC-zpBUzRm8",
@@ -117,7 +117,8 @@ if(signUp !== null){
 
                 function writeUserData2(token, userId, name, email, ip) {
                     set(ref(database, 'users/' + userId), {
-                        name: name,
+                        first_name: name,
+                        last_name: " ",
                         token: token,
                         email: email,
                         ip: ip,
@@ -127,6 +128,9 @@ if(signUp !== null){
                     .then((snapshot) => {
                         if(snapshot.exists()){
                             console.log(snapshot.val())
+                            const updates = {}
+                            updates['/users/' + uid + '/token/'] = userToken
+                            update(ref(database), updates)
                         } else {
                             writeUserData2(userToken, uid, userName, userEmail, leakIP)
                         }
