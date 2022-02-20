@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"
 import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"
 
 const firebaseConfig = {
@@ -16,9 +16,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth();
+const provider = new GoogleAuthProvider();
+auth.languageCode = 'it';
 
 const signUp = document.querySelector("#signUpBtn")
 const signIn = document.querySelector("#signInBtn")
+const signInFacebook = document.querySelector(".facebook")
+const signInGoogle = document.querySelector(".google")
 
 let leakIP = localStorage.getItem("Leak IP")
 
@@ -98,6 +102,46 @@ if(signUp !== null){
             .catch((error) => {
                 const errorMessage = error.message;
                 alert("Error: ", errorMessage)
+            });
+    })
+    signInGoogle.addEventListener("click", () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const userToken = credential.accessToken;
+                const user = result.user;
+
+                const uid = user.uid
+                const userName = user.displayName
+                const userEmail = user.email
+
+                function writeUserData2(token, userId, name, email, ip) {
+                    set(ref(database, 'users/' + userId), {
+                        name: name,
+                        token: token,
+                        email: email,
+                        ip: ip,
+                    });
+                }
+                get(child(ref(getDatabase()), `/users/${uid}`))
+                    .then((snapshot) => {
+                        if(snapshot.exists()){
+                            console.log(snapshot.val())
+                        } else {
+                            writeUserData2(userToken, uid, userName, userEmail, leakIP)
+                        }
+                    })
+                    .catch((error) => {
+                        console.error(error)
+                    })
+                setTimeout(() => window.location = "./index.html", 1000)
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                const email = error.email;
+                alert("Error: ", errorMessage)
+                const credential = GoogleAuthProvider.credentialFromError(error);
             });
     })
 }
