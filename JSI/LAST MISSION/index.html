@@ -20,26 +20,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <title>Shopping</title>
-    <script>
+    <!-- <script>
         document.onload = () => localStorage.clear()
         document.onkeydown = function(e) {
-        if(event.keyCode == 123) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            if(event.keyCode == 123) {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            }
         }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-        }
-    </script>
+    </script> -->
 </head>
 
 <body oncontextmenu="return false">
@@ -151,7 +151,7 @@
                                 <a class="action showcart" href="#">
                                     <span class="text">My Cart</span>
                                     <span class="counter qty">
-                                        <span class="counter-number"></span>
+                                        <span class="counter-number">0</span>
                                         <span class="counter-label"></span>
                                     </span>
                                 </a>
@@ -170,7 +170,7 @@
                                                     </span>
                                                     <div class="amount price-container">
                                                         <span class="price-wrapper">
-                                                            <span class="price"></span>
+                                                            <span class="price">$0.00</span>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -209,15 +209,14 @@
                                 <div class="field search">
                                     <input id="search" type="text" value="" placeholder="Search for item..." class="input-text">
     
-    
-                                    <button type="submit" title="Search" class="action fa fa-search">
+                                    <button type="button" title="Search" id="searchBtn" class="action fa fa-search">
                                         <span></span>
                                     </button>
                                     <ul class="results-list" id="result">
 
                                     </ul>
                                 </div>
-    
+
                             </form>
                         </div>
                     </div>
@@ -237,6 +236,7 @@
                                         <div id="pt_menu3" class="pt_menu readmore nav-1">
                                             <div class="parentMenu" id="div_1">
                                                 <a href="#" class="pt_cate">
+                                                    <span>vegetables</span>
                                                 </a>
                                             </div>
                                             <div id="popup1" class="popup" style="width: 1145px; top: 60px; left: 3px;">
@@ -339,7 +339,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="clearBoth"></div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -437,7 +437,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="clearBoth"></div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -477,51 +477,10 @@
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="clearBoth"></div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="pt_menu68" class="pt_menu readmore nav-5">
-                                            <div class="parentMenu" id="div_4">
-                                                <a href="#" class="pt_cate">
-                                                    <span>Others</span>
-                                                </a>
-                                            </div>
-                                            <div id="popup4" class="popup" style="width: 1145px; top: 60px; left: 3px">
-                                                <div class="block1" id="block168" style="width: 1145px;">
-                                                    <div class="column first col1">
-                                                        <div class="itemMenu level1">
-                                                            <a class="itemMenuName level1" href="#">
-                                                                <span>Hot Chillies & Pepper</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="column col2">
-                                                        <div class="itemMenu level1">
-                                                            <a class="itemMenuName level1" href="#">
-                                                                <span>Honey</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="column col3">
-                                                        <div class="itemMenu level1">
-                                                            <a class="itemMenuName level1" href="#">
-                                                                <span>Ginger</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="column last col4">
-                                                        <div class="itemMenu level1">
-                                                            <a class="itemMenuName level1" href="#">
-                                                                <span>Garlic</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="clearBoth"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clearBoth"></div>
                                     </div>
                                 </nav>
 

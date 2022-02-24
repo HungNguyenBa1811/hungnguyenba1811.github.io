@@ -145,12 +145,14 @@ onAuthStateChanged(auth, (user) => {
                     update(dbRef, updates)
                 })
             }
-            delAll.addEventListener("click", () => {
-                const updates = {}
-                updates['/carts/' + uid + '/'] = JSON.stringify(cart)
-                updates['/users/' + uid + '/cart/'] = JSON.stringify(cart)
-                update(dbRef, updates)
-            })
+            if(delAll){
+                delAll.addEventListener("click", () => {
+                    const updates = {}
+                    updates['/carts/' + uid + '/'] = JSON.stringify(cart)
+                    updates['/users/' + uid + '/cart/'] = JSON.stringify(cart)
+                    update(dbRef, updates)
+                })
+            }
 
         } else {
             const updates = {}
@@ -163,12 +165,12 @@ onAuthStateChanged(auth, (user) => {
         if(document.querySelector(".mySlide") || document.querySelector("#view-cart") || document.querySelector(".page-layout-2columns-left")){
             setTimeout( () => {
                 localStorage.clear()
-                window.location.href = "./login.html"
+                window.location.href = "https://hungnguyenba1811.github.io/JSI/LAST%20MISSION/login.html"
             }, 5000)
         }
 
         myAccount.addEventListener("click", () => {
-            window.location.href = './login.html'
+            window.location.href = 'https://hungnguyenba1811.github.io/JSI/LAST%20MISSION/login.html'
         })
     }
 });

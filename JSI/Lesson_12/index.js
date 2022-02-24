@@ -40,6 +40,7 @@ showProd()
 
 // Search
 let input_search = document.querySelector("#input")
+
 function getInputValue(){
     prod.innerHTML = ""
     let inputValue = input_search.value.toLowerCase()

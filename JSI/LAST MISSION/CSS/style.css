@@ -1486,6 +1486,7 @@ h6,
   box-sizing: border-box;
   line-height: 1.15;
   scroll-behavior: smooth;
+  z-index: 1;
   /* text-align: center; */
 }
 img,
@@ -1943,7 +1944,7 @@ dd {
   background: none;
   box-shadow: none;
 }
-#search_mini_form .search button[type="submit"] {
+#search_mini_form .search button[type="button"] {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -1956,6 +1957,17 @@ dd {
   font-size: 2rem;
   opacity: 1;
   background: #363f4d;
+}
+.results-list {
+  background: #fff;
+  color: #000;
+  max-height: 30vh;
+  z-index: 123456;
+  overflow-y: scroll;
+  display: none;
+}
+.results-list div {
+  padding: 10px 20px;
 }
 .hotline {
   text-align: center;
@@ -2323,6 +2335,9 @@ dd {
 /*===custommenu==============*/
 .nav-ozmegamenu {
   min-height: 50px;
+}
+.nav-ozmegamenu * {
+  z-index: 10;
 }
 .nav-ozmegamenu .nav-ozmegamenu-inner {
   background: #363f4d;
@@ -3201,8 +3216,10 @@ a.action.back:hover{
   justify-content: space-evenly;
   margin-bottom: 30px;
 }
-.form.form-btn .facebook {
+.form.form-btn .facebook,
+.form.form-btn .facebook:active {
   background-color: #3b5998;
+  color: #f1f1f1;
 }
 .form.form-btn .facebook:hover {
   color: #3b5998;
@@ -3210,6 +3227,7 @@ a.action.back:hover{
 }
 .form.form-btn .google {
   background-color: #db4a39;
+  color: #f1f1f1;
 }
 .form.form-btn .google:hover {
   color: #db4a39;

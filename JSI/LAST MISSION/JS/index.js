@@ -1,6 +1,6 @@
 // Toggle Menus
 function displayOtherIDInArray(numID){ // Filter Other ID
-    let array = ["1","2","3","4"]
+    let array = ["1","2","3"]
     let newArray = array.filter(x => x != numID)
     return newArray
 }
@@ -22,7 +22,6 @@ function toggleSystem(ID){
 toggleSystem("1")
 toggleSystem("2")
 toggleSystem("3")
-toggleSystem("4")
 
 // Toggle Items
 var ul = document.getElementsByTagName("UL");
