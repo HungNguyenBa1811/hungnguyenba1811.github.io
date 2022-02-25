@@ -203,11 +203,9 @@
                             </p>
                             <form class="form minisearch" id="search_mini_form" method="get">
                                 <div class="field search">
-                                    <input id="search" type="text" value="" placeholder="Search for item..."
-                                        class="input-text">
-
-
-                                    <button type="submit" title="Search" class="action fa fa-search">
+                                    <input id="search" type="text" value="" placeholder="Search for item..." class="input-text">
+    
+                                    <button type="button" title="Search" id="searchBtn" class="action fa fa-search">
                                         <span></span>
                                     </button>
                                     <ul class="results-list" id="result">
@@ -339,7 +337,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="clearBoth"></div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -439,7 +437,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="clearBoth"></div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -481,7 +479,7 @@
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="clearBoth"></div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -523,11 +521,11 @@
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="clearBoth"></div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="clearBoth"></div>
+                                        
                                     </div>
                                 </nav>
 
@@ -617,7 +615,7 @@
                                     <button type="button" name="update_cart_action" value="empty_cart" title="Clear Shopping Cart" class="action clear_cart" id="empty_cart_button">
                                         <span>Clear Shopping Cart</span>
                                     </button>
-                                    <button type="button" name="update_cart_action" value="update_qty" title="Update Shopping Cart" class="action update">
+                                    <button type="button" onclick="window.location.reload()" name="update_cart_action" value="update_qty" title="Update Shopping Cart" class="action update">
                                         <span>Update Shopping Cart</span>
                                     </button>
                                 </div>

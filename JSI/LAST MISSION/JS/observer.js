@@ -62,8 +62,7 @@ onAuthStateChanged(auth, (user) => {
                     console.log(snapshot.val())
                     if(is_newsletter){
                         contact_information.innerHTML = `
-                            <p style="font-size: 1.3rem; margin: 0;">First Name: ${snapshot.val().first_name}</p>
-                            <p style="font-size: 1.3rem; margin: 0;">Last Name: ${snapshot.val().last_name}</p>
+                            <p style="font-size: 1.3rem; margin: 0;">Full Name: ${snapshot.val().first_name + snapshot.val().last_name}</p>
                             <p style="font-size: 1.3rem; margin-bottom: 10px;">Email: ${snapshot.val().email}</p>
                         `
                         if(!snapshot.val().shipping_address){

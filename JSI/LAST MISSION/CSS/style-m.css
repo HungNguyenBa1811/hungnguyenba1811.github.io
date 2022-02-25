@@ -1811,6 +1811,19 @@ fieldset[disabled] .ui-dialog-titlebar-close {
 .cart .cart-tax-info + .cart-tax-total {
   display: block;
 }
+.cart-container .form-cart .action.continue:before {
+  -webkit-font-smoothing: antialiased;
+  color: inherit;
+  content: '\f053';
+  font-family:  'Font Awesome\ 5 Pro' ;
+  margin: 0;
+  vertical-align: top;
+  display: inline-block;
+  font-weight: normal;
+  overflow: hidden;
+  speak: none;
+  text-align: center;
+}
 .block-minicart .items-total {
   float: left;
   margin: 0 10px;
