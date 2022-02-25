@@ -3274,3 +3274,6 @@ a.action.back:hover{
   vertical-align: middle;
   margin-right: 5px;
 }
+.cart.item hr{
+  width: 160%;
+}

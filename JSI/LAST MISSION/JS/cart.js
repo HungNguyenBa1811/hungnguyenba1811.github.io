@@ -161,7 +161,7 @@ function render(){
 
                         <span class="price-excluding-tax">
                             <span class="cart-price">
-                                <span class="price">${products.price}</span>
+                                <span class="price">$${products.price}</span>
                             </span>
                         </span>
                     </td>
@@ -188,13 +188,14 @@ function render(){
                     </td>
                 </tr>
                 <tr class="item-actions">
-                    <td colspan="100">
+                    <td>
                         <div class="actions-toolbar">
                             <a href="#" title="Remove item" class="action action-delete del" id="${products.id}">
                                 <span>Remove item</span>
                             </a>
                         </div>
                     </td>
+                    <hr>
                 </tr>
             `) 
         }

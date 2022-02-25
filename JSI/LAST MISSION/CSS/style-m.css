@@ -1753,7 +1753,7 @@ fieldset[disabled] .ui-dialog-titlebar-close {
   padding-top: 20px;
 }
 .cart.table-wrapper .col.qty {
-  padding-top: 0;
+  padding-top: 10px;
 }
 .cart.table-wrapper .col.qty .input-text {
   margin-top: -5px;
@@ -2582,9 +2582,17 @@ body {
 }
 .price-excluding-tax {
   display: block;
-  font-size: 1.8rem;
+  font-size: 16px !important;
   line-height: 1;
 }
 .price-excluding-tax .price {
   font-weight: 700;
+  font-size: 1.7rem;
+}
+.cart.table-wrapper .col:not(.item){
+  text-align: right;
+  padding-left: 30px;
+}
+.totals * {
+  font-size: 13px;
 }

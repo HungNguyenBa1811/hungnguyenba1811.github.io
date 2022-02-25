@@ -873,6 +873,9 @@
   .sidebar .block.widget .pager .pages-item-next .action {
     margin: 0;
   }
+  .cart-container .form-cart .action.continue{
+    float: left;
+  }
 }
 @media all and (min-width: 1024px), print {
   .products-grid .product-item {
