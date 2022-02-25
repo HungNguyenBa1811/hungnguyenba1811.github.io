@@ -2149,6 +2149,9 @@ dd {
   padding: 15px 0;
   text-align: center;
 }
+.col span{
+  font-size: 13px
+}
 .main-content .cart-container .form-cart .cart.table-wrapper tbody .col .price {
   font-weight: 500;
   color: #333;

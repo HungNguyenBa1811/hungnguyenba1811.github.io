@@ -2225,7 +2225,7 @@ fieldset[disabled] .minicart-wrapper .action.close {
   font-weight: bold;
   line-height: 28px;
   color: #303030;
-  content: "\f044";
+  content: "\f03e";
   font-family: "Font Awesome\ 5 Pro";
   vertical-align: middle;
   display: inline-block;
@@ -2579,4 +2579,12 @@ body {
 }
 .block.widget .product-item-info {
   width: auto;
+}
+.price-excluding-tax {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.price-excluding-tax .price {
+  font-weight: 700;
 }
