@@ -29,7 +29,7 @@ let items_tab_right = document.querySelector(".daily-deal-products")
 let items_tab_right_a = document.querySelector(".new-pd")
 
 let HTMLContent_Grid_1 = (x) =>
-    `
+`
     <div class="item pd_t1">
         <div class="products-grid">
             <div class="product-item">
@@ -109,7 +109,7 @@ let HTMLContent_Grid_1 = (x) =>
     </div>
 `
 let HTMLContent_Grid_2 = (x) =>
-    `
+`
     <div class="products-grid">
         <div class="product-item">
             <div class="item-inner">
@@ -252,7 +252,6 @@ if (dataProduct) {
 
     console.log("No products, setting up...")
 }
-console.log(products_list)
 
 var products_tab_1 = products_list.filter((organic) => organic.special == `Tab_1`);
 var products_tab_2 = products_list.filter((organic) => organic.special == `Tab_2`);
@@ -321,43 +320,6 @@ let update_tab_3 = () => {
     resetProduct()
     items_tab_1_b.classList.remove("hide")
 }
-
-let prod = document.querySelector(".results-list")
-
-let showProd = () => {
-    prod.innerHTML = ''
-    for(let i = 0; i < products_list.length; i++){
-        prod.insertAdjacentHTML('beforeend', `
-            <div style="z-index: 9999;">
-                <b>${products_list[i].name}</b><br>
-                <span> Price: $${Math.round( products_list[i].oldPrice * (1 - products_list[i].saleOffValue) * 100)/100}</span>
-            </div>
-            <hr>
-        `)
-    }
-}
-showProd()
-
-let input_search = document.querySelector("#search")
-input_search.addEventListener("click", () => {
-    document.querySelector(".results-list").classList.toggle("show")
-})
-let searchBtn = document.querySelector("#searchBtn")
-searchBtn.addEventListener("click", () => {
-    prod.innerHTML = ""
-    let inputValue = input_search.value.toLowerCase()
-    for(let i = 0; i < products_list.length; i++){
-        let name = products_list[i].name.toLowerCase()
-        if(name == inputValue){
-            prod.insertAdjacentHTML("beforeend",`
-                <div>
-                    <b>${products_list[i].name}</b> <br>
-                    <span> Price: $${Math.round( products_list[i].oldPrice * (1 - products_list[i].saleOffValue) * 100)/100}</span>
-                </div>
-            `)
-        }
-    }
-})
 
 if (items_tab_1) {
     print()

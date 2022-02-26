@@ -99,8 +99,10 @@ onAuthStateChanged(auth, (user) => {
             .then((snapshot) => {
                 if (snapshot.exists()){
                     localStorage.setItem("Cart", snapshot.val())
+                    var cart = JSON.parse(snapshot.val())
                 } else {
                     localStorage.setItem("Cart", "[]")
+                    var cart = JSON.parse(snapshot.val())
                 }
             })
 
