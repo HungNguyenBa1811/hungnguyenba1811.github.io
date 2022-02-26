@@ -20,7 +20,6 @@ const myAccount = document.querySelector("#my_account")
 let auth_false = document.querySelector("#auth_false")
 let auth_check = document.querySelector(".auth-check")
 let contact_information = document.querySelector(".contact_change")
-let is_newsletter = document.querySelector("._newsletter")
 let address_information = document.querySelector(".address_change")
 let phone_change = document.querySelector(".phone_change")
 let new_address = document.querySelector("#change-address")
@@ -60,7 +59,7 @@ onAuthStateChanged(auth, (user) => {
                 if (snapshot.exists()){
                     auth_check.innerHTML = `Welcome back, ${snapshot.val().first_name} ${snapshot.val().last_name}`
                     console.log(snapshot.val())
-                    if(is_newsletter){
+                    if(contact_information){
                         contact_information.innerHTML = `
                             <p style="font-size: 1.3rem; margin: 0;">Full Name: ${snapshot.val().first_name + snapshot.val().last_name}</p>
                             <p style="font-size: 1.3rem; margin-bottom: 10px;">Email: ${snapshot.val().email}</p>
