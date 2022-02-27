@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
     <title>Sign In</title>
     <script>
-        document.onload = () => localStorage.clear()
         document.onkeydown = function(e) {
         if(event.keyCode == 123) {
             window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
@@ -35,7 +34,7 @@
         }
     </script>
 </head>
-<body>
+<body oncontextmenu="return false">
     <div class="page-wrapper">
         <header class="header-container">
             <div class="top-bar visible-lg visible-md">

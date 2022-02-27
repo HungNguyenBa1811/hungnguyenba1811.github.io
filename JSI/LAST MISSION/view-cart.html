@@ -18,7 +18,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>View Cart</title>
     <script>
-        document.onload = () => localStorage.clear()
         document.onkeydown = function(e) {
         if(event.keyCode == 123) {
             window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
@@ -39,7 +38,7 @@
     </script>
 </head>
 
-<body id="view-cart">
+<body id="view-cart" oncontextmenu="return false">
     <div class="page-wrapper">
         <header class="header-container">
             <div class="top-bar visible-lg visible-md">
