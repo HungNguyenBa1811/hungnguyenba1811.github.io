@@ -66,39 +66,3 @@ function scrollFunction() {
       scrollButton.style.display = "none";
     }
 }
-
-{/* <script type="text/javascript">
-require([
-  "jquery",
-  "owlcarousel/minjs"
- ], function($,owlCarousel){
-
-	$(".tab_content_2342323").hide();
-	$(".tab_content_2342323:first").show(); 
-
-	$("ul.tabs-2342323 li").click(function() {
-		$("ul.tabs-2342323 li").removeClass("active");
-		$(this).addClass("active");
-		$(".tab_content_2342323").hide();
-		var activeTab = $(this).attr("rel"); 
-		$("#"+activeTab).fadeIn(); 
-	});
-	
-	 $(".category_tab_slider_2342323").owlCarousel({
-	    		
-		autoPlay : false,
-		slideSpeed : 1000,
-		navigation : true,
-		stopOnHover : true,
-		pagination : false,
-		items : 2,
-		itemsDesktop : [1199,2],
-		itemsDesktopSmall : [992,2],
-		itemsTablet: [767,2],
-		itemsMobile : [479,1]
-	});
-	
-});
- 
-
-</script> */}

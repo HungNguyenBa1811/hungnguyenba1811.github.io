@@ -40,5 +40,6 @@ if(list_of_products){
         }
     })
 } else {
-    setTimeout( () => window.location.reload() , 1500)
+    alert("Rebuffing")
+    setTimeout( () => window.location.reload() , 6420)
 }
