@@ -46,6 +46,9 @@ function segmentedController(target) {
 document.querySelector(".showcart").addEventListener("click", () => {
     document.querySelector(".ui-widget.ui-widget-content").classList.toggle("show")
 })
+document.querySelector(".label.settings").addEventListener("click", () => {
+    document.querySelector("#settings-dialogue").classList.toggle("show")
+})
 // Scroll to top
 let scrollButton = document.querySelector("#back_top")
 let scroll_1 = document.querySelector('.header-container')
