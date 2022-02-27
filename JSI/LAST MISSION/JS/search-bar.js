@@ -40,6 +40,6 @@ if(list_of_products){
         }
     })
 } else {
-    alert("Rebuffing")
-    setTimeout( () => window.location.reload() , 6420)
+    // alert("Rebuffing")
+    // setTimeout( () => window.location.reload() , 6420)
 }
