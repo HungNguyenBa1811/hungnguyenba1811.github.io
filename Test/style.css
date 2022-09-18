@@ -1,0 +1,28 @@
+div#yellowBox1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#pokemon_namelist{
+    border: 1px solid #ffff00;
+    background: #ffff00;
+    color: #222;
+    font-size: 15px;
+}
+option{
+    background: #fff
+}
+#submit_btn{
+    border: 1px solid transparent;
+    border-radius: 0.05px;
+    padding: 2px 15px;
+    background: #ffc700;
+    color: #222;
+    font-weight: 600;
+    transition: .2s ease-in-out
+}
+#submit_btn:hover{
+    background: #ff8700;
+    color: #fff;
+}
