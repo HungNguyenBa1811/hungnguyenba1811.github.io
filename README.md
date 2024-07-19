@@ -1,2 +1,2 @@
-Javascript Lessons at MindX School :vvv
+Javascript :vvv
 # hungnguyenba1811.github.io
