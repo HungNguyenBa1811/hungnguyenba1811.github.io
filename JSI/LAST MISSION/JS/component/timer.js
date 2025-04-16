@@ -28,7 +28,7 @@ class Clock extends HTMLElement {
         this._shadowDOM = this.attachShadow({ mode: 'open' });
 
         // Set the date
-        let countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+        let countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
         // Update the count down every 1 second
         
             setInterval( () => {
